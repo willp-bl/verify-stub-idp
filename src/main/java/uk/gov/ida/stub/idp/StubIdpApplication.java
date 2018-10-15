@@ -28,23 +28,24 @@ import uk.gov.ida.stub.idp.exceptions.mappers.IdpNotFoundExceptionMapper;
 import uk.gov.ida.stub.idp.exceptions.mappers.IdpUserNotFoundExceptionMapper;
 import uk.gov.ida.stub.idp.exceptions.mappers.SessionSerializationExceptionMapper;
 import uk.gov.ida.stub.idp.filters.NoCacheResponseFilter;
+import uk.gov.ida.stub.idp.filters.SecurityHeadersFilter;
 import uk.gov.ida.stub.idp.filters.SessionCookieValueMustExistAsASessionFeature;
 import uk.gov.ida.stub.idp.filters.StubIdpCacheControlFilter;
 import uk.gov.ida.stub.idp.healthcheck.DatabaseHealthCheck;
 import uk.gov.ida.stub.idp.healthcheck.StubIdpHealthCheck;
-import uk.gov.ida.stub.idp.resources.eidas.EidasDebugPageResource;
-import uk.gov.ida.stub.idp.resources.idp.ConsentResource;
-import uk.gov.ida.stub.idp.resources.eidas.EidasProxyNodeServiceMetadataResource;
-import uk.gov.ida.stub.idp.resources.idp.DebugPageResource;
-import uk.gov.ida.stub.idp.resources.eidas.EidasConsentResource;
-import uk.gov.ida.stub.idp.resources.eidas.EidasLoginPageResource;
-import uk.gov.ida.stub.idp.resources.eidas.EidasRegistrationPageResource;
-import uk.gov.ida.stub.idp.resources.GeneratePasswordResource;
-import uk.gov.ida.stub.idp.resources.idp.HeadlessIdpResource;
 import uk.gov.ida.stub.idp.resources.AuthnRequestReceiverResource;
+import uk.gov.ida.stub.idp.resources.GeneratePasswordResource;
+import uk.gov.ida.stub.idp.resources.UserResource;
+import uk.gov.ida.stub.idp.resources.eidas.EidasConsentResource;
+import uk.gov.ida.stub.idp.resources.eidas.EidasDebugPageResource;
+import uk.gov.ida.stub.idp.resources.eidas.EidasLoginPageResource;
+import uk.gov.ida.stub.idp.resources.eidas.EidasProxyNodeServiceMetadataResource;
+import uk.gov.ida.stub.idp.resources.eidas.EidasRegistrationPageResource;
+import uk.gov.ida.stub.idp.resources.idp.ConsentResource;
+import uk.gov.ida.stub.idp.resources.idp.DebugPageResource;
+import uk.gov.ida.stub.idp.resources.idp.HeadlessIdpResource;
 import uk.gov.ida.stub.idp.resources.idp.LoginPageResource;
 import uk.gov.ida.stub.idp.resources.idp.RegistrationPageResource;
-import uk.gov.ida.stub.idp.resources.UserResource;
 
 import javax.servlet.DispatcherType;
 import java.util.EnumSet;
@@ -148,6 +149,7 @@ public class StubIdpApplication extends Application<StubIdpConfiguration> {
 
         //filters
         environment.jersey().register(NoCacheResponseFilter.class);
+        environment.jersey().register(SecurityHeadersFilter.class);
 
         //health checks
         StubIdpHealthCheck healthCheck = new StubIdpHealthCheck();
