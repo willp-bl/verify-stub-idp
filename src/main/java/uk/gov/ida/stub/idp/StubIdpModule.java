@@ -71,6 +71,7 @@ import uk.gov.ida.stub.idp.repositories.jdbc.JDBIEidasSessionRepository;
 import uk.gov.ida.stub.idp.repositories.jdbc.JDBIIdpSessionRepository;
 import uk.gov.ida.stub.idp.repositories.jdbc.JDBIUserRepository;
 import uk.gov.ida.stub.idp.repositories.jdbc.UserMapper;
+import uk.gov.ida.stub.idp.repositories.reaper.ManagedStaleSessionReaper;
 import uk.gov.ida.stub.idp.saml.locators.IdpHardCodedEntityToEncryptForLocator;
 import uk.gov.ida.stub.idp.saml.transformers.EidasResponseTransformerProvider;
 import uk.gov.ida.stub.idp.saml.transformers.OutboundResponseFromIdpTransformerProvider;
@@ -163,6 +164,8 @@ public class StubIdpModule extends AbstractModule {
         
         bind(new TypeLiteral<SessionRepository<IdpSession>>(){}).to(IdpSessionRepository.class);
         bind(new TypeLiteral<SessionRepository<EidasSession>>(){}).to(EidasSessionRepository.class);
+
+        bind(ManagedStaleSessionReaper.class).asEagerSingleton();
 
         bind(HmacValidator.class);
         bind(HmacDigest.class);
