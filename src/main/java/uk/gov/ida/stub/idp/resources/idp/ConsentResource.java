@@ -5,6 +5,7 @@ import uk.gov.ida.common.SessionId;
 import uk.gov.ida.saml.core.domain.AuthnContext;
 import uk.gov.ida.stub.idp.Urls;
 import uk.gov.ida.stub.idp.cookies.CookieNames;
+import uk.gov.ida.stub.idp.csrf.CSRFCheckProtection;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.filters.SessionCookieValueMustExistAsASession;
 import uk.gov.ida.stub.idp.repositories.Idp;
@@ -19,7 +20,14 @@ import uk.gov.ida.stub.idp.views.SamlResponseRedirectViewFactory;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.constraints.NotNull;
-import javax.ws.rs.*;
+import javax.ws.rs.CookieParam;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -68,7 +76,8 @@ public class ConsentResource {
         boolean isUserLOATooLow = !requestLevelsOfAssurance.stream().anyMatch(loa -> loa.equals(userLevelOfAssurance));
 
         Idp idp = idpStubsRepository.getIdpWithFriendlyId(idpName);
-        return Response.ok(new ConsentView(idp.getDisplayName(), idp.getFriendlyId(), idp.getAssetId(), idpUser, isUserLOATooLow, userLevelOfAssurance, requestLevelsOfAssurance)).build();
+        sessionRepository.updateSession(session.getSessionId(), session.setNewCsrfToken());
+        return Response.ok(new ConsentView(idp.getDisplayName(), idp.getFriendlyId(), idp.getAssetId(), idpUser, isUserLOATooLow, userLevelOfAssurance, requestLevelsOfAssurance, session.getCsrfToken())).build();
     }
 
     private WebApplicationException errorResponse(String error) {
@@ -76,6 +85,7 @@ public class ConsentResource {
     }
 
     @POST
+    @CSRFCheckProtection
     public Response consent(
             @Context HttpServletRequest httpServletRequest,
             @PathParam(Urls.IDP_ID_PARAM) @NotNull String idpName,

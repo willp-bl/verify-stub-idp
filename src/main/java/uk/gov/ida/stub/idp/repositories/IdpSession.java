@@ -16,9 +16,27 @@ public class IdpSession extends Session {
 	private Optional<DatabaseIdpUser> idpUser = Optional.empty();
 
 	@JsonCreator
-	public IdpSession(@JsonProperty("sessionId") SessionId sessionId, @JsonProperty("idaAuthnRequestFromHub") IdaAuthnRequestFromHub idaAuthnRequestFromHub, @JsonProperty("relayState") String relayState,
-				   @JsonProperty("validHints") List<IdpHint> validHints, @JsonProperty("invalidHints") List<String> invalidHints, @JsonProperty("languageHint") Optional<IdpLanguageHint> languageHint, @JsonProperty("registration") Optional<Boolean> registration) {
-		super(sessionId, relayState, validHints, invalidHints, languageHint, registration);
+	public IdpSession(@JsonProperty("sessionId") SessionId sessionId,
+					  @JsonProperty("idaAuthnRequestFromHub") IdaAuthnRequestFromHub idaAuthnRequestFromHub,
+					  @JsonProperty("relayState") String relayState,
+					  @JsonProperty("validHints") List<IdpHint> validHints,
+					  @JsonProperty("invalidHints") List<String> invalidHints,
+					  @JsonProperty("languageHint") Optional<IdpLanguageHint> languageHint,
+					  @JsonProperty("registration") Optional<Boolean> registration,
+					  @JsonProperty("csrfToken") String csrfToken) {
+		super(sessionId, relayState, validHints, invalidHints, languageHint, registration, csrfToken);
+		this.idaAuthnRequestFromHub = idaAuthnRequestFromHub;
+	}
+
+	public IdpSession(SessionId sessionId,
+					  IdaAuthnRequestFromHub idaAuthnRequestFromHub,
+					  String relayState,
+
+					  List<IdpHint> validHints,
+					  List<String> invalidHints,
+					  Optional<IdpLanguageHint> languageHint,
+					  Optional<Boolean> registration) {
+		super(sessionId, relayState, validHints, invalidHints, languageHint, registration, null);
 		this.idaAuthnRequestFromHub = idaAuthnRequestFromHub;
 	}
 
@@ -29,7 +47,7 @@ public class IdpSession extends Session {
 	public Optional<DatabaseIdpUser> getIdpUser() {
 		return idpUser;
 	}
-	
+
 	public void setIdpUser(Optional<DatabaseIdpUser> idpUser) {
 		this.idpUser = idpUser;
 	}

@@ -1,7 +1,9 @@
 package uk.gov.ida.stub.idp.services;
 
+import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.joda.time.LocalDate;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -40,6 +42,11 @@ public class EidasAuthnResponseServiceTest {
     private final String SAML_RESPONSE_AS_STRING = "some response";
 
     private EidasAuthnResponseService service;
+
+    @BeforeClass
+    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
+        JerseyGuiceUtils.reset();
+    }
 
     @Mock
     private EidasResponseTransformerProvider eidasResponseTransformerProvider;

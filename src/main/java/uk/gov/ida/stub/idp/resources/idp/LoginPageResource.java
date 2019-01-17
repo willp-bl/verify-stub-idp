@@ -4,6 +4,7 @@ import com.google.common.base.Strings;
 import uk.gov.ida.common.SessionId;
 import uk.gov.ida.stub.idp.Urls;
 import uk.gov.ida.stub.idp.cookies.CookieNames;
+import uk.gov.ida.stub.idp.csrf.CSRFCheckProtection;
 import uk.gov.ida.stub.idp.domain.FraudIndicator;
 import uk.gov.ida.stub.idp.domain.SamlResponse;
 import uk.gov.ida.stub.idp.domain.SubmitButtonValue;
@@ -48,6 +49,7 @@ import static uk.gov.ida.stub.idp.views.ErrorMessageType.NO_ERROR;
 @Path(Urls.LOGIN_RESOURCE)
 @Produces(MediaType.TEXT_HTML)
 @SessionCookieValueMustExistAsASession
+@CSRFCheckProtection
 public class LoginPageResource {
 
     private final IdpStubsRepository idpStubsRepository;
@@ -76,12 +78,14 @@ public class LoginPageResource {
             @QueryParam(Urls.ERROR_MESSAGE_PARAM) java.util.Optional<ErrorMessageType> errorMessage,
             @CookieParam(CookieNames.SESSION_COOKIE_NAME) @NotNull SessionId sessionCookie) {
 
-        checkAndGetSession(idpName, sessionCookie);
+        final IdpSession session = checkAndGetSession(idpName, sessionCookie);
 
         Idp idp = idpStubsRepository.getIdpWithFriendlyId(idpName);
 
+        sessionRepository.updateSession(session.getSessionId(), session.setNewCsrfToken());
+
         return Response.ok()
-                .entity(new LoginPageView(idp.getDisplayName(), idp.getFriendlyId(), errorMessage.orElse(NO_ERROR).getMessage(), idp.getAssetId()))
+                .entity(new LoginPageView(idp.getDisplayName(), idp.getFriendlyId(), errorMessage.orElse(NO_ERROR).getMessage(), idp.getAssetId(), session.getCsrfToken()))
                 .build();
     }
 
