@@ -122,7 +122,7 @@ public class StubIdpApplication extends Application<StubIdpConfiguration> {
     @Override
     public final void run(StubIdpConfiguration configuration, Environment environment) {
         IdaSamlBootstrap.bootstrap();
-        environment.servlets().addFilter("Cache Control", new StubIdpCacheControlFilter(configuration)).addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/consent");
+        environment.servlets().addFilter("Cache Control", new StubIdpCacheControlFilter(configuration)).addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/consent.php");
         environment.servlets().addFilter("Remove Accept-Language headers", AcceptLanguageFilter.class).addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
 
         environment.jersey().register(SessionCookieValueMustExistAsASessionFeature.class);

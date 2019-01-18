@@ -38,23 +38,23 @@ public interface Urls {
     String EIDAS_SAML2_SSO_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/SAML2/SSO";
     String HEADLESS_ROOT = "/headless";
 
-    String LOGIN_RESOURCE = "/{"+IDP_ID_PARAM+"}/login";
-    String EIDAS_LOGIN_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/login";
+    String LOGIN_RESOURCE = "/{"+IDP_ID_PARAM+"}/login.php";
+    String EIDAS_LOGIN_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/login.php";
     String LOGIN_AUTHN_FAILURE_PATH = "authn-failure";
     String LOGIN_NO_AUTHN_CONTEXT_PATH = "no-authn-context";
     String LOGIN_FRAUD_FAILURE_PATH = "fraud-failure";
     String LOGIN_UPLIFT_FAILED_PATH = "uplift-failed";
     String LOGIN_REQUESTER_ERROR_PATH = "requester-error";
 
-    String REGISTER_RESOURCE = "/{"+IDP_ID_PARAM+"}/register";
+    String REGISTER_RESOURCE = "/{"+IDP_ID_PARAM+"}/register.php";
     String LOGIN_AUTHN_PENDING_PATH = "authn-pending";
-    String DEBUG_RESOURCE = "/{"+IDP_ID_PARAM+"}/debug";
-    String CONSENT_RESOURCE = "/{"+IDP_ID_PARAM+"}/consent";
+    String DEBUG_RESOURCE = "/{"+IDP_ID_PARAM+"}/debug.php";
+    String CONSENT_RESOURCE = "/{"+IDP_ID_PARAM+"}/consent.php";
 
-    String EIDAS_REGISTER_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/register";
-    String EIDAS_CONSENT_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/consent";
+    String EIDAS_REGISTER_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/register.php";
+    String EIDAS_CONSENT_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/consent.php";
     String METADATA_RESOURCE = "/{"+SCHEME_ID_PARAM+"}/ServiceMetadata";
-    String EIDAS_DEBUG_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/debug";
+    String EIDAS_DEBUG_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/debug.php";
 
     String USERS_RESOURCE = "/{"+IDP_ID_PARAM+"}/users";
     String DELETE_USER_PATH = "/delete";

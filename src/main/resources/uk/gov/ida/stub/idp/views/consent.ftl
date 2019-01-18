@@ -50,7 +50,7 @@
 
     </div>
     <div class="submit">
-        <form action="/${idpId}/consent" method="post">
+        <form action="/${idpId}/consent.php" method="post">
             <input id="agree" class="button color-ok" type="submit" name="submit" value="I Agree"/>
             <input id="refuse" class="button color-cancel" type="submit" name="submit" value="I Refuse"/>
             <!-- this is used by the performance tests and acceptance tests -->

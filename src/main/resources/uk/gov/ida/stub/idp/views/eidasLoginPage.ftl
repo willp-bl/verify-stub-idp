@@ -6,14 +6,14 @@
                 <span id="tab-login" class="tab-text">Login</span>
             </li>
             <li>
-                <a id="tab-register" class="tab-text" href="/eidas/${idpId}/register">Register</a>
+                <a id="tab-register" class="tab-text" href="/eidas/${idpId}/register.php">Register</a>
             </li>
             <li>
-                <a id="tab-debug" class="tab-text" href="/eidas/${idpId}/debug">System information</a>
+                <a id="tab-debug" class="tab-text" href="/eidas/${idpId}/debug.php">System information</a>
             </li>
         </ul>
     </div>
-    <form action="/eidas/${idpId}/login" class="login" method="post">
+    <form action="/eidas/${idpId}/login.php" class="login" method="post">
         <fieldset>
             <legend>European ID Login</legend>
             <p>Use your existing username and password to access your European ID.</p>
@@ -37,7 +37,7 @@
             </div>
         </fieldset>
     </form>
-    <form action="/eidas/${idpId}/login/authn-failure" method="post">
+    <form action="/eidas/${idpId}/login.php/authn-failure" method="post">
         <fieldset>
             <legend>Submit Login Authn Failure</legend>
             <div class="submit">
