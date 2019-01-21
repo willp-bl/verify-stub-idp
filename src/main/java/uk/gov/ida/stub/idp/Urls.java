@@ -33,28 +33,32 @@ public interface Urls {
     String CYCLE3_PARAM = "c3";
     String LEVEL_OF_ASSURANCE_PARAM = "loa";
 
+    // comedy routes
+    String ROOT_PREFIX = "/~willp-bl/cgi-bin"; //can be left blank, needs no trailing slash if not blank
+    String ROUTE_SUFFIX = ".php"; // can be left blank
+
     // paths and resources
     String IDP_SAML2_SSO_RESOURCE = "/{"+IDP_ID_PARAM+"}/SAML2/SSO";
     String EIDAS_SAML2_SSO_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/SAML2/SSO";
     String HEADLESS_ROOT = "/headless";
 
-    String LOGIN_RESOURCE = "/{"+IDP_ID_PARAM+"}/login.php";
-    String EIDAS_LOGIN_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/login.php";
+    String LOGIN_RESOURCE = ROOT_PREFIX + "/{"+IDP_ID_PARAM+"}/login" + ROUTE_SUFFIX;
+    String EIDAS_LOGIN_RESOURCE = ROOT_PREFIX + "/eidas/{"+SCHEME_ID_PARAM+"}/login" + ROUTE_SUFFIX;
     String LOGIN_AUTHN_FAILURE_PATH = "authn-failure";
     String LOGIN_NO_AUTHN_CONTEXT_PATH = "no-authn-context";
     String LOGIN_FRAUD_FAILURE_PATH = "fraud-failure";
     String LOGIN_UPLIFT_FAILED_PATH = "uplift-failed";
     String LOGIN_REQUESTER_ERROR_PATH = "requester-error";
 
-    String REGISTER_RESOURCE = "/{"+IDP_ID_PARAM+"}/register.php";
+    String REGISTER_RESOURCE = ROOT_PREFIX + "/{"+IDP_ID_PARAM+"}/register" + ROUTE_SUFFIX;
     String LOGIN_AUTHN_PENDING_PATH = "authn-pending";
-    String DEBUG_RESOURCE = "/{"+IDP_ID_PARAM+"}/debug.php";
-    String CONSENT_RESOURCE = "/{"+IDP_ID_PARAM+"}/consent.php";
+    String DEBUG_RESOURCE = ROOT_PREFIX + "/{"+IDP_ID_PARAM+"}/debug" + ROUTE_SUFFIX;
+    String CONSENT_RESOURCE = ROOT_PREFIX + "/{"+IDP_ID_PARAM+"}/consent" + ROUTE_SUFFIX;
 
-    String EIDAS_REGISTER_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/register.php";
-    String EIDAS_CONSENT_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/consent.php";
+    String EIDAS_REGISTER_RESOURCE = ROOT_PREFIX + "/eidas/{"+SCHEME_ID_PARAM+"}/register" + ROUTE_SUFFIX;
+    String EIDAS_CONSENT_RESOURCE = ROOT_PREFIX + "/eidas/{"+SCHEME_ID_PARAM+"}/consent" + ROUTE_SUFFIX;
     String METADATA_RESOURCE = "/{"+SCHEME_ID_PARAM+"}/ServiceMetadata";
-    String EIDAS_DEBUG_RESOURCE = "/eidas/{"+SCHEME_ID_PARAM+"}/debug.php";
+    String EIDAS_DEBUG_RESOURCE = ROOT_PREFIX + "/eidas/{"+SCHEME_ID_PARAM+"}/debug" + ROUTE_SUFFIX;
 
     String USERS_RESOURCE = "/{"+IDP_ID_PARAM+"}/users";
     String DELETE_USER_PATH = "/delete";

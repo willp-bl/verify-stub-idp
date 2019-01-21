@@ -3,13 +3,13 @@
     <div class="tabs">
         <ul>
             <li>
-                <a id="tab-login" class="tab-text" href="/${idpId}/login.php">Login</a>
+                <a id="tab-login" class="tab-text" href="${rootPrefix}/${idpId}/login${routeSuffix}">Login</a>
             </li>
             <li class="on" id="tab-register">
                 <span class="tab-text">Register</span>
             </li>
             <li>
-                <a id="tab-debug" class="tab-text" href="/${idpId}/debug.php">System information</a>
+                <a id="tab-debug" class="tab-text" href="${rootPrefix}/${idpId}/debug${routeSuffix}">System information</a>
             </li>
         </ul>
     </div>
