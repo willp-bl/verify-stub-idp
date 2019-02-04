@@ -7,6 +7,7 @@ import uk.gov.ida.stub.idp.Urls;
 import uk.gov.ida.stub.idp.cookies.CookieNames;
 import uk.gov.ida.stub.idp.csrf.CSRFCheckProtection;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
+import uk.gov.ida.stub.idp.exceptions.GenericStubIdpException;
 import uk.gov.ida.stub.idp.filters.SessionCookieValueMustExistAsASession;
 import uk.gov.ida.stub.idp.repositories.Idp;
 import uk.gov.ida.stub.idp.repositories.IdpSession;
@@ -27,7 +28,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -80,8 +80,8 @@ public class ConsentResource {
         return Response.ok(new ConsentView(idp.getDisplayName(), idp.getFriendlyId(), idp.getAssetId(), idpUser, isUserLOATooLow, userLevelOfAssurance, requestLevelsOfAssurance, session.getCsrfToken())).build();
     }
 
-    private WebApplicationException errorResponse(String error) {
-        return new WebApplicationException(Response.status(Response.Status.BAD_REQUEST).entity(error).build());
+    private GenericStubIdpException errorResponse(String error) {
+        return new GenericStubIdpException(error, Response.Status.BAD_REQUEST);
     }
 
     @POST

@@ -26,6 +26,7 @@ import uk.gov.ida.stub.idp.csrf.CSRFCheckProtectionFeature;
 import uk.gov.ida.stub.idp.csrf.CSRFViewRenderer;
 import uk.gov.ida.stub.idp.exceptions.mappers.CatchAllExceptionMapper;
 import uk.gov.ida.stub.idp.exceptions.mappers.FileNotFoundExceptionMapper;
+import uk.gov.ida.stub.idp.exceptions.mappers.GenericStubIdpExceptionExceptionMapper;
 import uk.gov.ida.stub.idp.exceptions.mappers.IdpNotFoundExceptionMapper;
 import uk.gov.ida.stub.idp.exceptions.mappers.IdpUserNotFoundExceptionMapper;
 import uk.gov.ida.stub.idp.exceptions.mappers.SessionSerializationExceptionMapper;
@@ -150,6 +151,7 @@ public class StubIdpApplication extends Application<StubIdpConfiguration> {
         environment.jersey().register(IdpUserNotFoundExceptionMapper.class);
         environment.jersey().register(FileNotFoundExceptionMapper.class);
         environment.jersey().register(SessionSerializationExceptionMapper.class);
+        environment.jersey().register(GenericStubIdpExceptionExceptionMapper.class);
         environment.jersey().register(CatchAllExceptionMapper.class);
 
         //filters

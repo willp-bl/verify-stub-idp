@@ -13,6 +13,7 @@ import uk.gov.ida.stub.idp.domain.EidasAuthnRequest;
 import uk.gov.ida.stub.idp.domain.EidasScheme;
 import uk.gov.ida.stub.idp.domain.EidasUser;
 import uk.gov.ida.stub.idp.domain.SamlResponseFromValue;
+import uk.gov.ida.stub.idp.exceptions.GenericStubIdpException;
 import uk.gov.ida.stub.idp.repositories.EidasSession;
 import uk.gov.ida.stub.idp.repositories.SessionRepository;
 import uk.gov.ida.stub.idp.repositories.StubCountry;
@@ -21,7 +22,6 @@ import uk.gov.ida.stub.idp.resources.eidas.EidasConsentResource;
 import uk.gov.ida.stub.idp.services.EidasAuthnResponseService;
 import uk.gov.ida.stub.idp.views.SamlResponseRedirectViewFactory;
 
-import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 import java.util.Collections;
 import java.util.Optional;
@@ -90,8 +90,8 @@ public class EidasConsentResourceTest {
         assertThat(response.getStatus()).isEqualTo(Response.Status.OK.getStatusCode());
     }
 
-    @Test(expected = WebApplicationException.class)
-    public void shouldThrowAWebApplicationExceptionWhenSessionIsEmpty(){
+    @Test(expected = GenericStubIdpException.class)
+    public void shouldThrowAGenericStubIdpExceptionWhenSessionIsEmpty(){
         resource.get(SCHEME_NAME, null);
     }
 

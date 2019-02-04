@@ -7,6 +7,7 @@ import uk.gov.ida.stub.idp.cookies.CookieNames;
 import uk.gov.ida.stub.idp.csrf.CSRFCheckProtection;
 import uk.gov.ida.stub.idp.domain.EidasScheme;
 import uk.gov.ida.stub.idp.domain.SamlResponse;
+import uk.gov.ida.stub.idp.exceptions.GenericStubIdpException;
 import uk.gov.ida.stub.idp.exceptions.InvalidEidasSchemeException;
 import uk.gov.ida.stub.idp.exceptions.InvalidSessionIdException;
 import uk.gov.ida.stub.idp.exceptions.InvalidUsernameOrPasswordException;
@@ -32,7 +33,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
@@ -139,13 +139,13 @@ public class EidasLoginPageResource {
 
     private EidasSession checkSession(String schemeId, SessionId sessionCookie) {
         if (sessionCookie == null || Strings.isNullOrEmpty(sessionCookie.toString())) {
-            throw new WebApplicationException(Response.status(Response.Status.BAD_REQUEST).entity(format(("Unable to locate session cookie for " + schemeId))).build());
+            throw new GenericStubIdpException(format("Unable to locate session cookie for " + schemeId), Response.Status.BAD_REQUEST);
         }
 
         Optional<EidasSession> session = sessionRepository.get(sessionCookie);
 
         if (!session.isPresent()) {
-            throw new WebApplicationException(Response.status(Response.Status.BAD_REQUEST).entity(format(("Session is invalid for " + schemeId))).build());
+            throw new GenericStubIdpException(format("Session is invalid for " + schemeId), Response.Status.BAD_REQUEST);
         }
 
         return session.get();
@@ -153,13 +153,13 @@ public class EidasLoginPageResource {
 
     private EidasSession checkAndDeleteAndGetSession(String schemeId, SessionId sessionCookie) {
         if (Strings.isNullOrEmpty(sessionCookie.toString())) {
-            throw new WebApplicationException(Response.status(Response.Status.BAD_REQUEST).entity(format(("Unable to locate session cookie for " + schemeId))).build());
+            throw new GenericStubIdpException(format("Unable to locate session cookie for " + schemeId), Response.Status.BAD_REQUEST);
         }
 
         Optional<EidasSession> session = sessionRepository.deleteAndGet(sessionCookie);
 
         if (!session.isPresent()) {
-            throw new WebApplicationException(Response.status(Response.Status.BAD_REQUEST).entity(format(("Session is invalid for " + schemeId))).build());
+            throw new GenericStubIdpException(format("Session is invalid for " + schemeId), Response.Status.BAD_REQUEST);
         }
         return session.get();
     }

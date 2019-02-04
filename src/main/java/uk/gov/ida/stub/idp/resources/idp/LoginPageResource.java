@@ -8,6 +8,7 @@ import uk.gov.ida.stub.idp.csrf.CSRFCheckProtection;
 import uk.gov.ida.stub.idp.domain.FraudIndicator;
 import uk.gov.ida.stub.idp.domain.SamlResponse;
 import uk.gov.ida.stub.idp.domain.SubmitButtonValue;
+import uk.gov.ida.stub.idp.exceptions.GenericStubIdpException;
 import uk.gov.ida.stub.idp.exceptions.InvalidSessionIdException;
 import uk.gov.ida.stub.idp.exceptions.InvalidUsernameOrPasswordException;
 import uk.gov.ida.stub.idp.filters.SessionCookieValueMustExistAsASession;
@@ -33,7 +34,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -121,7 +121,7 @@ public class LoginPageResource {
                         .build(idpName))
                         .build();
             default:
-                throw new WebApplicationException(Response.Status.BAD_REQUEST);
+                throw new GenericStubIdpException("unknown submit button value", Response.Status.BAD_REQUEST);
         }
     }
 
@@ -211,26 +211,26 @@ public class LoginPageResource {
 
     private IdpSession checkAndGetSession(String idpName, SessionId sessionCookie) {
         if (Strings.isNullOrEmpty(sessionCookie.toString())) {
-            throw new WebApplicationException(Response.status(Response.Status.BAD_REQUEST).entity(format(("Unable to locate session cookie for " + idpName))).build());
+            throw new GenericStubIdpException(format("Unable to locate session cookie for " + idpName), Response.Status.BAD_REQUEST);
         }
 
         Optional<IdpSession> session = sessionRepository.get(sessionCookie);
 
         if (!session.isPresent() || session.get().getIdaAuthnRequestFromHub() == null) {
-            throw new WebApplicationException(Response.status(Response.Status.BAD_REQUEST).entity(format(("Session is invalid for " + idpName))).build());
+            throw new GenericStubIdpException(format("Session is invalid for " + idpName), Response.Status.BAD_REQUEST);
         }
         return session.get();
     }
 
     private IdpSession checkAndDeleteAndGetSession(String idpName, SessionId sessionCookie) {
         if (Strings.isNullOrEmpty(sessionCookie.toString())) {
-            throw new WebApplicationException(Response.status(Response.Status.BAD_REQUEST).entity(format(("Unable to locate session cookie for " + idpName))).build());
+            throw new GenericStubIdpException(format("Unable to locate session cookie for " + idpName), Response.Status.BAD_REQUEST);
         }
 
         Optional<IdpSession> session = sessionRepository.deleteAndGet(sessionCookie);
 
         if (!session.isPresent() || session.get().getIdaAuthnRequestFromHub() == null) {
-            throw new WebApplicationException(Response.status(Response.Status.BAD_REQUEST).entity(format(("Session is invalid for " + idpName))).build());
+            throw new GenericStubIdpException(format("Session is invalid for " + idpName), Response.Status.BAD_REQUEST);
         }
         return session.get();
     }
