@@ -123,7 +123,7 @@ public abstract class IdaSamlBootstrap {
 
         XMLObjectProviderRegistrySupport.registerObjectProvider(PersonName.TYPE_NAME, new PersonNameBuilder(), PersonNameImpl.MARSHALLER, PersonNameImpl.UNMARSHALLER);
         XMLObjectProviderRegistrySupport.registerObjectProvider(Date.TYPE_NAME, new DateBuilder(), DateImpl.MARSHALLER, DateImpl.UNMARSHALLER);
-        XMLObjectProviderRegistrySupport.registerObjectProvider(Address.TYPE_NAME, new AddressBuilder(), new AddressMarshaller(), new AddressUnmarshaller());
+        XMLObjectProviderRegistrySupport.registerObjectProvider(Address.TYPE_NAME, new AddressBuilder(), AddressMarshaller.MARSHALLER, AddressUnmarshaller.UNMARSHALLER);
         XMLObjectProviderRegistrySupport.registerObjectProvider(PostCode.DEFAULT_ELEMENT_NAME, new PostCodeBuilder(), StringValueSamlObjectImpl.MARSHALLER, StringValueSamlObjectImpl.UNMARSHALLER);
         XMLObjectProviderRegistrySupport.registerObjectProvider(InternationalPostCode.DEFAULT_ELEMENT_NAME, new InternationalPostCodeBuilder(), StringValueSamlObjectImpl.MARSHALLER, StringValueSamlObjectImpl.UNMARSHALLER);
         XMLObjectProviderRegistrySupport.registerObjectProvider(UPRN.DEFAULT_ELEMENT_NAME, new UPRNBuilder(), StringValueSamlObjectImpl.MARSHALLER, StringValueSamlObjectImpl.UNMARSHALLER);
@@ -141,14 +141,14 @@ public abstract class IdaSamlBootstrap {
         XMLObjectProviderRegistrySupport.registerObjectProvider(SPType.DEFAULT_ELEMENT_NAME, new SPTypeBuilder(), SPTypeImpl.MARSHALLER, SPTypeImpl.UNMARSHALLER);
         XMLObjectProviderRegistrySupport.registerObjectProvider(RequestedAttributes.DEFAULT_ELEMENT_NAME, new RequestedAttributesBuilder(), RequestedAttributesImpl.MARSHALLER, RequestedAttributesImpl.UNMARSHALLER);
         XMLObjectProviderRegistrySupport.registerObjectProvider(RequestedAttribute.DEFAULT_ELEMENT_NAME, new RequestedAttributeBuilder(), RequestedAttributeImpl.MARSHALLER, RequestedAttributeImpl.UNMARSHALLER);
-        XMLObjectProviderRegistrySupport.registerObjectProvider(CurrentGivenName.TYPE_NAME, new CurrentGivenNameBuilder(), new CurrentGivenNameMarshaller(), new CurrentGivenNameUnmarshaller());
-        XMLObjectProviderRegistrySupport.registerObjectProvider(CurrentFamilyName.TYPE_NAME, new CurrentFamilyNameBuilder(), new CurrentFamilyNameMarshaller(), new CurrentFamilyNameUnmarshaller());
-        XMLObjectProviderRegistrySupport.registerObjectProvider(DateOfBirth.TYPE_NAME, new DateOfBirthBuilder(), new DateOfBirthMarshaller(), new DateOfBirthUnmarshaller());
-        XMLObjectProviderRegistrySupport.registerObjectProvider(PersonIdentifier.TYPE_NAME, new PersonIdentifierBuilder(), new PersonIdentifierMarshaller(), new PersonIdentifierUnmarshaller());
-        XMLObjectProviderRegistrySupport.registerObjectProvider(CurrentAddress.TYPE_NAME, new CurrentAddressBuilder(), new CurrentAddressMarshaller(), new CurrentAddressUnmarshaller());
-        XMLObjectProviderRegistrySupport.registerObjectProvider(EidasGender.TYPE_NAME, new EidasGenderBuilder(), new EidasGenderMarshaller(), new EidasGenderUnmarshaller());
-        XMLObjectProviderRegistrySupport.registerObjectProvider(BirthName.TYPE_NAME, new BirthNameBuilder(), new BirthNameMarshaller(), new BirthNameUnmarshaller());
-        XMLObjectProviderRegistrySupport.registerObjectProvider(PlaceOfBirth.TYPE_NAME, new PlaceOfBirthBuilder(), new PlaceOfBirthMarshaller(), new PlaceOfBirthUnmarshaller());
+        XMLObjectProviderRegistrySupport.registerObjectProvider(CurrentGivenName.TYPE_NAME, new CurrentGivenNameBuilder(), CurrentGivenNameMarshaller.MARSHALLER, CurrentGivenNameUnmarshaller.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(CurrentFamilyName.TYPE_NAME, new CurrentFamilyNameBuilder(), CurrentFamilyNameMarshaller.MARSHALLER, CurrentFamilyNameUnmarshaller.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(DateOfBirth.TYPE_NAME, new DateOfBirthBuilder(), DateOfBirthMarshaller.MARSHALLER, DateOfBirthUnmarshaller.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(PersonIdentifier.TYPE_NAME, new PersonIdentifierBuilder(), PersonIdentifierMarshaller.MARSHALLER, PersonIdentifierUnmarshaller.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(CurrentAddress.TYPE_NAME, new CurrentAddressBuilder(), CurrentAddressMarshaller.MARSHALLER, CurrentAddressUnmarshaller.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(EidasGender.TYPE_NAME, new EidasGenderBuilder(), EidasGenderMarshaller.MARSHALLER, EidasGenderUnmarshaller.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(BirthName.TYPE_NAME, new BirthNameBuilder(), BirthNameMarshaller.MARSHALLER, BirthNameUnmarshaller.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(PlaceOfBirth.TYPE_NAME, new PlaceOfBirthBuilder(), PlaceOfBirthMarshaller.MARSHALLER, PlaceOfBirthUnmarshaller.UNMARSHALLER);
 
         XMLObjectProviderRegistrySupport.registerObjectProvider(Version.DEFAULT_ELEMENT_NAME, new VersionBuilder(), VersionImpl.MARSHALLER, VersionImpl.UNMARSHALLER);
         XMLObjectProviderRegistrySupport.registerObjectProvider(ApplicationVersion.DEFAULT_ELEMENT_NAME, new ApplicationVersionBuilder(), StringValueSamlObjectImpl.MARSHALLER, StringValueSamlObjectImpl.UNMARSHALLER);
