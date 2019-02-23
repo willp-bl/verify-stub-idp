@@ -6,7 +6,7 @@ import org.opensaml.core.xml.XMLObject;
 import org.opensaml.saml.saml2.core.AuthnRequest;
 import uk.gov.ida.saml.core.test.builders.AuthnRequestBuilder;
 import uk.gov.ida.saml.core.test.builders.IssuerBuilder;
-import uk.gov.ida.saml.serializers.XmlObjectToBase64EncodedStringTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 
 import java.net.URI;
 import java.util.Optional;

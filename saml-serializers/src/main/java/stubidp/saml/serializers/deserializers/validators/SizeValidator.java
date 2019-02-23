@@ -1,4 +1,4 @@
-package uk.gov.ida.saml.deserializers.validators;
+package stubidp.saml.serializers.deserializers.validators;
 
 
 public interface SizeValidator {

@@ -6,7 +6,7 @@ import org.opensaml.core.xml.io.UnmarshallingException;
 import org.opensaml.saml.common.SignableSAMLObject;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import uk.gov.ida.eidas.metadata.saml.SamlObjectSigner;
-import uk.gov.ida.saml.deserializers.parser.SamlObjectParser;
+import stubidp.saml.serializers.deserializers.parser.SamlObjectParser;
 
 import java.security.PrivateKey;
 import java.security.cert.CertificateEncodingException;

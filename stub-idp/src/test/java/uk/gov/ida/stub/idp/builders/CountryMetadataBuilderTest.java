@@ -34,7 +34,7 @@ import org.w3c.dom.Document;
 import uk.gov.ida.common.shared.security.X509CertificateFactory;
 import stubidp.saml.extensions.IdaSamlBootstrap;
 import stubidp.test.devpki.TestCertificateStrings;
-import uk.gov.ida.saml.serializers.XmlObjectToElementTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CountryMetadataBuilderTest {

@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.hub.transformers.outbound;
 
 import org.opensaml.saml.saml2.core.Assertion;
-import uk.gov.ida.saml.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
 
 public class AssertionFromIdpToAssertionTransformer {
 

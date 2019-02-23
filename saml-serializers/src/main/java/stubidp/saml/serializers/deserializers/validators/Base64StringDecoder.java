@@ -1,4 +1,4 @@
-package uk.gov.ida.saml.deserializers.validators;
+package stubidp.saml.serializers.deserializers.validators;
 
 import net.shibboleth.utilities.java.support.codec.Base64Support;
 import org.apache.commons.codec.binary.StringUtils;
@@ -6,7 +6,7 @@ import stubidp.saml.extensions.validation.SamlTransformationErrorException;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 
 import static java.util.regex.Pattern.matches;
-import static uk.gov.ida.saml.errors.SamlTransformationErrorFactory.invalidBase64Encoding;
+import static stubidp.saml.serializers.errors.SamlTransformationErrorFactory.invalidBase64Encoding;
 
 public class Base64StringDecoder {
 

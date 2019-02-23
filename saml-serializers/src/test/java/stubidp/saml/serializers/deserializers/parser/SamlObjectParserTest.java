@@ -1,4 +1,4 @@
-package uk.gov.ida.saml.deserializers.parser;
+package stubidp.saml.serializers.deserializers.parser;
 
 import net.shibboleth.utilities.java.support.xml.XMLParserException;
 import org.assertj.core.api.Assertions;
@@ -10,6 +10,7 @@ import org.opensaml.saml.common.xml.SAMLConstants;
 import org.opensaml.saml.saml2.metadata.EntityDescriptor;
 import org.opensaml.security.credential.UsageType;
 import org.xml.sax.SAXParseException;
+import stubidp.saml.serializers.deserializers.parser.SamlObjectParser;
 
 public class SamlObjectParserTest {
 

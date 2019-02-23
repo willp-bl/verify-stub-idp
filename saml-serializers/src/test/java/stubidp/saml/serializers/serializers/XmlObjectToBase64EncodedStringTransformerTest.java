@@ -1,4 +1,4 @@
-package uk.gov.ida.saml.serializers;
+package stubidp.saml.serializers.serializers;
 
 import org.apache.commons.codec.binary.StringUtils;
 import org.junit.Before;
@@ -11,6 +11,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;

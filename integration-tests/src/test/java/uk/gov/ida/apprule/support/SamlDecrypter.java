@@ -30,11 +30,11 @@ import uk.gov.ida.saml.core.validators.assertion.IdentityProviderAssertionValida
 import uk.gov.ida.saml.core.validators.assertion.MatchingDatasetAssertionValidator;
 import uk.gov.ida.saml.core.validators.subject.AssertionSubjectValidator;
 import uk.gov.ida.saml.core.validators.subjectconfirmation.AssertionSubjectConfirmationValidator;
-import uk.gov.ida.saml.deserializers.OpenSamlXMLObjectUnmarshaller;
-import uk.gov.ida.saml.deserializers.StringToOpenSamlObjectTransformer;
-import uk.gov.ida.saml.deserializers.parser.SamlObjectParser;
-import uk.gov.ida.saml.deserializers.validators.Base64StringDecoder;
-import uk.gov.ida.saml.deserializers.validators.NotNullSamlStringValidator;
+import stubidp.saml.serializers.deserializers.OpenSamlXMLObjectUnmarshaller;
+import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.saml.serializers.deserializers.parser.SamlObjectParser;
+import stubidp.saml.serializers.deserializers.validators.Base64StringDecoder;
+import stubidp.saml.serializers.deserializers.validators.NotNullSamlStringValidator;
 import uk.gov.ida.saml.hub.domain.InboundResponseFromIdp;
 import uk.gov.ida.saml.hub.transformers.inbound.IdaResponseFromIdpUnmarshaller;
 import uk.gov.ida.saml.hub.transformers.inbound.IdpIdaStatusUnmarshaller;
@@ -62,7 +62,7 @@ import uk.gov.ida.saml.security.validators.ValidatedResponse;
 import uk.gov.ida.saml.security.validators.encryptedelementtype.EncryptionAlgorithmValidator;
 import uk.gov.ida.saml.security.validators.issuer.IssuerValidator;
 import uk.gov.ida.saml.security.validators.signature.SamlResponseSignatureValidator;
-import uk.gov.ida.saml.serializers.XmlObjectToBase64EncodedStringTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 
 import javax.ws.rs.client.Client;
 import java.net.URI;

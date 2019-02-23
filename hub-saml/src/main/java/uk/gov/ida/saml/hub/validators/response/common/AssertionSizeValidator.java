@@ -1,6 +1,6 @@
 package uk.gov.ida.saml.hub.validators.response.common;
 
-import uk.gov.ida.saml.deserializers.validators.SizeValidator;
+import stubidp.saml.serializers.deserializers.validators.SizeValidator;
 
 public class AssertionSizeValidator implements SizeValidator {
 

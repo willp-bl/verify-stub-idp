@@ -2,7 +2,7 @@ package uk.gov.ida.saml.hub.transformers.outbound;
 
 
 import org.opensaml.saml.saml2.core.EncryptedAssertion;
-import uk.gov.ida.saml.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
 
 public class EncryptedAssertionUnmarshaller {
     private final StringToOpenSamlObjectTransformer<EncryptedAssertion> stringAssertionTransformer;

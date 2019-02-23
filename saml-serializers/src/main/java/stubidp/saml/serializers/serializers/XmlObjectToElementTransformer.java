@@ -1,4 +1,4 @@
-package uk.gov.ida.saml.serializers;
+package stubidp.saml.serializers.serializers;
 
 import org.opensaml.core.xml.XMLObject;
 import org.opensaml.core.xml.io.MarshallingException;

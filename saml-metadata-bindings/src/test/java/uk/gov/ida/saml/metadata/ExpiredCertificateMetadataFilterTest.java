@@ -11,8 +11,8 @@ import org.opensaml.core.xml.XMLObject;
 import org.opensaml.saml.metadata.resolver.filter.FilterException;
 import org.opensaml.saml.metadata.resolver.filter.MetadataFilter;
 import stubidp.test.devpki.TestCertificateStrings;
-import uk.gov.ida.saml.deserializers.OpenSamlXMLObjectUnmarshaller;
-import uk.gov.ida.saml.deserializers.parser.SamlObjectParser;
+import stubidp.saml.serializers.deserializers.OpenSamlXMLObjectUnmarshaller;
+import stubidp.saml.serializers.deserializers.parser.SamlObjectParser;
 import uk.gov.ida.saml.metadata.test.factories.metadata.MetadataFactory;
 
 import static org.assertj.core.api.Assertions.assertThat;

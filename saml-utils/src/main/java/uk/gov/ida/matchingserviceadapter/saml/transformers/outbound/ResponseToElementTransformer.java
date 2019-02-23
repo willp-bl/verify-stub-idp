@@ -6,7 +6,7 @@ import uk.gov.ida.saml.core.transformers.outbound.decorators.ResponseAssertionSi
 import uk.gov.ida.saml.core.transformers.outbound.decorators.ResponseSignatureCreator;
 import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlResponseAssertionEncrypter;
 import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlSignatureSigner;
-import uk.gov.ida.saml.serializers.XmlObjectToElementTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
 
 import javax.inject.Inject;
 import java.util.function.Function;

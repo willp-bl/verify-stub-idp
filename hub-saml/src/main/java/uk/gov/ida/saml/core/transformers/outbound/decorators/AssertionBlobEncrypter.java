@@ -1,8 +1,8 @@
 package uk.gov.ida.saml.core.transformers.outbound.decorators;
 
 import org.opensaml.saml.saml2.core.Assertion;
-import uk.gov.ida.saml.deserializers.StringToOpenSamlObjectTransformer;
-import uk.gov.ida.saml.serializers.XmlObjectToBase64EncodedStringTransformer;
+import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 
 import javax.inject.Inject;
 import java.util.Optional;

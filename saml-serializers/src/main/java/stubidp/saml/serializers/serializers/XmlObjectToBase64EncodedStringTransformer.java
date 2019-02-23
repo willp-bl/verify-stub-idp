@@ -1,4 +1,4 @@
-package uk.gov.ida.saml.serializers;
+package stubidp.saml.serializers.serializers;
 
 import net.shibboleth.utilities.java.support.codec.Base64Support;
 import net.shibboleth.utilities.java.support.xml.SerializeSupport;

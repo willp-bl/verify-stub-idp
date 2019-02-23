@@ -13,7 +13,7 @@ import stubidp.saml.extensions.extensions.EidasAuthnContext;
 import stubidp.saml.extensions.extensions.IdaAuthnContext;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.core.transformers.AuthnContextFactory;
-import uk.gov.ida.saml.serializers.XmlObjectToBase64EncodedStringTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;

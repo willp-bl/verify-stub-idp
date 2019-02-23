@@ -7,7 +7,7 @@ import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.core.api.CoreTransformersFactory;
 import uk.gov.ida.saml.core.transformers.outbound.OutboundAssertionToSubjectTransformer;
 import uk.gov.ida.saml.core.transformers.outbound.ResponseToSignedStringTransformer;
-import uk.gov.ida.saml.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
 import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.saml.hub.factories.AttributeFactory_1_1;
 import uk.gov.ida.saml.hub.transformers.inbound.decorators.AuthnRequestSizeValidator;

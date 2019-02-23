@@ -1,8 +1,8 @@
-package uk.gov.ida.saml.deserializers.validators;
+package stubidp.saml.serializers.deserializers.validators;
 
 import stubidp.saml.extensions.validation.SamlTransformationErrorException;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
-import uk.gov.ida.saml.errors.SamlTransformationErrorFactory;
+import stubidp.saml.serializers.errors.SamlTransformationErrorFactory;
 
 public class NotNullSamlStringValidator {
     public void validate(String input) {

@@ -9,7 +9,7 @@ import org.opensaml.saml.saml2.core.StatusCode;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.core.api.CoreTransformersFactory;
 import uk.gov.ida.saml.core.test.OpenSAMLRunner;
-import uk.gov.ida.saml.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
 import uk.gov.ida.saml.hub.domain.IdpIdaStatus;
 
 import java.io.IOException;

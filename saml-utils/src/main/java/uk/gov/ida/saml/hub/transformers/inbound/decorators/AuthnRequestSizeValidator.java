@@ -1,6 +1,6 @@
 package uk.gov.ida.saml.hub.transformers.inbound.decorators;
 
-import uk.gov.ida.saml.deserializers.validators.SizeValidator;
+import stubidp.saml.serializers.deserializers.validators.SizeValidator;
 import uk.gov.ida.saml.hub.validators.StringSizeValidator;
 
 import javax.inject.Inject;

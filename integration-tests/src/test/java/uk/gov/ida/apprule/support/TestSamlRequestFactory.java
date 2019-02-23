@@ -6,7 +6,7 @@ import uk.gov.ida.saml.core.test.TestCredentialFactory;
 import stubidp.test.devpki.TestEntityIds;
 import uk.gov.ida.saml.core.test.builders.IssuerBuilder;
 import uk.gov.ida.saml.hub.domain.Endpoints;
-import uk.gov.ida.saml.serializers.XmlObjectToBase64EncodedStringTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 
 import java.util.Optional;
 import java.util.UUID;

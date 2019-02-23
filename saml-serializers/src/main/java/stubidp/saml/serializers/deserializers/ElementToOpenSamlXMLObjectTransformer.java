@@ -1,15 +1,15 @@
-package uk.gov.ida.saml.deserializers;
+package stubidp.saml.serializers.deserializers;
 
 import org.opensaml.core.xml.XMLObject;
 import org.opensaml.core.xml.io.UnmarshallingException;
 import org.w3c.dom.Element;
 import stubidp.saml.extensions.validation.SamlTransformationErrorException;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
-import uk.gov.ida.saml.deserializers.parser.SamlObjectParser;
+import stubidp.saml.serializers.deserializers.parser.SamlObjectParser;
 
 import java.util.function.Function;
 
-import static uk.gov.ida.saml.errors.SamlTransformationErrorFactory.unableToUnmarshallElementToOpenSaml;
+import static stubidp.saml.serializers.errors.SamlTransformationErrorFactory.unableToUnmarshallElementToOpenSaml;
 
 public class ElementToOpenSamlXMLObjectTransformer<TOutput extends XMLObject> implements Function<Element,TOutput> {
     private final SamlObjectParser samlObjectParser;

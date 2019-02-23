@@ -17,7 +17,7 @@ import uk.gov.ida.saml.core.domain.HubAssertion;
 import uk.gov.ida.saml.core.domain.PersistentId;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.core.transformers.outbound.OutboundAssertionToSubjectTransformer;
-import uk.gov.ida.saml.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
 import uk.gov.ida.saml.hub.domain.HubEidasAttributeQueryRequest;
 import uk.gov.ida.saml.hub.factories.AttributeFactory_1_1;
 import uk.gov.ida.saml.hub.factories.AttributeQueryAttributeFactory;

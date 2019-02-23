@@ -19,7 +19,7 @@ import stubidp.saml.extensions.IdaSamlBootstrap;
 import uk.gov.ida.saml.core.api.CoreTransformersFactory;
 import uk.gov.ida.saml.core.domain.AuthnContext;
 import stubidp.test.devpki.TestCertificateStrings;
-import uk.gov.ida.saml.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
 import uk.gov.ida.saml.hub.domain.EidasAuthnRequestFromHub;
 import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.saml.hub.test.builders.EidasAuthnRequestBuilder;

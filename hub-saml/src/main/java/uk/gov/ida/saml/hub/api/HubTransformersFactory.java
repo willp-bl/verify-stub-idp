@@ -32,7 +32,7 @@ import uk.gov.ida.saml.core.validators.assertion.MatchingDatasetAssertionValidat
 import uk.gov.ida.saml.core.validators.subject.AssertionSubjectValidator;
 import uk.gov.ida.saml.core.validators.subjectconfirmation.AssertionSubjectConfirmationValidator;
 import uk.gov.ida.saml.core.validators.subjectconfirmation.BasicAssertionSubjectConfirmationValidator;
-import uk.gov.ida.saml.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
 import uk.gov.ida.saml.hub.configuration.SamlAuthnRequestValidityDurationConfiguration;
 import uk.gov.ida.saml.hub.configuration.SamlDuplicateRequestValidationConfiguration;
 import uk.gov.ida.saml.hub.domain.AuthnRequestFromRelyingParty;
@@ -107,8 +107,8 @@ import uk.gov.ida.saml.security.SigningKeyStore;
 import uk.gov.ida.saml.security.validators.encryptedelementtype.EncryptionAlgorithmValidator;
 import uk.gov.ida.saml.security.validators.issuer.IssuerValidator;
 import uk.gov.ida.saml.security.validators.signature.SamlResponseSignatureValidator;
-import uk.gov.ida.saml.serializers.XmlObjectToBase64EncodedStringTransformer;
-import uk.gov.ida.saml.serializers.XmlObjectToElementTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
 
 import java.net.URI;
 import java.util.List;

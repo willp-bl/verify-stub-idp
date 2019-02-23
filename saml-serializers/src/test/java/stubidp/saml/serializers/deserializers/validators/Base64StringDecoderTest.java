@@ -1,4 +1,4 @@
-package uk.gov.ida.saml.deserializers.validators;
+package stubidp.saml.serializers.deserializers.validators;
 
 import org.apache.xml.security.utils.Base64;
 import org.junit.Before;
@@ -7,10 +7,11 @@ import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.saml.extensions.validation.SamlTransformationErrorException;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.serializers.deserializers.validators.Base64StringDecoder;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.fail;
-import static uk.gov.ida.saml.errors.SamlTransformationErrorFactory.invalidBase64Encoding;
+import static stubidp.saml.serializers.errors.SamlTransformationErrorFactory.invalidBase64Encoding;
 
 @RunWith(MockitoJUnitRunner.class)
 public class Base64StringDecoderTest {

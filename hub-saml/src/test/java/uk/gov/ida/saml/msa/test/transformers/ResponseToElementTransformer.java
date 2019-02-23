@@ -3,7 +3,7 @@ package uk.gov.ida.saml.msa.test.transformers;
 import com.google.inject.Inject;
 import org.opensaml.saml.saml2.core.Response;
 import org.w3c.dom.Element;
-import uk.gov.ida.saml.serializers.XmlObjectToElementTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
 import uk.gov.ida.saml.core.transformers.outbound.decorators.ResponseAssertionSigner;
 import uk.gov.ida.saml.core.transformers.outbound.decorators.ResponseSignatureCreator;
 import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlResponseAssertionEncrypter;

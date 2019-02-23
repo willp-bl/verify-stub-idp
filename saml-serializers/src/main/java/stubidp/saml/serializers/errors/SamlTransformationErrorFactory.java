@@ -1,4 +1,4 @@
-package uk.gov.ida.saml.errors;
+package stubidp.saml.serializers.errors;
 
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import stubidp.saml.extensions.validation.errors.SamlValidationSpecification;

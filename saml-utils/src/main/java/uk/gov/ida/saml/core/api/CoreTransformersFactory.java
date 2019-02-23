@@ -12,13 +12,13 @@ import uk.gov.ida.saml.core.transformers.outbound.decorators.ResponseAssertionSi
 import uk.gov.ida.saml.core.transformers.outbound.decorators.ResponseSignatureCreator;
 import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlResponseAssertionEncrypter;
 import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlSignatureSigner;
-import uk.gov.ida.saml.deserializers.ElementToOpenSamlXMLObjectTransformer;
-import uk.gov.ida.saml.deserializers.OpenSamlXMLObjectUnmarshaller;
-import uk.gov.ida.saml.deserializers.StringToOpenSamlObjectTransformer;
-import uk.gov.ida.saml.deserializers.parser.SamlObjectParser;
-import uk.gov.ida.saml.deserializers.validators.Base64StringDecoder;
-import uk.gov.ida.saml.deserializers.validators.NotNullSamlStringValidator;
-import uk.gov.ida.saml.deserializers.validators.SizeValidator;
+import stubidp.saml.serializers.deserializers.ElementToOpenSamlXMLObjectTransformer;
+import stubidp.saml.serializers.deserializers.OpenSamlXMLObjectUnmarshaller;
+import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.saml.serializers.deserializers.parser.SamlObjectParser;
+import stubidp.saml.serializers.deserializers.validators.Base64StringDecoder;
+import stubidp.saml.serializers.deserializers.validators.NotNullSamlStringValidator;
+import stubidp.saml.serializers.deserializers.validators.SizeValidator;
 import uk.gov.ida.saml.metadata.transformers.KeyDescriptorsUnmarshaller;
 import uk.gov.ida.saml.security.CredentialFactorySignatureValidator;
 import uk.gov.ida.saml.security.EncrypterFactory;
@@ -34,8 +34,8 @@ import uk.gov.ida.saml.security.SignatureWithKeyInfoFactory;
 import uk.gov.ida.saml.security.SigningCredentialFactory;
 import uk.gov.ida.saml.security.SigningKeyStore;
 import uk.gov.ida.saml.security.validators.signature.SamlRequestSignatureValidator;
-import uk.gov.ida.saml.serializers.XmlObjectToBase64EncodedStringTransformer;
-import uk.gov.ida.saml.serializers.XmlObjectToElementTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
 
 public class CoreTransformersFactory {
     public KeyDescriptorsUnmarshaller getCertificatesToKeyDescriptorsTransformer() {

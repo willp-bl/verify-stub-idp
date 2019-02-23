@@ -14,7 +14,7 @@ import stubidp.saml.extensions.extensions.Gpg45Status;
 import stubidp.saml.extensions.extensions.IPAddress;
 import stubidp.saml.extensions.extensions.IdpFraudEventId;
 import uk.gov.ida.saml.core.transformers.AuthnContextFactory;
-import uk.gov.ida.saml.serializers.XmlObjectToBase64EncodedStringTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 
 import java.text.MessageFormat;
 import java.util.List;

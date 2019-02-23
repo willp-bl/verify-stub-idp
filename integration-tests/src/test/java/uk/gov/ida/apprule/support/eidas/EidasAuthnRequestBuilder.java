@@ -25,7 +25,7 @@ import stubidp.saml.extensions.extensions.impl.RequestedAttributesImpl;
 import stubidp.saml.extensions.extensions.impl.SPTypeBuilder;
 import uk.gov.ida.saml.core.test.builders.AuthnRequestBuilder;
 import uk.gov.ida.saml.hub.domain.LevelOfAssurance;
-import uk.gov.ida.saml.serializers.XmlObjectToBase64EncodedStringTransformer;
+import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 
 import java.util.ArrayList;
 import java.util.List;

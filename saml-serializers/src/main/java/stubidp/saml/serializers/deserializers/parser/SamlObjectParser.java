@@ -1,4 +1,4 @@
-package uk.gov.ida.saml.deserializers.parser;
+package stubidp.saml.serializers.deserializers.parser;
 
 import net.shibboleth.utilities.java.support.xml.ParserPool;
 import net.shibboleth.utilities.java.support.xml.XMLParserException;

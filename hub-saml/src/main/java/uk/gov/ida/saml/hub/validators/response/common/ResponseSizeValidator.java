@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.hub.validators.response.common;
 
 import com.google.inject.Inject;
-import uk.gov.ida.saml.deserializers.validators.SizeValidator;
+import stubidp.saml.serializers.deserializers.validators.SizeValidator;
 import uk.gov.ida.saml.hub.validators.StringSizeValidator;
 
 

@@ -1,9 +1,9 @@
-package uk.gov.ida.saml.deserializers;
+package stubidp.saml.serializers.deserializers;
 
 import org.opensaml.core.xml.XMLObject;
-import uk.gov.ida.saml.deserializers.validators.Base64StringDecoder;
-import uk.gov.ida.saml.deserializers.validators.NotNullSamlStringValidator;
-import uk.gov.ida.saml.deserializers.validators.SizeValidator;
+import stubidp.saml.serializers.deserializers.validators.Base64StringDecoder;
+import stubidp.saml.serializers.deserializers.validators.NotNullSamlStringValidator;
+import stubidp.saml.serializers.deserializers.validators.SizeValidator;
 
 import java.util.function.Function;
 
