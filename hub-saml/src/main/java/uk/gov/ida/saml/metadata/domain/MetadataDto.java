@@ -2,7 +2,7 @@ package uk.gov.ida.saml.metadata.domain;
 
 import com.google.common.collect.ImmutableList;
 import org.joda.time.DateTime;
-import uk.gov.ida.common.shared.security.Certificate;
+import stubidp.utils.security.security.Certificate;
 
 import java.util.ArrayList;
 import java.util.Collection;

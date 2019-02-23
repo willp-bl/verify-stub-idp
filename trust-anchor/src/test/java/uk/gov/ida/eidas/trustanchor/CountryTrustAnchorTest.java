@@ -3,7 +3,7 @@ package uk.gov.ida.eidas.trustanchor;
 import certificates.values.CACertificates;
 import com.nimbusds.jose.jwk.JWK;
 import org.junit.jupiter.api.Test;
-import uk.gov.ida.common.shared.security.X509CertificateFactory;
+import stubidp.utils.security.security.X509CertificateFactory;
 import stubidp.test.devpki.TestCertificateStrings;
 
 import java.security.cert.X509Certificate;

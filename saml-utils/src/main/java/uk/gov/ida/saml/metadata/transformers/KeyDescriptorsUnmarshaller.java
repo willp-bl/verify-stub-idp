@@ -4,7 +4,7 @@ import org.opensaml.saml.saml2.metadata.KeyDescriptor;
 import org.opensaml.xmlsec.signature.KeyInfo;
 import org.opensaml.xmlsec.signature.X509Certificate;
 import org.opensaml.xmlsec.signature.X509Data;
-import uk.gov.ida.common.shared.security.Certificate;
+import stubidp.utils.security.security.Certificate;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 
 import java.util.ArrayList;

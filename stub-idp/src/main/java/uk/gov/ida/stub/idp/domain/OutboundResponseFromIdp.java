@@ -2,7 +2,7 @@ package uk.gov.ida.stub.idp.domain;
 
 import org.apache.commons.lang.StringUtils;
 import org.joda.time.DateTime;
-import uk.gov.ida.common.shared.security.IdGenerator;
+import stubidp.utils.security.security.IdGenerator;
 import uk.gov.ida.saml.core.domain.IdaSamlResponse;
 import uk.gov.ida.saml.core.domain.IdentityProviderAssertion;
 

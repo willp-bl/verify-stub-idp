@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.domain.factories;
 
 import org.joda.time.DateTime;
-import uk.gov.ida.common.shared.security.IdGenerator;
+import stubidp.utils.security.security.IdGenerator;
 import uk.gov.ida.saml.core.domain.AssertionRestrictions;
 import uk.gov.ida.saml.core.domain.IdentityProviderAssertion;
 import uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement;

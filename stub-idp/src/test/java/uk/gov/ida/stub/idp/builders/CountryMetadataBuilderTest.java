@@ -31,7 +31,7 @@ import org.opensaml.xmlsec.signature.X509Certificate;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.w3c.dom.Document;
 
-import uk.gov.ida.common.shared.security.X509CertificateFactory;
+import stubidp.utils.security.security.X509CertificateFactory;
 import stubidp.saml.extensions.IdaSamlBootstrap;
 import stubidp.test.devpki.TestCertificateStrings;
 import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;

@@ -1,7 +1,6 @@
 package uk.gov.ida.stub.idp.cookies;
 
 import com.squarespace.jersey2.guice.JerseyGuiceUtils;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -9,9 +8,8 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import uk.gov.ida.common.SessionId;
-import uk.gov.ida.common.shared.configuration.SecureCookieConfiguration;
-import uk.gov.ida.common.shared.security.HmacDigest;
-import uk.gov.ida.shared.utils.datetime.DateTimeFreezer;
+import stubidp.utils.security.configuration.SecureCookieConfiguration;
+import stubidp.utils.security.security.HmacDigest;
 
 import javax.ws.rs.core.NewCookie;
 import java.util.UUID;

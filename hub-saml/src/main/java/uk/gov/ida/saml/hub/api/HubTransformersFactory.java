@@ -12,7 +12,7 @@ import org.opensaml.security.credential.Credential;
 import org.opensaml.xmlsec.algorithm.DigestAlgorithm;
 import org.opensaml.xmlsec.algorithm.SignatureAlgorithm;
 import org.w3c.dom.Element;
-import uk.gov.ida.common.shared.security.IdGenerator;
+import stubidp.utils.security.security.IdGenerator;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.core.api.CoreTransformersFactory;
 import uk.gov.ida.saml.core.domain.OutboundResponseFromHub;

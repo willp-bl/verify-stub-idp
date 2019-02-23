@@ -3,7 +3,7 @@ package uk.gov.ida.saml.core.test.builders.metadata;
 import com.google.common.collect.ImmutableList;
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
-import uk.gov.ida.common.shared.security.Certificate;
+import stubidp.utils.security.security.Certificate;
 import stubidp.test.devpki.TestEntityIds;
 import uk.gov.ida.saml.core.test.builders.CertificateBuilder;
 import uk.gov.ida.saml.core.test.builders.ContactPersonDtoBuilder;

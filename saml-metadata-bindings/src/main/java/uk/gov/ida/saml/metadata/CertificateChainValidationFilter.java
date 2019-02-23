@@ -8,7 +8,7 @@ import org.opensaml.saml.saml2.metadata.RoleDescriptor;
 import org.opensaml.xmlsec.signature.KeyInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.gov.ida.common.shared.security.verification.CertificateChainValidator;
+import stubidp.utils.security.security.verification.CertificateChainValidator;
 import uk.gov.ida.saml.metadata.exception.CertificateConversionException;
 
 import javax.annotation.Nonnull;

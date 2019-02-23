@@ -9,8 +9,8 @@ import net.minidev.json.JSONObject;
 import org.apache.commons.codec.binary.Base64;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import uk.gov.ida.common.shared.security.PrivateKeyFactory;
-import uk.gov.ida.common.shared.security.X509CertificateFactory;
+import stubidp.utils.security.security.PrivateKeyFactory;
+import stubidp.utils.security.security.X509CertificateFactory;
 import stubidp.test.devpki.TestCertificateStrings;
 
 import java.security.PrivateKey;

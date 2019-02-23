@@ -1,10 +1,10 @@
 package uk.gov.ida.security;
 
 import org.apache.commons.codec.binary.Base64;
-import uk.gov.ida.common.shared.security.InternalPublicKeyStore;
-import uk.gov.ida.common.shared.security.PublicKeyFactory;
-import uk.gov.ida.common.shared.security.PublicKeyInputStreamFactory;
-import uk.gov.ida.common.shared.security.X509CertificateFactory;
+import stubidp.utils.security.security.InternalPublicKeyStore;
+import stubidp.utils.security.security.PublicKeyFactory;
+import stubidp.utils.security.security.PublicKeyInputStreamFactory;
+import stubidp.utils.security.security.X509CertificateFactory;
 import stubidp.test.devpki.TestCertificateStrings;
 import uk.gov.ida.saml.security.EncryptionKeyStore;
 import uk.gov.ida.saml.security.SigningKeyStore;

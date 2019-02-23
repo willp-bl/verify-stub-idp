@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.security;
 
-import uk.gov.ida.common.shared.security.PublicKeyFactory;
-import uk.gov.ida.common.shared.security.X509CertificateFactory;
+import stubidp.utils.security.security.PublicKeyFactory;
+import stubidp.utils.security.security.X509CertificateFactory;
 
 import java.security.PublicKey;
 import java.util.List;

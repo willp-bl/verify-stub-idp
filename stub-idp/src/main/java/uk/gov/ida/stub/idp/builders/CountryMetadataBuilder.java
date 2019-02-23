@@ -27,7 +27,7 @@ import org.opensaml.saml.saml2.metadata.impl.SingleSignOnServiceBuilder;
 import org.opensaml.security.SecurityException;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 
-import uk.gov.ida.common.shared.security.Certificate;
+import stubidp.utils.security.security.Certificate;
 import uk.gov.ida.saml.core.api.CoreTransformersFactory;
 import uk.gov.ida.saml.metadata.transformers.KeyDescriptorsUnmarshaller;
 

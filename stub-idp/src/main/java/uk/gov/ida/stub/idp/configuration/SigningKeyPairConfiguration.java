@@ -1,9 +1,8 @@
 package uk.gov.ida.stub.idp.configuration;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import uk.gov.ida.common.shared.configuration.DeserializablePublicKeyConfiguration;
-import uk.gov.ida.common.shared.configuration.PrivateKeyConfiguration;
-import uk.gov.ida.common.shared.configuration.PublicKeyFileConfiguration;
+import stubidp.utils.security.configuration.DeserializablePublicKeyConfiguration;
+import stubidp.utils.security.configuration.PrivateKeyConfiguration;
 
 import javax.validation.Valid;
 import java.security.PrivateKey;

@@ -1,10 +1,9 @@
 package uk.gov.ida.stub.idp.security;
 
-import uk.gov.ida.common.shared.security.PublicKeyFactory;
+import stubidp.utils.security.security.PublicKeyFactory;
 import uk.gov.ida.saml.security.EncryptionKeyStore;
 import uk.gov.ida.stub.idp.repositories.MetadataRepository;
 
-import javax.inject.Inject;
 import java.security.PublicKey;
 
 public class HubEncryptionKeyStore implements EncryptionKeyStore {

@@ -3,7 +3,7 @@ package uk.gov.ida.metadata.transformers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.metadata.KeyDescriptor;
-import uk.gov.ida.common.shared.security.Certificate;
+import stubidp.utils.security.security.Certificate;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.core.test.OpenSAMLRunner;
 import uk.gov.ida.saml.metadata.transformers.KeyDescriptorsUnmarshaller;

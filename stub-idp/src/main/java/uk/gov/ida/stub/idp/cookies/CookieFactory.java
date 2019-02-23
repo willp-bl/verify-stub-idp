@@ -2,8 +2,8 @@ package uk.gov.ida.stub.idp.cookies;
 
 import com.google.inject.Inject;
 import uk.gov.ida.common.SessionId;
-import uk.gov.ida.common.shared.configuration.SecureCookieConfiguration;
-import uk.gov.ida.common.shared.security.HmacDigest;
+import stubidp.utils.security.configuration.SecureCookieConfiguration;
+import stubidp.utils.security.security.HmacDigest;
 
 import javax.inject.Singleton;
 import javax.ws.rs.core.NewCookie;

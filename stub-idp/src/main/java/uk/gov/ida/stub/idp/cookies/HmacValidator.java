@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.cookies;
 
 import com.google.inject.Inject;
-import uk.gov.ida.common.shared.security.HmacDigest;
+import stubidp.utils.security.security.HmacDigest;
 
 public class HmacValidator {
     private HmacDigest hmacDigest;

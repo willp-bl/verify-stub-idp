@@ -6,7 +6,7 @@ import io.dropwizard.Configuration;
 import io.dropwizard.util.Duration;
 import uk.gov.ida.cache.AssetCacheConfiguration;
 import uk.gov.ida.common.ServiceInfoConfiguration;
-import uk.gov.ida.common.shared.configuration.SecureCookieConfiguration;
+import stubidp.utils.security.configuration.SecureCookieConfiguration;
 import uk.gov.ida.configuration.ServiceNameConfiguration;
 import uk.gov.ida.saml.idp.configuration.SamlConfiguration;
 import uk.gov.ida.saml.metadata.MetadataResolverConfiguration;

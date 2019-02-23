@@ -1,8 +1,8 @@
 package uk.gov.ida.saml.idp.test;
 
 import org.apache.commons.codec.binary.Base64;
-import uk.gov.ida.common.shared.security.PrivateKeyFactory;
-import uk.gov.ida.common.shared.security.PrivateKeyStore;
+import stubidp.utils.security.security.PrivateKeyFactory;
+import stubidp.utils.security.security.PrivateKeyStore;
 import stubidp.test.devpki.TestCertificateStrings;
 
 import java.security.PrivateKey;

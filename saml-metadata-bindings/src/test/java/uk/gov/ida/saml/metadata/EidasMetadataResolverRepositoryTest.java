@@ -18,7 +18,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.opensaml.saml.metadata.resolver.MetadataResolver;
 import org.opensaml.xmlsec.signature.support.impl.ExplicitKeySignatureTrustEngine;
 import org.slf4j.LoggerFactory;
-import uk.gov.ida.common.shared.security.X509CertificateFactory;
+import stubidp.utils.security.security.X509CertificateFactory;
 import uk.gov.ida.eidas.trustanchor.CountryTrustAnchor;
 import stubidp.test.devpki.TestCertificateStrings;
 import uk.gov.ida.saml.metadata.factories.DropwizardMetadataResolverFactory;

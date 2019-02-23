@@ -15,9 +15,9 @@ import org.opensaml.security.credential.BasicCredential;
 import org.opensaml.security.credential.Credential;
 import org.opensaml.xmlsec.encryption.support.DecryptionException;
 import org.xml.sax.SAXException;
-import uk.gov.ida.common.shared.security.PrivateKeyFactory;
-import uk.gov.ida.common.shared.security.PublicKeyFactory;
-import uk.gov.ida.common.shared.security.X509CertificateFactory;
+import stubidp.utils.security.security.PrivateKeyFactory;
+import stubidp.utils.security.security.PublicKeyFactory;
+import stubidp.utils.security.security.X509CertificateFactory;
 import stubidp.test.devpki.TestCertificateStrings;
 import stubidp.test.devpki.TestEntityIds;
 import uk.gov.ida.saml.security.saml.OpenSAMLRunner;
@@ -45,7 +45,7 @@ public class DecrypterFactoryTest {
 
     @Before
     public void setup() throws Exception {
-        uk.gov.ida.common.shared.security.PublicKeyFactory publicKeyFactory = new PublicKeyFactory(new X509CertificateFactory());
+        PublicKeyFactory publicKeyFactory = new PublicKeyFactory(new X509CertificateFactory());
         privateEncryptionKey = new PrivateKeyFactory().createPrivateKey(Base64.decodeBase64(OLD_HUB_PRIVATE_ENCRYPTION_KEY));
 
         //We don't have the corresponding public key here. We intend to re-encrypt the test data and put both keys in this file.

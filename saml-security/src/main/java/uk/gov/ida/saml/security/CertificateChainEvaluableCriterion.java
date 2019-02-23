@@ -25,9 +25,9 @@ import org.opensaml.security.credential.criteria.impl.EvaluableCredentialCriteri
 import org.opensaml.security.x509.X509Credential;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.gov.ida.common.shared.security.verification.CertificateChainValidator;
-import uk.gov.ida.common.shared.security.verification.CertificateValidity;
-import uk.gov.ida.common.shared.security.verification.exceptions.CertificateChainValidationException;
+import stubidp.utils.security.security.verification.CertificateChainValidator;
+import stubidp.utils.security.security.verification.CertificateValidity;
+import stubidp.utils.security.security.verification.exceptions.CertificateChainValidationException;
 
 import java.security.KeyStore;
 import java.security.cert.CertPathValidatorException;
