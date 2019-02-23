@@ -63,7 +63,7 @@ public class SingleIdpPreRegistrationResource {
                 new SessionId(UUID.randomUUID().toString()));
         final SessionId sessionId = idpSessionRepository.createSession(session);
         idpSessionRepository.updateSession(session.getSessionId(), session.setNewCsrfToken());
-        return Response.ok(new RegistrationPageView(idp.getDisplayName(), idp.getFriendlyId(), errorMessage.orElse(NO_ERROR).getMessage(), idp.getAssetId(), Urls.SINGLE_IDP_PRE_REGISTER_PATH, session.getCsrfToken()))
+        return Response.ok(new RegistrationPageView(idp.getDisplayName(), idp.getFriendlyId(), errorMessage.orElse(NO_ERROR).getMessage(), idp.getAssetId(), true, session.getCsrfToken()))
                 .cookie(cookieFactory.createSessionIdCookie(sessionId))
                 .build();
     }

@@ -2,7 +2,7 @@
 <div class="main">
     <div class="tabs">
         <ul>
-        <#if path != "pre-register">
+        <#if !preRegistration>
             <li>
                 <a id="tab-login" class="tab-text" href="${rootPrefix}/${idpId}/login${routeSuffix}">Login</a>
             </li>
@@ -10,7 +10,7 @@
         <li class="on" id="tab-register">
             <span class="tab-text">Register</span>
         </li>
-        <#if path != "pre-register">
+        <#if !preRegistration>
             <li>
                 <a id="tab-debug" class="tab-text" href="${rootPrefix}/${idpId}/debug${routeSuffix}">System information</a>
             </li>
@@ -19,7 +19,7 @@
     </div>
     <form action="/${idpId}/register/" class="register" method="post" id="registration-form" autocomplete="off">
         <fieldset>
-        <#if path == "pre-register">
+        <#if preRegistration>
             <legend>Pre-Register with ${name}</legend>
         <#else>
             <legend>Register with ${name}</legend>

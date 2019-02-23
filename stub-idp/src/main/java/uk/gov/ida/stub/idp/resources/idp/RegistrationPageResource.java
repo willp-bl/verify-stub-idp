@@ -88,7 +88,7 @@ public class RegistrationPageResource {
 
         idpSessionRepository.updateSession(session.getSessionId(), session.setNewCsrfToken());
 
-        return Response.ok(new RegistrationPageView(idp.getDisplayName(), idp.getFriendlyId(), errorMessage.orElse(NO_ERROR).getMessage(), idp.getAssetId(), null, session.getCsrfToken())).build();
+        return Response.ok(new RegistrationPageView(idp.getDisplayName(), idp.getFriendlyId(), errorMessage.orElse(NO_ERROR).getMessage(), idp.getAssetId(), false, session.getCsrfToken())).build();
     }
 
     @POST
