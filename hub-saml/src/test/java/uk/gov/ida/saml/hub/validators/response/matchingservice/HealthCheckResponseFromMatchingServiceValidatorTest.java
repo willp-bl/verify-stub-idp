@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.NameIDType;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.StatusCode;
-import uk.gov.ida.saml.core.domain.SamlStatusCode;
+import stubidp.saml.extensions.domain.SamlStatusCode;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 
 import static uk.gov.ida.saml.core.test.builders.IssuerBuilder.anIssuer;
 import static uk.gov.ida.saml.core.test.builders.ResponseBuilder.aResponse;

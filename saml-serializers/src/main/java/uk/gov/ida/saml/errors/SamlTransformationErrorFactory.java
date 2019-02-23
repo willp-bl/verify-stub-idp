@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.errors;
 
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
-import uk.gov.ida.saml.core.validation.errors.SamlValidationSpecification;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.errors.SamlValidationSpecification;
 
 public final class SamlTransformationErrorFactory {
 

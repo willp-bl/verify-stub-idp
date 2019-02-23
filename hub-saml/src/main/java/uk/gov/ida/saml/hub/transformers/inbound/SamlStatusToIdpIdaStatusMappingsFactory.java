@@ -2,7 +2,7 @@ package uk.gov.ida.saml.hub.transformers.inbound;
 
 import com.google.common.collect.ImmutableMap;
 import uk.gov.ida.saml.core.domain.DetailedStatusCode;
-import uk.gov.ida.saml.core.extensions.StatusValue;
+import stubidp.saml.extensions.extensions.StatusValue;
 import uk.gov.ida.saml.hub.domain.IdpIdaStatus;
 
 import java.util.List;

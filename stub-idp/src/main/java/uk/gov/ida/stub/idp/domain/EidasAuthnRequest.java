@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.opensaml.core.xml.XMLObject;
 import org.opensaml.saml.saml2.core.AuthnRequest;
-import uk.gov.ida.saml.core.extensions.RequestedAttribute;
-import uk.gov.ida.saml.core.extensions.impl.RequestedAttributesImpl;
+import stubidp.saml.extensions.extensions.RequestedAttribute;
+import stubidp.saml.extensions.extensions.impl.RequestedAttributesImpl;
 
 import java.util.Collections;
 import java.util.List;

@@ -10,7 +10,7 @@ import org.opensaml.xmlsec.encryption.support.DecryptionException;
 import org.opensaml.xmlsec.signature.Signature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.gov.ida.saml.core.extensions.versioning.Version;
+import stubidp.saml.extensions.extensions.versioning.Version;
 import uk.gov.ida.saml.hub.domain.AuthnRequestFromRelyingParty;
 
 import java.net.URI;

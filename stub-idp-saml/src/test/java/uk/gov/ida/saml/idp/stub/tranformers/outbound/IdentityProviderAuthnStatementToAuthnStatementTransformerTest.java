@@ -13,7 +13,7 @@ import org.opensaml.saml.saml2.core.AuthnStatement;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.core.domain.AuthnContext;
 import uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement;
-import uk.gov.ida.saml.core.extensions.IdaAuthnContext;
+import stubidp.saml.extensions.extensions.IdaAuthnContext;
 import uk.gov.ida.saml.core.test.OpenSAMLRunner;
 import uk.gov.ida.saml.idp.stub.transformers.outbound.IdentityProviderAuthnStatementToAuthnStatementTransformer;
 import uk.gov.ida.shared.utils.datetime.DateTimeFreezer;

@@ -7,18 +7,18 @@ import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeValue;
-import uk.gov.ida.saml.core.IdaConstants;
+import stubidp.saml.extensions.IdaConstants;
+import stubidp.saml.extensions.extensions.eidas.EidasGender;
 import uk.gov.ida.saml.core.domain.MatchingDataset;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentFamilyName;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentGivenName;
-import uk.gov.ida.saml.core.extensions.eidas.DateOfBirth;
-import uk.gov.ida.saml.core.extensions.eidas.Gender;
-import uk.gov.ida.saml.core.extensions.eidas.PersonIdentifier;
-import uk.gov.ida.saml.core.extensions.eidas.impl.CurrentFamilyNameBuilder;
-import uk.gov.ida.saml.core.extensions.eidas.impl.CurrentGivenNameBuilder;
-import uk.gov.ida.saml.core.extensions.eidas.impl.DateOfBirthBuilder;
-import uk.gov.ida.saml.core.extensions.eidas.impl.GenderBuilder;
-import uk.gov.ida.saml.core.extensions.eidas.impl.PersonIdentifierBuilder;
+import stubidp.saml.extensions.extensions.eidas.CurrentFamilyName;
+import stubidp.saml.extensions.extensions.eidas.CurrentGivenName;
+import stubidp.saml.extensions.extensions.eidas.DateOfBirth;
+import stubidp.saml.extensions.extensions.eidas.PersonIdentifier;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentFamilyNameBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentGivenNameBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.DateOfBirthBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.EidasGenderBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.PersonIdentifierBuilder;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.core.test.OpenSamlXmlObjectFactory;
 
@@ -135,8 +135,8 @@ public class EidasMatchingDatasetUnmarshallerTest {
     }
 
     private Attribute anEidasGender(String gender) {
-        Gender genderValue = new GenderBuilder().buildObject();
-        genderValue.setValue(gender);
-        return anEidasAttribute(IdaConstants.Eidas_Attributes.Gender.NAME, genderValue);
+        EidasGender eidasGenderValue = new EidasGenderBuilder().buildObject();
+        eidasGenderValue.setValue(gender);
+        return anEidasAttribute(IdaConstants.Eidas_Attributes.Gender.NAME, eidasGenderValue);
     }
 }

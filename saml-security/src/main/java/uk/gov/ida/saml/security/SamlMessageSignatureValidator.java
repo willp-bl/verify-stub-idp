@@ -9,7 +9,7 @@ import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.gov.ida.saml.core.validation.SamlValidationResponse;
+import stubidp.saml.extensions.validation.SamlValidationResponse;
 import uk.gov.ida.saml.security.errors.SamlTransformationErrorFactory;
 import uk.gov.ida.saml.security.validators.signature.SamlSignatureUtil;
 

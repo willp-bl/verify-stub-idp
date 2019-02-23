@@ -5,11 +5,10 @@ import com.google.common.collect.ImmutableList;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.StatusCode;
 import org.opensaml.xmlsec.signature.Signature;
-import uk.gov.ida.saml.core.domain.SamlStatusCode;
+import stubidp.saml.extensions.domain.SamlStatusCode;
 import uk.gov.ida.saml.hub.exception.SamlValidationException;
 import uk.gov.ida.saml.hub.validators.response.common.IssuerValidator;
 import uk.gov.ida.saml.hub.validators.response.common.RequestIdValidator;
-import uk.gov.ida.saml.security.validators.signature.SamlSignatureUtil;
 
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.missingId;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.missingSignature;

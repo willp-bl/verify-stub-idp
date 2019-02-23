@@ -2,8 +2,8 @@ package uk.gov.ida.saml.core.validators.subjectconfirmation;
 
 import org.opensaml.saml.saml2.core.SubjectConfirmation;
 import org.opensaml.saml.saml2.core.SubjectConfirmationData;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
 public class AssertionSubjectConfirmationValidator extends BasicAssertionSubjectConfirmationValidator {
 

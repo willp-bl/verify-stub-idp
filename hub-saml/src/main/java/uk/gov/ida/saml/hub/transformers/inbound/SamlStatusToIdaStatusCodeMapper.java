@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import org.opensaml.saml.saml2.core.Status;
 import org.opensaml.saml.saml2.core.StatusCode;
 import org.opensaml.saml.saml2.core.StatusDetail;
-import uk.gov.ida.saml.core.extensions.StatusValue;
+import stubidp.saml.extensions.extensions.StatusValue;
 import uk.gov.ida.saml.hub.domain.IdpIdaStatus;
 
 import java.util.Collections;

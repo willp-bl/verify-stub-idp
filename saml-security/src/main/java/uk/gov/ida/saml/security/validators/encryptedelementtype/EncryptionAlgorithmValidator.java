@@ -4,8 +4,8 @@ import com.google.common.collect.ImmutableSet;
 import org.opensaml.saml.saml2.core.EncryptedElementType;
 import org.opensaml.xmlsec.encryption.EncryptionMethod;
 import org.opensaml.xmlsec.encryption.support.EncryptionConstants;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.security.errors.SamlTransformationErrorFactory;
 
 import java.util.Set;

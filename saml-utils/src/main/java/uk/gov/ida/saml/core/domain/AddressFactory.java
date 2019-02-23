@@ -3,7 +3,7 @@ package uk.gov.ida.saml.core.domain;
 import org.joda.time.DateTime;
 import org.opensaml.core.xml.XMLObject;
 import org.opensaml.saml.saml2.core.Attribute;
-import uk.gov.ida.saml.core.extensions.Line;
+import stubidp.saml.extensions.extensions.Line;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,13 +16,13 @@ public class AddressFactory {
     public List<Address> create(Attribute attribute) {
         List<Address> addresses = new ArrayList<>();
         for (XMLObject xmlObject : attribute.getAttributeValues()) {
-            uk.gov.ida.saml.core.extensions.Address address = (uk.gov.ida.saml.core.extensions.Address) xmlObject;
+            stubidp.saml.extensions.extensions.Address address = (stubidp.saml.extensions.extensions.Address) xmlObject;
             addresses.add(create(address));
         }
         return addresses;
     }
 
-    public Address create(uk.gov.ida.saml.core.extensions.Address addressAttributeValue) {
+    public Address create(stubidp.saml.extensions.extensions.Address addressAttributeValue) {
         List<String> lines = new ArrayList<>();
         for (Line originalLine : addressAttributeValue.getLines()) {
             lines.add(originalLine.getValue());

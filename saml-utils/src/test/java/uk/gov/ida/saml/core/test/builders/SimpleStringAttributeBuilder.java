@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.core.test.builders;
 
 import org.opensaml.saml.saml2.core.Attribute;
-import uk.gov.ida.saml.core.extensions.StringBasedMdsAttributeValue;
+import stubidp.saml.extensions.extensions.StringBasedMdsAttributeValue;
 import uk.gov.ida.saml.core.test.OpenSamlXmlObjectFactory;
 
 import java.util.Optional;

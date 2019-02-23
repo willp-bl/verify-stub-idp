@@ -1,15 +1,15 @@
 package uk.gov.ida.saml.core.errors;
 
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationWarning;
-import uk.gov.ida.saml.core.validation.errors.*;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationWarning;
+import stubidp.saml.extensions.validation.errors.*;
 
 import javax.xml.namespace.QName;
 import java.net.URI;
 
 import static java.text.MessageFormat.format;
-import static uk.gov.ida.saml.core.validation.errors.ResponseProcessingValidationSpecification.ATTRIBUTE_STATEMENT_EMPTY;
+import static stubidp.saml.extensions.validation.errors.ResponseProcessingValidationSpecification.ATTRIBUTE_STATEMENT_EMPTY;
 
 public final class SamlTransformationErrorFactory {
 

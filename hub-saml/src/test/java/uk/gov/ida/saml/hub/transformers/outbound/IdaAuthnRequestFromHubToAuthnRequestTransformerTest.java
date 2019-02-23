@@ -13,7 +13,7 @@ import org.opensaml.saml.saml2.core.NameIDType;
 import org.opensaml.saml.saml2.core.RequestedAuthnContext;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.extensions.IdaAuthnContext;
+import stubidp.saml.extensions.extensions.IdaAuthnContext;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
 

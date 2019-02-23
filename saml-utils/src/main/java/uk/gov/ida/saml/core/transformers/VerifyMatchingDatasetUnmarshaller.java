@@ -5,13 +5,13 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.gov.ida.saml.core.IdaConstants;
+import stubidp.saml.extensions.IdaConstants;
 import uk.gov.ida.saml.core.domain.Address;
 import uk.gov.ida.saml.core.domain.AddressFactory;
 import uk.gov.ida.saml.core.domain.Gender;
 import uk.gov.ida.saml.core.domain.SimpleMdsValue;
 import uk.gov.ida.saml.core.domain.TransliterableMdsValue;
-import uk.gov.ida.saml.core.extensions.PersonName;
+import stubidp.saml.extensions.extensions.PersonName;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +43,7 @@ public class VerifyMatchingDatasetUnmarshaller extends MatchingDatasetUnmarshall
                 break;
 
             case IdaConstants.Attributes_1_1.Gender.NAME:
-                uk.gov.ida.saml.core.extensions.Gender gender = (uk.gov.ida.saml.core.extensions.Gender) attribute.getAttributeValues().get(0);
+                stubidp.saml.extensions.extensions.Gender gender = (stubidp.saml.extensions.extensions.Gender) attribute.getAttributeValues().get(0);
                 datasetBuilder.gender(new SimpleMdsValue<>(Gender.fromString(gender.getValue()), gender.getFrom(), gender.getTo(), gender.getVerified()));
                 break;
 

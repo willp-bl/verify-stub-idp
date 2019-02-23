@@ -5,10 +5,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.Status;
 import org.opensaml.saml.saml2.core.StatusCode;
-import uk.gov.ida.saml.core.IdaSamlBootstrap;
+import stubidp.saml.extensions.IdaSamlBootstrap;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.hub.domain.IdpIdaStatus;
-import uk.gov.ida.saml.core.extensions.StatusValue;
+import stubidp.saml.extensions.extensions.StatusValue;
 import uk.gov.ida.saml.core.test.OpenSAMLRunner;
 
 import java.util.Optional;

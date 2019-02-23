@@ -1,14 +1,14 @@
 package uk.gov.ida.saml.core.transformers;
 
 import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.extensions.IdaAuthnContext;
+import stubidp.saml.extensions.extensions.IdaAuthnContext;
 
 import javax.inject.Inject;
 
 import static java.text.MessageFormat.format;
-import static uk.gov.ida.saml.core.extensions.EidasAuthnContext.EIDAS_LOA_HIGH;
-import static uk.gov.ida.saml.core.extensions.EidasAuthnContext.EIDAS_LOA_LOW;
-import static uk.gov.ida.saml.core.extensions.EidasAuthnContext.EIDAS_LOA_SUBSTANTIAL;
+import static stubidp.saml.extensions.extensions.EidasAuthnContext.EIDAS_LOA_HIGH;
+import static stubidp.saml.extensions.extensions.EidasAuthnContext.EIDAS_LOA_LOW;
+import static stubidp.saml.extensions.extensions.EidasAuthnContext.EIDAS_LOA_SUBSTANTIAL;
 
 public class AuthnContextFactory {
 

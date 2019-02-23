@@ -14,7 +14,7 @@ import org.opensaml.saml.saml2.core.Subject;
 import org.opensaml.xmlsec.signature.Signature;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.opensaml.xmlsec.signature.support.Signer;
-import uk.gov.ida.saml.core.extensions.IPAddress;
+import stubidp.saml.extensions.extensions.IPAddress;
 import uk.gov.ida.saml.security.saml.TestSamlObjectFactory;
 
 import java.util.ArrayList;

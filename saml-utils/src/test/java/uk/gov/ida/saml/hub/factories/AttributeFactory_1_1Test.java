@@ -10,15 +10,16 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.core.xml.XMLObject;
 import org.opensaml.saml.saml2.core.Attribute;
+import stubidp.saml.extensions.extensions.Date;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.core.domain.Address;
 import uk.gov.ida.saml.core.domain.Gender;
 import uk.gov.ida.saml.core.domain.SimpleMdsValue;
-import uk.gov.ida.saml.core.extensions.Gpg45Status;
-import uk.gov.ida.saml.core.extensions.IPAddress;
-import uk.gov.ida.saml.core.extensions.IdpFraudEventId;
-import uk.gov.ida.saml.core.extensions.PersonName;
-import uk.gov.ida.saml.core.extensions.StringBasedMdsAttributeValue;
+import stubidp.saml.extensions.extensions.Gpg45Status;
+import stubidp.saml.extensions.extensions.IPAddress;
+import stubidp.saml.extensions.extensions.IdpFraudEventId;
+import stubidp.saml.extensions.extensions.PersonName;
+import stubidp.saml.extensions.extensions.StringBasedMdsAttributeValue;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.core.test.builders.AddressBuilder;
 import uk.gov.ida.saml.core.test.builders.SimpleMdsValueBuilder;
@@ -111,7 +112,7 @@ public class AttributeFactory_1_1Test {
         assertThat(createdAttribute.getFriendlyName()).isEqualTo("Gender");
         assertThat(createdAttribute.getNameFormat()).isEqualTo(Attribute.UNSPECIFIED);
         assertThat(createdAttribute.getAttributeValues().size()).isEqualTo(1);
-        uk.gov.ida.saml.core.extensions.Gender expectedGenderAttributeValue = (uk.gov.ida.saml.core.extensions.Gender) createdAttribute.getAttributeValues().get(0);
+        stubidp.saml.extensions.extensions.Gender expectedGenderAttributeValue = (stubidp.saml.extensions.extensions.Gender) createdAttribute.getAttributeValues().get(0);
         assertThat(expectedGenderAttributeValue.getValue()).isEqualTo(genderSimpleMdsValue.getValue().getValue());
         assertThat(expectedGenderAttributeValue.getFrom()).isEqualTo(genderSimpleMdsValue.getFrom());
         assertThat(expectedGenderAttributeValue.getTo()).isEqualTo(genderSimpleMdsValue.getTo());
@@ -140,7 +141,7 @@ public class AttributeFactory_1_1Test {
         assertThat(createdAttribute.getFriendlyName()).isEqualTo("Date of Birth");
         assertThat(createdAttribute.getNameFormat()).isEqualTo(Attribute.UNSPECIFIED);
         assertThat(createdAttribute.getAttributeValues().size()).isEqualTo(1);
-        uk.gov.ida.saml.core.extensions.Date dateOfBirthAttributeValue = (uk.gov.ida.saml.core.extensions.Date) createdAttribute.getAttributeValues().get(0);
+        Date dateOfBirthAttributeValue = (Date) createdAttribute.getAttributeValues().get(0);
         LocalDate dateOfBirthFromDom = LocalDate.parse(dateOfBirthAttributeValue.getValue());
         assertThat(dateOfBirthFromDom).isEqualTo(dateOfBirth.getValue());
         assertThat(dateOfBirthAttributeValue.getFrom()).isEqualTo(dateOfBirth.getFrom());
@@ -174,7 +175,7 @@ public class AttributeFactory_1_1Test {
         assertThat(createdAttribute.getFriendlyName()).isEqualTo("Current Address");
         assertThat(createdAttribute.getNameFormat()).isEqualTo(Attribute.UNSPECIFIED);
 
-        uk.gov.ida.saml.core.extensions.Address addressAttributeValue = getAddress(createdAttribute);
+        stubidp.saml.extensions.extensions.Address addressAttributeValue = getAddress(createdAttribute);
         assertThat(addressAttributeValue.getFrom()).isEqualTo(fromDateValue);
         assertThat(addressAttributeValue.getTo()).isEqualTo(toDateValue);
         assertThat(addressAttributeValue.getVerified()).isEqualTo(verified);
@@ -198,7 +199,7 @@ public class AttributeFactory_1_1Test {
 
         final Attribute createdAttribute = attributeFactory.createCurrentAddressesAttribute(ImmutableList.of(currentAddress));
 
-        uk.gov.ida.saml.core.extensions.Address addressAttributeValue = getAddress(createdAttribute);
+        stubidp.saml.extensions.extensions.Address addressAttributeValue = getAddress(createdAttribute);
         assertThat(addressAttributeValue.getPostCode()).isNull();
     }
 
@@ -208,7 +209,7 @@ public class AttributeFactory_1_1Test {
 
         final Attribute createdAttribute = attributeFactory.createCurrentAddressesAttribute(ImmutableList.of(currentAddress));
 
-        uk.gov.ida.saml.core.extensions.Address addressAttributeValue = getAddress(createdAttribute);
+        stubidp.saml.extensions.extensions.Address addressAttributeValue = getAddress(createdAttribute);
         assertThat(addressAttributeValue.getInternationalPostCode()).isNull();
     }
 
@@ -218,7 +219,7 @@ public class AttributeFactory_1_1Test {
 
         final Attribute createdAttribute = attributeFactory.createCurrentAddressesAttribute(ImmutableList.of(currentAddress));
 
-        uk.gov.ida.saml.core.extensions.Address addressAttributeValue = getAddress(createdAttribute);
+        stubidp.saml.extensions.extensions.Address addressAttributeValue = getAddress(createdAttribute);
         assertThat(addressAttributeValue.getUPRN()).isNull();
     }
 
@@ -246,7 +247,7 @@ public class AttributeFactory_1_1Test {
         assertThat(createdAttribute.getFriendlyName()).isEqualTo("Previous Address");
         assertThat(createdAttribute.getNameFormat()).isEqualTo(Attribute.UNSPECIFIED);
 
-        uk.gov.ida.saml.core.extensions.Address addressAttributeValue = getAddress(createdAttribute);
+        stubidp.saml.extensions.extensions.Address addressAttributeValue = getAddress(createdAttribute);
         assertThat(addressAttributeValue.getFrom()).isEqualTo(fromDateValue);
         assertThat(addressAttributeValue.getTo()).isEqualTo(toDateValue);
         assertThat(addressAttributeValue.getLines().get(0).getValue()).isEqualTo(line1Value);
@@ -319,9 +320,9 @@ public class AttributeFactory_1_1Test {
         assertThat(idpFraudEventId.getValue()).isEqualTo(fraudEventId);
     }
 
-    private uk.gov.ida.saml.core.extensions.Address getAddress(Attribute createdAttribute) {
+    private stubidp.saml.extensions.extensions.Address getAddress(Attribute createdAttribute) {
         List<XMLObject> addressAttributeValues = createdAttribute.getAttributeValues();
         assertThat(addressAttributeValues.size()).isEqualTo(1);
-        return (uk.gov.ida.saml.core.extensions.Address) addressAttributeValues.get(0);
+        return (stubidp.saml.extensions.extensions.Address) addressAttributeValues.get(0);
     }
 }

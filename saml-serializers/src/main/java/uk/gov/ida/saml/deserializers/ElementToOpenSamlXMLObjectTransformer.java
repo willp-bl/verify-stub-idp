@@ -3,8 +3,8 @@ package uk.gov.ida.saml.deserializers;
 import org.opensaml.core.xml.XMLObject;
 import org.opensaml.core.xml.io.UnmarshallingException;
 import org.w3c.dom.Element;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.deserializers.parser.SamlObjectParser;
 
 import java.util.function.Function;

@@ -3,8 +3,8 @@ package uk.gov.ida.saml.security.validators.issuer;
 import com.google.common.base.Strings;
 import org.opensaml.saml.saml2.core.Issuer;
 import org.opensaml.saml.saml2.core.NameIDType;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.security.errors.SamlTransformationErrorFactory;
 
 public class IssuerValidator {

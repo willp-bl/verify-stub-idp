@@ -7,10 +7,10 @@ import org.mockito.Mock;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeStatement;
-import uk.gov.ida.saml.core.IdaConstants;
-import uk.gov.ida.saml.core.extensions.Date;
-import uk.gov.ida.saml.core.extensions.PersonName;
-import uk.gov.ida.saml.core.extensions.StringBasedMdsAttributeValue;
+import stubidp.saml.extensions.IdaConstants;
+import stubidp.saml.extensions.extensions.Date;
+import stubidp.saml.extensions.extensions.PersonName;
+import stubidp.saml.extensions.extensions.StringBasedMdsAttributeValue;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
 
 import static org.mockito.Mockito.times;

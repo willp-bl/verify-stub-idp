@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import org.opensaml.saml.saml2.core.StatusDetail;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.core.domain.DetailedStatusCode;
-import uk.gov.ida.saml.core.extensions.StatusValue;
+import stubidp.saml.extensions.extensions.StatusValue;
 import uk.gov.ida.saml.core.transformers.outbound.IdaStatusMarshaller;
 
 import java.util.Optional;

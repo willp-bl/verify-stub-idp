@@ -4,10 +4,10 @@ import com.google.common.base.Strings;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeStatement;
-import uk.gov.ida.saml.core.IdaConstants;
-import uk.gov.ida.saml.core.extensions.IPAddress;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.IdaConstants;
+import stubidp.saml.extensions.extensions.IPAddress;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
 public class IPAddressValidator {
     public void validate(Assertion assertion) {

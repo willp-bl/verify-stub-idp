@@ -8,8 +8,8 @@ import org.opensaml.saml.saml2.core.Subject;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
 import uk.gov.ida.saml.core.test.builders.NameIdBuilder;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
-import uk.gov.ida.saml.core.validation.errors.ResponseProcessingValidationSpecification;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.errors.ResponseProcessingValidationSpecification;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
 import static uk.gov.ida.saml.core.test.builders.SubjectBuilder.aSubject;
 

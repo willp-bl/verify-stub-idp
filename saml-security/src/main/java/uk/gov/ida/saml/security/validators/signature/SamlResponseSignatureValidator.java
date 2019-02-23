@@ -1,9 +1,9 @@
 package uk.gov.ida.saml.security.validators.signature;
 
 import org.opensaml.saml.saml2.core.Response;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationResponse;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationResponse;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.security.SamlMessageSignatureValidator;
 import uk.gov.ida.saml.security.validators.ValidatedResponse;
 

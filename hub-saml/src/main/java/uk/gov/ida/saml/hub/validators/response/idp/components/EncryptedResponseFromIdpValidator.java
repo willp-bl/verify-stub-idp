@@ -6,7 +6,7 @@ import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.Status;
 import org.opensaml.saml.saml2.core.StatusCode;
 import org.opensaml.xmlsec.signature.Signature;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.hub.exception.SamlValidationException;
 import uk.gov.ida.saml.hub.transformers.inbound.SamlStatusToAuthenticationStatusCodeMapper;
 import uk.gov.ida.saml.hub.validators.response.common.IssuerValidator;

@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.core.test.builders;
 
 import org.opensaml.saml.saml2.core.StatusCode;
-import uk.gov.ida.saml.core.domain.SamlStatusCode;
+import stubidp.saml.extensions.domain.SamlStatusCode;
 import uk.gov.ida.saml.core.test.OpenSamlXmlObjectFactory;
 
 import java.util.Optional;

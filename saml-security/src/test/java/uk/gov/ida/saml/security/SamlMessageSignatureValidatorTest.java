@@ -11,7 +11,7 @@ import org.opensaml.saml.saml2.metadata.SPSSODescriptor;
 import org.opensaml.security.credential.Credential;
 import stubidp.test.devpki.TestCertificateStrings;
 import stubidp.test.devpki.TestEntityIds;
-import uk.gov.ida.saml.core.validation.SamlValidationResponse;
+import stubidp.saml.extensions.validation.SamlValidationResponse;
 import uk.gov.ida.saml.security.errors.SamlTransformationErrorFactory;
 import uk.gov.ida.saml.security.saml.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.security.saml.TestCredentialFactory;

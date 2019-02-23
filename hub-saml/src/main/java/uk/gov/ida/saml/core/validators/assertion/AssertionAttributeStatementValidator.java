@@ -6,11 +6,11 @@ import org.opensaml.core.xml.XMLObject;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeStatement;
-import uk.gov.ida.saml.core.IdaConstants;
-import uk.gov.ida.saml.core.extensions.IdpFraudEventId;
-import uk.gov.ida.saml.core.extensions.PersonName;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.IdaConstants;
+import stubidp.saml.extensions.extensions.IdpFraudEventId;
+import stubidp.saml.extensions.extensions.PersonName;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.invalidAttributeLanguageInAssertion;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.invalidFraudAttribute;

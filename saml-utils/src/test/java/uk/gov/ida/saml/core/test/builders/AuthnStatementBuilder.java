@@ -3,7 +3,7 @@ package uk.gov.ida.saml.core.test.builders;
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.AuthnContext;
 import org.opensaml.saml.saml2.core.AuthnStatement;
-import uk.gov.ida.saml.core.extensions.EidasAuthnContext;
+import stubidp.saml.extensions.extensions.EidasAuthnContext;
 import uk.gov.ida.saml.core.test.OpenSamlXmlObjectFactory;
 
 import java.util.Optional;

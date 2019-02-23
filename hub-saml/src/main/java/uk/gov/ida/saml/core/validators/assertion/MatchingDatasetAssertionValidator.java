@@ -6,11 +6,11 @@ import org.opensaml.core.xml.XMLObject;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeStatement;
-import uk.gov.ida.saml.core.IdaConstants;
-import uk.gov.ida.saml.core.extensions.Address;
-import uk.gov.ida.saml.core.extensions.Date;
-import uk.gov.ida.saml.core.extensions.Gender;
-import uk.gov.ida.saml.core.extensions.PersonName;
+import stubidp.saml.extensions.IdaConstants;
+import stubidp.saml.extensions.extensions.Address;
+import stubidp.saml.extensions.extensions.Date;
+import stubidp.saml.extensions.extensions.Gender;
+import stubidp.saml.extensions.extensions.PersonName;
 import uk.gov.ida.saml.hub.exception.SamlValidationException;
 
 import javax.xml.namespace.QName;
@@ -25,7 +25,7 @@ import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.invalid
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.mdsAttributeNotRecognised;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.mdsMultipleStatements;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.mdsStatementMissing;
-import static uk.gov.ida.saml.core.validation.SamlTransformationErrorManager.warn;
+import static stubidp.saml.extensions.validation.SamlTransformationErrorManager.warn;
 
 public class MatchingDatasetAssertionValidator {
 

@@ -1,7 +1,7 @@
 package uk.gov.ida.apprule.support.eidas;
 
 import org.slf4j.event.Level;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
 
 import java.text.MessageFormat;
 

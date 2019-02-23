@@ -4,9 +4,9 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeStatement;
 import uk.gov.ida.saml.core.domain.Cycle3Dataset;
-import uk.gov.ida.saml.core.extensions.StringBasedMdsAttributeValue;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.extensions.StringBasedMdsAttributeValue;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 
 import java.util.HashMap;
 import java.util.List;

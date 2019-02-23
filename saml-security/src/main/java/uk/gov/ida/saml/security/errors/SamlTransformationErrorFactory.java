@@ -1,8 +1,8 @@
 package uk.gov.ida.saml.security.errors;
 
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
-import uk.gov.ida.saml.core.validation.errors.GenericHubProfileValidationSpecification;
-import uk.gov.ida.saml.core.validation.errors.SamlValidationSpecification;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.errors.GenericHubProfileValidationSpecification;
+import stubidp.saml.extensions.validation.errors.SamlValidationSpecification;
 
 public final class SamlTransformationErrorFactory {
 

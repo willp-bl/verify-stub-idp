@@ -4,7 +4,7 @@ import com.google.common.base.Strings;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.StatusCode;
 import org.opensaml.xmlsec.signature.Signature;
-import uk.gov.ida.saml.core.domain.SamlStatusCode;
+import stubidp.saml.extensions.domain.SamlStatusCode;
 import uk.gov.ida.saml.hub.exception.SamlValidationException;
 import uk.gov.ida.saml.hub.validators.response.common.IssuerValidator;
 import uk.gov.ida.saml.hub.validators.response.common.RequestIdValidator;

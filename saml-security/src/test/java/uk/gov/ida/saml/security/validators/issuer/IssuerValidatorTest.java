@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.Issuer;
 import org.opensaml.saml.saml2.core.NameIDType;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.security.errors.SamlTransformationErrorFactory;
 import uk.gov.ida.saml.security.saml.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.security.saml.SamlTransformationErrorManagerTestHelper;

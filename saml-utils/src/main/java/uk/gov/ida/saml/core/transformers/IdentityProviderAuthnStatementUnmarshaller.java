@@ -4,10 +4,10 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeStatement;
 import org.opensaml.saml.saml2.core.AuthnStatement;
-import uk.gov.ida.saml.core.IdaConstants;
+import stubidp.saml.extensions.IdaConstants;
 import uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement;
 import uk.gov.ida.saml.core.domain.IpAddress;
-import uk.gov.ida.saml.core.extensions.IPAddress;
+import stubidp.saml.extensions.extensions.IPAddress;
 
 import static uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement.createIdentityProviderAuthnStatement;
 

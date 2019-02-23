@@ -24,7 +24,7 @@ import org.opensaml.saml.saml2.core.StatusCode;
 import org.opensaml.saml.saml2.core.Subject;
 import org.opensaml.saml.saml2.core.SubjectConfirmation;
 import org.opensaml.saml.saml2.core.SubjectConfirmationData;
-import uk.gov.ida.saml.core.extensions.IPAddress;
+import stubidp.saml.extensions.extensions.IPAddress;
 
 public class TestSamlObjectFactory {
 

@@ -2,7 +2,7 @@ package uk.gov.ida.saml.core.test.builders;
 
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeValue;
-import uk.gov.ida.saml.core.IdaConstants;
+import stubidp.saml.extensions.IdaConstants;
 import uk.gov.ida.saml.core.test.OpenSamlXmlObjectFactory;
 
 import java.util.ArrayList;

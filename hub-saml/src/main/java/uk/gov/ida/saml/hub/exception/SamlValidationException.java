@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.hub.exception;
 
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 
 public class SamlValidationException extends SamlTransformationErrorException {
     public SamlValidationException(SamlValidationSpecificationFailure failure) {

@@ -15,7 +15,7 @@ import org.opensaml.xmlsec.algorithm.descriptors.SignatureRSASHA256;
 import uk.gov.ida.common.shared.security.PrivateKeyFactory;
 import uk.gov.ida.common.shared.security.PublicKeyFactory;
 import uk.gov.ida.common.shared.security.X509CertificateFactory;
-import uk.gov.ida.saml.core.IdaSamlBootstrap;
+import stubidp.saml.extensions.IdaSamlBootstrap;
 import uk.gov.ida.saml.core.api.CoreTransformersFactory;
 import uk.gov.ida.saml.core.domain.AuthnContext;
 import stubidp.test.devpki.TestCertificateStrings;

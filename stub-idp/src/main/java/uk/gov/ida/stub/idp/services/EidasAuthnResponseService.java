@@ -9,14 +9,14 @@ import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeValue;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.StatusCode;
-import uk.gov.ida.saml.core.IdaConstants;
-import uk.gov.ida.saml.core.extensions.EidasAuthnContext;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentAddress;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentFamilyName;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentGivenName;
-import uk.gov.ida.saml.core.extensions.eidas.DateOfBirth;
-import uk.gov.ida.saml.core.extensions.eidas.Gender;
-import uk.gov.ida.saml.core.extensions.eidas.PersonIdentifier;
+import stubidp.saml.extensions.IdaConstants;
+import stubidp.saml.extensions.extensions.EidasAuthnContext;
+import stubidp.saml.extensions.extensions.eidas.CurrentAddress;
+import stubidp.saml.extensions.extensions.eidas.CurrentFamilyName;
+import stubidp.saml.extensions.extensions.eidas.CurrentGivenName;
+import stubidp.saml.extensions.extensions.eidas.DateOfBirth;
+import stubidp.saml.extensions.extensions.eidas.EidasGender;
+import stubidp.saml.extensions.extensions.eidas.PersonIdentifier;
 import uk.gov.ida.stub.idp.StubIdpModule;
 import uk.gov.ida.stub.idp.builders.EidasResponseBuilder;
 import uk.gov.ida.stub.idp.domain.EidasAddress;
@@ -166,11 +166,11 @@ public class EidasAuthnResponseService {
     }
 
     private Attribute buildGenderAttribute(String value) {
-        XMLObjectBuilder<? extends Gender> eidasTypeBuilder = (XMLObjectBuilder<? extends Gender>) XMLObjectSupport.getBuilder(Gender.TYPE_NAME);
-        Gender gender = eidasTypeBuilder.buildObject(AttributeValue.DEFAULT_ELEMENT_NAME, Gender.TYPE_NAME);
-        gender.setValue(value);
+        XMLObjectBuilder<? extends EidasGender> eidasTypeBuilder = (XMLObjectBuilder<? extends EidasGender>) XMLObjectSupport.getBuilder(EidasGender.TYPE_NAME);
+        EidasGender eidasGender = eidasTypeBuilder.buildObject(AttributeValue.DEFAULT_ELEMENT_NAME, EidasGender.TYPE_NAME);
+        eidasGender.setValue(value);
 
-        return buildAttribute(IdaConstants.Eidas_Attributes.Gender.NAME, IdaConstants.Eidas_Attributes.Gender.FRIENDLY_NAME, gender);
+        return buildAttribute(IdaConstants.Eidas_Attributes.Gender.NAME, IdaConstants.Eidas_Attributes.Gender.FRIENDLY_NAME, eidasGender);
     }
 
     private Attribute buildAddressAttribute(EidasAddress address) {

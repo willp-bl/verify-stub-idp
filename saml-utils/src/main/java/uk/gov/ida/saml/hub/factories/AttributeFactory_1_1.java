@@ -4,14 +4,14 @@ import org.joda.time.LocalDate;
 import org.opensaml.core.xml.XMLObject;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeValue;
-import uk.gov.ida.saml.core.IdaConstants;
+import stubidp.saml.extensions.IdaConstants;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.core.domain.Address;
 import uk.gov.ida.saml.core.domain.Gender;
 import uk.gov.ida.saml.core.domain.SimpleMdsValue;
-import uk.gov.ida.saml.core.extensions.Date;
-import uk.gov.ida.saml.core.extensions.Line;
-import uk.gov.ida.saml.core.extensions.PersonName;
+import stubidp.saml.extensions.extensions.Date;
+import stubidp.saml.extensions.extensions.Line;
+import stubidp.saml.extensions.extensions.PersonName;
 
 import javax.inject.Inject;
 import java.util.ArrayList;
@@ -45,7 +45,7 @@ public class AttributeFactory_1_1 implements AttributeFactory {
 
     @Override
     public Attribute createGenderAttribute(SimpleMdsValue<Gender> gender) {
-        final uk.gov.ida.saml.core.extensions.Gender genderValue = openSamlXmlObjectFactory.createGenderAttributeValue(gender.getValue().getValue());
+        final stubidp.saml.extensions.extensions.Gender genderValue = openSamlXmlObjectFactory.createGenderAttributeValue(gender.getValue().getValue());
         genderValue.setFrom(gender.getFrom());
         genderValue.setTo(gender.getTo());
         genderValue.setVerified(gender.isVerified());
@@ -146,7 +146,7 @@ public class AttributeFactory_1_1 implements AttributeFactory {
 
     private AttributeValue createAddressAttributeValue(Address address) {
 
-        uk.gov.ida.saml.core.extensions.Address addressAttributeValue = openSamlXmlObjectFactory.createAddressAttributeValue();
+        stubidp.saml.extensions.extensions.Address addressAttributeValue = openSamlXmlObjectFactory.createAddressAttributeValue();
         addressAttributeValue.setFrom(address.getFrom());
         if (address.getTo().isPresent()) {
             addressAttributeValue.setTo(address.getTo().get());

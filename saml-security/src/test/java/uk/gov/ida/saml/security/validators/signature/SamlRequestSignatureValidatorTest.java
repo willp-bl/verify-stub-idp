@@ -7,8 +7,8 @@ import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.AuthnRequest;
 import org.opensaml.saml.saml2.metadata.SPSSODescriptor;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationResponse;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationResponse;
 import uk.gov.ida.saml.security.SamlMessageSignatureValidator;
 import uk.gov.ida.saml.security.saml.OpenSAMLMockitoRunner;
 

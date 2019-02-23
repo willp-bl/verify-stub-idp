@@ -3,8 +3,8 @@ package uk.gov.ida.saml.metadata.transformers;
 import org.opensaml.saml.saml2.metadata.KeyDescriptor;
 import org.opensaml.security.credential.UsageType;
 import org.slf4j.event.Level;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
 import java.util.List;
 

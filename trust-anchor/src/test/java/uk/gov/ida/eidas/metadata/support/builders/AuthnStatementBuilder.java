@@ -3,7 +3,7 @@ package uk.gov.ida.eidas.metadata.support.builders;
 import org.opensaml.saml.saml2.core.AuthnContext;
 import org.opensaml.saml.saml2.core.AuthnStatement;
 import uk.gov.ida.eidas.metadata.support.TestSamlObjectFactory;
-import uk.gov.ida.saml.core.extensions.IdaAuthnContext;
+import stubidp.saml.extensions.extensions.IdaAuthnContext;
 
 import java.util.Optional;
 

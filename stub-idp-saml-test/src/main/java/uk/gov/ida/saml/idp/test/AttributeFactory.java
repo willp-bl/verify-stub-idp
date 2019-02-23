@@ -3,23 +3,23 @@ package uk.gov.ida.saml.idp.test;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeValue;
 import org.opensaml.saml.saml2.core.impl.AttributeBuilder;
-import uk.gov.ida.saml.core.IdaConstants.Eidas_Attributes;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentAddress;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentFamilyName;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentGivenName;
-import uk.gov.ida.saml.core.extensions.eidas.DateOfBirth;
-import uk.gov.ida.saml.core.extensions.eidas.Gender;
-import uk.gov.ida.saml.core.extensions.eidas.PersonIdentifier;
-import uk.gov.ida.saml.core.extensions.eidas.impl.CurrentAddressBuilder;
-import uk.gov.ida.saml.core.extensions.eidas.impl.CurrentFamilyNameBuilder;
-import uk.gov.ida.saml.core.extensions.eidas.impl.CurrentGivenNameBuilder;
-import uk.gov.ida.saml.core.extensions.eidas.impl.DateOfBirthBuilder;
-import uk.gov.ida.saml.core.extensions.eidas.impl.GenderBuilder;
-import uk.gov.ida.saml.core.extensions.eidas.impl.PersonIdentifierBuilder;
+import stubidp.saml.extensions.IdaConstants.Eidas_Attributes;
+import stubidp.saml.extensions.extensions.eidas.CurrentAddress;
+import stubidp.saml.extensions.extensions.eidas.CurrentFamilyName;
+import stubidp.saml.extensions.extensions.eidas.CurrentGivenName;
+import stubidp.saml.extensions.extensions.eidas.DateOfBirth;
+import stubidp.saml.extensions.extensions.eidas.EidasGender;
+import stubidp.saml.extensions.extensions.eidas.PersonIdentifier;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentAddressBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentFamilyNameBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentGivenNameBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.DateOfBirthBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.EidasGenderBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.PersonIdentifierBuilder;
 
 import java.util.Arrays;
 
-import static uk.gov.ida.saml.core.extensions.eidas.impl.DateOfBirthImpl.DATE_OF_BIRTH_FORMAT;
+import static stubidp.saml.extensions.extensions.eidas.impl.DateOfBirthImpl.DATE_OF_BIRTH_FORMAT;
 
 public class AttributeFactory {
 
@@ -33,9 +33,9 @@ public class AttributeFactory {
     }
 
     public static Attribute genderAttribute(String gender) {
-        Gender genderAttributeValue = new GenderBuilder().buildObject();
-        genderAttributeValue.setValue(gender);
-        return buildAttribute(Eidas_Attributes.Gender.FRIENDLY_NAME, Eidas_Attributes.Gender.NAME, genderAttributeValue);
+        EidasGender eidasGenderAttributeValue = new EidasGenderBuilder().buildObject();
+        eidasGenderAttributeValue.setValue(gender);
+        return buildAttribute(Eidas_Attributes.Gender.FRIENDLY_NAME, Eidas_Attributes.Gender.NAME, eidasGenderAttributeValue);
     }
 
     public static Attribute currentAddressAttribute(String address) {

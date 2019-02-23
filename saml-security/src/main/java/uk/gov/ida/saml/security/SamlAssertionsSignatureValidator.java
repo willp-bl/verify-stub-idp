@@ -1,9 +1,9 @@
 package uk.gov.ida.saml.security;
 
 import org.opensaml.saml.saml2.core.Assertion;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationResponse;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationResponse;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.security.validators.ValidatedAssertions;
 
 import javax.xml.namespace.QName;

@@ -18,7 +18,7 @@ import org.opensaml.xmlsec.algorithm.descriptors.DigestSHA256;
 import org.opensaml.xmlsec.algorithm.descriptors.SignatureRSAMD5;
 import org.opensaml.xmlsec.algorithm.descriptors.SignatureRSASHA256;
 import org.opensaml.xmlsec.signature.Signature;
-import uk.gov.ida.saml.core.IdaSamlBootstrap;
+import stubidp.saml.extensions.IdaSamlBootstrap;
 import stubidp.test.devpki.TestCertificateStrings;
 import uk.gov.ida.saml.core.test.builders.metadata.SignatureBuilder;
 import uk.gov.ida.saml.metadata.test.factories.metadata.EntitiesDescriptorFactory;

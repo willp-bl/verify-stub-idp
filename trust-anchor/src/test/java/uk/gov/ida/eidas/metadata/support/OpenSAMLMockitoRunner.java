@@ -2,7 +2,7 @@ package uk.gov.ida.eidas.metadata.support;
 
 import org.junit.runners.model.InitializationError;
 import org.mockito.junit.MockitoJUnitRunner;
-import uk.gov.ida.saml.core.IdaSamlBootstrap;
+import stubidp.saml.extensions.IdaSamlBootstrap;
 
 import java.lang.reflect.InvocationTargetException;
 

@@ -2,8 +2,8 @@ package uk.gov.ida.saml.core.test.builders;
 
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.Attribute;
-import uk.gov.ida.saml.core.IdaConstants;
-import uk.gov.ida.saml.core.extensions.Gender;
+import stubidp.saml.extensions.IdaConstants;
+import stubidp.saml.extensions.extensions.Gender;
 import uk.gov.ida.saml.core.test.OpenSamlXmlObjectFactory;
 
 import java.util.Optional;

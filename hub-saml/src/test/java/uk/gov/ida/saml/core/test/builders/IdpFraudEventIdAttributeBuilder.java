@@ -6,11 +6,11 @@ import org.opensaml.saml.saml2.core.Attribute;
 
 import java.util.Optional;
 
-import uk.gov.ida.saml.core.IdaConstants;
+import stubidp.saml.extensions.IdaConstants;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.extensions.IdpFraudEventId;
-import uk.gov.ida.saml.core.extensions.StringValueSamlObject;
-import uk.gov.ida.saml.core.extensions.impl.StringBasedMdsAttributeValueBuilder;
+import stubidp.saml.extensions.extensions.IdpFraudEventId;
+import stubidp.saml.extensions.extensions.StringValueSamlObject;
+import stubidp.saml.extensions.extensions.impl.StringBasedMdsAttributeValueBuilder;
 
 public class IdpFraudEventIdAttributeBuilder {
 

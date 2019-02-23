@@ -12,7 +12,7 @@ import org.opensaml.saml.saml2.core.AuthnStatement;
 import org.opensaml.saml.saml2.core.NameIDType;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.SubjectConfirmation;
-import uk.gov.ida.saml.core.IdaSamlBootstrap;
+import stubidp.saml.extensions.IdaSamlBootstrap;
 
 import java.util.Collections;
 import java.util.List;

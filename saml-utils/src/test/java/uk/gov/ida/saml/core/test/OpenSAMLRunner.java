@@ -2,7 +2,7 @@ package uk.gov.ida.saml.core.test;
 
 import org.junit.runners.BlockJUnit4ClassRunner;
 import org.junit.runners.model.InitializationError;
-import uk.gov.ida.saml.core.IdaSamlBootstrap;
+import stubidp.saml.extensions.IdaSamlBootstrap;
 
 public class OpenSAMLRunner extends BlockJUnit4ClassRunner {
 

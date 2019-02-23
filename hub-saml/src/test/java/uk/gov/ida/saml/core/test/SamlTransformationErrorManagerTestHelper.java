@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.core.test;
 
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.fail;

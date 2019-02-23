@@ -5,14 +5,14 @@ import org.opensaml.core.xml.XMLObject;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeStatement;
-import uk.gov.ida.saml.core.IdaConstants;
+import stubidp.saml.extensions.IdaConstants;
 import uk.gov.ida.saml.core.domain.AuthnContext;
 import uk.gov.ida.saml.core.domain.FraudDetectedDetails;
 import uk.gov.ida.saml.core.domain.PassthroughAssertion;
 import uk.gov.ida.saml.core.domain.PersistentId;
-import uk.gov.ida.saml.core.extensions.Gpg45Status;
-import uk.gov.ida.saml.core.extensions.IPAddress;
-import uk.gov.ida.saml.core.extensions.IdpFraudEventId;
+import stubidp.saml.extensions.extensions.Gpg45Status;
+import stubidp.saml.extensions.extensions.IPAddress;
+import stubidp.saml.extensions.extensions.IdpFraudEventId;
 import uk.gov.ida.saml.core.transformers.AuthnContextFactory;
 import uk.gov.ida.saml.serializers.XmlObjectToBase64EncodedStringTransformer;
 

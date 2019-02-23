@@ -12,7 +12,7 @@ import uk.gov.ida.apprule.support.IntegrationTestHelper;
 import uk.gov.ida.apprule.support.SamlDecrypter;
 import uk.gov.ida.apprule.support.StubIdpAppRule;
 import uk.gov.ida.apprule.support.eidas.InboundResponseFromCountry;
-import uk.gov.ida.saml.core.IdaConstants;
+import stubidp.saml.extensions.IdaConstants;
 import uk.gov.ida.saml.hub.domain.LevelOfAssurance;
 import uk.gov.ida.stub.idp.domain.EidasScheme;
 

@@ -1,8 +1,8 @@
 package uk.gov.ida.saml.hub.errors;
 
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
-import uk.gov.ida.saml.core.validation.errors.ResponseProcessingValidationSpecification;
-import uk.gov.ida.saml.core.validation.errors.StringValidationSpecification;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.errors.ResponseProcessingValidationSpecification;
+import stubidp.saml.extensions.validation.errors.StringValidationSpecification;
 
 public final class SamlTransformationErrorFactory {
 

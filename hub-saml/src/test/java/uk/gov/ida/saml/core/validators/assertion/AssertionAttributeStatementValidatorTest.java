@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.extensions.PersonName;
+import stubidp.saml.extensions.extensions.PersonName;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
 import uk.gov.ida.saml.core.test.builders.AssertionBuilder;

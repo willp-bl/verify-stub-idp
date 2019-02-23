@@ -7,7 +7,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import uk.gov.ida.apprule.support.TestSamlRequestFactory;
 import uk.gov.ida.apprule.support.eidas.EidasAuthnRequestBuilder;
-import uk.gov.ida.saml.core.IdaConstants;
+import stubidp.saml.extensions.IdaConstants;
 import uk.gov.ida.stub.idp.Urls;
 import uk.gov.ida.stub.idp.cookies.CookieNames;
 

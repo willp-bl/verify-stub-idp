@@ -2,7 +2,7 @@ package uk.gov.ida.saml.security.saml.builders;
 
 import org.opensaml.saml.saml2.core.AuthnContext;
 import org.opensaml.saml.saml2.core.AuthnStatement;
-import uk.gov.ida.saml.core.extensions.IdaAuthnContext;
+import stubidp.saml.extensions.extensions.IdaAuthnContext;
 import uk.gov.ida.saml.security.saml.TestSamlObjectFactory;
 
 import java.util.Optional;

@@ -4,8 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
-import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 

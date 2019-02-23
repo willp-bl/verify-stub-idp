@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.hub.validators;
 
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.hub.errors.SamlTransformationErrorFactory;
 
 public class StringSizeValidator {

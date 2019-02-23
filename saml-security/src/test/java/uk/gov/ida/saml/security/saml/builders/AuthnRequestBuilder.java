@@ -17,7 +17,7 @@ import org.opensaml.xmlsec.algorithm.descriptors.DigestSHA256;
 import org.opensaml.xmlsec.algorithm.descriptors.SignatureRSASHA256;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.opensaml.xmlsec.signature.support.Signer;
-import uk.gov.ida.saml.core.extensions.IdaAuthnContext;
+import stubidp.saml.extensions.extensions.IdaAuthnContext;
 import uk.gov.ida.saml.security.saml.TestSamlObjectFactory;
 
 import java.util.Optional;

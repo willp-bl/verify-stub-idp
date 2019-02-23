@@ -9,7 +9,7 @@ import org.opensaml.saml.saml2.core.AuthnRequest;
 import org.opensaml.saml.saml2.core.Conditions;
 import org.opensaml.saml.saml2.core.Issuer;
 import org.opensaml.saml.saml2.core.RequestedAuthnContext;
-import uk.gov.ida.saml.core.extensions.IdaAuthnContext;
+import stubidp.saml.extensions.extensions.IdaAuthnContext;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.saml.idp.stub.transformers.inbound.IdaAuthnRequestFromHubUnmarshaller;

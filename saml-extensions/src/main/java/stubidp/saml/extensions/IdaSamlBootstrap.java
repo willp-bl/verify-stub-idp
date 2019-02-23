@@ -1,0 +1,156 @@
+package stubidp.saml.extensions;
+
+import org.opensaml.core.config.InitializationException;
+import org.opensaml.core.config.InitializationService;
+import org.opensaml.core.xml.config.XMLObjectProviderRegistrySupport;
+import org.opensaml.core.xml.schema.XSString;
+import stubidp.saml.extensions.extensions.Address;
+import stubidp.saml.extensions.extensions.Date;
+import stubidp.saml.extensions.extensions.Gender;
+import stubidp.saml.extensions.extensions.Gpg45Status;
+import stubidp.saml.extensions.extensions.IPAddress;
+import stubidp.saml.extensions.extensions.IdpFraudEventId;
+import stubidp.saml.extensions.extensions.InternationalPostCode;
+import stubidp.saml.extensions.extensions.Line;
+import stubidp.saml.extensions.extensions.PersonName;
+import stubidp.saml.extensions.extensions.PostCode;
+import stubidp.saml.extensions.extensions.RequestedAttribute;
+import stubidp.saml.extensions.extensions.RequestedAttributes;
+import stubidp.saml.extensions.extensions.SPType;
+import stubidp.saml.extensions.extensions.StatusValue;
+import stubidp.saml.extensions.extensions.StringBasedMdsAttributeValue;
+import stubidp.saml.extensions.extensions.UPRN;
+import stubidp.saml.extensions.extensions.Verified;
+import stubidp.saml.extensions.extensions.eidas.BirthName;
+import stubidp.saml.extensions.extensions.eidas.CurrentAddress;
+import stubidp.saml.extensions.extensions.eidas.CurrentFamilyName;
+import stubidp.saml.extensions.extensions.eidas.CurrentGivenName;
+import stubidp.saml.extensions.extensions.eidas.DateOfBirth;
+import stubidp.saml.extensions.extensions.eidas.EidasGender;
+import stubidp.saml.extensions.extensions.eidas.PersonIdentifier;
+import stubidp.saml.extensions.extensions.eidas.PlaceOfBirth;
+import stubidp.saml.extensions.extensions.eidas.impl.BirthNameBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.BirthNameMarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.BirthNameUnmarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentAddressBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentAddressMarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentAddressUnmarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentFamilyNameBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentFamilyNameMarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentFamilyNameUnmarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentGivenNameBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentGivenNameMarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.CurrentGivenNameUnmarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.DateOfBirthBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.DateOfBirthMarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.DateOfBirthUnmarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.EidasGenderBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.EidasGenderMarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.EidasGenderUnmarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.PersonIdentifierBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.PersonIdentifierMarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.PersonIdentifierUnmarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.PlaceOfBirthBuilder;
+import stubidp.saml.extensions.extensions.eidas.impl.PlaceOfBirthMarshaller;
+import stubidp.saml.extensions.extensions.eidas.impl.PlaceOfBirthUnmarshaller;
+import stubidp.saml.extensions.extensions.impl.AddressBuilder;
+import stubidp.saml.extensions.extensions.impl.AddressMarshaller;
+import stubidp.saml.extensions.extensions.impl.AddressUnmarshaller;
+import stubidp.saml.extensions.extensions.impl.DateBuilder;
+import stubidp.saml.extensions.extensions.impl.DateImpl;
+import stubidp.saml.extensions.extensions.impl.GenderBuilder;
+import stubidp.saml.extensions.extensions.impl.GenderImpl;
+import stubidp.saml.extensions.extensions.impl.Gpg45StatusBuilder;
+import stubidp.saml.extensions.extensions.impl.Gpg45StatusImpl;
+import stubidp.saml.extensions.extensions.impl.IPAddressBuilder;
+import stubidp.saml.extensions.extensions.impl.IPAddressImpl;
+import stubidp.saml.extensions.extensions.impl.IdpFraudEventIdBuilder;
+import stubidp.saml.extensions.extensions.impl.IdpFraudEventIdImpl;
+import stubidp.saml.extensions.extensions.impl.InternationalPostCodeBuilder;
+import stubidp.saml.extensions.extensions.impl.LineBuilder;
+import stubidp.saml.extensions.extensions.impl.PersonNameBuilder;
+import stubidp.saml.extensions.extensions.impl.PersonNameImpl;
+import stubidp.saml.extensions.extensions.impl.PostCodeBuilder;
+import stubidp.saml.extensions.extensions.impl.RequestedAttributeBuilder;
+import stubidp.saml.extensions.extensions.impl.RequestedAttributeImpl;
+import stubidp.saml.extensions.extensions.impl.RequestedAttributesBuilder;
+import stubidp.saml.extensions.extensions.impl.RequestedAttributesImpl;
+import stubidp.saml.extensions.extensions.impl.SPTypeBuilder;
+import stubidp.saml.extensions.extensions.impl.SPTypeImpl;
+import stubidp.saml.extensions.extensions.impl.StatusValueBuilder;
+import stubidp.saml.extensions.extensions.impl.StatusValueImpl;
+import stubidp.saml.extensions.extensions.impl.StringBasedMdsAttributeValueBuilder;
+import stubidp.saml.extensions.extensions.impl.StringBasedMdsAttributeValueImpl;
+import stubidp.saml.extensions.extensions.impl.StringValueSamlObjectImpl;
+import stubidp.saml.extensions.extensions.impl.UPRNBuilder;
+import stubidp.saml.extensions.extensions.impl.VerifiedBuilder;
+import stubidp.saml.extensions.extensions.impl.VerifiedImpl;
+import stubidp.saml.extensions.extensions.versioning.Version;
+import stubidp.saml.extensions.extensions.versioning.VersionBuilder;
+import stubidp.saml.extensions.extensions.versioning.VersionImpl;
+import stubidp.saml.extensions.extensions.versioning.application.ApplicationVersion;
+import stubidp.saml.extensions.extensions.versioning.application.ApplicationVersionBuilder;
+
+public abstract class IdaSamlBootstrap {
+
+    private static boolean hasBeenBootstrapped = false;
+
+    public static class BootstrapException extends RuntimeException {
+        public BootstrapException(Exception e) {
+            super(e);
+        }
+    }
+
+    public static synchronized void bootstrap() {
+        if (hasBeenBootstrapped) {
+            return;
+        }
+
+        try {
+            doBootstrapping();
+        } catch (InitializationException e) {
+            throw new BootstrapException(e);
+        }
+
+        hasBeenBootstrapped = true;
+    }
+
+    private static void doBootstrapping() throws InitializationException {
+        InitializationService.initialize();
+
+        //HACK: Why is the string type even registered? It can't ever get the element name right in that case, can it? [Mark/Peter 15/1/2013]
+        XMLObjectProviderRegistrySupport.deregisterObjectProvider(XSString.TYPE_NAME);
+
+        XMLObjectProviderRegistrySupport.registerObjectProvider(PersonName.TYPE_NAME, new PersonNameBuilder(), PersonNameImpl.MARSHALLER, PersonNameImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(Date.TYPE_NAME, new DateBuilder(), DateImpl.MARSHALLER, DateImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(Address.TYPE_NAME, new AddressBuilder(), new AddressMarshaller(), new AddressUnmarshaller());
+        XMLObjectProviderRegistrySupport.registerObjectProvider(PostCode.DEFAULT_ELEMENT_NAME, new PostCodeBuilder(), StringValueSamlObjectImpl.MARSHALLER, StringValueSamlObjectImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(InternationalPostCode.DEFAULT_ELEMENT_NAME, new InternationalPostCodeBuilder(), StringValueSamlObjectImpl.MARSHALLER, StringValueSamlObjectImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(UPRN.DEFAULT_ELEMENT_NAME, new UPRNBuilder(), StringValueSamlObjectImpl.MARSHALLER, StringValueSamlObjectImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(Line.DEFAULT_ELEMENT_NAME, new LineBuilder(), StringValueSamlObjectImpl.MARSHALLER, StringValueSamlObjectImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(StringBasedMdsAttributeValue.TYPE_NAME, new StringBasedMdsAttributeValueBuilder(), StringBasedMdsAttributeValueImpl.MARSHALLER, StringBasedMdsAttributeValueImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(StringBasedMdsAttributeValue.DEFAULT_ELEMENT_NAME, new StringBasedMdsAttributeValueBuilder(), StringBasedMdsAttributeValueImpl.MARSHALLER, StringBasedMdsAttributeValueImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(Gender.TYPE_NAME, new GenderBuilder(), GenderImpl.MARSHALLER, GenderImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(IdpFraudEventId.TYPE_NAME, new IdpFraudEventIdBuilder(), IdpFraudEventIdImpl.MARSHALLER, IdpFraudEventIdImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(Gpg45Status.TYPE_NAME, new Gpg45StatusBuilder(), Gpg45StatusImpl.MARSHALLER, IdpFraudEventIdImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(IPAddress.TYPE_NAME, new IPAddressBuilder(), IPAddressImpl.MARSHALLER, IPAddressImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(Verified.TYPE_NAME, new VerifiedBuilder(), VerifiedImpl.MARSHALLER, VerifiedImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(StatusValue.DEFAULT_ELEMENT_NAME, new StatusValueBuilder(), StatusValueImpl.MARSHALLER, StatusValueImpl.UNMARSHALLER);
+
+        // Verify Europe (eIDAS) specific providers
+        XMLObjectProviderRegistrySupport.registerObjectProvider(SPType.DEFAULT_ELEMENT_NAME, new SPTypeBuilder(), SPTypeImpl.MARSHALLER, SPTypeImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(RequestedAttributes.DEFAULT_ELEMENT_NAME, new RequestedAttributesBuilder(), RequestedAttributesImpl.MARSHALLER, RequestedAttributesImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(RequestedAttribute.DEFAULT_ELEMENT_NAME, new RequestedAttributeBuilder(), RequestedAttributeImpl.MARSHALLER, RequestedAttributeImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(CurrentGivenName.TYPE_NAME, new CurrentGivenNameBuilder(), new CurrentGivenNameMarshaller(), new CurrentGivenNameUnmarshaller());
+        XMLObjectProviderRegistrySupport.registerObjectProvider(CurrentFamilyName.TYPE_NAME, new CurrentFamilyNameBuilder(), new CurrentFamilyNameMarshaller(), new CurrentFamilyNameUnmarshaller());
+        XMLObjectProviderRegistrySupport.registerObjectProvider(DateOfBirth.TYPE_NAME, new DateOfBirthBuilder(), new DateOfBirthMarshaller(), new DateOfBirthUnmarshaller());
+        XMLObjectProviderRegistrySupport.registerObjectProvider(PersonIdentifier.TYPE_NAME, new PersonIdentifierBuilder(), new PersonIdentifierMarshaller(), new PersonIdentifierUnmarshaller());
+        XMLObjectProviderRegistrySupport.registerObjectProvider(CurrentAddress.TYPE_NAME, new CurrentAddressBuilder(), new CurrentAddressMarshaller(), new CurrentAddressUnmarshaller());
+        XMLObjectProviderRegistrySupport.registerObjectProvider(EidasGender.TYPE_NAME, new EidasGenderBuilder(), new EidasGenderMarshaller(), new EidasGenderUnmarshaller());
+        XMLObjectProviderRegistrySupport.registerObjectProvider(BirthName.TYPE_NAME, new BirthNameBuilder(), new BirthNameMarshaller(), new BirthNameUnmarshaller());
+        XMLObjectProviderRegistrySupport.registerObjectProvider(PlaceOfBirth.TYPE_NAME, new PlaceOfBirthBuilder(), new PlaceOfBirthMarshaller(), new PlaceOfBirthUnmarshaller());
+
+        XMLObjectProviderRegistrySupport.registerObjectProvider(Version.DEFAULT_ELEMENT_NAME, new VersionBuilder(), VersionImpl.MARSHALLER, VersionImpl.UNMARSHALLER);
+        XMLObjectProviderRegistrySupport.registerObjectProvider(ApplicationVersion.DEFAULT_ELEMENT_NAME, new ApplicationVersionBuilder(), StringValueSamlObjectImpl.MARSHALLER, StringValueSamlObjectImpl.UNMARSHALLER);
+    }
+}

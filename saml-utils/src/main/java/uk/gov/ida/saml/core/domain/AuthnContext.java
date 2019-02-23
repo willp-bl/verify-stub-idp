@@ -1,6 +1,6 @@
 package uk.gov.ida.saml.core.domain;
 
-import uk.gov.ida.saml.core.extensions.IdaAuthnContext;
+import stubidp.saml.extensions.extensions.IdaAuthnContext;
 
 public enum AuthnContext {
     LEVEL_X(IdaAuthnContext.LEVEL_X_AUTHN_CTX),

@@ -3,16 +3,13 @@ package uk.gov.ida.saml.metadata.transformers.decorators;
 import com.google.common.base.Strings;
 import org.apache.commons.lang.StringUtils;
 import org.opensaml.saml.saml2.metadata.EntityDescriptor;
-import org.opensaml.saml.saml2.metadata.Organization;
-import org.opensaml.saml.saml2.metadata.OrganizationDisplayName;
 import org.opensaml.saml.saml2.metadata.RoleDescriptor;
 import org.opensaml.xmlsec.signature.KeyInfo;
 import org.opensaml.xmlsec.signature.X509Certificate;
 import org.opensaml.xmlsec.signature.X509Data;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
-import java.util.List;
 
 public class SamlEntityDescriptorValidator {
 

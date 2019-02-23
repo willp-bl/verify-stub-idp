@@ -3,8 +3,8 @@ package uk.gov.ida.saml.deserializers;
 import net.shibboleth.utilities.java.support.xml.XMLParserException;
 import org.opensaml.core.xml.XMLObject;
 import org.opensaml.core.xml.io.UnmarshallingException;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.deserializers.parser.SamlObjectParser;
 
 import static uk.gov.ida.saml.errors.SamlTransformationErrorFactory.unableToDeserializeStringToOpenSaml;

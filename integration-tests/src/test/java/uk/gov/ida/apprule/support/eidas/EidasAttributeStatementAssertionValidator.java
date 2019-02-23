@@ -6,17 +6,17 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeStatement;
 import org.slf4j.event.Level;
-import uk.gov.ida.saml.core.IdaConstants.Eidas_Attributes;
+import stubidp.saml.extensions.IdaConstants.Eidas_Attributes;
+import stubidp.saml.extensions.extensions.eidas.EidasGender;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentAddress;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentFamilyName;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentGivenName;
-import uk.gov.ida.saml.core.extensions.eidas.DateOfBirth;
-import uk.gov.ida.saml.core.extensions.eidas.Gender;
-import uk.gov.ida.saml.core.extensions.eidas.PersonIdentifier;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorManager;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.extensions.eidas.CurrentAddress;
+import stubidp.saml.extensions.extensions.eidas.CurrentFamilyName;
+import stubidp.saml.extensions.extensions.eidas.CurrentGivenName;
+import stubidp.saml.extensions.extensions.eidas.DateOfBirth;
+import stubidp.saml.extensions.extensions.eidas.PersonIdentifier;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlTransformationErrorManager;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 
 import javax.xml.namespace.QName;
 import java.util.List;
@@ -51,7 +51,7 @@ public class EidasAttributeStatementAssertionValidator {
             .put(Eidas_Attributes.DateOfBirth.NAME, DateOfBirth.TYPE_NAME)
             .put(Eidas_Attributes.PersonIdentifier.NAME, PersonIdentifier.TYPE_NAME)
             .put(Eidas_Attributes.CurrentAddress.NAME, CurrentAddress.TYPE_NAME)
-            .put(Eidas_Attributes.Gender.NAME, Gender.TYPE_NAME)
+            .put(Eidas_Attributes.Gender.NAME, EidasGender.TYPE_NAME)
             .build();
 
     private static final Map<String, String> MANDATORY_ATTRIBUTES = ImmutableMap.of(

@@ -32,7 +32,7 @@ import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.w3c.dom.Document;
 
 import uk.gov.ida.common.shared.security.X509CertificateFactory;
-import uk.gov.ida.saml.core.IdaSamlBootstrap;
+import stubidp.saml.extensions.IdaSamlBootstrap;
 import stubidp.test.devpki.TestCertificateStrings;
 import uk.gov.ida.saml.serializers.XmlObjectToElementTransformer;
 

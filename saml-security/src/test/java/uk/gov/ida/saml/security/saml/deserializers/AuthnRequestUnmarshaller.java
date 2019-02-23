@@ -3,8 +3,8 @@ package uk.gov.ida.saml.security.saml.deserializers;
 import org.opensaml.core.xml.io.UnmarshallingException;
 import org.opensaml.saml.saml2.core.AuthnRequest;
 import org.xml.sax.SAXException;
-import uk.gov.ida.saml.core.validation.SamlTransformationErrorException;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlTransformationErrorException;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;

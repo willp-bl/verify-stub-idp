@@ -2,7 +2,7 @@ package uk.gov.ida.saml.core.test.builders;
 
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.AttributeValue;
-import uk.gov.ida.saml.core.extensions.PersonName;
+import stubidp.saml.extensions.extensions.PersonName;
 import uk.gov.ida.saml.core.test.OpenSamlXmlObjectFactory;
 
 import java.util.Optional;

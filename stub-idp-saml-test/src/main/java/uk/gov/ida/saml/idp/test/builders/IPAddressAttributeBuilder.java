@@ -2,9 +2,9 @@ package uk.gov.ida.saml.idp.test.builders;
 
 import java.util.Optional;
 import org.opensaml.saml.saml2.core.Attribute;
-import uk.gov.ida.saml.core.IdaConstants;
+import stubidp.saml.extensions.IdaConstants;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.extensions.IPAddress;
+import stubidp.saml.extensions.extensions.IPAddress;
 
 public class IPAddressAttributeBuilder {
 

@@ -11,7 +11,7 @@ import org.opensaml.saml.saml2.core.Status;
 import org.opensaml.saml.saml2.core.StatusCode;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.hub.domain.IdpIdaStatus;
 import uk.gov.ida.saml.hub.transformers.inbound.SamlStatusToIdaStatusCodeMapper;
 

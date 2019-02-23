@@ -5,20 +5,20 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.Attribute;
-import uk.gov.ida.saml.core.IdaConstants.Eidas_Attributes;
-import uk.gov.ida.saml.core.IdaConstants.Eidas_Attributes.FamilyName;
-import uk.gov.ida.saml.core.IdaConstants.Eidas_Attributes.FirstName;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentAddress;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentFamilyName;
-import uk.gov.ida.saml.core.extensions.eidas.CurrentGivenName;
-import uk.gov.ida.saml.core.extensions.eidas.DateOfBirth;
-import uk.gov.ida.saml.core.extensions.eidas.Gender;
-import uk.gov.ida.saml.core.extensions.eidas.PersonIdentifier;
+import stubidp.saml.extensions.IdaConstants.Eidas_Attributes;
+import stubidp.saml.extensions.IdaConstants.Eidas_Attributes.FamilyName;
+import stubidp.saml.extensions.IdaConstants.Eidas_Attributes.FirstName;
+import stubidp.saml.extensions.extensions.eidas.CurrentAddress;
+import stubidp.saml.extensions.extensions.eidas.CurrentFamilyName;
+import stubidp.saml.extensions.extensions.eidas.CurrentGivenName;
+import stubidp.saml.extensions.extensions.eidas.DateOfBirth;
+import stubidp.saml.extensions.extensions.eidas.EidasGender;
+import stubidp.saml.extensions.extensions.eidas.PersonIdentifier;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.opensaml.saml.saml2.core.Attribute.URI_REFERENCE;
-import static uk.gov.ida.saml.core.extensions.eidas.impl.DateOfBirthImpl.DATE_OF_BIRTH_FORMAT;
+import static stubidp.saml.extensions.extensions.eidas.impl.DateOfBirthImpl.DATE_OF_BIRTH_FORMAT;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class EidasAttributeFactoryTest {
@@ -105,7 +105,7 @@ public class EidasAttributeFactoryTest {
         assertThat(attribute.getName()).isEqualTo(Eidas_Attributes.Gender.NAME);
         assertThat(attribute.getNameFormat()).isEqualTo(URI_REFERENCE);
         assertThat(attribute.getAttributeValues().size()).isEqualTo(1);
-        Gender value = (Gender) attribute.getAttributeValues().get(0);
+        EidasGender value = (EidasGender) attribute.getAttributeValues().get(0);
         assertThat(value.getValue()).isEqualTo(gender);
     }
 }

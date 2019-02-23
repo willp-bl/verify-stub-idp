@@ -7,7 +7,7 @@ import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeStatement;
 import uk.gov.ida.saml.core.domain.MatchingDataset;
 import uk.gov.ida.saml.core.domain.SimpleMdsValue;
-import uk.gov.ida.saml.core.extensions.StringBasedMdsAttributeValue;
+import stubidp.saml.extensions.extensions.StringBasedMdsAttributeValue;
 
 import java.util.ArrayList;
 import java.util.List;

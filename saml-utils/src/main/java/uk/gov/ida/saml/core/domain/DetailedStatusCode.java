@@ -1,6 +1,7 @@
 package uk.gov.ida.saml.core.domain;
 
 import org.opensaml.saml.saml2.core.StatusCode;
+import stubidp.saml.extensions.domain.SamlStatusCode;
 
 import java.util.Optional;
 
