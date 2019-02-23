@@ -7,8 +7,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <parent>
-        <groupId>uk.gov.ida.stub-idp</groupId>
-        <artifactId>parent</artifactId>
+        <groupId>stub-idp</groupId>
+        <artifactId>stub-idp-parent</artifactId>
+
         <version>1.0-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
@@ -18,51 +19,51 @@
 
     <dependencies>
         <dependency>
-            <groupId>uk.gov.ida.stub-idp</groupId>
+            <groupId>stub-idp</groupId>
             <artifactId>stub-idp</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>uk.gov.ida.stub-idp</groupId>
+            <groupId>stub-idp</groupId>
             <artifactId>stub-idp</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>uk.gov.ida.stub-idp</groupId>
+            <groupId>stub-idp</groupId>
             <artifactId>stub-idp-saml</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>uk.gov.ida.stub-idp</groupId>
+            <groupId>stub-idp</groupId>
             <artifactId>stub-idp-saml-test</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>uk.gov.ida.stub-idp</groupId>
+            <groupId>stub-idp</groupId>
             <artifactId>hub-saml</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>uk.gov.ida.stub-idp</groupId>
+            <groupId>stub-idp</groupId>
             <artifactId>test-utils</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>uk.gov.ida.stub-idp</groupId>
+            <groupId>stub-idp</groupId>
             <artifactId>hub-saml</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>uk.gov.ida.stub-idp</groupId>
+            <groupId>stub-idp</groupId>
             <artifactId>saml-metadata-bindings</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>test-jar</type>
@@ -147,13 +148,13 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>uk.gov.ida.stub-idp</groupId>
+            <groupId>stub-idp</groupId>
             <artifactId>dev-pki</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>uk.gov.ida.stub-idp</groupId>
+            <groupId>stub-idp</groupId>
             <artifactId>saml-utils</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>test-jar</type>
