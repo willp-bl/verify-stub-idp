@@ -3,7 +3,7 @@ package uk.gov.ida.stub.idp.auth;
 import com.google.common.base.Splitter;
 import org.apache.log4j.Logger;
 import org.mindrot.jbcrypt.BCrypt;
-import uk.gov.ida.shared.utils.string.StringEncoding;
+import stubidp.utils.common.string.StringEncoding;
 import uk.gov.ida.stub.idp.configuration.UserCredentials;
 import uk.gov.ida.stub.idp.repositories.IdpStubsRepository;
 

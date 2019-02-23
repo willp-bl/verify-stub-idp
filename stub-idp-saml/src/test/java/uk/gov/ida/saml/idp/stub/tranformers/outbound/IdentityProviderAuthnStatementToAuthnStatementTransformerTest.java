@@ -16,7 +16,7 @@ import uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement;
 import stubidp.saml.extensions.extensions.IdaAuthnContext;
 import uk.gov.ida.saml.core.test.OpenSAMLRunner;
 import uk.gov.ida.saml.idp.stub.transformers.outbound.IdentityProviderAuthnStatementToAuthnStatementTransformer;
-import uk.gov.ida.shared.utils.datetime.DateTimeFreezer;
+import stubidp.utils.common.datetime.DateTimeFreezer;
 
 @RunWith(OpenSAMLRunner.class)
 public class IdentityProviderAuthnStatementToAuthnStatementTransformerTest {

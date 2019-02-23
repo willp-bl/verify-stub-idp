@@ -23,7 +23,7 @@ import uk.gov.ida.eidas.trustanchor.CountryTrustAnchor;
 import stubidp.test.devpki.TestCertificateStrings;
 import uk.gov.ida.saml.metadata.factories.DropwizardMetadataResolverFactory;
 import uk.gov.ida.saml.metadata.factories.MetadataSignatureTrustEngineFactory;
-import uk.gov.ida.shared.utils.datetime.DateTimeFreezer;
+import stubidp.utils.common.datetime.DateTimeFreezer;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.core.UriBuilder;

@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import uk.gov.ida.saml.hub.configuration.SamlAuthnRequestValidityDurationConfiguration;
-import uk.gov.ida.shared.utils.datetime.DateTimeFreezer;
+import stubidp.utils.common.datetime.DateTimeFreezer;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
