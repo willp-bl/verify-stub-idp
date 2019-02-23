@@ -23,8 +23,8 @@ import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.opensaml.xmlsec.signature.support.SignatureTrustEngine;
 import org.opensaml.xmlsec.signature.support.Signer;
 import org.w3c.dom.Element;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
-import uk.gov.ida.saml.core.test.TestEntityIds;
+import stubidp.test.devpki.TestCertificateStrings;
+import stubidp.test.devpki.TestEntityIds;
 import uk.gov.ida.saml.metadata.test.factories.metadata.EntityDescriptorFactory;
 
 import javax.xml.crypto.dsig.CanonicalizationMethod;

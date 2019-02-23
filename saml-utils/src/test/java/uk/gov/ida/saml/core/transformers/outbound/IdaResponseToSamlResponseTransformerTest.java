@@ -9,7 +9,7 @@ import org.opensaml.saml.saml2.core.Status;
 import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.core.domain.OutboundResponseFromHub;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.test.TestEntityIds;
+import stubidp.test.devpki.TestEntityIds;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static uk.gov.ida.saml.core.test.builders.ResponseForHubBuilder.anAuthnResponse;

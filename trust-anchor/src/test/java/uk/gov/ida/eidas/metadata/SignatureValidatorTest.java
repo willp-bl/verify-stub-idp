@@ -28,7 +28,7 @@ import org.opensaml.xmlsec.signature.support.impl.ExplicitKeySignatureTrustEngin
 import uk.gov.ida.eidas.metadata.support.HardCodedKeyStore;
 import uk.gov.ida.eidas.metadata.support.OpenSAMLMockitoRunner;
 import uk.gov.ida.eidas.metadata.support.SigningCredentialFactory;
-import uk.gov.ida.saml.core.test.TestEntityIds;
+import stubidp.test.devpki.TestEntityIds;
 
 import javax.xml.namespace.QName;
 import java.util.Arrays;

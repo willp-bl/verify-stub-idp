@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.security.saml.builders;
 
 import org.opensaml.saml.saml2.core.Issuer;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
+import stubidp.test.devpki.TestCertificateStrings;
 import uk.gov.ida.saml.security.saml.TestSamlObjectFactory;
 
 import java.util.Optional;

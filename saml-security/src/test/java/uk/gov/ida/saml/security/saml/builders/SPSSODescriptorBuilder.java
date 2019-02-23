@@ -5,7 +5,7 @@ import org.opensaml.saml.saml2.metadata.AssertionConsumerService;
 import org.opensaml.saml.saml2.metadata.KeyDescriptor;
 import org.opensaml.saml.saml2.metadata.SPSSODescriptor;
 import org.opensaml.security.credential.UsageType;
-import uk.gov.ida.saml.core.test.TestEntityIds;
+import stubidp.test.devpki.TestEntityIds;
 
 import java.util.ArrayList;
 import java.util.List;

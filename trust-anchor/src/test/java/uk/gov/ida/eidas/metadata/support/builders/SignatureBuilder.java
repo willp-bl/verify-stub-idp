@@ -13,7 +13,7 @@ import org.opensaml.xmlsec.signature.X509Certificate;
 import org.opensaml.xmlsec.signature.support.DocumentInternalIDContentReference;
 import org.opensaml.xmlsec.signature.support.SignatureConstants;
 import uk.gov.ida.eidas.metadata.support.TestCredentialFactory;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
+import stubidp.test.devpki.TestCertificateStrings;
 
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;

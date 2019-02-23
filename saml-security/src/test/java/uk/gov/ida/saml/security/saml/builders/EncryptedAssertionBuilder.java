@@ -5,7 +5,7 @@ import org.opensaml.saml.saml2.core.EncryptedAssertion;
 import org.opensaml.saml.saml2.encryption.Encrypter;
 import org.opensaml.security.credential.Credential;
 import org.opensaml.xmlsec.encryption.support.EncryptionException;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
+import stubidp.test.devpki.TestCertificateStrings;
 import uk.gov.ida.saml.security.EncrypterFactory;
 import uk.gov.ida.saml.security.saml.TestCredentialFactory;
 

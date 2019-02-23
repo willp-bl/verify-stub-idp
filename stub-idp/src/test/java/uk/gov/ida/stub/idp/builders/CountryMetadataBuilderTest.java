@@ -33,7 +33,7 @@ import org.w3c.dom.Document;
 
 import uk.gov.ida.common.shared.security.X509CertificateFactory;
 import uk.gov.ida.saml.core.IdaSamlBootstrap;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
+import stubidp.test.devpki.TestCertificateStrings;
 import uk.gov.ida.saml.serializers.XmlObjectToElementTransformer;
 
 @RunWith(MockitoJUnitRunner.class)

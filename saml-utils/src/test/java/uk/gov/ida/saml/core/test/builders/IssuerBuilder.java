@@ -2,7 +2,7 @@ package uk.gov.ida.saml.core.test.builders;
 
 import org.opensaml.saml.saml2.core.Issuer;
 import uk.gov.ida.saml.core.test.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
+import stubidp.test.devpki.TestCertificateStrings;
 
 
 public class IssuerBuilder {

@@ -1,4 +1,4 @@
-package uk.gov.ida.saml.core.test;
+package stubidp.test.devpki;
 
 public interface TestEntityIds {
     String HUB_ENTITY_ID = "https://signin.service.gov.uk";

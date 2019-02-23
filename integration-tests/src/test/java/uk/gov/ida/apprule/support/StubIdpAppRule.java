@@ -23,9 +23,9 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
-import static uk.gov.ida.saml.core.test.TestCertificateStrings.STUB_IDP_PUBLIC_PRIMARY_CERT;
-import static uk.gov.ida.saml.core.test.TestCertificateStrings.STUB_IDP_PUBLIC_PRIMARY_PRIVATE_KEY;
-import static uk.gov.ida.saml.core.test.TestEntityIds.HUB_ENTITY_ID;
+import static stubidp.test.devpki.TestCertificateStrings.STUB_IDP_PUBLIC_PRIMARY_CERT;
+import static stubidp.test.devpki.TestCertificateStrings.STUB_IDP_PUBLIC_PRIMARY_PRIVATE_KEY;
+import static stubidp.test.devpki.TestEntityIds.HUB_ENTITY_ID;
 
 public class StubIdpAppRule extends DropwizardAppRule<StubIdpConfiguration> {
 

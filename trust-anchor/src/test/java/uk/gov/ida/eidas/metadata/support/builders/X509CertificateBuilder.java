@@ -1,8 +1,8 @@
 package uk.gov.ida.eidas.metadata.support.builders;
 
 import org.opensaml.xmlsec.signature.X509Certificate;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
-import uk.gov.ida.saml.core.test.TestEntityIds;
+import stubidp.test.devpki.TestCertificateStrings;
+import stubidp.test.devpki.TestEntityIds;
 
 import java.util.Optional;
 

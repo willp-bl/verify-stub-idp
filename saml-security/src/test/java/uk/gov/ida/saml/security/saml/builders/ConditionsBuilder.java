@@ -2,7 +2,7 @@ package uk.gov.ida.saml.security.saml.builders;
 
 import org.opensaml.saml.saml2.core.AudienceRestriction;
 import org.opensaml.saml.saml2.core.Conditions;
-import uk.gov.ida.saml.core.test.TestEntityIds;
+import stubidp.test.devpki.TestEntityIds;
 import uk.gov.ida.saml.security.saml.TestSamlObjectFactory;
 
 import java.util.ArrayList;

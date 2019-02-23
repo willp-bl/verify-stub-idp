@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.core.test.builders;
 
 import uk.gov.ida.common.shared.security.Certificate;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
+import stubidp.test.devpki.TestCertificateStrings;
 
 public class CertificateBuilder {
 

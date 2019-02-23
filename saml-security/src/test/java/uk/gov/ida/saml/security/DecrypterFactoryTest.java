@@ -18,8 +18,8 @@ import org.xml.sax.SAXException;
 import uk.gov.ida.common.shared.security.PrivateKeyFactory;
 import uk.gov.ida.common.shared.security.PublicKeyFactory;
 import uk.gov.ida.common.shared.security.X509CertificateFactory;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
-import uk.gov.ida.saml.core.test.TestEntityIds;
+import stubidp.test.devpki.TestCertificateStrings;
+import stubidp.test.devpki.TestEntityIds;
 import uk.gov.ida.saml.security.saml.OpenSAMLRunner;
 import uk.gov.ida.saml.security.saml.deserializers.SamlObjectParser;
 

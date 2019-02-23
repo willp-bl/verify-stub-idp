@@ -15,7 +15,7 @@ import java.nio.file.Files;
 import java.util.Base64;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static uk.gov.ida.saml.core.test.TestCertificateStrings.HUB_TEST_PUBLIC_SIGNING_CERT;
+import static stubidp.test.devpki.TestCertificateStrings.HUB_TEST_PUBLIC_SIGNING_CERT;
 
 public class TrustStoreConfigurationTest {
     @Rule

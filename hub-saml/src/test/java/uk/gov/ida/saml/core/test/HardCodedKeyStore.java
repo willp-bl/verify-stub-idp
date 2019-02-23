@@ -1,8 +1,7 @@
 package uk.gov.ida.saml.core.test;
 
-import com.google.common.base.Function;
-import com.google.common.collect.Collections2;
 import org.apache.commons.codec.binary.Base64;
+import stubidp.test.devpki.TestCertificateStrings;
 import uk.gov.ida.common.shared.security.InternalPublicKeyStore;
 import uk.gov.ida.common.shared.security.PublicKeyFactory;
 import uk.gov.ida.common.shared.security.PublicKeyInputStreamFactory;
@@ -13,7 +12,6 @@ import uk.gov.ida.saml.security.SigningKeyStore;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.security.PublicKey;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;

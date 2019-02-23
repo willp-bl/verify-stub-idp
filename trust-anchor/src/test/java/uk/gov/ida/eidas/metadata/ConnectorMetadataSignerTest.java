@@ -18,7 +18,7 @@ import uk.gov.ida.common.shared.security.PrivateKeyFactory;
 import uk.gov.ida.common.shared.security.X509CertificateFactory;
 import uk.gov.ida.eidas.utils.FileReader;
 import uk.gov.ida.eidas.utils.keyloader.FileKeyLoader;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
+import stubidp.test.devpki.TestCertificateStrings;
 
 import java.io.File;
 import java.io.IOException;

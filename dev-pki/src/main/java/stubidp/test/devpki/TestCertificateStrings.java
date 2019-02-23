@@ -1,4 +1,4 @@
-package uk.gov.ida.saml.core.test;
+package stubidp.test.devpki;
 
 import com.google.common.base.Throwables;
 import com.google.common.collect.ImmutableList;

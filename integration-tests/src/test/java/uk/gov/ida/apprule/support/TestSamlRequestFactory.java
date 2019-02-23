@@ -1,25 +1,18 @@
 package uk.gov.ida.apprule.support;
 
-import com.google.common.base.Throwables;
-import com.google.common.io.Resources;
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.AuthnRequest;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
 import uk.gov.ida.saml.core.test.TestCredentialFactory;
-import uk.gov.ida.saml.core.test.TestEntityIds;
+import stubidp.test.devpki.TestEntityIds;
 import uk.gov.ida.saml.core.test.builders.IssuerBuilder;
 import uk.gov.ida.saml.hub.domain.Endpoints;
 import uk.gov.ida.saml.serializers.XmlObjectToBase64EncodedStringTransformer;
 
-import java.io.IOException;
-import java.net.URL;
-import java.nio.charset.Charset;
-import java.util.Base64;
 import java.util.Optional;
 import java.util.UUID;
 
-import static uk.gov.ida.saml.core.test.TestCertificateStrings.HUB_TEST_PRIVATE_SIGNING_KEY;
-import static uk.gov.ida.saml.core.test.TestCertificateStrings.HUB_TEST_PUBLIC_SIGNING_CERT;
+import static stubidp.test.devpki.TestCertificateStrings.HUB_TEST_PRIVATE_SIGNING_KEY;
+import static stubidp.test.devpki.TestCertificateStrings.HUB_TEST_PUBLIC_SIGNING_CERT;
 
 public class TestSamlRequestFactory {
 

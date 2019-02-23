@@ -4,7 +4,7 @@ import certificates.values.CACertificates;
 import com.nimbusds.jose.jwk.JWK;
 import org.junit.jupiter.api.Test;
 import uk.gov.ida.common.shared.security.X509CertificateFactory;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
+import stubidp.test.devpki.TestCertificateStrings;
 
 import java.security.cert.X509Certificate;
 import java.util.List;

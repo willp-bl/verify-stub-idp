@@ -13,7 +13,7 @@ import org.opensaml.saml.saml2.metadata.SPSSODescriptor;
 import org.opensaml.saml.security.impl.MetadataCredentialResolver;
 import org.opensaml.xmlsec.config.impl.DefaultSecurityConfigurationBootstrap;
 import org.opensaml.xmlsec.signature.support.SignatureException;
-import uk.gov.ida.saml.core.test.TestCertificateStrings;
+import stubidp.test.devpki.TestCertificateStrings;
 import uk.gov.ida.saml.security.saml.MetadataFactory;
 import uk.gov.ida.saml.security.saml.TestCredentialFactory;
 import uk.gov.ida.saml.security.saml.builders.EntitiesDescriptorBuilder;
@@ -26,8 +26,8 @@ import java.util.Collections;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static uk.gov.ida.saml.core.test.TestEntityIds.HUB_ENTITY_ID;
-import static uk.gov.ida.saml.core.test.TestEntityIds.STUB_IDP_ONE;
+import static stubidp.test.devpki.TestEntityIds.HUB_ENTITY_ID;
+import static stubidp.test.devpki.TestEntityIds.STUB_IDP_ONE;
 
 public class MetadataBackedEncryptionCredentialResolverTest {
     private MetadataCredentialResolver metadataCredentialResolver;

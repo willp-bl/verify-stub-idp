@@ -3,7 +3,7 @@ package uk.gov.ida.eidas.metadata.support.builders;
 import org.opensaml.saml.saml2.core.AudienceRestriction;
 import org.opensaml.saml.saml2.core.Conditions;
 import uk.gov.ida.eidas.metadata.support.TestSamlObjectFactory;
-import uk.gov.ida.saml.core.test.TestEntityIds;
+import stubidp.test.devpki.TestEntityIds;
 
 import java.util.ArrayList;
 import java.util.List;

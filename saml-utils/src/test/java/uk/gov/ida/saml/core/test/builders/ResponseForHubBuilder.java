@@ -7,7 +7,7 @@ import uk.gov.ida.saml.core.domain.InboundResponseFromIdp;
 import uk.gov.ida.saml.core.domain.OutboundResponseFromHub;
 import uk.gov.ida.saml.core.domain.PassthroughAssertion;
 import uk.gov.ida.saml.core.domain.TransactionIdaStatus;
-import uk.gov.ida.saml.core.test.TestEntityIds;
+import stubidp.test.devpki.TestEntityIds;
 
 import java.net.URI;
 import java.util.Collections;
