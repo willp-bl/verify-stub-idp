@@ -3,7 +3,7 @@ package uk.gov.ida.saml.hub.domain;
 import org.joda.time.DateTime;
 import org.opensaml.xmlsec.signature.Signature;
 import stubidp.utils.security.security.IdGenerator;
-import uk.gov.ida.saml.core.domain.IdaSamlMessage;
+import stubidp.saml.utils.core.domain.IdaSamlMessage;
 
 import java.net.URI;
 import java.util.Optional;

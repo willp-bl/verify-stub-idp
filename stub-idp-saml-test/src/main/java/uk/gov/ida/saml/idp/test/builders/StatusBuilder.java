@@ -4,7 +4,7 @@ import java.util.Optional;
 import org.opensaml.saml.saml2.core.Status;
 import org.opensaml.saml.saml2.core.StatusCode;
 import org.opensaml.saml.saml2.core.StatusMessage;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 
 public class StatusBuilder {
 

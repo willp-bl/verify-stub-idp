@@ -10,8 +10,8 @@ import org.opensaml.saml.saml2.core.Conditions;
 import org.opensaml.saml.saml2.core.Issuer;
 import org.opensaml.saml.saml2.core.RequestedAuthnContext;
 import stubidp.saml.extensions.extensions.IdaAuthnContext;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.saml.idp.stub.transformers.inbound.IdaAuthnRequestFromHubUnmarshaller;
 
 import java.util.Arrays;
@@ -19,8 +19,8 @@ import java.util.Arrays;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 import static org.opensaml.saml.saml2.core.AuthnContextComparisonTypeEnumeration.EXACT;
-import static uk.gov.ida.saml.core.domain.AuthnContext.LEVEL_1;
-import static uk.gov.ida.saml.core.domain.AuthnContext.LEVEL_2;
+import static stubidp.saml.utils.core.domain.AuthnContext.LEVEL_1;
+import static stubidp.saml.utils.core.domain.AuthnContext.LEVEL_2;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class IdaAuthnRequestFromHubUnmarshallerTest {

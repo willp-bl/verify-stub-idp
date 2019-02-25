@@ -4,13 +4,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.SubjectConfirmation;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper;
 import stubidp.test.devpki.TestEntityIds;
-import uk.gov.ida.saml.core.test.builders.SubjectConfirmationDataBuilder;
+import stubidp.saml.utils.core.test.builders.SubjectConfirmationDataBuilder;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
-import static uk.gov.ida.saml.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
+import static stubidp.saml.utils.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class AssertionSubjectConfirmationValidatorTest {

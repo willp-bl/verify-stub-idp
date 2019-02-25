@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.hub.transformers.inbound;
 
 import com.google.common.collect.ImmutableMap;
-import uk.gov.ida.saml.core.domain.DetailedStatusCode;
+import stubidp.saml.utils.core.domain.DetailedStatusCode;
 import uk.gov.ida.saml.hub.domain.CountryAuthenticationStatus;
 
 public class SamlStatusToCountryAuthenticationStatusMappingsFactory {

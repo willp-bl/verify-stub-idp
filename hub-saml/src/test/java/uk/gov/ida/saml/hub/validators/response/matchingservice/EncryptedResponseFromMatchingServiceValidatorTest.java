@@ -11,14 +11,14 @@ import org.opensaml.saml.saml2.core.Status;
 import org.opensaml.saml.saml2.core.StatusCode;
 import stubidp.saml.extensions.domain.SamlStatusCode;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.*;
-import static uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper.validateFail;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
-import static uk.gov.ida.saml.core.test.builders.IssuerBuilder.anIssuer;
-import static uk.gov.ida.saml.core.test.builders.ResponseBuilder.aResponse;
+import static stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper.validateFail;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.IssuerBuilder.anIssuer;
+import static stubidp.saml.utils.core.test.builders.ResponseBuilder.aResponse;
 import static uk.gov.ida.saml.hub.validators.response.helpers.ResponseValidatorTestHelper.createStatus;
 import static uk.gov.ida.saml.hub.validators.response.helpers.ResponseValidatorTestHelper.createSubStatusCode;
 

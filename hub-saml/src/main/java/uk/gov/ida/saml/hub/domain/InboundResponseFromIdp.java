@@ -2,8 +2,8 @@ package uk.gov.ida.saml.hub.domain;
 
 import org.joda.time.DateTime;
 import org.opensaml.xmlsec.signature.Signature;
-import uk.gov.ida.saml.core.domain.IdaSamlResponse;
-import uk.gov.ida.saml.core.domain.PassthroughAssertion;
+import stubidp.saml.utils.core.domain.IdaSamlResponse;
+import stubidp.saml.utils.core.domain.PassthroughAssertion;
 
 import java.net.URI;
 import java.util.Optional;

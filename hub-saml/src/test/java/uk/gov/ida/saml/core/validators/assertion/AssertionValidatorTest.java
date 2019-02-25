@@ -7,8 +7,8 @@ import org.mockito.Mock;
 import org.opensaml.saml.common.SAMLVersion;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.SubjectConfirmation;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;import uk.gov.ida.saml.core.validators.subject.AssertionSubjectValidator;
 import uk.gov.ida.saml.core.validators.subjectconfirmation.BasicAssertionSubjectConfirmationValidator;
@@ -17,9 +17,9 @@ import stubidp.saml.security.validators.issuer.IssuerValidator;
 import java.util.UUID;
 
 import static org.mockito.Mockito.verify;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
-import static uk.gov.ida.saml.core.test.builders.SubjectBuilder.aSubject;
-import static uk.gov.ida.saml.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.SubjectBuilder.aSubject;
+import static stubidp.saml.utils.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class AssertionValidatorTest {

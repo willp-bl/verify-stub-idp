@@ -1,9 +1,9 @@
 package uk.gov.ida.stub.idp.repositories;
 
 import org.joda.time.LocalDate;
-import uk.gov.ida.saml.core.domain.Address;
-import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.domain.Gender;
+import stubidp.saml.utils.core.domain.Address;
+import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.Gender;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.domain.MatchingDatasetValue;
 

@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.idp.builders;
 
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.domain.SimpleMdsValue;
+import stubidp.saml.utils.core.domain.SimpleMdsValue;
 
 public class SimpleMdsValueBuilder<T> {
 

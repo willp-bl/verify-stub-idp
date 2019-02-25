@@ -8,9 +8,9 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Issuer;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.xmlsec.signature.Signature;
-import uk.gov.ida.saml.core.domain.PassthroughAssertion;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.test.builders.SignatureBuilder;
+import stubidp.saml.utils.core.domain.PassthroughAssertion;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.builders.SignatureBuilder;
 import uk.gov.ida.saml.hub.domain.InboundResponseFromIdp;
 import stubidp.saml.security.validators.ValidatedAssertions;
 import stubidp.saml.security.validators.ValidatedResponse;
@@ -18,10 +18,10 @@ import stubidp.saml.security.validators.ValidatedResponse;
 import static com.google.common.collect.Lists.newArrayList;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
-import static uk.gov.ida.saml.core.test.builders.AttributeStatementBuilder.anAttributeStatement;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.AttributeStatementBuilder.anAttributeStatement;
 import static uk.gov.ida.saml.core.test.builders.PassthroughAssertionBuilder.aPassthroughAssertion;
-import static uk.gov.ida.saml.core.test.builders.AuthnStatementBuilder.anAuthnStatement;
+import static stubidp.saml.utils.core.test.builders.AuthnStatementBuilder.anAuthnStatement;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class IdaResponseFromIdpUnmarshallerTest {

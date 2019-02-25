@@ -2,7 +2,7 @@ package uk.gov.ida.saml.hub.transformers.inbound;
 
 import org.opensaml.saml.saml2.core.Status;
 import org.opensaml.saml.saml2.core.StatusCode;
-import uk.gov.ida.saml.core.domain.IdaStatus;
+import stubidp.saml.utils.core.domain.IdaStatus;
 import stubidp.saml.extensions.domain.SamlStatusCode;
 
 import java.text.MessageFormat;

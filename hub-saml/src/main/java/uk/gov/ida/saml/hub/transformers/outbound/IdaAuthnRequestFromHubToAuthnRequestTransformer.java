@@ -8,10 +8,10 @@ import org.opensaml.saml.saml2.core.NameIDPolicy;
 import org.opensaml.saml.saml2.core.NameIDType;
 import org.opensaml.saml.saml2.core.RequestedAuthnContext;
 import org.opensaml.saml.saml2.core.Scoping;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.domain.AuthnContext;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.domain.AuthnContext;
 import uk.gov.ida.saml.hub.HubConstants;
-import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
+import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 
 public class IdaAuthnRequestFromHubToAuthnRequestTransformer extends IdaAuthnRequestToAuthnRequestTransformer<IdaAuthnRequestFromHub> {
 

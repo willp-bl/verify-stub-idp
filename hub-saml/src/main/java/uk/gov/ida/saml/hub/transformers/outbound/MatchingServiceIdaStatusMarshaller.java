@@ -2,10 +2,10 @@ package uk.gov.ida.saml.hub.transformers.outbound;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.inject.Inject;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.domain.DetailedStatusCode;
-import uk.gov.ida.saml.core.domain.MatchingServiceIdaStatus;
-import uk.gov.ida.saml.core.transformers.outbound.IdaStatusMarshaller;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.domain.DetailedStatusCode;
+import stubidp.saml.utils.core.domain.MatchingServiceIdaStatus;
+import stubidp.saml.utils.core.transformers.outbound.IdaStatusMarshaller;
 
 public class MatchingServiceIdaStatusMarshaller extends IdaStatusMarshaller<MatchingServiceIdaStatus> {
 

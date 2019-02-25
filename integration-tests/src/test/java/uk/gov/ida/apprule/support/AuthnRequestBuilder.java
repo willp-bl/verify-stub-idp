@@ -16,11 +16,11 @@ import org.opensaml.security.credential.Credential;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.opensaml.xmlsec.signature.support.Signer;
 import stubidp.saml.extensions.IdaConstants;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.extensions.extensions.IdaAuthnContext;
-import uk.gov.ida.saml.core.test.AuthnRequestIdGenerator;
-import uk.gov.ida.saml.core.test.builders.IssuerBuilder;
-import uk.gov.ida.saml.core.test.builders.SignatureBuilder;
+import stubidp.saml.utils.core.test.AuthnRequestIdGenerator;
+import stubidp.saml.utils.core.test.builders.IssuerBuilder;
+import stubidp.saml.utils.core.test.builders.SignatureBuilder;
 import uk.gov.ida.saml.idp.test.builders.ConditionsBuilder;
 
 import java.util.Optional;

@@ -2,9 +2,9 @@ package uk.gov.ida.apprule.support;
 
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.AuthnRequest;
-import uk.gov.ida.saml.core.test.TestCredentialFactory;
+import stubidp.saml.utils.core.test.TestCredentialFactory;
 import stubidp.test.devpki.TestEntityIds;
-import uk.gov.ida.saml.core.test.builders.IssuerBuilder;
+import stubidp.saml.utils.core.test.builders.IssuerBuilder;
 import uk.gov.ida.saml.hub.domain.Endpoints;
 import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 

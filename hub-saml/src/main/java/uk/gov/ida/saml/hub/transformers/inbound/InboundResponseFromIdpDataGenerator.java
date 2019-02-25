@@ -2,7 +2,7 @@ package uk.gov.ida.saml.hub.transformers.inbound;
 
 import com.google.inject.Inject;
 import uk.gov.ida.saml.core.domain.InboundResponseFromIdpData;
-import uk.gov.ida.saml.core.domain.PassthroughAssertion;
+import stubidp.saml.utils.core.domain.PassthroughAssertion;
 import uk.gov.ida.saml.core.transformers.outbound.decorators.AssertionBlobEncrypter;
 import uk.gov.ida.saml.hub.domain.InboundResponseFromIdp;
 

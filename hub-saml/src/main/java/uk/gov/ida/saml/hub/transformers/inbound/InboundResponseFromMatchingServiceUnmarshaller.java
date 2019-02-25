@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.hub.transformers.inbound;
 
 import java.util.Optional;
-import uk.gov.ida.saml.core.domain.PassthroughAssertion;
+import stubidp.saml.utils.core.domain.PassthroughAssertion;
 import uk.gov.ida.saml.hub.domain.InboundResponseFromMatchingService;
 import stubidp.saml.security.validators.ValidatedAssertions;
 import stubidp.saml.security.validators.ValidatedResponse;

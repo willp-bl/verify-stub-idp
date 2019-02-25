@@ -1,6 +1,6 @@
 package uk.gov.ida.stub.idp.services;
 
-import uk.gov.ida.saml.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.AuthnContext;
 import uk.gov.ida.stub.idp.Urls;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.dtos.IdpUserDto;

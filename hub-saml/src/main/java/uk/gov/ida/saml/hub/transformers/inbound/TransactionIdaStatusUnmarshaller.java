@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.hub.transformers.inbound;
 
 import com.google.common.collect.ImmutableMap;
-import uk.gov.ida.saml.core.domain.TransactionIdaStatus;
+import stubidp.saml.utils.core.domain.TransactionIdaStatus;
 
 public class TransactionIdaStatusUnmarshaller extends IdaStatusUnmarshaller<TransactionIdaStatus> {
 

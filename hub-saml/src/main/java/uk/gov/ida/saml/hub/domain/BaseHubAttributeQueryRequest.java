@@ -1,8 +1,8 @@
 package uk.gov.ida.saml.hub.domain;
 
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.domain.IdaSamlMessage;
-import uk.gov.ida.saml.core.domain.PersistentId;
+import stubidp.saml.utils.core.domain.IdaSamlMessage;
+import stubidp.saml.utils.core.domain.PersistentId;
 
 import java.net.URI;
 

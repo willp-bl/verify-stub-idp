@@ -16,7 +16,7 @@ import org.opensaml.saml.saml2.metadata.SPSSODescriptor;
 import stubidp.utils.security.security.X509CertificateFactory;
 import stubidp.utils.security.security.verification.CertificateChainValidator;
 import stubidp.utils.security.security.verification.PKIXParametersProvider;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import stubidp.test.devpki.TestEntityIds;
 import uk.gov.ida.saml.metadata.test.factories.metadata.EntityDescriptorFactory;
 import uk.gov.ida.saml.metadata.test.factories.metadata.MetadataFactory;

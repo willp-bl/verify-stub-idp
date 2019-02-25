@@ -8,7 +8,7 @@ import org.opensaml.saml.saml2.core.NameID;
 import org.opensaml.saml.saml2.core.Subject;
 import org.opensaml.saml.saml2.core.SubjectConfirmation;
 import org.opensaml.saml.saml2.core.SubjectConfirmationData;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.hub.domain.MatchingServiceHealthCheckRequest;
 
 import java.util.function.Function;

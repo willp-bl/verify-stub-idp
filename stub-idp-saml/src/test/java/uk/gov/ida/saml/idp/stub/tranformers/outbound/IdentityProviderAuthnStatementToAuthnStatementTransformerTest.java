@@ -10,11 +10,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.AuthnStatement;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.IdentityProviderAuthnStatement;
 import stubidp.saml.extensions.extensions.IdaAuthnContext;
-import uk.gov.ida.saml.core.test.OpenSAMLRunner;
+import stubidp.saml.utils.core.test.OpenSAMLRunner;
 import uk.gov.ida.saml.idp.stub.transformers.outbound.IdentityProviderAuthnStatementToAuthnStatementTransformer;
 import stubidp.utils.common.datetime.DateTimeFreezer;
 

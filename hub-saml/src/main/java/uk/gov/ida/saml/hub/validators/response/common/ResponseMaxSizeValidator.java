@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.hub.validators.response.common;
 
 import javax.inject.Inject;
-import uk.gov.ida.saml.hub.validators.StringSizeValidator;
+import stubidp.saml.utils.hub.validators.StringSizeValidator;
 
 public class ResponseMaxSizeValidator extends ResponseSizeValidator {
     private static final int LOWER_BOUND = 0;

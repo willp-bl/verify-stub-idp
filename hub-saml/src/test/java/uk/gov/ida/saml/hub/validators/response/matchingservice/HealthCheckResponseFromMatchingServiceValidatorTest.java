@@ -8,14 +8,14 @@ import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.StatusCode;
 import stubidp.saml.extensions.domain.SamlStatusCode;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 
-import static uk.gov.ida.saml.core.test.builders.IssuerBuilder.anIssuer;
-import static uk.gov.ida.saml.core.test.builders.ResponseBuilder.aResponse;
-import static uk.gov.ida.saml.core.test.builders.StatusBuilder.aStatus;
-import static uk.gov.ida.saml.core.test.builders.StatusCodeBuilder.aStatusCode;
+import static stubidp.saml.utils.core.test.builders.IssuerBuilder.anIssuer;
+import static stubidp.saml.utils.core.test.builders.ResponseBuilder.aResponse;
+import static stubidp.saml.utils.core.test.builders.StatusBuilder.aStatus;
+import static stubidp.saml.utils.core.test.builders.StatusCodeBuilder.aStatusCode;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class HealthCheckResponseFromMatchingServiceValidatorTest {

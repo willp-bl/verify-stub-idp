@@ -1,6 +1,6 @@
 package uk.gov.ida.saml.idp.test.builders;
 
-import uk.gov.ida.saml.core.domain.PersistentId;
+import stubidp.saml.utils.core.domain.PersistentId;
 
 public class PersistentIdBuilder {
 

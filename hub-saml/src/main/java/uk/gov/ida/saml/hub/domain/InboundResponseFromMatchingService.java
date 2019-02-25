@@ -3,7 +3,7 @@ package uk.gov.ida.saml.hub.domain;
 import java.util.Optional;
 import org.joda.time.DateTime;
 import uk.gov.ida.saml.core.domain.IdaMatchingServiceResponse;
-import uk.gov.ida.saml.core.domain.PassthroughAssertion;
+import stubidp.saml.utils.core.domain.PassthroughAssertion;
 import uk.gov.ida.saml.hub.transformers.inbound.MatchingServiceIdaStatus;
 
 public class InboundResponseFromMatchingService extends IdaMatchingServiceResponse {

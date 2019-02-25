@@ -4,10 +4,10 @@ import com.google.inject.Inject;
 import org.opensaml.saml.saml2.core.Response;
 import org.w3c.dom.Element;
 import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.ResponseAssertionSigner;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.ResponseSignatureCreator;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlResponseAssertionEncrypter;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlSignatureSigner;
+import stubidp.saml.utils.core.transformers.outbound.decorators.ResponseAssertionSigner;
+import stubidp.saml.utils.core.transformers.outbound.decorators.ResponseSignatureCreator;
+import stubidp.saml.utils.core.transformers.outbound.decorators.SamlResponseAssertionEncrypter;
+import stubidp.saml.utils.core.transformers.outbound.decorators.SamlSignatureSigner;
 import java.util.function.Function;
 
 public class ResponseToElementTransformer implements Function<Response, Element> {

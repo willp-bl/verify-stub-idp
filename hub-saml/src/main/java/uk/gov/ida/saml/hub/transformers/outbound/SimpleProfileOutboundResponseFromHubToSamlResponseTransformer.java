@@ -2,9 +2,9 @@ package uk.gov.ida.saml.hub.transformers.outbound;
 
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.Status;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.domain.OutboundResponseFromHub;
-import uk.gov.ida.saml.core.transformers.outbound.IdaResponseToSamlResponseTransformer;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.domain.OutboundResponseFromHub;
+import stubidp.saml.utils.core.transformers.outbound.IdaResponseToSamlResponseTransformer;
 
 import javax.inject.Inject;
 

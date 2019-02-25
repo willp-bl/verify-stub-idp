@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import uk.gov.ida.saml.core.DateTimeFreezer;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import uk.gov.ida.saml.hub.configuration.SamlDuplicateRequestValidationConfiguration;
 
 import java.util.concurrent.ConcurrentHashMap;

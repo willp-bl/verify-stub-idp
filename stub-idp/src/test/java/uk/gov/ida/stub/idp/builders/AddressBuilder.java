@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.builders;
 
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.domain.Address;
+import stubidp.saml.utils.core.domain.Address;
 
 import java.util.ArrayList;
 import java.util.List;

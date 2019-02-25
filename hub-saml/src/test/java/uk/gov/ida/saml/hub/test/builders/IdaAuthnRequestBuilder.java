@@ -3,9 +3,9 @@ package uk.gov.ida.saml.hub.test.builders;
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.AuthnContextComparisonTypeEnumeration;
 import org.opensaml.xmlsec.signature.Signature;
-import uk.gov.ida.saml.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.AuthnContext;
 import uk.gov.ida.saml.hub.domain.AuthnRequestFromTransaction;
-import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
+import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 
 import java.net.URI;
 import java.util.Collections;

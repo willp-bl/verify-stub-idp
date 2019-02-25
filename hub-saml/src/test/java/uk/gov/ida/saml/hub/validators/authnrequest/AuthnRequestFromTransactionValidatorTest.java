@@ -12,7 +12,7 @@ import org.opensaml.saml.saml2.core.AuthnRequest;
 import org.opensaml.saml.saml2.core.NameIDType;
 import uk.gov.ida.saml.core.DateTimeFreezer;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
-import uk.gov.ida.saml.core.test.OpenSAMLRunner;
+import stubidp.saml.utils.core.test.OpenSAMLRunner;
 import stubidp.saml.extensions.validation.SamlTransformationErrorException;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.hub.configuration.SamlAuthnRequestValidityDurationConfiguration;
@@ -25,9 +25,9 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static stubidp.saml.extensions.IdaConstants.SAML_VERSION_NUMBER;
-import static uk.gov.ida.saml.core.test.AuthnRequestIdGenerator.generateRequestId;
-import static uk.gov.ida.saml.core.test.builders.AuthnRequestBuilder.anAuthnRequest;
-import static uk.gov.ida.saml.core.test.builders.IssuerBuilder.anIssuer;
+import static stubidp.saml.utils.core.test.AuthnRequestIdGenerator.generateRequestId;
+import static stubidp.saml.utils.core.test.builders.AuthnRequestBuilder.anAuthnRequest;
+import static stubidp.saml.utils.core.test.builders.IssuerBuilder.anIssuer;
 import static uk.gov.ida.saml.core.test.builders.NameIdPolicyBuilder.aNameIdPolicy;
 import static uk.gov.ida.saml.core.test.builders.ScopingBuilder.aScoping;
 

@@ -13,7 +13,7 @@ import org.opensaml.core.criterion.EntityIdCriterion;
 import org.opensaml.core.xml.io.MarshallingException;
 import org.opensaml.saml.metadata.resolver.MetadataResolver;
 import org.opensaml.xmlsec.signature.support.SignatureException;
-import uk.gov.ida.saml.core.test.builders.metadata.EntityDescriptorBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.EntityDescriptorBuilder;
 
 import java.util.Collections;
 import java.util.List;

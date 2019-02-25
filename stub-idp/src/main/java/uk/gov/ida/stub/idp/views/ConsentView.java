@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.views;
 
-import uk.gov.ida.saml.core.domain.Address;
-import uk.gov.ida.saml.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.Address;
+import stubidp.saml.utils.core.domain.AuthnContext;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.views.helpers.IdpUserHelper;
 
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class ConsentView extends IdpPageView {
     private final boolean userLOADidNotMatch;
     private final AuthnContext userLevelOfAssurance;
-    private final List<uk.gov.ida.saml.core.domain.AuthnContext> levelsOfAssurance;
+    private final List<AuthnContext> levelsOfAssurance;
     private final IdpUserHelper idpUserHelper;
 
     public ConsentView(String name, String idpId, String assetId, DatabaseIdpUser idpUser, boolean userLOADidNotMatch, AuthnContext userLevelOfAssurance, List<AuthnContext> levelsOfAssurance, String csrfToken) {

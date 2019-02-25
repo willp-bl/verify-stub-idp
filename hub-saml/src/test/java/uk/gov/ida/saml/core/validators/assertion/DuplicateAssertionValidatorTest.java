@@ -9,7 +9,7 @@ import org.opensaml.saml.saml2.core.Subject;
 import org.opensaml.saml.saml2.core.SubjectConfirmation;
 import org.opensaml.saml.saml2.core.SubjectConfirmationData;
 import uk.gov.ida.saml.core.DateTimeFreezer;
-import uk.gov.ida.saml.core.test.OpenSAMLRunner;
+import stubidp.saml.utils.core.test.OpenSAMLRunner;
 import uk.gov.ida.saml.hub.validators.authnrequest.ConcurrentMapIdExpirationCache;
 import uk.gov.ida.saml.hub.validators.authnrequest.IdExpirationCache;
 
@@ -20,11 +20,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.joda.time.DateTimeZone.UTC;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.authnStatementAlreadyReceived;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.duplicateMatchingDataset;
-import static uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper.validateFail;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
-import static uk.gov.ida.saml.core.test.builders.SubjectBuilder.aSubject;
-import static uk.gov.ida.saml.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
-import static uk.gov.ida.saml.core.test.builders.SubjectConfirmationDataBuilder.aSubjectConfirmationData;
+import static stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper.validateFail;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.SubjectBuilder.aSubject;
+import static stubidp.saml.utils.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
+import static stubidp.saml.utils.core.test.builders.SubjectConfirmationDataBuilder.aSubjectConfirmationData;
 
 @RunWith(OpenSAMLRunner.class)
 public class DuplicateAssertionValidatorTest {

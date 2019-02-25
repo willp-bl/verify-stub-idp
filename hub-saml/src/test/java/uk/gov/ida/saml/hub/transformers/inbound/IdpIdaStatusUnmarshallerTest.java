@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.Status;
 import org.opensaml.saml.saml2.core.StatusCode;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.api.CoreTransformersFactory;
-import uk.gov.ida.saml.core.test.OpenSAMLRunner;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.api.CoreTransformersFactory;
+import stubidp.saml.utils.core.test.OpenSAMLRunner;
 import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
 import uk.gov.ida.saml.hub.domain.IdpIdaStatus;
 
@@ -20,8 +20,8 @@ import java.nio.file.Paths;
 import java.util.Base64;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static uk.gov.ida.saml.core.test.builders.StatusBuilder.aStatus;
-import static uk.gov.ida.saml.core.test.builders.StatusCodeBuilder.aStatusCode;
+import static stubidp.saml.utils.core.test.builders.StatusBuilder.aStatus;
+import static stubidp.saml.utils.core.test.builders.StatusCodeBuilder.aStatusCode;
 import static uk.gov.ida.saml.core.test.builders.StatusMessageBuilder.aStatusMessage;
 
 @RunWith(OpenSAMLRunner.class)

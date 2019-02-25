@@ -1,6 +1,6 @@
 package uk.gov.ida.stub.idp.domain;
 
-import uk.gov.ida.saml.core.domain.IdaStatus;
+import stubidp.saml.utils.core.domain.IdaStatus;
 
 import java.util.Optional;
 

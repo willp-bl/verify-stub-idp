@@ -5,7 +5,7 @@ import org.opensaml.saml.saml2.core.AttributeQuery;
 import org.w3c.dom.Element;
 import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
 import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlAttributeQueryAssertionEncrypter;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlSignatureSigner;
+import stubidp.saml.utils.core.transformers.outbound.decorators.SamlSignatureSigner;
 import uk.gov.ida.saml.hub.transformers.outbound.decorators.SamlAttributeQueryAssertionSignatureSigner;
 import uk.gov.ida.saml.hub.transformers.outbound.decorators.SigningRequestAbstractTypeSignatureCreator;
 

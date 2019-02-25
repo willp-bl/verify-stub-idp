@@ -3,10 +3,10 @@ package uk.gov.ida.saml.idp.stub.domain;
 import java.util.Optional;
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.Attribute;
-import uk.gov.ida.saml.core.domain.PersistentId;
-import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.domain.IdaSamlResponse;
-import uk.gov.ida.saml.core.domain.TransactionIdaStatus;
+import stubidp.saml.utils.core.domain.PersistentId;
+import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.IdaSamlResponse;
+import stubidp.saml.utils.core.domain.TransactionIdaStatus;
 
 import java.net.URI;
 import java.util.List;

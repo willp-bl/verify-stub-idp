@@ -1,8 +1,8 @@
 package uk.gov.ida.saml.hub.test.builders;
 
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.hub.domain.EidasAuthnRequestFromHub;
+import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.saml.utils.hub.domain.EidasAuthnRequestFromHub;
 
 import java.net.URI;
 import java.util.List;

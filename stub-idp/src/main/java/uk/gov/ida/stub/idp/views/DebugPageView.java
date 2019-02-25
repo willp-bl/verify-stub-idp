@@ -1,6 +1,6 @@
 package uk.gov.ida.stub.idp.views;
 
-import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
+import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.stub.idp.domain.IdpHint;
 import uk.gov.ida.stub.idp.domain.IdpLanguageHint;
 import uk.gov.ida.stub.idp.repositories.IdpSession;

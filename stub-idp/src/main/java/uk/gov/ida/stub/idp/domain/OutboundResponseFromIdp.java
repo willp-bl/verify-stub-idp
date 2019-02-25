@@ -3,8 +3,8 @@ package uk.gov.ida.stub.idp.domain;
 import org.apache.commons.lang.StringUtils;
 import org.joda.time.DateTime;
 import stubidp.utils.security.security.IdGenerator;
-import uk.gov.ida.saml.core.domain.IdaSamlResponse;
-import uk.gov.ida.saml.core.domain.IdentityProviderAssertion;
+import stubidp.saml.utils.core.domain.IdaSamlResponse;
+import stubidp.saml.utils.core.domain.IdentityProviderAssertion;
 
 import java.io.Serializable;
 import java.net.URI;

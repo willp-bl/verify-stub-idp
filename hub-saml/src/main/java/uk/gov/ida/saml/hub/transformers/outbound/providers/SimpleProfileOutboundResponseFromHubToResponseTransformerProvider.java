@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.hub.transformers.outbound.providers;
 
 import com.google.inject.Provider;
-import uk.gov.ida.saml.core.domain.OutboundResponseFromHub;
+import stubidp.saml.utils.core.domain.OutboundResponseFromHub;
 import uk.gov.ida.saml.hub.transformers.outbound.SimpleProfileOutboundResponseFromHubToSamlResponseTransformer;
 
 import javax.inject.Inject;

@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.idp.builders;
 
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.domain.TransliterableMdsValue;
+import stubidp.saml.utils.core.domain.TransliterableMdsValue;
 
 public class TransliterableMdsValueBuilder {
 

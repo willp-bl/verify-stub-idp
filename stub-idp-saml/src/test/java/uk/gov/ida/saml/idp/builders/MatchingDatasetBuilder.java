@@ -2,12 +2,12 @@ package uk.gov.ida.saml.idp.builders;
 
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
-import uk.gov.ida.saml.core.domain.Address;
-import uk.gov.ida.saml.core.domain.AddressFactory;
-import uk.gov.ida.saml.core.domain.Gender;
-import uk.gov.ida.saml.core.domain.MatchingDataset;
-import uk.gov.ida.saml.core.domain.SimpleMdsValue;
-import uk.gov.ida.saml.core.domain.TransliterableMdsValue;
+import stubidp.saml.utils.core.domain.Address;
+import stubidp.saml.utils.core.domain.AddressFactory;
+import stubidp.saml.utils.core.domain.Gender;
+import stubidp.saml.utils.core.domain.MatchingDataset;
+import stubidp.saml.utils.core.domain.SimpleMdsValue;
+import stubidp.saml.utils.core.domain.TransliterableMdsValue;
 
 import java.util.ArrayList;
 import java.util.List;

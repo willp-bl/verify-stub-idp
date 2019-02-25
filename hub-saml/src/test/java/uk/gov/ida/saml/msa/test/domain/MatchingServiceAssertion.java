@@ -2,10 +2,10 @@ package uk.gov.ida.saml.msa.test.domain;
 
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.Attribute;
-import uk.gov.ida.saml.core.domain.AssertionRestrictions;
+import stubidp.saml.utils.core.domain.AssertionRestrictions;
 import uk.gov.ida.saml.core.domain.MatchingServiceAuthnStatement;
-import uk.gov.ida.saml.core.domain.OutboundAssertion;
-import uk.gov.ida.saml.core.domain.PersistentId;
+import stubidp.saml.utils.core.domain.OutboundAssertion;
+import stubidp.saml.utils.core.domain.PersistentId;
 
 import java.util.List;
 

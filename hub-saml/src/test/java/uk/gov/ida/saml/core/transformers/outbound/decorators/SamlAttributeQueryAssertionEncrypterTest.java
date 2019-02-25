@@ -15,7 +15,7 @@ import org.opensaml.security.credential.Credential;
 import org.opensaml.xmlsec.encryption.support.EncryptionException;
 import stubidp.saml.security.EncrypterFactory;
 import stubidp.saml.security.EntityToEncryptForLocator;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import stubidp.saml.security.KeyStoreBackedEncryptionCredentialResolver;
 
 import java.util.List;
@@ -25,11 +25,11 @@ import static org.assertj.core.api.Assertions.fail;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
-import static uk.gov.ida.saml.core.test.builders.AttributeQueryBuilder.anAttributeQuery;
-import static uk.gov.ida.saml.core.test.builders.SubjectBuilder.aSubject;
-import static uk.gov.ida.saml.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
-import static uk.gov.ida.saml.core.test.builders.SubjectConfirmationDataBuilder.aSubjectConfirmationData;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.AttributeQueryBuilder.anAttributeQuery;
+import static stubidp.saml.utils.core.test.builders.SubjectBuilder.aSubject;
+import static stubidp.saml.utils.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
+import static stubidp.saml.utils.core.test.builders.SubjectConfirmationDataBuilder.aSubjectConfirmationData;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class SamlAttributeQueryAssertionEncrypterTest {

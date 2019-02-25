@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.idp.test.builders;
 
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.domain.AssertionRestrictions;
+import stubidp.saml.utils.core.domain.AssertionRestrictions;
 
 public class AssertionRestrictionsBuilder {
 

@@ -3,9 +3,9 @@ package uk.gov.ida.stub.idp.domain;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.joda.time.LocalDate;
-import uk.gov.ida.saml.core.domain.Address;
-import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.domain.Gender;
+import stubidp.saml.utils.core.domain.Address;
+import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.Gender;
 
 import java.io.Serializable;
 import java.util.List;

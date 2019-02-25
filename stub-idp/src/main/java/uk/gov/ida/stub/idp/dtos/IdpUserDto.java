@@ -2,8 +2,8 @@ package uk.gov.ida.stub.idp.dtos;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.joda.time.LocalDate;
-import uk.gov.ida.saml.core.domain.Address;
-import uk.gov.ida.saml.core.domain.Gender;
+import stubidp.saml.utils.core.domain.Address;
+import stubidp.saml.utils.core.domain.Gender;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.domain.MatchingDatasetValue;
 

@@ -3,7 +3,7 @@ package uk.gov.ida.saml.hub.transformers.outbound;
 import com.google.inject.Inject;
 import org.opensaml.saml.saml2.core.RequestAbstractType;
 import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlSignatureSigner;
+import stubidp.saml.utils.core.transformers.outbound.decorators.SamlSignatureSigner;
 import uk.gov.ida.saml.hub.transformers.outbound.decorators.SigningRequestAbstractTypeSignatureCreator;
 
 import java.util.function.Function;

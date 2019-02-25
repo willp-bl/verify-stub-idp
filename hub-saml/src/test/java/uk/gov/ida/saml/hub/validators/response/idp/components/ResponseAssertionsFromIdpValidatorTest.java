@@ -7,7 +7,7 @@ import org.mockito.Mock;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Response;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import stubidp.test.devpki.TestEntityIds;
 import stubidp.saml.extensions.validation.SamlTransformationErrorException;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
@@ -23,10 +23,10 @@ import java.util.List;
 import static java.util.Arrays.asList;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
-import static uk.gov.ida.saml.core.test.builders.AuthnStatementBuilder.anAuthnStatement;
-import static uk.gov.ida.saml.core.test.builders.MatchingDatasetAttributeStatementBuilder_1_1.aMatchingDatasetAttributeStatement_1_1;
-import static uk.gov.ida.saml.core.test.builders.ResponseBuilder.aResponse;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.AuthnStatementBuilder.anAuthnStatement;
+import static stubidp.saml.utils.core.test.builders.MatchingDatasetAttributeStatementBuilder_1_1.aMatchingDatasetAttributeStatement_1_1;
+import static stubidp.saml.utils.core.test.builders.ResponseBuilder.aResponse;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class ResponseAssertionsFromIdpValidatorTest {

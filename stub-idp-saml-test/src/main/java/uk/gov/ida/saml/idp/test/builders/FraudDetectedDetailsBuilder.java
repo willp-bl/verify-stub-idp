@@ -1,6 +1,6 @@
 package uk.gov.ida.saml.idp.test.builders;
 
-import uk.gov.ida.saml.core.domain.FraudDetectedDetails;
+import stubidp.saml.utils.core.domain.FraudDetectedDetails;
 
 public class FraudDetectedDetailsBuilder {
 

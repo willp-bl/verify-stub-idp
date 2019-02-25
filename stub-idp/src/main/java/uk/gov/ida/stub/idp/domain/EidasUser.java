@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.joda.time.LocalDate;
-import uk.gov.ida.saml.core.domain.Gender;
+import stubidp.saml.utils.core.domain.Gender;
 
 import java.util.Objects;
 import java.util.Optional;

@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.hub.transformers.inbound;
 
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.domain.PassthroughAssertion;
+import stubidp.saml.utils.core.domain.PassthroughAssertion;
 import uk.gov.ida.saml.hub.domain.IdpIdaStatus;
 import uk.gov.ida.saml.hub.domain.InboundResponseFromIdp;
 import stubidp.saml.security.validators.ValidatedAssertions;

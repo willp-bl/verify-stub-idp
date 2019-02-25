@@ -1,11 +1,11 @@
 package uk.gov.ida.saml.idp.test.builders;
 
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.domain.AssertionRestrictions;
-import uk.gov.ida.saml.core.domain.IdentityProviderAssertion;
-import uk.gov.ida.saml.core.domain.PersistentId;
-import uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement;
-import uk.gov.ida.saml.core.domain.MatchingDataset;
+import stubidp.saml.utils.core.domain.AssertionRestrictions;
+import stubidp.saml.utils.core.domain.IdentityProviderAssertion;
+import stubidp.saml.utils.core.domain.PersistentId;
+import stubidp.saml.utils.core.domain.IdentityProviderAuthnStatement;
+import stubidp.saml.utils.core.domain.MatchingDataset;
 
 import java.util.Optional;
 import java.util.UUID;

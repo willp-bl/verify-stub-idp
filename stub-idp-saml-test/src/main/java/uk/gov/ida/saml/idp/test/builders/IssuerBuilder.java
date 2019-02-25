@@ -2,7 +2,7 @@ package uk.gov.ida.saml.idp.test.builders;
 
 import java.util.Optional;
 import org.opensaml.saml.saml2.core.Issuer;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.test.devpki.TestCertificateStrings;
 
 public class IssuerBuilder {

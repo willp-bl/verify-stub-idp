@@ -4,12 +4,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.AuthnRequest;
 import org.w3c.dom.Element;
-import uk.gov.ida.saml.core.test.OpenSAMLRunner;
+import stubidp.saml.utils.core.test.OpenSAMLRunner;
 import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static uk.gov.ida.saml.core.test.builders.AuthnRequestBuilder.anAuthnRequest;
-import static uk.gov.ida.saml.core.test.builders.IssuerBuilder.anIssuer;
+import static stubidp.saml.utils.core.test.builders.AuthnRequestBuilder.anAuthnRequest;
+import static stubidp.saml.utils.core.test.builders.IssuerBuilder.anIssuer;
 
 @RunWith(OpenSAMLRunner.class)
 public class EntitiesDescriptorToElementTransformerTest {

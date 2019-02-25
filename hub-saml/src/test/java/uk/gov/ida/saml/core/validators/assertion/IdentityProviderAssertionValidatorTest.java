@@ -6,12 +6,12 @@ import org.mockito.Mock;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.AuthnContextClassRef;
 import org.opensaml.saml.saml2.core.SubjectConfirmation;
-import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
-import uk.gov.ida.saml.core.test.builders.AttributeStatementBuilder;
+import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper;
+import stubidp.saml.utils.core.test.builders.AttributeStatementBuilder;
 import uk.gov.ida.saml.core.test.builders.IdpFraudEventIdAttributeBuilder;
-import uk.gov.ida.saml.core.test.builders.SubjectBuilder;
+import stubidp.saml.utils.core.test.builders.SubjectBuilder;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;import uk.gov.ida.saml.core.validators.subject.AssertionSubjectValidator;
 import uk.gov.ida.saml.core.validators.subjectconfirmation.AssertionSubjectConfirmationValidator;
 import stubidp.saml.security.validators.issuer.IssuerValidator;
@@ -19,11 +19,11 @@ import stubidp.saml.security.validators.issuer.IssuerValidator;
 import java.util.UUID;
 
 import static org.mockito.Mockito.verify;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
-import static uk.gov.ida.saml.core.test.builders.AuthnContextBuilder.anAuthnContext;
-import static uk.gov.ida.saml.core.test.builders.AuthnContextClassRefBuilder.anAuthnContextClassRef;
-import static uk.gov.ida.saml.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
-import static uk.gov.ida.saml.core.test.builders.AuthnStatementBuilder.anAuthnStatement;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.AuthnContextBuilder.anAuthnContext;
+import static stubidp.saml.utils.core.test.builders.AuthnContextClassRefBuilder.anAuthnContextClassRef;
+import static stubidp.saml.utils.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
+import static stubidp.saml.utils.core.test.builders.AuthnStatementBuilder.anAuthnStatement;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class IdentityProviderAssertionValidatorTest {

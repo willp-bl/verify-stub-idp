@@ -7,7 +7,7 @@ import org.opensaml.saml.saml2.core.RequestAbstractType;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.metadata.IDPSSODescriptor;
 import org.opensaml.saml.saml2.metadata.SPSSODescriptor;
-import uk.gov.ida.saml.core.test.TestCredentialFactory;
+import stubidp.saml.utils.core.test.TestCredentialFactory;
 import uk.gov.ida.saml.core.test.validators.SingleCertificateSignatureValidator;
 import stubidp.saml.security.SamlMessageSignatureValidator;
 import stubidp.saml.security.SignatureValidator;

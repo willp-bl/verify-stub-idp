@@ -5,14 +5,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.Status;
 import org.opensaml.saml.saml2.core.StatusCode;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.extensions.domain.SamlStatusCode;
-import uk.gov.ida.saml.core.domain.TransactionIdaStatus;
-import uk.gov.ida.saml.core.test.OpenSAMLRunner;
+import stubidp.saml.utils.core.domain.TransactionIdaStatus;
+import stubidp.saml.utils.core.test.OpenSAMLRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static uk.gov.ida.saml.core.test.builders.StatusBuilder.aStatus;
-import static uk.gov.ida.saml.core.test.builders.StatusCodeBuilder.aStatusCode;
+import static stubidp.saml.utils.core.test.builders.StatusBuilder.aStatus;
+import static stubidp.saml.utils.core.test.builders.StatusCodeBuilder.aStatusCode;
 
 @RunWith(OpenSAMLRunner.class)
 public class TransactionIdaStatusUnmarshallerTest {

@@ -5,17 +5,18 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.Status;
 import org.opensaml.saml.saml2.core.StatusCode;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.domain.MatchingServiceIdaStatus;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.domain.MatchingServiceIdaStatus;
 import stubidp.saml.extensions.domain.SamlStatusCode;
-import uk.gov.ida.saml.core.test.OpenSAMLRunner;
+import stubidp.saml.utils.hub.transformers.outbound.MatchingServiceIdaStatusMarshaller;
+import stubidp.saml.utils.core.test.OpenSAMLRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(OpenSAMLRunner.class)
 public class MatchingServiceIdaStatusToSamlStatusMarshallerTest {
 
-    private MatchingServiceIdaStatusMarshaller marshaller;
+    private stubidp.saml.utils.hub.transformers.outbound.MatchingServiceIdaStatusMarshaller marshaller;
 
     @Before
     public void setUp() throws Exception {

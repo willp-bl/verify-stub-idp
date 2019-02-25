@@ -8,8 +8,8 @@ import org.opensaml.saml.saml2.metadata.EntityDescriptor;
 import org.opensaml.security.credential.Credential;
 import org.opensaml.xmlsec.signature.Signature;
 import org.opensaml.xmlsec.signature.support.SignatureException;
-import uk.gov.ida.saml.core.test.builders.metadata.EntitiesDescriptorBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.SignatureBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.EntitiesDescriptorBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.SignatureBuilder;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +17,7 @@ import java.util.Optional;
 import static java.util.Collections.emptyList;
 import static stubidp.test.devpki.TestCertificateStrings.METADATA_SIGNING_A_PRIVATE_KEY;
 import static stubidp.test.devpki.TestCertificateStrings.METADATA_SIGNING_A_PUBLIC_CERT;
-import static uk.gov.ida.saml.core.test.builders.metadata.EntitiesDescriptorBuilder.anEntitiesDescriptor;
+import static stubidp.saml.utils.core.test.builders.metadata.EntitiesDescriptorBuilder.anEntitiesDescriptor;
 
 public class EntitiesDescriptorFactory {
     private final DateTime validUntil = DateTime.now().plusWeeks(2);

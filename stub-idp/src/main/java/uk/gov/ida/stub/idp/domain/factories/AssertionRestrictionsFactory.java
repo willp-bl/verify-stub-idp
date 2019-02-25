@@ -2,7 +2,7 @@ package uk.gov.ida.stub.idp.domain.factories;
 
 import io.dropwizard.util.Duration;
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.domain.AssertionRestrictions;
+import stubidp.saml.utils.core.domain.AssertionRestrictions;
 import uk.gov.ida.stub.idp.configuration.AssertionLifetimeConfiguration;
 
 import javax.inject.Inject;

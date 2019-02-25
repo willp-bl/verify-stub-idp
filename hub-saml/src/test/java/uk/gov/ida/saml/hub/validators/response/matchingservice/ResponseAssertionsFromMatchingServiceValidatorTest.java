@@ -8,7 +8,7 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.StatusCode;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import stubidp.test.devpki.TestEntityIds;
 import stubidp.saml.extensions.validation.SamlTransformationErrorException;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
@@ -18,11 +18,11 @@ import stubidp.saml.security.validators.ValidatedResponse;
 
 import static java.util.Collections.singletonList;
 import static org.assertj.core.api.Assertions.assertThat;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
-import static uk.gov.ida.saml.core.test.builders.AuthnStatementBuilder.anAuthnStatement;
-import static uk.gov.ida.saml.core.test.builders.ResponseBuilder.aResponse;
-import static uk.gov.ida.saml.core.test.builders.StatusBuilder.aStatus;
-import static uk.gov.ida.saml.core.test.builders.StatusCodeBuilder.aStatusCode;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.AuthnStatementBuilder.anAuthnStatement;
+import static stubidp.saml.utils.core.test.builders.ResponseBuilder.aResponse;
+import static stubidp.saml.utils.core.test.builders.StatusBuilder.aStatus;
+import static stubidp.saml.utils.core.test.builders.StatusCodeBuilder.aStatusCode;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class ResponseAssertionsFromMatchingServiceValidatorTest {

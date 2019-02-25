@@ -2,9 +2,9 @@ package uk.gov.ida.saml.idp.stub.transformers.inbound;
 
 import org.opensaml.saml.saml2.core.AuthnContextClassRef;
 import org.opensaml.saml.saml2.core.AuthnRequest;
-import uk.gov.ida.saml.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.AuthnContext;
 import stubidp.saml.extensions.extensions.IdaAuthnContext;
-import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
+import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -28,8 +28,8 @@ import org.opensaml.security.SecurityException;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 
 import stubidp.utils.security.security.Certificate;
-import uk.gov.ida.saml.core.api.CoreTransformersFactory;
-import uk.gov.ida.saml.metadata.transformers.KeyDescriptorsUnmarshaller;
+import stubidp.saml.utils.core.api.CoreTransformersFactory;
+import stubidp.saml.utils.metadata.transformers.KeyDescriptorsUnmarshaller;
 
 public class CountryMetadataBuilder {
     private final ReadablePeriod validity;

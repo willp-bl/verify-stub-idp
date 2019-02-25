@@ -1,8 +1,8 @@
 package uk.gov.ida.stub.idp.services;
 
-import uk.gov.ida.saml.core.domain.IdentityProviderAssertion;
-import uk.gov.ida.saml.core.domain.IpAddress;
-import uk.gov.ida.saml.core.domain.PersistentId;
+import stubidp.saml.utils.core.domain.IdentityProviderAssertion;
+import stubidp.saml.utils.core.domain.IpAddress;
+import stubidp.saml.utils.core.domain.PersistentId;
 import uk.gov.ida.stub.idp.StubIdpModule;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.domain.OutboundResponseFromIdp;
@@ -21,7 +21,7 @@ import javax.inject.Named;
 import java.net.URI;
 import java.util.UUID;
 
-import static uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement.createIdentityProviderAuthnStatement;
+import static stubidp.saml.utils.core.domain.IdentityProviderAuthnStatement.createIdentityProviderAuthnStatement;
 
 public class SuccessAuthnResponseService {
 

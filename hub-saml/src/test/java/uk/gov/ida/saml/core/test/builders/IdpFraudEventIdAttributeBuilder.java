@@ -7,7 +7,7 @@ import org.opensaml.saml.saml2.core.Attribute;
 import java.util.Optional;
 
 import stubidp.saml.extensions.IdaConstants;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.extensions.extensions.IdpFraudEventId;
 import stubidp.saml.extensions.extensions.StringValueSamlObject;
 import stubidp.saml.extensions.extensions.impl.StringBasedMdsAttributeValueBuilder;

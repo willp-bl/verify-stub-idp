@@ -1,7 +1,7 @@
 package uk.gov.ida.saml.core.test.builders;
 
 import org.opensaml.saml.saml2.core.AttributeValue;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 
 public class SimpleStringAttributeValueBuilder {
 

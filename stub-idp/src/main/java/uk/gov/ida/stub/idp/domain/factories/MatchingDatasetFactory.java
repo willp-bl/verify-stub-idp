@@ -1,9 +1,9 @@
 package uk.gov.ida.stub.idp.domain.factories;
 
-import uk.gov.ida.saml.core.domain.Address;
-import uk.gov.ida.saml.core.domain.MatchingDataset;
-import uk.gov.ida.saml.core.domain.SimpleMdsValue;
-import uk.gov.ida.saml.core.domain.TransliterableMdsValue;
+import stubidp.saml.utils.core.domain.Address;
+import stubidp.saml.utils.core.domain.MatchingDataset;
+import stubidp.saml.utils.core.domain.SimpleMdsValue;
+import stubidp.saml.utils.core.domain.TransliterableMdsValue;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.domain.MatchingDatasetValue;
 

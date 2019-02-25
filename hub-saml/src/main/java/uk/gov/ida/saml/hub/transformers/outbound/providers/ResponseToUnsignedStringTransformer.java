@@ -1,8 +1,8 @@
 package uk.gov.ida.saml.hub.transformers.outbound.providers;
 
 import org.opensaml.saml.saml2.core.Response;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.ResponseAssertionSigner;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlResponseAssertionEncrypter;
+import stubidp.saml.utils.core.transformers.outbound.decorators.ResponseAssertionSigner;
+import stubidp.saml.utils.core.transformers.outbound.decorators.SamlResponseAssertionEncrypter;
 import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 import javax.inject.Inject;
 import java.util.function.Function;

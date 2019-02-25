@@ -3,6 +3,7 @@ package uk.gov.ida.saml.core.transformers.outbound.decorators;
 import org.opensaml.saml.saml2.core.Assertion;
 import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
 import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
+import stubidp.saml.utils.core.transformers.outbound.decorators.AssertionEncrypter;
 
 import javax.inject.Inject;
 import java.util.Optional;

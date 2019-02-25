@@ -13,7 +13,7 @@ import uk.gov.ida.saml.metadata.test.factories.metadata.EntityDescriptorFactory;
 import java.util.Collections;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static uk.gov.ida.saml.core.test.builders.metadata.EntitiesDescriptorBuilder.anEntitiesDescriptor;
+import static stubidp.saml.utils.core.test.builders.metadata.EntitiesDescriptorBuilder.anEntitiesDescriptor;
 
 public class EntitiesDescriptorNamePredicateTest {
 

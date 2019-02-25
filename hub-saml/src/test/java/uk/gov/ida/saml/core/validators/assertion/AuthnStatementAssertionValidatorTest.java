@@ -8,12 +8,11 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.AuthnContext;
 import org.opensaml.saml.saml2.core.AuthnContextClassRef;
 import org.opensaml.saml.saml2.core.AuthnStatement;
-import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.test.builders.AssertionBuilder;
-import uk.gov.ida.saml.core.test.builders.AuthnContextBuilder;
-import uk.gov.ida.saml.core.test.builders.AuthnContextClassRefBuilder;
-import uk.gov.ida.saml.core.test.builders.AuthnStatementBuilder;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.builders.AssertionBuilder;
+import stubidp.saml.utils.core.test.builders.AuthnContextBuilder;
+import stubidp.saml.utils.core.test.builders.AuthnContextClassRefBuilder;
+import stubidp.saml.utils.core.test.builders.AuthnStatementBuilder;
 
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -21,7 +20,7 @@ import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.authnCo
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.authnContextClassRefValueMissing;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.authnContextMissingError;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.authnInstantMissing;
-import static uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper.validateFail;
+import static stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper.validateFail;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class AuthnStatementAssertionValidatorTest {

@@ -8,6 +8,7 @@ import org.opensaml.saml.saml2.core.SubjectConfirmationData;
 import stubidp.saml.security.EncrypterFactory;
 import stubidp.saml.security.EntityToEncryptForLocator;
 import stubidp.saml.security.KeyStoreBackedEncryptionCredentialResolver;
+import stubidp.saml.utils.core.transformers.outbound.decorators.AbstractAssertionEncrypter;
 
 import java.util.List;
 

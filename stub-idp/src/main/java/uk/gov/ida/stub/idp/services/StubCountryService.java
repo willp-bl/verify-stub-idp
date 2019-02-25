@@ -3,7 +3,7 @@ package uk.gov.ida.stub.idp.services;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
-import uk.gov.ida.saml.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.AuthnContext;
 import uk.gov.ida.stub.idp.domain.DatabaseEidasUser;
 import uk.gov.ida.stub.idp.domain.EidasScheme;
 import uk.gov.ida.stub.idp.domain.EidasUser;

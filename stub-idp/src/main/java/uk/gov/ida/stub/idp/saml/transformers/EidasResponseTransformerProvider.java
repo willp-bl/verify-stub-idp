@@ -4,7 +4,7 @@ import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.xmlsec.algorithm.DigestAlgorithm;
 import org.opensaml.xmlsec.algorithm.SignatureAlgorithm;
 import org.opensaml.xmlsec.encryption.support.EncryptionConstants;
-import uk.gov.ida.saml.core.api.CoreTransformersFactory;
+import stubidp.saml.utils.core.api.CoreTransformersFactory;
 import stubidp.saml.security.EncrypterFactory;
 import stubidp.saml.security.EncryptionKeyStore;
 import stubidp.saml.security.EntityToEncryptForLocator;

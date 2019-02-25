@@ -23,7 +23,7 @@ import stubidp.saml.extensions.extensions.impl.RequestedAttributeBuilder;
 import stubidp.saml.extensions.extensions.impl.RequestedAttributesBuilder;
 import stubidp.saml.extensions.extensions.impl.RequestedAttributesImpl;
 import stubidp.saml.extensions.extensions.impl.SPTypeBuilder;
-import uk.gov.ida.saml.core.test.builders.AuthnRequestBuilder;
+import stubidp.saml.utils.core.test.builders.AuthnRequestBuilder;
 import uk.gov.ida.saml.hub.domain.LevelOfAssurance;
 import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 

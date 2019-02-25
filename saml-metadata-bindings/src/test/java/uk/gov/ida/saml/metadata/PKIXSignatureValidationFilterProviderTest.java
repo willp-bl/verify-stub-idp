@@ -20,7 +20,7 @@ import org.opensaml.xmlsec.algorithm.descriptors.SignatureRSASHA256;
 import org.opensaml.xmlsec.signature.Signature;
 import stubidp.saml.extensions.IdaSamlBootstrap;
 import stubidp.test.devpki.TestCertificateStrings;
-import uk.gov.ida.saml.core.test.builders.metadata.SignatureBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.SignatureBuilder;
 import uk.gov.ida.saml.metadata.test.factories.metadata.EntitiesDescriptorFactory;
 import uk.gov.ida.saml.metadata.test.factories.metadata.MetadataFactory;
 import uk.gov.ida.saml.metadata.test.factories.metadata.TestCredentialFactory;

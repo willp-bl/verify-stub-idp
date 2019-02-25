@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.repositories;
 
 import org.joda.time.LocalDate;
-import uk.gov.ida.saml.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.AuthnContext;
 import uk.gov.ida.stub.idp.domain.DatabaseEidasUser;
 import uk.gov.ida.stub.idp.domain.MatchingDatasetValue;
 

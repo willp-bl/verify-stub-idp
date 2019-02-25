@@ -8,24 +8,24 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.AttributeQuery;
 import org.opensaml.saml.saml2.core.Issuer;
 import org.opensaml.security.credential.Credential;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.test.PrivateKeyStoreFactory;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.PrivateKeyStoreFactory;
 import stubidp.test.devpki.TestCertificateStrings;
-import uk.gov.ida.saml.core.test.TestCredentialFactory;
+import stubidp.saml.utils.core.test.TestCredentialFactory;
 import stubidp.test.devpki.TestEntityIds;
 import stubidp.saml.security.IdaKeyStoreCredentialRetriever;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
-import static uk.gov.ida.saml.core.test.builders.AttributeQueryBuilder.anAttributeQuery;
-import static uk.gov.ida.saml.core.test.builders.AttributeStatementBuilder.anAttributeStatement;
-import static uk.gov.ida.saml.core.test.builders.IssuerBuilder.anIssuer;
-import static uk.gov.ida.saml.core.test.builders.SimpleStringAttributeBuilder.aSimpleStringAttribute;
-import static uk.gov.ida.saml.core.test.builders.SubjectBuilder.aSubject;
-import static uk.gov.ida.saml.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
-import static uk.gov.ida.saml.core.test.builders.SubjectConfirmationDataBuilder.aSubjectConfirmationData;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.AttributeQueryBuilder.anAttributeQuery;
+import static stubidp.saml.utils.core.test.builders.AttributeStatementBuilder.anAttributeStatement;
+import static stubidp.saml.utils.core.test.builders.IssuerBuilder.anIssuer;
+import static stubidp.saml.utils.core.test.builders.SimpleStringAttributeBuilder.aSimpleStringAttribute;
+import static stubidp.saml.utils.core.test.builders.SubjectBuilder.aSubject;
+import static stubidp.saml.utils.core.test.builders.SubjectConfirmationBuilder.aSubjectConfirmation;
+import static stubidp.saml.utils.core.test.builders.SubjectConfirmationDataBuilder.aSubjectConfirmationData;
 import static uk.gov.ida.saml.hub.transformers.outbound.decorators.StringEncoding.toBase64Encoded;
 
 @RunWith(OpenSAMLMockitoRunner.class)

@@ -1,16 +1,16 @@
 package uk.gov.ida.stub.idp.domain.factories;
 
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.domain.FraudAuthnDetails;
-import uk.gov.ida.saml.core.domain.IdentityProviderAssertion;
-import uk.gov.ida.saml.core.domain.IpAddress;
-import uk.gov.ida.saml.core.domain.MatchingDataset;
-import uk.gov.ida.saml.core.domain.PersistentId;
+import stubidp.saml.utils.core.domain.FraudAuthnDetails;
+import stubidp.saml.utils.core.domain.IdentityProviderAssertion;
+import stubidp.saml.utils.core.domain.IpAddress;
+import stubidp.saml.utils.core.domain.MatchingDataset;
+import stubidp.saml.utils.core.domain.PersistentId;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 
 import javax.inject.Inject;
 
-import static uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement.createIdentityProviderFraudAuthnStatement;
+import static stubidp.saml.utils.core.domain.IdentityProviderAuthnStatement.createIdentityProviderFraudAuthnStatement;
 
 public class AssertionFactory {
 

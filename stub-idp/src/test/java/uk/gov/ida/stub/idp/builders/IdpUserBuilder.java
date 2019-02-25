@@ -2,9 +2,9 @@ package uk.gov.ida.stub.idp.builders;
 
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
-import uk.gov.ida.saml.core.domain.Address;
-import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.domain.Gender;
+import stubidp.saml.utils.core.domain.Address;
+import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.Gender;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.domain.MatchingDatasetValue;
 
@@ -13,7 +13,7 @@ import java.util.Optional;
 
 import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
-import static uk.gov.ida.saml.core.domain.AuthnContext.LEVEL_1;
+import static stubidp.saml.utils.core.domain.AuthnContext.LEVEL_1;
 
 public class IdpUserBuilder {
 

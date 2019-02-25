@@ -1,5 +1,7 @@
 package uk.gov.ida.saml.core.domain;
 
+import stubidp.saml.utils.core.domain.AuthnContext;
+
 public final class MatchingServiceAuthnStatement {
 
     private AuthnContext authnContext;

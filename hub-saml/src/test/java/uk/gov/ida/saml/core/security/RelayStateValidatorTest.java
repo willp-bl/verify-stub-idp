@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
-import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
+import stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
 import static java.util.Arrays.asList;
 

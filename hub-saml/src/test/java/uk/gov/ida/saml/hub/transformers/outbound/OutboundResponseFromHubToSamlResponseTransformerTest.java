@@ -6,19 +6,18 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.opensaml.saml.saml2.core.EncryptedAssertion;
 import org.opensaml.saml.saml2.core.Response;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.domain.PassthroughAssertion;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.domain.PassthroughAssertion;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 
 import java.util.Arrays;
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
 import static uk.gov.ida.saml.core.test.builders.PassthroughAssertionBuilder.aPassthroughAssertion;
-import static uk.gov.ida.saml.core.test.builders.ResponseBuilder.aResponse;
-import static uk.gov.ida.saml.core.test.builders.ResponseForHubBuilder.anAuthnResponse;
+import static stubidp.saml.utils.core.test.builders.ResponseBuilder.aResponse;
+import static stubidp.saml.utils.core.test.builders.ResponseForHubBuilder.anAuthnResponse;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class OutboundResponseFromHubToSamlResponseTransformerTest {

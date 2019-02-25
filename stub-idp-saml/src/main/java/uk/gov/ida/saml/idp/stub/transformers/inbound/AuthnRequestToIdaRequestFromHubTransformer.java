@@ -3,7 +3,7 @@ package uk.gov.ida.saml.idp.stub.transformers.inbound;
 import org.opensaml.saml.saml2.core.AuthnRequest;
 import org.opensaml.saml.saml2.metadata.SPSSODescriptor;
 import stubidp.saml.security.validators.signature.SamlRequestSignatureValidator;
-import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
+import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 
 import java.util.function.Function;
 

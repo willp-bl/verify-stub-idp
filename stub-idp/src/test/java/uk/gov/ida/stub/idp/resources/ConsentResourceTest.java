@@ -10,11 +10,11 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import uk.gov.ida.common.SessionId;
-import uk.gov.ida.saml.core.domain.AddressFactory;
-import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.domain.Gender;
+import stubidp.saml.utils.core.domain.AddressFactory;
+import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.Gender;
 import stubidp.test.devpki.TestEntityIds;
-import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
+import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.domain.MatchingDatasetValue;
 import uk.gov.ida.stub.idp.repositories.Idp;
@@ -74,7 +74,7 @@ public class ConsentResourceTest {
         session.setIdpUser(newUser(AuthnContext.LEVEL_1));
         when(sessionRepository.get(idpSessionId)).thenReturn(Optional.ofNullable(session));
 
-        when(idaAuthnRequestFromHub.getLevelsOfAssurance()).thenReturn(Collections.singletonList(uk.gov.ida.saml.core.domain.AuthnContext.LEVEL_2));
+        when(idaAuthnRequestFromHub.getLevelsOfAssurance()).thenReturn(Collections.singletonList(AuthnContext.LEVEL_2));
         when(idpStubsRepository.getIdpWithFriendlyId(idpName)).thenReturn(idp);
 
         final Response response = consentResource.get(idpName, idpSessionId);
@@ -91,7 +91,7 @@ public class ConsentResourceTest {
         session.setIdpUser(newUser(AuthnContext.LEVEL_1));
         when(sessionRepository.get(idpSessionId)).thenReturn(Optional.ofNullable(session));
 
-        when(idaAuthnRequestFromHub.getLevelsOfAssurance()).thenReturn(ImmutableList.of(uk.gov.ida.saml.core.domain.AuthnContext.LEVEL_1, AuthnContext.LEVEL_2));
+        when(idaAuthnRequestFromHub.getLevelsOfAssurance()).thenReturn(ImmutableList.of(AuthnContext.LEVEL_1, AuthnContext.LEVEL_2));
         when(idpStubsRepository.getIdpWithFriendlyId(idpName)).thenReturn(idp);
 
         final Response response = consentResource.get(idpName, idpSessionId);
@@ -108,7 +108,7 @@ public class ConsentResourceTest {
         session.setIdpUser(newUser(AuthnContext.LEVEL_2));
         when(sessionRepository.get(idpSessionId)).thenReturn(Optional.ofNullable(session));
 
-        when(idaAuthnRequestFromHub.getLevelsOfAssurance()).thenReturn(Collections.singletonList(uk.gov.ida.saml.core.domain.AuthnContext.LEVEL_2));
+        when(idaAuthnRequestFromHub.getLevelsOfAssurance()).thenReturn(Collections.singletonList(AuthnContext.LEVEL_2));
         when(idpStubsRepository.getIdpWithFriendlyId(idpName)).thenReturn(idp);
 
         final Response response = consentResource.get(idpName, idpSessionId);

@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.joda.time.DateTime;
 import org.joda.time.base.BaseDateTime;
-import uk.gov.ida.saml.core.domain.SimpleMdsValue;
+import stubidp.saml.utils.core.domain.SimpleMdsValue;
 
 import java.io.Serializable;
 import java.util.Objects;

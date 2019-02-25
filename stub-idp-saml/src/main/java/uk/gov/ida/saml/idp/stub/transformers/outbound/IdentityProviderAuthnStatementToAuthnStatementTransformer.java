@@ -5,8 +5,8 @@ import javax.inject.Inject;
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.AuthnContext;
 import org.opensaml.saml.saml2.core.AuthnStatement;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.domain.IdentityProviderAuthnStatement;
 
 public class IdentityProviderAuthnStatementToAuthnStatementTransformer {
 

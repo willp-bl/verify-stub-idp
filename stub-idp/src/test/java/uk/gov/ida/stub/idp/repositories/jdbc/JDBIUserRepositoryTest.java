@@ -8,7 +8,7 @@ import org.jdbi.v3.core.Jdbi;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
-import uk.gov.ida.saml.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.AuthnContext;
 import uk.gov.ida.stub.idp.domain.DatabaseEidasUser;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.domain.MatchingDatasetValue;

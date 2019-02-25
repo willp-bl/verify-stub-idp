@@ -1,6 +1,8 @@
 package uk.gov.ida.saml.core.domain;
 
 import org.joda.time.DateTime;
+import stubidp.saml.utils.core.domain.IdaMessage;
+import stubidp.saml.utils.core.domain.IdaResponse;
 
 public abstract class IdaMatchingServiceResponse extends IdaMessage implements IdaResponse {
 

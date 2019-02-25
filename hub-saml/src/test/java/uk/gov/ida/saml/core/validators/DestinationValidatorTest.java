@@ -12,7 +12,7 @@ import java.net.URISyntaxException;
 import static org.junit.Assert.fail;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.destinationEmpty;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.destinationMissing;
-import static uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper.*;
+import static stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class DestinationValidatorTest {

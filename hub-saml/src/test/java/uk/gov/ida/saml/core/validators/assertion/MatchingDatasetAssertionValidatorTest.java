@@ -11,7 +11,7 @@ import stubidp.saml.extensions.IdaConstants;
 import stubidp.saml.extensions.extensions.Date;
 import stubidp.saml.extensions.extensions.PersonName;
 import stubidp.saml.extensions.extensions.StringBasedMdsAttributeValue;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -21,13 +21,13 @@ import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.emptyAt
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.mdsAttributeNotRecognised;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.mdsMultipleStatements;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.mdsStatementMissing;
-import static uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper.validateFail;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
-import static uk.gov.ida.saml.core.test.builders.MatchingDatasetAttributeStatementBuilder_1_1.aMatchingDatasetAttributeStatement_1_1;
-import static uk.gov.ida.saml.core.test.builders.MatchingDatasetAttributeStatementBuilder_1_1.anEmptyMatchingDatasetAttributeStatement_1_1;
-import static uk.gov.ida.saml.core.test.builders.PersonNameAttributeBuilder_1_1.aPersonName_1_1;
-import static uk.gov.ida.saml.core.test.builders.PersonNameAttributeValueBuilder.aPersonNameValue;
-import static uk.gov.ida.saml.core.test.builders.SimpleStringAttributeBuilder.aSimpleStringAttribute;
+import static stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper.validateFail;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.MatchingDatasetAttributeStatementBuilder_1_1.aMatchingDatasetAttributeStatement_1_1;
+import static stubidp.saml.utils.core.test.builders.MatchingDatasetAttributeStatementBuilder_1_1.anEmptyMatchingDatasetAttributeStatement_1_1;
+import static stubidp.saml.utils.core.test.builders.PersonNameAttributeBuilder_1_1.aPersonName_1_1;
+import static stubidp.saml.utils.core.test.builders.PersonNameAttributeValueBuilder.aPersonNameValue;
+import static stubidp.saml.utils.core.test.builders.SimpleStringAttributeBuilder.aSimpleStringAttribute;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class MatchingDatasetAssertionValidatorTest {

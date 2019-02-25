@@ -20,7 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
-import uk.gov.ida.Constants;
+import stubidp.saml.utils.Constants;
 import stubidp.saml.security.IdaKeyStore;
 import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
 import uk.gov.ida.stub.idp.StubIdpModule;

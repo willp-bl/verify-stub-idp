@@ -11,9 +11,9 @@ import org.opensaml.saml.saml2.core.Conditions;
 import org.opensaml.saml.saml2.core.Issuer;
 import org.opensaml.saml.saml2.core.Subject;
 import org.opensaml.saml.saml2.core.impl.AttributeStatementBuilder;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import uk.gov.ida.saml.core.domain.MatchingServiceAuthnStatement;
-import uk.gov.ida.saml.core.transformers.outbound.OutboundAssertionToSubjectTransformer;
+import stubidp.saml.utils.core.transformers.outbound.OutboundAssertionToSubjectTransformer;
 import uk.gov.ida.saml.msa.test.domain.MatchingServiceAssertion;
 
 import java.util.List;

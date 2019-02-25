@@ -2,9 +2,9 @@ package uk.gov.ida.saml.hub.test.builders;
 
 import java.util.Optional;
 import org.joda.time.DateTime;
-import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.domain.HubAssertion;
-import uk.gov.ida.saml.core.domain.PersistentId;
+import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.HubAssertion;
+import stubidp.saml.utils.core.domain.PersistentId;
 import uk.gov.ida.saml.hub.domain.HubAttributeQueryRequest;
 import uk.gov.ida.saml.hub.domain.UserAccountCreationAttribute;
 

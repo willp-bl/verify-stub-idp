@@ -2,11 +2,11 @@ package uk.gov.ida.saml.idp.test.transformers;
 
 import javax.inject.Inject;
 import org.opensaml.saml.saml2.core.Response;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.ResponseAssertionSigner;
+import stubidp.saml.utils.core.transformers.outbound.decorators.ResponseAssertionSigner;
 import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.ResponseSignatureCreator;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlResponseAssertionEncrypter;
-import uk.gov.ida.saml.core.transformers.outbound.decorators.SamlSignatureSigner;
+import stubidp.saml.utils.core.transformers.outbound.decorators.ResponseSignatureCreator;
+import stubidp.saml.utils.core.transformers.outbound.decorators.SamlResponseAssertionEncrypter;
+import stubidp.saml.utils.core.transformers.outbound.decorators.SamlSignatureSigner;
 
 import java.util.function.Function;
 

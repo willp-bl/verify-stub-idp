@@ -6,15 +6,15 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.metadata.KeyDescriptor;
 import org.opensaml.security.credential.UsageType;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
-import uk.gov.ida.saml.core.test.builders.metadata.KeyDescriptorBuilder;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper;
+import stubidp.saml.utils.core.test.builders.metadata.KeyDescriptorBuilder;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
 import java.util.UUID;
 
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
-import static uk.gov.ida.saml.core.test.builders.metadata.KeyInfoBuilder.aKeyInfo;
+import static stubidp.saml.utils.core.test.builders.metadata.KeyInfoBuilder.aKeyInfo;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class KeyDescriptorFinderTest {

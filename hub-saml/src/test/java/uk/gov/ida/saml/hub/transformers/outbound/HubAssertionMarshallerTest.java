@@ -8,20 +8,20 @@ import org.mockito.Mock;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.AttributeStatement;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.domain.HubAssertion;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.transformers.outbound.OutboundAssertionToSubjectTransformer;
-import uk.gov.ida.saml.hub.factories.AttributeFactory_1_1;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.domain.HubAssertion;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.transformers.outbound.OutboundAssertionToSubjectTransformer;
+import stubidp.saml.utils.hub.factories.AttributeFactory_1_1;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static uk.gov.ida.saml.core.test.builders.Cycle3DatasetBuilder.aCycle3Dataset;
-import static uk.gov.ida.saml.core.test.builders.HubAssertionBuilder.aHubAssertion;
-import static uk.gov.ida.saml.core.test.builders.SimpleStringAttributeBuilder.aSimpleStringAttribute;
+import static stubidp.saml.utils.core.test.builders.Cycle3DatasetBuilder.aCycle3Dataset;
+import static stubidp.saml.utils.core.test.builders.HubAssertionBuilder.aHubAssertion;
+import static stubidp.saml.utils.core.test.builders.SimpleStringAttributeBuilder.aSimpleStringAttribute;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class HubAssertionMarshallerTest {

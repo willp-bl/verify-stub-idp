@@ -12,16 +12,17 @@ import org.opensaml.xmlsec.signature.KeyInfo;
 import org.opensaml.xmlsec.signature.KeyName;
 import org.opensaml.xmlsec.signature.X509Certificate;
 import org.opensaml.xmlsec.signature.X509Data;
+import stubidp.saml.utils.metadata.transformers.KeyDescriptorsUnmarshaller;
 import stubidp.utils.security.security.Certificate;
 import stubidp.utils.security.security.IdGenerator;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.test.OpenSAMLRunner;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.test.OpenSAMLRunner;
 import uk.gov.ida.saml.core.test.builders.metadata.IdentityProviderMetadataDtoBuilder;
 
 import java.util.List;
 import java.util.UUID;
 
-import static uk.gov.ida.saml.core.test.builders.CertificateBuilder.aCertificate;
+import static stubidp.saml.utils.core.test.builders.CertificateBuilder.aCertificate;
 
 @RunWith(OpenSAMLRunner.class)
 public class HubIdentityProviderMetadataDtoToEntityDescriptorTransformerTest {

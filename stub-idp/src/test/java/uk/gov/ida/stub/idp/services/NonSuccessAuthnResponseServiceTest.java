@@ -13,7 +13,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.opensaml.saml.saml2.core.AuthnContextComparisonTypeEnumeration;
 import uk.gov.ida.common.SessionId;
-import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
+import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.stub.idp.domain.FraudIndicator;
 import uk.gov.ida.stub.idp.domain.IdpIdaStatus;
 import uk.gov.ida.stub.idp.domain.OutboundResponseFromIdp;
@@ -32,7 +32,7 @@ import java.util.function.Function;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static uk.gov.ida.saml.core.domain.AuthnContext.LEVEL_2;
+import static stubidp.saml.utils.core.domain.AuthnContext.LEVEL_2;
 
 @RunWith(MockitoJUnitRunner.class)
 public class NonSuccessAuthnResponseServiceTest {

@@ -34,7 +34,7 @@ import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static uk.gov.ida.saml.core.domain.AuthnContext.LEVEL_2;
+import static stubidp.saml.utils.core.domain.AuthnContext.LEVEL_2;
 import static uk.gov.ida.stub.idp.domain.SubmitButtonValue.Cancel;
 import static uk.gov.ida.stub.idp.domain.SubmitButtonValue.Register;
 

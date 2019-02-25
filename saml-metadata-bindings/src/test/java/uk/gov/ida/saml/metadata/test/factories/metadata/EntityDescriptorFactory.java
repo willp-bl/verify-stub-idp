@@ -16,15 +16,15 @@ import org.opensaml.xmlsec.signature.X509Data;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import stubidp.test.devpki.TestCertificateStrings;
 import stubidp.test.devpki.TestEntityIds;
-import uk.gov.ida.saml.core.test.builders.metadata.AttributeAuthorityDescriptorBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.EntityDescriptorBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.IdpSsoDescriptorBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.KeyDescriptorBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.KeyInfoBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.SPSSODescriptorBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.SignatureBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.X509CertificateBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.X509DataBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.AttributeAuthorityDescriptorBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.EntityDescriptorBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.IdpSsoDescriptorBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.KeyDescriptorBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.KeyInfoBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.SPSSODescriptorBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.SignatureBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.X509CertificateBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.X509DataBuilder;
 
 import java.util.List;
 

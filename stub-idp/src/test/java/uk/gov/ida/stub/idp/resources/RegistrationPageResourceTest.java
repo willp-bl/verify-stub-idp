@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import uk.gov.ida.common.SessionId;
-import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
+import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.stub.idp.cookies.CookieFactory;
 import uk.gov.ida.stub.idp.domain.SamlResponseFromValue;
 import uk.gov.ida.stub.idp.exceptions.IncompleteRegistrationException;
@@ -34,7 +34,7 @@ import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static uk.gov.ida.saml.core.domain.AuthnContext.LEVEL_2;
+import static stubidp.saml.utils.core.domain.AuthnContext.LEVEL_2;
 import static uk.gov.ida.stub.idp.domain.SubmitButtonValue.Cancel;
 import static uk.gov.ida.stub.idp.domain.SubmitButtonValue.Register;
 

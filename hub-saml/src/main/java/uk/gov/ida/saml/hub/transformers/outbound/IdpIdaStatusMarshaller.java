@@ -2,10 +2,10 @@ package uk.gov.ida.saml.hub.transformers.outbound;
 
 import com.google.common.collect.ImmutableMap;
 import org.opensaml.saml.saml2.core.StatusDetail;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.domain.DetailedStatusCode;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.domain.DetailedStatusCode;
 import stubidp.saml.extensions.extensions.StatusValue;
-import uk.gov.ida.saml.core.transformers.outbound.IdaStatusMarshaller;
+import stubidp.saml.utils.core.transformers.outbound.IdaStatusMarshaller;
 import uk.gov.ida.saml.hub.domain.IdpIdaStatus;
 
 import java.util.Optional;

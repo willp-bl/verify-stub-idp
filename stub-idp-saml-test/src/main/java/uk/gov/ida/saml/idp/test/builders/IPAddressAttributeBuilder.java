@@ -3,7 +3,7 @@ package uk.gov.ida.saml.idp.test.builders;
 import java.util.Optional;
 import org.opensaml.saml.saml2.core.Attribute;
 import stubidp.saml.extensions.IdaConstants;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.extensions.extensions.IPAddress;
 
 public class IPAddressAttributeBuilder {

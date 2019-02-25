@@ -5,18 +5,18 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.extensions.extensions.PersonName;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
-import uk.gov.ida.saml.core.test.builders.AssertionBuilder;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper;
+import stubidp.saml.utils.core.test.builders.AssertionBuilder;
 import uk.gov.ida.saml.core.test.builders.IdpFraudEventIdAttributeBuilder;
 
 import static java.util.Arrays.asList;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.invalidAttributeLanguageInAssertion;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.invalidFraudAttribute;
-import static uk.gov.ida.saml.core.test.builders.AttributeStatementBuilder.anAttributeStatement;
-import static uk.gov.ida.saml.core.test.builders.SimpleStringAttributeBuilder.aSimpleStringAttribute;
+import static stubidp.saml.utils.core.test.builders.AttributeStatementBuilder.anAttributeStatement;
+import static stubidp.saml.utils.core.test.builders.SimpleStringAttributeBuilder.aSimpleStringAttribute;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class AssertionAttributeStatementValidatorTest {

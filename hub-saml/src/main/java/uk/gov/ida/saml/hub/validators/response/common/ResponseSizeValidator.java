@@ -2,7 +2,7 @@ package uk.gov.ida.saml.hub.validators.response.common;
 
 import com.google.inject.Inject;
 import stubidp.saml.serializers.deserializers.validators.SizeValidator;
-import uk.gov.ida.saml.hub.validators.StringSizeValidator;
+import stubidp.saml.utils.hub.validators.StringSizeValidator;
 
 
 public class ResponseSizeValidator implements SizeValidator {

@@ -1,6 +1,6 @@
 package uk.gov.ida.saml.hub.domain;
 
-import uk.gov.ida.saml.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.AuthnContext;
 
 import java.util.Arrays;
 

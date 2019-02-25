@@ -1,14 +1,14 @@
 package uk.gov.ida.saml.idp.builders;
 
-import static uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement.createIdentityProviderAuthnStatement;
-import static uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement.createIdentityProviderFraudAuthnStatement;
+import static stubidp.saml.utils.core.domain.IdentityProviderAuthnStatement.createIdentityProviderAuthnStatement;
+import static stubidp.saml.utils.core.domain.IdentityProviderAuthnStatement.createIdentityProviderFraudAuthnStatement;
 
 import java.util.Optional;
 
-import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.domain.FraudAuthnDetails;
-import uk.gov.ida.saml.core.domain.IdentityProviderAuthnStatement;
-import uk.gov.ida.saml.core.domain.IpAddress;
+import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.FraudAuthnDetails;
+import stubidp.saml.utils.core.domain.IdentityProviderAuthnStatement;
+import stubidp.saml.utils.core.domain.IpAddress;
 
 public class IdentityProviderAuthnStatementBuilder {
 

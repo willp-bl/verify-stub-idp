@@ -1,6 +1,6 @@
 package uk.gov.ida.stub.idp.views;
 
-import uk.gov.ida.saml.core.domain.Address;
+import stubidp.saml.utils.core.domain.Address;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.domain.Service;
 import uk.gov.ida.stub.idp.views.helpers.IdpUserHelper;

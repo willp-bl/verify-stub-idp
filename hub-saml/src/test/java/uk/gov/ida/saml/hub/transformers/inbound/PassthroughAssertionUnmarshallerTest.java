@@ -6,25 +6,25 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.AuthnContextClassRef;
-import uk.gov.ida.saml.core.domain.AuthnContext;
-import uk.gov.ida.saml.core.domain.FraudDetectedDetails;
-import uk.gov.ida.saml.core.domain.PassthroughAssertion;
+import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.saml.utils.core.domain.FraudDetectedDetails;
+import stubidp.saml.utils.core.domain.PassthroughAssertion;
 import stubidp.saml.extensions.extensions.EidasAuthnContext;
 import stubidp.saml.extensions.extensions.IdaAuthnContext;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.transformers.AuthnContextFactory;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.transformers.AuthnContextFactory;
 import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
-import static uk.gov.ida.saml.core.test.builders.AssertionBuilder.anAssertion;
-import static uk.gov.ida.saml.core.test.builders.AttributeStatementBuilder.anAttributeStatement;
-import static uk.gov.ida.saml.core.test.builders.AuthnContextBuilder.anAuthnContext;
-import static uk.gov.ida.saml.core.test.builders.AuthnContextClassRefBuilder.anAuthnContextClassRef;
-import static uk.gov.ida.saml.core.test.builders.IPAddressAttributeBuilder.anIPAddress;
+import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
+import static stubidp.saml.utils.core.test.builders.AttributeStatementBuilder.anAttributeStatement;
+import static stubidp.saml.utils.core.test.builders.AuthnContextBuilder.anAuthnContext;
+import static stubidp.saml.utils.core.test.builders.AuthnContextClassRefBuilder.anAuthnContextClassRef;
+import static stubidp.saml.utils.core.test.builders.IPAddressAttributeBuilder.anIPAddress;
 import static uk.gov.ida.saml.core.test.builders.IdpFraudEventIdAttributeBuilder.anIdpFraudEventIdAttribute;
-import static uk.gov.ida.saml.core.test.builders.AuthnStatementBuilder.anAuthnStatement;
-import static uk.gov.ida.saml.core.test.builders.Gpg45StatusAttributeBuilder.aGpg45StatusAttribute;
+import static stubidp.saml.utils.core.test.builders.AuthnStatementBuilder.anAuthnStatement;
+import static stubidp.saml.utils.core.test.builders.Gpg45StatusAttributeBuilder.aGpg45StatusAttribute;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class PassthroughAssertionUnmarshallerTest {

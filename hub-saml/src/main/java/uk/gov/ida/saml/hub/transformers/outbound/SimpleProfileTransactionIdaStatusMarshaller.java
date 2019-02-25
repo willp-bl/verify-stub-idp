@@ -2,10 +2,10 @@ package uk.gov.ida.saml.hub.transformers.outbound;
 
 import com.google.common.collect.ImmutableMap;
 import javax.inject.Inject;
-import uk.gov.ida.saml.core.OpenSamlXmlObjectFactory;
-import uk.gov.ida.saml.core.domain.DetailedStatusCode;
-import uk.gov.ida.saml.core.domain.TransactionIdaStatus;
-import uk.gov.ida.saml.core.transformers.outbound.IdaStatusMarshaller;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
+import stubidp.saml.utils.core.domain.DetailedStatusCode;
+import stubidp.saml.utils.core.domain.TransactionIdaStatus;
+import stubidp.saml.utils.core.transformers.outbound.IdaStatusMarshaller;
 
 public class SimpleProfileTransactionIdaStatusMarshaller extends IdaStatusMarshaller<TransactionIdaStatus> {
 

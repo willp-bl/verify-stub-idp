@@ -4,17 +4,17 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.saml2.metadata.EntityDescriptor;
-import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
-import uk.gov.ida.saml.core.test.builders.metadata.IdpSsoDescriptorBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.KeyDescriptorBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.KeyInfoBuilder;
-import uk.gov.ida.saml.core.test.builders.metadata.X509CertificateBuilder;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper;
+import stubidp.saml.utils.core.test.builders.metadata.IdpSsoDescriptorBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.KeyDescriptorBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.KeyInfoBuilder;
+import stubidp.saml.utils.core.test.builders.metadata.X509CertificateBuilder;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
-import static uk.gov.ida.saml.core.test.builders.metadata.EndpointBuilder.anEndpoint;
-import static uk.gov.ida.saml.core.test.builders.metadata.EntityDescriptorBuilder.anEntityDescriptor;
-import static uk.gov.ida.saml.core.test.builders.metadata.X509DataBuilder.aX509Data;
+import static stubidp.saml.utils.core.test.builders.metadata.EndpointBuilder.anEndpoint;
+import static stubidp.saml.utils.core.test.builders.metadata.EntityDescriptorBuilder.anEntityDescriptor;
+import static stubidp.saml.utils.core.test.builders.metadata.X509DataBuilder.aX509Data;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class SamlEntityDescriptorValidatorTest {

@@ -1,6 +1,6 @@
 package uk.gov.ida.saml.hub.transformers.inbound;
 
-import uk.gov.ida.saml.core.domain.IdaStatus;
+import stubidp.saml.utils.core.domain.IdaStatus;
 
 public enum MatchingServiceIdaStatus implements IdaStatus {
     NoMatchingServiceMatchFromMatchingService,

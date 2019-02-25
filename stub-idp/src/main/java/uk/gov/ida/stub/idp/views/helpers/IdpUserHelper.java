@@ -3,7 +3,7 @@ package uk.gov.ida.stub.idp.views.helpers;
 import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
 import org.apache.commons.lang.StringUtils;
-import uk.gov.ida.saml.core.domain.Address;
+import stubidp.saml.utils.core.domain.Address;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;
 import uk.gov.ida.stub.idp.domain.MatchingDatasetValue;
 
