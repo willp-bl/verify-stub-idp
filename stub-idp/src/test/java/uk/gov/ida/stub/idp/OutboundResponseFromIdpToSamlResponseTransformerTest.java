@@ -16,7 +16,7 @@ import uk.gov.ida.stub.idp.domain.OutboundResponseFromIdp;
 import uk.gov.ida.stub.idp.saml.transformers.OutboundResponseFromIdpToSamlResponseTransformer;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static uk.gov.ida.saml.idp.test.builders.IdentityProviderAssertionBuilder.anIdentityProviderAssertion;
+import static stubidp.saml.stubidp.test.builders.IdentityProviderAssertionBuilder.anIdentityProviderAssertion;
 
 @RunWith(OpenSAMLRunner.class)
 public class OutboundResponseFromIdpToSamlResponseTransformerTest {

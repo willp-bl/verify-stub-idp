@@ -21,7 +21,7 @@ import stubidp.saml.extensions.extensions.IdaAuthnContext;
 import stubidp.saml.utils.core.test.AuthnRequestIdGenerator;
 import stubidp.saml.utils.core.test.builders.IssuerBuilder;
 import stubidp.saml.utils.core.test.builders.SignatureBuilder;
-import uk.gov.ida.saml.idp.test.builders.ConditionsBuilder;
+import stubidp.saml.stubidp.test.builders.ConditionsBuilder;
 
 import java.util.Optional;
 

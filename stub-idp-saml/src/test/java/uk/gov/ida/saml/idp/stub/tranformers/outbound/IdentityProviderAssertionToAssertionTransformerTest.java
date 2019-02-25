@@ -42,8 +42,8 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static uk.gov.ida.saml.idp.builders.IdentityProviderAuthnStatementBuilder.anIdentityProviderAuthnStatement;
-import static uk.gov.ida.saml.idp.test.builders.IPAddressAttributeBuilder.anIPAddress;
-import static uk.gov.ida.saml.idp.test.builders.IdentityProviderAssertionBuilder.anIdentityProviderAssertion;
+import static stubidp.saml.stubidp.test.builders.IPAddressAttributeBuilder.anIPAddress;
+import static stubidp.saml.stubidp.test.builders.IdentityProviderAssertionBuilder.anIdentityProviderAssertion;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class IdentityProviderAssertionToAssertionTransformerTest {
