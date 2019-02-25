@@ -1,8 +1,8 @@
 package uk.gov.ida.saml.metadata;
 
 
-import keystore.KeyStoreRule;
-import keystore.builders.KeyStoreRuleBuilder;
+import stubidp.test.utils.keystore.KeyStoreRule;
+import stubidp.test.utils.keystore.builders.KeyStoreRuleBuilder;
 import org.junit.ClassRule;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,6 +1,6 @@
 package uk.gov.ida.saml.metadata;
 
-import helpers.ResourceHelpers;
+import stubidp.test.utils.helpers.ResourceHelpers;
 import org.junit.Test;
 
 import java.security.KeyStore;

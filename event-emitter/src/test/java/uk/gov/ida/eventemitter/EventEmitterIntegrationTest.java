@@ -8,7 +8,7 @@ import com.amazonaws.regions.Regions;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Injector;
-import httpstub.HttpStubRule;
+import stubidp.test.utils.httpstub.HttpStubRule;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;

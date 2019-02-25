@@ -2,8 +2,8 @@ package uk.gov.ida.saml.metadata;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
-import keystore.KeyStoreRule;
-import keystore.builders.KeyStoreRuleBuilder;
+import stubidp.test.utils.keystore.KeyStoreRule;
+import stubidp.test.utils.keystore.builders.KeyStoreRuleBuilder;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;

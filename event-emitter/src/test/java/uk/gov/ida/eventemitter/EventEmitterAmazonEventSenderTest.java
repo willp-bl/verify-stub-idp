@@ -2,9 +2,9 @@ package uk.gov.ida.eventemitter;
 
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.regions.Regions;
-import httpstub.ExpectedRequest;
-import httpstub.HttpStubRule;
-import httpstub.RegisteredResponse;
+import stubidp.test.utils.httpstub.ExpectedRequest;
+import stubidp.test.utils.httpstub.HttpStubRule;
+import stubidp.test.utils.httpstub.RegisteredResponse;
 import org.assertj.core.api.Fail;
 import org.junit.After;
 import org.junit.Before;

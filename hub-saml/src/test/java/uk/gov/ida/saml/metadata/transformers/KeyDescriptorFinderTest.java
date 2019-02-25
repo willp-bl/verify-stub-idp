@@ -10,6 +10,7 @@ import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper;
 import stubidp.saml.utils.core.test.builders.metadata.KeyDescriptorBuilder;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
+
 import java.util.UUID;
 
 import static java.util.Arrays.asList;

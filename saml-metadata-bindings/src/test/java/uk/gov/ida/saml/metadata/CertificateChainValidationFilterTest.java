@@ -1,8 +1,8 @@
 package uk.gov.ida.saml.metadata;
 
 import certificates.values.CACertificates;
-import keystore.KeyStoreRule;
-import keystore.builders.KeyStoreRuleBuilder;
+import stubidp.test.utils.keystore.KeyStoreRule;
+import stubidp.test.utils.keystore.builders.KeyStoreRuleBuilder;
 import net.shibboleth.utilities.java.support.xml.BasicParserPool;
 import org.apache.commons.io.IOUtils;
 import org.junit.ClassRule;
