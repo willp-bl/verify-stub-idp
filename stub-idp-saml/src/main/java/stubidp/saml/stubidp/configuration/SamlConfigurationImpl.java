@@ -1,7 +1,6 @@
-package uk.gov.ida.stub.idp.configuration;
+package stubidp.saml.stubidp.configuration;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import stubidp.saml.stubidp.configuration.SamlConfiguration;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -9,11 +8,6 @@ import java.net.URI;
 
 public class SamlConfigurationImpl implements SamlConfiguration {
     protected SamlConfigurationImpl() {
-    }
-
-    public SamlConfigurationImpl(String entityId, URI expectedDestination) {
-        this.entityId = entityId;
-        this.expectedDestination = expectedDestination;
     }
 
     @Valid
@@ -25,13 +19,12 @@ public class SamlConfigurationImpl implements SamlConfiguration {
     @JsonProperty
     protected URI expectedDestination = URI.create("http://configure.me/if/i/fail");
 
+    @Override
+    public URI getExpectedDestinationHost() {
+        return expectedDestination;
+    }
+
     public String getEntityId() {
         return entityId;
     }
-
-    public URI getExpectedDestinationHost() {
-        return expectedDestination;
-
-    }
-
 }

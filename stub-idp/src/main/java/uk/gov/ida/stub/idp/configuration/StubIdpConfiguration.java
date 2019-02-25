@@ -8,7 +8,7 @@ import uk.gov.ida.cache.AssetCacheConfiguration;
 import uk.gov.ida.common.ServiceInfoConfiguration;
 import stubidp.utils.security.configuration.SecureCookieConfiguration;
 import uk.gov.ida.configuration.ServiceNameConfiguration;
-import uk.gov.ida.saml.idp.configuration.SamlConfiguration;
+import stubidp.saml.stubidp.configuration.SamlConfiguration;
 import uk.gov.ida.saml.metadata.MetadataResolverConfiguration;
 import uk.gov.ida.saml.metadata.TrustStoreBackedMetadataConfiguration;
 import uk.gov.ida.stub.idp.repositories.reaper.StaleSessionReaperConfiguration;

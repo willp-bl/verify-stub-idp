@@ -37,7 +37,7 @@ import uk.gov.ida.jerseyclient.JsonResponseProcessor;
 import uk.gov.ida.restclient.ClientProvider;
 import stubidp.saml.utils.core.api.CoreTransformersFactory;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
-import uk.gov.ida.saml.idp.configuration.SamlConfiguration;
+import stubidp.saml.stubidp.configuration.SamlConfiguration;
 import uk.gov.ida.saml.metadata.MetadataHealthCheck;
 import uk.gov.ida.saml.metadata.MetadataResolverConfiguration;
 import uk.gov.ida.saml.metadata.factories.DropwizardMetadataResolverFactory;

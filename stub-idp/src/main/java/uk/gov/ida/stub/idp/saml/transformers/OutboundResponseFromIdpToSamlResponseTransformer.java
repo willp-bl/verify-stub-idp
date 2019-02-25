@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.utils.core.domain.IdentityProviderAssertion;
 import stubidp.saml.utils.core.transformers.outbound.IdaResponseToSamlResponseTransformer;
-import uk.gov.ida.saml.idp.stub.transformers.outbound.IdentityProviderAssertionToAssertionTransformer;
+import stubidp.saml.stubidp.stub.transformers.outbound.IdentityProviderAssertionToAssertionTransformer;
 import uk.gov.ida.stub.idp.domain.IdpIdaStatusMarshaller;
 import uk.gov.ida.stub.idp.domain.OutboundResponseFromIdp;
 
