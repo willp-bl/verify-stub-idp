@@ -7,7 +7,7 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.opensaml.saml.saml2.core.AttributeQuery;
 import org.opensaml.xmlsec.signature.Signature;
-import uk.gov.ida.saml.security.SignatureFactory;
+import stubidp.saml.security.SignatureFactory;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;

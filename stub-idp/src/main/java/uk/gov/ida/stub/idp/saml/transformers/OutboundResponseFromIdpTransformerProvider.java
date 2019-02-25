@@ -2,9 +2,9 @@ package uk.gov.ida.stub.idp.saml.transformers;
 
 import org.opensaml.xmlsec.algorithm.DigestAlgorithm;
 import org.opensaml.xmlsec.algorithm.SignatureAlgorithm;
-import uk.gov.ida.saml.security.EncryptionKeyStore;
-import uk.gov.ida.saml.security.EntityToEncryptForLocator;
-import uk.gov.ida.saml.security.IdaKeyStore;
+import stubidp.saml.security.EncryptionKeyStore;
+import stubidp.saml.security.EntityToEncryptForLocator;
+import stubidp.saml.security.IdaKeyStore;
 import uk.gov.ida.stub.idp.domain.OutboundResponseFromIdp;
 import uk.gov.ida.stub.idp.domain.factories.StubTransformersFactory;
 import uk.gov.ida.stub.idp.repositories.Idp;

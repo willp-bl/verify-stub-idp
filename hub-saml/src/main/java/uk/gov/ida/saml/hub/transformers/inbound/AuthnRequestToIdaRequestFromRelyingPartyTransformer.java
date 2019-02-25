@@ -5,7 +5,7 @@ import org.opensaml.saml.saml2.metadata.SPSSODescriptor;
 import uk.gov.ida.saml.core.validators.DestinationValidator;
 import uk.gov.ida.saml.hub.domain.AuthnRequestFromRelyingParty;
 import uk.gov.ida.saml.hub.validators.authnrequest.AuthnRequestFromTransactionValidator;
-import uk.gov.ida.saml.security.validators.signature.SamlRequestSignatureValidator;
+import stubidp.saml.security.validators.signature.SamlRequestSignatureValidator;
 
 import java.util.function.Function;
 

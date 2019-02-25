@@ -3,8 +3,8 @@ package uk.gov.ida.saml.hub.transformers.inbound;
 import java.util.Optional;
 import uk.gov.ida.saml.core.domain.PassthroughAssertion;
 import uk.gov.ida.saml.hub.domain.InboundResponseFromMatchingService;
-import uk.gov.ida.saml.security.validators.ValidatedAssertions;
-import uk.gov.ida.saml.security.validators.ValidatedResponse;
+import stubidp.saml.security.validators.ValidatedAssertions;
+import stubidp.saml.security.validators.ValidatedResponse;
 
 public class InboundResponseFromMatchingServiceUnmarshaller {
     private PassthroughAssertionUnmarshaller passthroughAssertionUnmarshaller;

@@ -14,7 +14,8 @@ import org.opensaml.saml.saml2.metadata.IDPSSODescriptor;
 import org.opensaml.saml.saml2.metadata.KeyDescriptor;
 import org.opensaml.security.credential.UsageType;
 import org.opensaml.xmlsec.signature.X509Certificate;
-import uk.gov.ida.saml.security.SigningKeyStore;
+import stubidp.saml.security.MetadataBackedSignatureValidator;
+import stubidp.saml.security.SigningKeyStore;
 import uk.gov.ida.saml.metadata.exceptions.NoKeyConfiguredForEntityException;
 
 import java.io.ByteArrayInputStream;
@@ -32,7 +33,7 @@ import static com.google.common.base.Throwables.propagate;
 
 
 /**
- * @deprecated Use {@link uk.gov.ida.saml.security.MetadataBackedSignatureValidator} instead
+ * @deprecated Use {@link MetadataBackedSignatureValidator} instead
  */
 @Deprecated
 public class IdpMetadataPublicKeyStore implements SigningKeyStore {

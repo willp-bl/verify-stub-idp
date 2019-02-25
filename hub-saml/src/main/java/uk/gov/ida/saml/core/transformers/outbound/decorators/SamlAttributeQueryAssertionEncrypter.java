@@ -5,9 +5,9 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.AttributeQuery;
 import org.opensaml.saml.saml2.core.EncryptedAssertion;
 import org.opensaml.saml.saml2.core.SubjectConfirmationData;
-import uk.gov.ida.saml.security.EncrypterFactory;
-import uk.gov.ida.saml.security.EntityToEncryptForLocator;
-import uk.gov.ida.saml.security.KeyStoreBackedEncryptionCredentialResolver;
+import stubidp.saml.security.EncrypterFactory;
+import stubidp.saml.security.EntityToEncryptForLocator;
+import stubidp.saml.security.KeyStoreBackedEncryptionCredentialResolver;
 
 import java.util.List;
 

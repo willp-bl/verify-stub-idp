@@ -6,11 +6,11 @@ import org.opensaml.saml.saml2.metadata.IDPSSODescriptor;
 import uk.gov.ida.saml.core.validators.DestinationValidator;
 import uk.gov.ida.saml.hub.validators.response.idp.components.EncryptedResponseFromIdpValidator;
 import uk.gov.ida.saml.hub.validators.response.idp.components.ResponseAssertionsFromIdpValidator;
-import uk.gov.ida.saml.security.AssertionDecrypter;
-import uk.gov.ida.saml.security.SamlAssertionsSignatureValidator;
-import uk.gov.ida.saml.security.validators.ValidatedAssertions;
-import uk.gov.ida.saml.security.validators.ValidatedResponse;
-import uk.gov.ida.saml.security.validators.signature.SamlResponseSignatureValidator;
+import stubidp.saml.security.AssertionDecrypter;
+import stubidp.saml.security.SamlAssertionsSignatureValidator;
+import stubidp.saml.security.validators.ValidatedAssertions;
+import stubidp.saml.security.validators.ValidatedResponse;
+import stubidp.saml.security.validators.signature.SamlResponseSignatureValidator;
 
 import java.util.List;
 

@@ -8,7 +8,7 @@ import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.xmlsec.signature.Signature;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.opensaml.xmlsec.signature.support.Signer;
-import uk.gov.ida.saml.security.SignatureFactory;
+import stubidp.saml.security.SignatureFactory;
 
 import javax.inject.Inject;
 

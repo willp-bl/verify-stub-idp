@@ -14,7 +14,7 @@ import org.opensaml.security.SecurityException;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.w3c.dom.Document;
 import stubidp.saml.extensions.IdaSamlBootstrap;
-import uk.gov.ida.saml.security.IdaKeyStore;
+import stubidp.saml.security.IdaKeyStore;
 import uk.gov.ida.stub.idp.builders.CountryMetadataBuilder;
 import uk.gov.ida.stub.idp.exceptions.InvalidEidasSchemeException;
 import uk.gov.ida.stub.idp.resources.eidas.EidasProxyNodeServiceMetadataResource;

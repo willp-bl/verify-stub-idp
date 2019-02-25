@@ -9,8 +9,8 @@ import org.opensaml.saml.saml2.metadata.IDPSSODescriptor;
 import org.opensaml.saml.saml2.metadata.SPSSODescriptor;
 import uk.gov.ida.saml.core.test.TestCredentialFactory;
 import uk.gov.ida.saml.core.test.validators.SingleCertificateSignatureValidator;
-import uk.gov.ida.saml.security.SamlMessageSignatureValidator;
-import uk.gov.ida.saml.security.SignatureValidator;
+import stubidp.saml.security.SamlMessageSignatureValidator;
+import stubidp.saml.security.SignatureValidator;
 
 public class SignableSAMLObjectBaseMatcher extends Condition<SignableSAMLObject> {
 

@@ -9,7 +9,7 @@ import org.opensaml.xmlsec.config.impl.DefaultSecurityConfigurationBootstrap;
 import org.opensaml.xmlsec.keyinfo.KeyInfoCredentialResolver;
 import org.opensaml.xmlsec.signature.Signature;
 import org.opensaml.xmlsec.signature.support.impl.ExplicitKeySignatureTrustEngine;
-import uk.gov.ida.saml.security.SignatureValidator;
+import stubidp.saml.security.SignatureValidator;
 
 import javax.xml.namespace.QName;
 import java.util.Collections;

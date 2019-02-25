@@ -14,7 +14,7 @@ import uk.gov.ida.saml.core.test.builders.IdpFraudEventIdAttributeBuilder;
 import uk.gov.ida.saml.core.test.builders.SubjectBuilder;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;import uk.gov.ida.saml.core.validators.subject.AssertionSubjectValidator;
 import uk.gov.ida.saml.core.validators.subjectconfirmation.AssertionSubjectConfirmationValidator;
-import uk.gov.ida.saml.security.validators.issuer.IssuerValidator;
+import stubidp.saml.security.validators.issuer.IssuerValidator;
 
 import java.util.UUID;
 

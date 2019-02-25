@@ -4,14 +4,14 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.metadata.AttributeAuthorityDescriptor;
 import uk.gov.ida.saml.hub.validators.response.matchingservice.EncryptedResponseFromMatchingServiceValidator;
-import uk.gov.ida.saml.security.AssertionDecrypter;
-import uk.gov.ida.saml.security.SamlAssertionsSignatureValidator;
+import stubidp.saml.security.AssertionDecrypter;
+import stubidp.saml.security.SamlAssertionsSignatureValidator;
 import uk.gov.ida.saml.hub.domain.InboundResponseFromMatchingService;
 import uk.gov.ida.saml.hub.transformers.inbound.InboundResponseFromMatchingServiceUnmarshaller;
 import uk.gov.ida.saml.hub.validators.response.matchingservice.ResponseAssertionsFromMatchingServiceValidator;
-import uk.gov.ida.saml.security.validators.ValidatedAssertions;
-import uk.gov.ida.saml.security.validators.ValidatedResponse;
-import uk.gov.ida.saml.security.validators.signature.SamlResponseSignatureValidator;
+import stubidp.saml.security.validators.ValidatedAssertions;
+import stubidp.saml.security.validators.ValidatedResponse;
+import stubidp.saml.security.validators.signature.SamlResponseSignatureValidator;
 
 import java.util.List;
 

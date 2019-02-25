@@ -14,8 +14,8 @@ import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;import uk.gov.ida.saml.core.validators.SamlValidator;
 import uk.gov.ida.saml.hub.exception.SamlDuplicateRequestIdException;
 import uk.gov.ida.saml.hub.exception.SamlRequestTooOldException;
-import uk.gov.ida.saml.security.validators.issuer.IssuerValidator;
-import uk.gov.ida.saml.security.validators.signature.SamlSignatureUtil;
+import stubidp.saml.security.validators.issuer.IssuerValidator;
+import stubidp.saml.security.validators.signature.SamlSignatureUtil;
 
 public class AuthnRequestFromTransactionValidator implements SamlValidator<AuthnRequest> {
 

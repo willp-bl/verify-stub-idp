@@ -12,7 +12,8 @@ import org.opensaml.saml.saml2.metadata.KeyDescriptor;
 import org.opensaml.security.credential.UsageType;
 import org.opensaml.xmlsec.signature.X509Certificate;
 import org.opensaml.xmlsec.signature.X509Data;
-import uk.gov.ida.saml.security.PublicKeyFactory;
+import stubidp.saml.security.MetadataBackedSignatureValidator;
+import stubidp.saml.security.PublicKeyFactory;
 import uk.gov.ida.saml.core.InternalPublicKeyStore;
 import uk.gov.ida.saml.metadata.exceptions.HubEntityMissingException;
 
@@ -26,7 +27,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * @deprecated Use {@link uk.gov.ida.saml.security.MetadataBackedSignatureValidator} instead
+ * @deprecated Use {@link MetadataBackedSignatureValidator} instead
  */
 @Deprecated
 public class HubMetadataPublicKeyStore implements InternalPublicKeyStore {

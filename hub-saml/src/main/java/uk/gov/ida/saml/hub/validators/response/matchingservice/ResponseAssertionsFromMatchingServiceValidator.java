@@ -3,8 +3,8 @@ package uk.gov.ida.saml.hub.validators.response.matchingservice;
 import org.opensaml.saml.saml2.core.Assertion;
 import uk.gov.ida.saml.core.validators.assertion.AssertionValidator;
 import uk.gov.ida.saml.hub.exception.SamlValidationException;
-import uk.gov.ida.saml.security.validators.ValidatedAssertions;
-import uk.gov.ida.saml.security.validators.ValidatedResponse;
+import stubidp.saml.security.validators.ValidatedAssertions;
+import stubidp.saml.security.validators.ValidatedResponse;
 
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.authnContextMissingError;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.missingAuthnStatement;

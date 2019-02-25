@@ -12,7 +12,7 @@ import uk.gov.ida.saml.core.test.SamlTransformationErrorManagerTestHelper;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;import uk.gov.ida.saml.core.validators.subject.AssertionSubjectValidator;
 import uk.gov.ida.saml.core.validators.subjectconfirmation.BasicAssertionSubjectConfirmationValidator;
-import uk.gov.ida.saml.security.validators.issuer.IssuerValidator;
+import stubidp.saml.security.validators.issuer.IssuerValidator;
 
 import java.util.UUID;
 

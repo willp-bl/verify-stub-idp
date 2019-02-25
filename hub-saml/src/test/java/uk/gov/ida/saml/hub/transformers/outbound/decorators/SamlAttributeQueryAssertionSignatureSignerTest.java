@@ -14,7 +14,7 @@ import uk.gov.ida.saml.core.test.PrivateKeyStoreFactory;
 import stubidp.test.devpki.TestCertificateStrings;
 import uk.gov.ida.saml.core.test.TestCredentialFactory;
 import stubidp.test.devpki.TestEntityIds;
-import uk.gov.ida.saml.security.IdaKeyStoreCredentialRetriever;
+import stubidp.saml.security.IdaKeyStoreCredentialRetriever;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;

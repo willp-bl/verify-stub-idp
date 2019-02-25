@@ -3,9 +3,9 @@ package uk.gov.ida.saml.core.transformers.outbound.decorators;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.EncryptedAssertion;
 import org.opensaml.saml.saml2.core.Response;
-import uk.gov.ida.saml.security.EncrypterFactory;
-import uk.gov.ida.saml.security.EncryptionCredentialResolver;
-import uk.gov.ida.saml.security.EntityToEncryptForLocator;
+import stubidp.saml.security.EncrypterFactory;
+import stubidp.saml.security.EncryptionCredentialResolver;
+import stubidp.saml.security.EntityToEncryptForLocator;
 
 import javax.inject.Inject;
 import java.util.List;

@@ -24,7 +24,7 @@ import uk.gov.ida.saml.hub.domain.EidasAuthnRequestFromHub;
 import uk.gov.ida.saml.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.saml.hub.test.builders.EidasAuthnRequestBuilder;
 import uk.gov.ida.saml.hub.test.builders.IdaAuthnRequestBuilder;
-import uk.gov.ida.saml.security.IdaKeyStore;
+import stubidp.saml.security.IdaKeyStore;
 
 import java.security.KeyPair;
 import java.security.PrivateKey;

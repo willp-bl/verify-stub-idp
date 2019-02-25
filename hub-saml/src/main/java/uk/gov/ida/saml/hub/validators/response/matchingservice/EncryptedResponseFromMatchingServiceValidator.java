@@ -19,7 +19,7 @@ import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.signatu
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.subStatusMustBeOneOf;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.unencryptedAssertion;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.unexpectedNumberOfAssertions;
-import static uk.gov.ida.saml.security.validators.signature.SamlSignatureUtil.isSignaturePresent;
+import static stubidp.saml.security.validators.signature.SamlSignatureUtil.isSignaturePresent;
 
 public class EncryptedResponseFromMatchingServiceValidator {
 

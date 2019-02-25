@@ -2,7 +2,7 @@ package uk.gov.ida.saml.core.transformers.outbound.decorators;
 
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.xmlsec.signature.Signature;
-import uk.gov.ida.saml.security.SignatureFactory;
+import stubidp.saml.security.SignatureFactory;
 
 public class ResponseSignatureCreator {
 

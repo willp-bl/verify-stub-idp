@@ -9,7 +9,7 @@ import org.opensaml.security.SecurityException;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.opensaml.xmlsec.signature.support.Signer;
 
-import uk.gov.ida.saml.security.SignatureFactory;
+import stubidp.saml.security.SignatureFactory;
 
 public class CountryMetadataSigningHelper {
     private SignatureFactory signatureFactory;

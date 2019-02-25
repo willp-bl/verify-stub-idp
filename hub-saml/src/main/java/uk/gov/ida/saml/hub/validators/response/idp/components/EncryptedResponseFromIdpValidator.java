@@ -26,7 +26,7 @@ import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.nonSucc
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.signatureNotSigned;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.unencryptedAssertion;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.unexpectedNumberOfAssertions;
-import static uk.gov.ida.saml.security.validators.signature.SamlSignatureUtil.isSignaturePresent;
+import static stubidp.saml.security.validators.signature.SamlSignatureUtil.isSignaturePresent;
 
 public class EncryptedResponseFromIdpValidator<T extends Enum> {
     private static final int SUB_STATUS_CODE_LIMIT = 1;

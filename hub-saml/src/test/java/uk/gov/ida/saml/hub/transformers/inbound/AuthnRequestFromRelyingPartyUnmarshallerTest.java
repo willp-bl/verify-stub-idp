@@ -26,8 +26,8 @@ import stubidp.saml.extensions.extensions.versioning.VersionImpl;
 import stubidp.saml.extensions.extensions.versioning.application.ApplicationVersion;
 import stubidp.saml.extensions.extensions.versioning.application.ApplicationVersionImpl;
 import uk.gov.ida.saml.hub.domain.AuthnRequestFromRelyingParty;
-import uk.gov.ida.saml.security.DecrypterFactory;
-import uk.gov.ida.saml.security.EncrypterFactory;
+import stubidp.saml.security.DecrypterFactory;
+import stubidp.saml.security.EncrypterFactory;
 
 import java.net.URI;
 import java.security.PrivateKey;

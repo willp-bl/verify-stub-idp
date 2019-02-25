@@ -5,8 +5,8 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.EncryptedAssertion;
 import org.opensaml.saml.saml2.encryption.Encrypter;
 import org.opensaml.security.credential.Credential;
-import uk.gov.ida.saml.security.EncrypterFactory;
-import uk.gov.ida.saml.security.KeyStoreBackedEncryptionCredentialResolver;
+import stubidp.saml.security.EncrypterFactory;
+import stubidp.saml.security.KeyStoreBackedEncryptionCredentialResolver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

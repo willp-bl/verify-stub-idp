@@ -15,7 +15,7 @@ import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.missing
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.missingSignature;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.missingSubStatus;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.signatureNotSigned;
-import static uk.gov.ida.saml.security.validators.signature.SamlSignatureUtil.isSignaturePresent;
+import static stubidp.saml.security.validators.signature.SamlSignatureUtil.isSignaturePresent;
 
 public class HealthCheckResponseFromMatchingServiceValidator {
 

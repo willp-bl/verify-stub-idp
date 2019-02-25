@@ -16,10 +16,10 @@ import uk.gov.ida.saml.idp.stub.transformers.inbound.AuthnRequestToIdaRequestFro
 import uk.gov.ida.saml.idp.stub.transformers.inbound.IdaAuthnRequestFromHubUnmarshaller;
 import uk.gov.ida.saml.idp.stub.transformers.outbound.IdentityProviderAssertionToAssertionTransformer;
 import uk.gov.ida.saml.idp.stub.transformers.outbound.IdentityProviderAuthnStatementToAuthnStatementTransformer;
-import uk.gov.ida.saml.security.EncryptionKeyStore;
-import uk.gov.ida.saml.security.EntityToEncryptForLocator;
-import uk.gov.ida.saml.security.IdaKeyStore;
-import uk.gov.ida.saml.security.SigningKeyStore;
+import stubidp.saml.security.EncryptionKeyStore;
+import stubidp.saml.security.EntityToEncryptForLocator;
+import stubidp.saml.security.IdaKeyStore;
+import stubidp.saml.security.SigningKeyStore;
 import uk.gov.ida.stub.idp.domain.IdpIdaStatusMarshaller;
 import uk.gov.ida.stub.idp.domain.OutboundResponseFromIdp;
 import uk.gov.ida.stub.idp.saml.transformers.OutboundResponseFromIdpToSamlResponseTransformer;

@@ -8,7 +8,7 @@ import stubidp.saml.extensions.validation.SamlTransformationErrorException;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;import uk.gov.ida.saml.core.validators.subject.AssertionSubjectValidator;
 import uk.gov.ida.saml.core.validators.subjectconfirmation.AssertionSubjectConfirmationValidator;
-import uk.gov.ida.saml.security.validators.issuer.IssuerValidator;
+import stubidp.saml.security.validators.issuer.IssuerValidator;
 
 import java.util.Arrays;
 import java.util.List;

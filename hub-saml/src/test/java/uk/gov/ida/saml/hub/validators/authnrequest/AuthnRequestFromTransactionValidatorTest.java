@@ -19,7 +19,7 @@ import uk.gov.ida.saml.hub.configuration.SamlAuthnRequestValidityDurationConfigu
 import uk.gov.ida.saml.hub.configuration.SamlDuplicateRequestValidationConfiguration;
 import uk.gov.ida.saml.hub.exception.SamlDuplicateRequestIdException;
 import uk.gov.ida.saml.hub.exception.SamlRequestTooOldException;
-import uk.gov.ida.saml.security.validators.issuer.IssuerValidator;
+import stubidp.saml.security.validators.issuer.IssuerValidator;
 
 import java.util.concurrent.ConcurrentHashMap;
 

@@ -12,7 +12,7 @@ import stubidp.utils.security.security.PublicKeyFactory;
 import stubidp.utils.security.security.X509CertificateFactory;
 import stubidp.test.devpki.TestCertificateStrings;
 import stubidp.test.devpki.TestEntityIds;
-import uk.gov.ida.saml.security.IdaKeyStore;
+import stubidp.saml.security.IdaKeyStore;
 import uk.gov.ida.security.HardCodedKeyStore;
 import uk.gov.ida.stub.idp.domain.factories.StubTransformersFactory;
 import uk.gov.ida.stub.idp.repositories.Idp;

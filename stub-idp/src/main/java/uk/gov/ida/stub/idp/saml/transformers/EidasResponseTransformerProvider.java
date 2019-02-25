@@ -5,10 +5,10 @@ import org.opensaml.xmlsec.algorithm.DigestAlgorithm;
 import org.opensaml.xmlsec.algorithm.SignatureAlgorithm;
 import org.opensaml.xmlsec.encryption.support.EncryptionConstants;
 import uk.gov.ida.saml.core.api.CoreTransformersFactory;
-import uk.gov.ida.saml.security.EncrypterFactory;
-import uk.gov.ida.saml.security.EncryptionKeyStore;
-import uk.gov.ida.saml.security.EntityToEncryptForLocator;
-import uk.gov.ida.saml.security.IdaKeyStore;
+import stubidp.saml.security.EncrypterFactory;
+import stubidp.saml.security.EncryptionKeyStore;
+import stubidp.saml.security.EntityToEncryptForLocator;
+import stubidp.saml.security.IdaKeyStore;
 
 import java.util.function.Function;
 

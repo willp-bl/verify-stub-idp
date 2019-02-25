@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.security;
 
 import stubidp.utils.security.security.PublicKeyFactory;
-import uk.gov.ida.saml.security.SigningKeyStore;
+import stubidp.saml.security.SigningKeyStore;
 import uk.gov.ida.stub.idp.StubIdpModule;
 import uk.gov.ida.stub.idp.repositories.MetadataRepository;
 

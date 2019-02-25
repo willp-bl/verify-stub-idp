@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.security;
 
 import stubidp.utils.security.security.PublicKeyFactory;
-import uk.gov.ida.saml.security.EncryptionKeyStore;
+import stubidp.saml.security.EncryptionKeyStore;
 import uk.gov.ida.stub.idp.repositories.MetadataRepository;
 
 import java.security.PublicKey;

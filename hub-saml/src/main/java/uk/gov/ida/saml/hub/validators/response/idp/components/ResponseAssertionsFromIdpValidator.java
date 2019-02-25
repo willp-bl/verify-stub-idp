@@ -6,8 +6,8 @@ import uk.gov.ida.saml.core.validators.assertion.IPAddressValidator;
 import uk.gov.ida.saml.core.validators.assertion.IdentityProviderAssertionValidator;
 import uk.gov.ida.saml.core.validators.assertion.MatchingDatasetAssertionValidator;
 import uk.gov.ida.saml.hub.exception.SamlValidationException;
-import uk.gov.ida.saml.security.validators.ValidatedAssertions;
-import uk.gov.ida.saml.security.validators.ValidatedResponse;
+import stubidp.saml.security.validators.ValidatedAssertions;
+import stubidp.saml.security.validators.ValidatedResponse;
 
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.missingAuthnStatement;
 import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.missingMatchingMds;

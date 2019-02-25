@@ -13,10 +13,10 @@ import org.opensaml.saml.saml2.core.SubjectConfirmationData;
 import org.opensaml.saml.saml2.encryption.Encrypter;
 import org.opensaml.security.credential.Credential;
 import org.opensaml.xmlsec.encryption.support.EncryptionException;
-import uk.gov.ida.saml.security.EncrypterFactory;
-import uk.gov.ida.saml.security.EntityToEncryptForLocator;
+import stubidp.saml.security.EncrypterFactory;
+import stubidp.saml.security.EntityToEncryptForLocator;
 import uk.gov.ida.saml.core.test.OpenSAMLMockitoRunner;
-import uk.gov.ida.saml.security.KeyStoreBackedEncryptionCredentialResolver;
+import stubidp.saml.security.KeyStoreBackedEncryptionCredentialResolver;
 
 import java.util.List;
 

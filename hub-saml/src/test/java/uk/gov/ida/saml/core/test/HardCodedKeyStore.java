@@ -6,8 +6,8 @@ import stubidp.utils.security.security.InternalPublicKeyStore;
 import stubidp.utils.security.security.PublicKeyFactory;
 import stubidp.utils.security.security.PublicKeyInputStreamFactory;
 import stubidp.utils.security.security.X509CertificateFactory;
-import uk.gov.ida.saml.security.EncryptionKeyStore;
-import uk.gov.ida.saml.security.SigningKeyStore;
+import stubidp.saml.security.EncryptionKeyStore;
+import stubidp.saml.security.SigningKeyStore;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

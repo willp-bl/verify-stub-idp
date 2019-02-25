@@ -14,7 +14,7 @@ import stubidp.test.devpki.TestCertificateStrings;
 import stubidp.test.devpki.TestEntityIds;
 import uk.gov.ida.saml.metadata.exceptions.HubEntityMissingException;
 import uk.gov.ida.saml.metadata.test.factories.metadata.MetadataFactory;
-import uk.gov.ida.saml.security.PublicKeyFactory;
+import stubidp.saml.security.PublicKeyFactory;
 
 import java.io.ByteArrayInputStream;
 import java.net.URISyntaxException;

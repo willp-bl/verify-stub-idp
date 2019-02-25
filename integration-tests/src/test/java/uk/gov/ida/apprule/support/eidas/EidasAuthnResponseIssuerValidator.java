@@ -1,7 +1,7 @@
 package uk.gov.ida.apprule.support.eidas;
 
 import org.opensaml.saml.saml2.core.Assertion;
-import uk.gov.ida.saml.security.validators.ValidatedResponse;
+import stubidp.saml.security.validators.ValidatedResponse;
 
 import java.util.Objects;
 

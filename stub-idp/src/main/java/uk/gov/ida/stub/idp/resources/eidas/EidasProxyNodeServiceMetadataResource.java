@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 import uk.gov.ida.Constants;
-import uk.gov.ida.saml.security.IdaKeyStore;
+import stubidp.saml.security.IdaKeyStore;
 import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
 import uk.gov.ida.stub.idp.StubIdpModule;
 import uk.gov.ida.stub.idp.Urls;
