@@ -9,11 +9,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import stubidp.saml.metadata.EidasTrustAnchorResolver;
 import stubidp.utils.security.security.PrivateKeyFactory;
 import stubidp.utils.security.security.X509CertificateFactory;
-import uk.gov.ida.eidas.trustanchor.CountryTrustAnchor;
-import uk.gov.ida.eidas.trustanchor.Generator;
+import stubidp.eidas.trustanchor.CountryTrustAnchor;
+import stubidp.eidas.trustanchor.Generator;
 import stubidp.test.devpki.TestCertificateStrings;
 
 import javax.ws.rs.client.Client;

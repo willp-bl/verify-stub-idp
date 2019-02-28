@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import stubidp.saml.metadata.factories.DropwizardMetadataResolverFactory;
 import stubidp.saml.metadata.factories.MetadataSignatureTrustEngineFactory;
-import uk.gov.ida.eidas.trustanchor.CountryTrustAnchor;
+import stubidp.eidas.trustanchor.CountryTrustAnchor;
 
 import javax.inject.Inject;
 import javax.ws.rs.client.Client;
