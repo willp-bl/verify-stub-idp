@@ -1,6 +1,6 @@
 package uk.gov.ida.eventsink;
 
-import uk.gov.ida.eventemitter.EventDetailsKey;
+import stubidp.eventemitter.EventDetailsKey;
 
 public class EventDetails {
 

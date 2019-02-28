@@ -3,7 +3,7 @@ package uk.gov.ida.eventsink;
 import com.google.common.collect.ImmutableMap;
 import uk.gov.ida.common.ServiceInfoConfiguration;
 import uk.gov.ida.common.SessionId;
-import uk.gov.ida.eventemitter.EventDetailsKey;
+import stubidp.eventemitter.EventDetailsKey;
 
 import javax.inject.Inject;
 import java.util.HashMap;

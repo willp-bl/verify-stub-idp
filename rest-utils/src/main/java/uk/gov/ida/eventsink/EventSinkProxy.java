@@ -1,6 +1,6 @@
 package uk.gov.ida.eventsink;
 
-import uk.gov.ida.eventemitter.Event;
+import stubidp.eventemitter.Event;
 
 public interface EventSinkProxy {
 

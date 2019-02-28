@@ -4,8 +4,8 @@ import com.google.common.collect.Maps;
 import org.joda.time.DateTime;
 import uk.gov.ida.common.ServiceInfoConfiguration;
 import uk.gov.ida.common.SessionId;
-import uk.gov.ida.eventemitter.Event;
-import uk.gov.ida.eventemitter.EventDetailsKey;
+import stubidp.eventemitter.Event;
+import stubidp.eventemitter.EventDetailsKey;
 
 import java.util.EnumMap;
 import java.util.Map;

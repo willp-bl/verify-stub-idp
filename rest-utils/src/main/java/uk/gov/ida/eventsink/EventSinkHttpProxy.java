@@ -6,7 +6,7 @@ import io.dropwizard.setup.Environment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.gov.ida.common.CommonUrls;
-import uk.gov.ida.eventemitter.Event;
+import stubidp.eventemitter.Event;
 import uk.gov.ida.exceptions.ApplicationException;
 import uk.gov.ida.jerseyclient.JsonClient;
 
