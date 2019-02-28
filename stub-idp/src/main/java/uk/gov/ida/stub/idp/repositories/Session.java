@@ -2,7 +2,7 @@ package uk.gov.ida.stub.idp.repositories;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import uk.gov.ida.stub.idp.domain.IdpHint;
 import uk.gov.ida.stub.idp.domain.IdpLanguageHint;
 

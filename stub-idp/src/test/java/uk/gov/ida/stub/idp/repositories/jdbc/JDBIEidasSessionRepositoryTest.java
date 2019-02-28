@@ -5,7 +5,7 @@ import org.joda.time.DateTimeZone;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.core.domain.Gender;
 import uk.gov.ida.stub.idp.domain.EidasAddress;
 import uk.gov.ida.stub.idp.domain.EidasAuthnRequest;

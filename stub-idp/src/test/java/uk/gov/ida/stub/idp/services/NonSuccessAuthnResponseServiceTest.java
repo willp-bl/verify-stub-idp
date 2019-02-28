@@ -12,7 +12,7 @@ import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.opensaml.saml.saml2.core.AuthnContextComparisonTypeEnumeration;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.stub.idp.domain.FraudIndicator;
 import uk.gov.ida.stub.idp.domain.IdpIdaStatus;

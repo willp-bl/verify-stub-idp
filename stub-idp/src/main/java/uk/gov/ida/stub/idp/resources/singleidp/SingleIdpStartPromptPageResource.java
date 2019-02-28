@@ -1,6 +1,6 @@
 package uk.gov.ida.stub.idp.resources.singleidp;
 
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import uk.gov.ida.stub.idp.Urls;
 import uk.gov.ida.stub.idp.configuration.SingleIdpConfiguration;
 import uk.gov.ida.stub.idp.cookies.CookieNames;

@@ -35,10 +35,10 @@ import static javax.ws.rs.client.Entity.entity;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON_TYPE;
 import static org.assertj.core.api.Assertions.assertThat;
 import static uk.gov.ida.apprule.UserRepositoryIntegrationTests.UserBuilder.aUser;
-import static uk.gov.ida.common.HttpHeaders.CACHE_CONTROL_KEY;
-import static uk.gov.ida.common.HttpHeaders.CACHE_CONTROL_NO_CACHE_VALUE;
-import static uk.gov.ida.common.HttpHeaders.PRAGMA_KEY;
-import static uk.gov.ida.common.HttpHeaders.PRAGMA_NO_CACHE_VALUE;
+import static stubidp.utils.rest.common.HttpHeaders.CACHE_CONTROL_KEY;
+import static stubidp.utils.rest.common.HttpHeaders.CACHE_CONTROL_NO_CACHE_VALUE;
+import static stubidp.utils.rest.common.HttpHeaders.PRAGMA_KEY;
+import static stubidp.utils.rest.common.HttpHeaders.PRAGMA_NO_CACHE_VALUE;
 import static uk.gov.ida.stub.idp.builders.AddressBuilder.anAddress;
 import static uk.gov.ida.stub.idp.builders.StubIdpBuilder.aStubIdp;
 

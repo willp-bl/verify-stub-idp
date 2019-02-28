@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.cookies;
 
 import com.google.inject.Inject;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import stubidp.utils.security.configuration.SecureCookieConfiguration;
 import stubidp.utils.security.security.HmacDigest;
 

@@ -1,4 +1,4 @@
-package uk.gov.ida.dropwizard.logstash;
+package stubidp.dropwizard.logstash;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,10 +10,10 @@ import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.rules.RuleChain;
 import org.junit.rules.TestRule;
-import uk.gov.ida.dropwizard.logstash.support.AccessEventFormat;
-import uk.gov.ida.dropwizard.logstash.support.LoggingEventFormat;
-import uk.gov.ida.dropwizard.logstash.support.TestApplication;
-import uk.gov.ida.dropwizard.logstash.support.TestConfiguration;
+import stubidp.dropwizard.logstash.support.AccessEventFormat;
+import stubidp.dropwizard.logstash.support.LoggingEventFormat;
+import stubidp.dropwizard.logstash.support.TestApplication;
+import stubidp.dropwizard.logstash.support.TestConfiguration;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.core.Response;
@@ -101,7 +101,7 @@ public class LogstashConsoleAppenderAppRuleTest {
         assertThat(list.size()).isGreaterThan(0);
 
         assertThat(list.stream()
-                .filter(logFormat -> logFormat.getMessage().equals("The following paths were found for the configured resources:\n\n    GET     / (uk.gov.ida.dropwizard.logstash.support.RootResource)\n"))
+                .filter(logFormat -> logFormat.getMessage().equals("The following paths were found for the configured resources:\n\n    GET     / (stubidp.dropwizard.logstash.support.RootResource)\n"))
                 .count()).isEqualTo(1);
     }
 

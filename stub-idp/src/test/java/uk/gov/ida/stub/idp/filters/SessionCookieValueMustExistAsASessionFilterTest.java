@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import uk.gov.ida.stub.idp.cookies.HmacValidator;
 import uk.gov.ida.stub.idp.exceptions.InvalidSecureCookieException;
 import uk.gov.ida.stub.idp.exceptions.SecureCookieNotFoundException;
@@ -20,7 +20,6 @@ import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.core.Cookie;
 import javax.ws.rs.core.NewCookie;
 import java.util.Map;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.fail;

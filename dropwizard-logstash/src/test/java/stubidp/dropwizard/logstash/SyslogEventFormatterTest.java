@@ -1,4 +1,4 @@
-package uk.gov.ida.dropwizard.logstash;
+package stubidp.dropwizard.logstash;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.spi.ILoggingEvent;

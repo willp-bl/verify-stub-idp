@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.core.domain.AuthnContext;
 import uk.gov.ida.stub.idp.domain.DatabaseEidasUser;
 import uk.gov.ida.stub.idp.domain.EidasAuthnRequest;

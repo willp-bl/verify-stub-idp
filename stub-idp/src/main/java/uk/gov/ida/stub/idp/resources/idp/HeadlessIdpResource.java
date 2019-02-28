@@ -1,6 +1,6 @@
 package uk.gov.ida.stub.idp.resources.idp;
 
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.stub.idp.Urls;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;

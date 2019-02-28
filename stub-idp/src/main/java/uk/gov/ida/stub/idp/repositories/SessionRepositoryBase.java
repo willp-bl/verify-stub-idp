@@ -12,7 +12,7 @@ import org.jdbi.v3.core.Jdbi;
 import org.joda.time.Duration;
 import org.opensaml.core.xml.XMLObject;
 import org.opensaml.saml.saml2.core.AuthnContextComparisonTypeEnumeration;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.core.domain.Gender;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.stub.idp.exceptions.SessionSerializationException;

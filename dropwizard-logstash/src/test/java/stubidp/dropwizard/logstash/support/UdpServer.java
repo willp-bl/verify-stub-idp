@@ -1,4 +1,4 @@
-package uk.gov.ida.dropwizard.logstash.support;
+package stubidp.dropwizard.logstash.support;
 
 import com.google.common.collect.Iterables;
 

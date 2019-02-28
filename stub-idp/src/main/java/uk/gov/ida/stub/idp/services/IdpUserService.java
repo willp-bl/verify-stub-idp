@@ -3,7 +3,7 @@ package uk.gov.ida.stub.idp.services;
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.core.domain.Address;
 import stubidp.saml.utils.core.domain.AuthnContext;
 import stubidp.saml.utils.core.domain.Gender;

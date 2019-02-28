@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Matchers;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import uk.gov.ida.jerseyclient.JsonClient;
+import stubidp.utils.rest.jerseyclient.JsonClient;
 import uk.gov.ida.stub.idp.configuration.SingleIdpConfiguration;
 import uk.gov.ida.stub.idp.domain.Service;
 import uk.gov.ida.stub.idp.exceptions.FeatureNotEnabledException;

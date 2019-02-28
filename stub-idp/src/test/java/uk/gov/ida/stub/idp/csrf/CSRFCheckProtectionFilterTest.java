@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import uk.gov.ida.stub.idp.cookies.HmacValidator;
 import uk.gov.ida.stub.idp.csrf.exceptions.CSRFBodyNotFoundException;
 import uk.gov.ida.stub.idp.csrf.exceptions.CSRFCouldNotValidateSessionException;

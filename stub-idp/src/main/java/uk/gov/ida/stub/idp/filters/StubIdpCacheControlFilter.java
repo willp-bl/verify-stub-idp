@@ -1,6 +1,6 @@
 package uk.gov.ida.stub.idp.filters;
 
-import uk.gov.ida.cache.CacheControlFilter;
+import stubidp.utils.rest.cache.CacheControlFilter;
 import uk.gov.ida.stub.idp.configuration.StubIdpConfiguration;
 
 public class StubIdpCacheControlFilter extends CacheControlFilter {

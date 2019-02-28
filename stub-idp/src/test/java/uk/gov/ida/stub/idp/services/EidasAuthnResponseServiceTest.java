@@ -11,7 +11,7 @@ import org.opensaml.saml.saml2.core.Attribute;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.StatusCode;
 import org.opensaml.xmlsec.signature.support.SignatureException;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.extensions.IdaConstants;
 import stubidp.saml.extensions.IdaSamlBootstrap;
 import stubidp.saml.extensions.extensions.eidas.CurrentFamilyName;

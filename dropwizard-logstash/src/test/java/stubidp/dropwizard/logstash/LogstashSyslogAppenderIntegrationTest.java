@@ -1,4 +1,4 @@
-package uk.gov.ida.dropwizard.logstash;
+package stubidp.dropwizard.logstash;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
@@ -11,9 +11,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.LoggerFactory;
-import stubidp.dropwizard.logstash.SyslogAppender;
-import stubidp.dropwizard.logstash.SyslogEventFormatter;
-import uk.gov.ida.dropwizard.logstash.support.UdpServer;
+import stubidp.dropwizard.logstash.support.UdpServer;
 
 import static io.dropwizard.logging.SyslogAppenderFactory.Facility.LOCAL7;
 import static org.hamcrest.Matchers.startsWith;

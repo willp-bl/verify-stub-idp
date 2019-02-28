@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.repositories.jdbc;
 
 import org.jdbi.v3.core.Jdbi;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import uk.gov.ida.stub.idp.repositories.IdpSession;
 import uk.gov.ida.stub.idp.repositories.IdpSessionRepository;
 import uk.gov.ida.stub.idp.repositories.SessionRepositoryBase;

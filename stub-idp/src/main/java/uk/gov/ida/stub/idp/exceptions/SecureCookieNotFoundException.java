@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.exceptions;
 
 import com.google.common.base.Optional;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 
 public class SecureCookieNotFoundException extends RuntimeException {
 

@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.resources.idp;
 
 import com.google.common.base.Strings;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import uk.gov.ida.stub.idp.Urls;
 import uk.gov.ida.stub.idp.cookies.CookieFactory;
 import uk.gov.ida.stub.idp.cookies.CookieNames;

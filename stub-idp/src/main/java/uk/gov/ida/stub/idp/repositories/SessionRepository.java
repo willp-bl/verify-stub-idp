@@ -1,7 +1,7 @@
 package uk.gov.ida.stub.idp.repositories;
 
 import org.joda.time.Duration;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 
 import java.util.Optional;
 

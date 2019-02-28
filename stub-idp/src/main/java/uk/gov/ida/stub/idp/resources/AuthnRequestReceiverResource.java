@@ -2,7 +2,7 @@ package uk.gov.ida.stub.idp.resources;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import uk.gov.ida.stub.idp.Urls;
 import uk.gov.ida.stub.idp.cookies.CookieFactory;
 import uk.gov.ida.stub.idp.cookies.CookieNames;

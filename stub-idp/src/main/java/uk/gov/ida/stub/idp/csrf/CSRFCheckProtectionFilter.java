@@ -3,7 +3,7 @@ package uk.gov.ida.stub.idp.csrf;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.jboss.logging.MDC;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import uk.gov.ida.stub.idp.cookies.HmacValidator;
 import uk.gov.ida.stub.idp.csrf.exceptions.CSRFBodyNotFoundException;
 import uk.gov.ida.stub.idp.csrf.exceptions.CSRFCouldNotValidateSessionException;

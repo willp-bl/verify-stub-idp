@@ -4,7 +4,7 @@ import org.apache.commons.lang.StringEscapeUtils;
 import org.opensaml.saml.saml2.core.AuthnRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.stub.idp.Urls;
 import uk.gov.ida.stub.idp.domain.EidasAuthnRequest;

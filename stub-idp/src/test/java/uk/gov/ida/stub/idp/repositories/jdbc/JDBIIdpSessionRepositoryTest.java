@@ -8,7 +8,7 @@ import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 import org.opensaml.saml.saml2.core.AuthnContextComparisonTypeEnumeration;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.core.domain.AuthnContext;
 import stubidp.saml.utils.core.domain.Gender;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;

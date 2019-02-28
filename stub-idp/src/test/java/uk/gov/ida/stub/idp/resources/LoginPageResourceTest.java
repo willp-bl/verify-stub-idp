@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
-import uk.gov.ida.common.SessionId;
+import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import uk.gov.ida.stub.idp.cookies.CookieFactory;
 import uk.gov.ida.stub.idp.domain.DatabaseIdpUser;

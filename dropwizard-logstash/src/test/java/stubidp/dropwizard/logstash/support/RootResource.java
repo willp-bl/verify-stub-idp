@@ -1,4 +1,4 @@
-package uk.gov.ida.dropwizard.logstash.support;
+package stubidp.dropwizard.logstash.support;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
