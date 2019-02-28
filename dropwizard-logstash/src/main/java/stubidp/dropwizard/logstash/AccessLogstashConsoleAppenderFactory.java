@@ -1,4 +1,4 @@
-package uk.gov.ida.dropwizard.logstash;
+package stubidp.dropwizard.logstash;
 
 import ch.qos.logback.access.spi.IAccessEvent;
 import ch.qos.logback.classic.LoggerContext;
@@ -24,8 +24,8 @@ import net.logstash.logback.composite.accessevent.MethodJsonProvider;
 import net.logstash.logback.composite.accessevent.RemoteUserJsonProvider;
 import net.logstash.logback.composite.accessevent.StatusCodeJsonProvider;
 import net.logstash.logback.encoder.AccessEventCompositeJsonEncoder;
-import uk.gov.ida.dropwizard.logstash.typed.BytesField;
-import uk.gov.ida.dropwizard.logstash.typed.MillisecondsField;
+import stubidp.dropwizard.logstash.typed.BytesField;
+import stubidp.dropwizard.logstash.typed.MillisecondsField;
 
 import java.io.IOException;
 

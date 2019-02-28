@@ -1,4 +1,4 @@
-package uk.gov.ida.dropwizard.logstash;
+package stubidp.dropwizard.logstash;
 
 import io.dropwizard.Bundle;
 import io.dropwizard.setup.Bootstrap;

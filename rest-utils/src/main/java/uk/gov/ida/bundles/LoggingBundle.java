@@ -6,7 +6,7 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.slf4j.LoggerFactory;
 import uk.gov.ida.configuration.ServiceNameConfiguration;
-import uk.gov.ida.dropwizard.logstash.LogstashBundle;
+import stubidp.dropwizard.logstash.LogstashBundle;
 import uk.gov.ida.filters.ClearMdcAfterRequestFilter;
 
 import javax.servlet.DispatcherType;

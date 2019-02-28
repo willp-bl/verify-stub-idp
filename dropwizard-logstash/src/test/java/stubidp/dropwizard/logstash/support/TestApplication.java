@@ -3,7 +3,7 @@ package uk.gov.ida.dropwizard.logstash.support;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import uk.gov.ida.dropwizard.logstash.LogstashBundle;
+import stubidp.dropwizard.logstash.LogstashBundle;
 
 public class TestApplication extends Application<TestConfiguration> {
     @Override

@@ -1,4 +1,4 @@
-package uk.gov.ida.dropwizard.logstash.typed;
+package stubidp.dropwizard.logstash.typed;
 
 public class MillisecondsField {
     public final long ms;

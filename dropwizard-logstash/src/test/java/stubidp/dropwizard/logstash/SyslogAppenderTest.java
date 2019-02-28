@@ -8,9 +8,10 @@ import org.hamcrest.core.Is;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Matchers;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import stubidp.dropwizard.logstash.SyslogAppender;
+import stubidp.dropwizard.logstash.SyslogEventFormatter;
 
 import java.io.IOException;
 import java.util.List;
