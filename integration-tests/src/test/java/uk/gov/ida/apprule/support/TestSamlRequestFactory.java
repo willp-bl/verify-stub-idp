@@ -5,7 +5,7 @@ import org.opensaml.saml.saml2.core.AuthnRequest;
 import stubidp.saml.utils.core.test.TestCredentialFactory;
 import stubidp.test.devpki.TestEntityIds;
 import stubidp.saml.utils.core.test.builders.IssuerBuilder;
-import uk.gov.ida.saml.hub.domain.Endpoints;
+import stubidp.saml.hub.hub.domain.Endpoints;
 import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 
 import java.util.Optional;

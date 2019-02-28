@@ -13,7 +13,7 @@ import uk.gov.ida.apprule.support.SamlDecrypter;
 import uk.gov.ida.apprule.support.StubIdpAppRule;
 import uk.gov.ida.apprule.support.eidas.InboundResponseFromCountry;
 import stubidp.saml.extensions.IdaConstants;
-import uk.gov.ida.saml.hub.domain.LevelOfAssurance;
+import stubidp.saml.hub.hub.domain.LevelOfAssurance;
 import uk.gov.ida.stub.idp.domain.EidasScheme;
 
 import javax.ws.rs.client.Client;

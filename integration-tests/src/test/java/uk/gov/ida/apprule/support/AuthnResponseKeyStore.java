@@ -2,7 +2,7 @@ package uk.gov.ida.apprule.support;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.gov.ida.saml.metadata.IdpMetadataPublicKeyStore;
+import stubidp.saml.hub.metadata.IdpMetadataPublicKeyStore;
 import stubidp.saml.security.SigningKeyStore;
 
 import javax.inject.Inject;

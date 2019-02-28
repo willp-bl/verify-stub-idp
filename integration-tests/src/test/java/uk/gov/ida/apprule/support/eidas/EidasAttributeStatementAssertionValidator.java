@@ -8,7 +8,7 @@ import org.opensaml.saml.saml2.core.AttributeStatement;
 import org.slf4j.event.Level;
 import stubidp.saml.extensions.IdaConstants.Eidas_Attributes;
 import stubidp.saml.extensions.extensions.eidas.EidasGender;
-import uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory;
+import stubidp.saml.hub.core.errors.SamlTransformationErrorFactory;
 import stubidp.saml.extensions.extensions.eidas.CurrentAddress;
 import stubidp.saml.extensions.extensions.eidas.CurrentFamilyName;
 import stubidp.saml.extensions.extensions.eidas.CurrentGivenName;
@@ -24,8 +24,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.attributeStatementEmpty;
-import static uk.gov.ida.saml.core.errors.SamlTransformationErrorFactory.invalidAttributeNameFormat;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.attributeStatementEmpty;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.invalidAttributeNameFormat;
 
 public class EidasAttributeStatementAssertionValidator {
 

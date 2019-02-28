@@ -35,7 +35,7 @@ import stubidp.saml.utils.core.test.builders.AuthnContextClassRefBuilder;
 import stubidp.saml.utils.core.test.builders.AuthnRequestBuilder;
 import stubidp.saml.utils.core.test.builders.IssuerBuilder;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
-import uk.gov.ida.saml.hub.domain.LevelOfAssurance;
+import stubidp.saml.hub.hub.domain.LevelOfAssurance;
 import stubidp.saml.security.IdaKeyStore;
 import stubidp.saml.security.IdaKeyStoreCredentialRetriever;
 import stubidp.saml.security.SignatureWithKeyInfoFactory;

@@ -11,7 +11,7 @@ import uk.gov.ida.apprule.steps.AuthnRequestSteps;
 import uk.gov.ida.apprule.support.IntegrationTestHelper;
 import uk.gov.ida.apprule.support.SamlDecrypter;
 import uk.gov.ida.apprule.support.StubIdpAppRule;
-import uk.gov.ida.saml.hub.domain.InboundResponseFromIdp;
+import stubidp.saml.hub.hub.domain.InboundResponseFromIdp;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
