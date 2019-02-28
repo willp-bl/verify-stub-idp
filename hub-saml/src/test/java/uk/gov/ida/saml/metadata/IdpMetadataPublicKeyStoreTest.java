@@ -20,6 +20,7 @@ import org.opensaml.xmlsec.signature.KeyInfo;
 import org.opensaml.xmlsec.signature.X509Certificate;
 import org.opensaml.xmlsec.signature.X509Data;
 import org.opensaml.xmlsec.signature.support.SignatureException;
+import stubidp.saml.metadata.StringBackedMetadataResolver;
 import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import stubidp.test.devpki.TestCertificateStrings;
 import stubidp.test.devpki.TestEntityIds;
@@ -30,8 +31,8 @@ import stubidp.saml.utils.core.test.builders.metadata.KeyInfoBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.X509CertificateBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.X509DataBuilder;
 import uk.gov.ida.saml.metadata.exceptions.NoKeyConfiguredForEntityException;
-import uk.gov.ida.saml.metadata.test.factories.metadata.EntityDescriptorFactory;
-import uk.gov.ida.saml.metadata.test.factories.metadata.MetadataFactory;
+import stubidp.saml.metadata.test.factories.metadata.EntityDescriptorFactory;
+import stubidp.saml.metadata.test.factories.metadata.MetadataFactory;
 
 import java.io.ByteArrayInputStream;
 import java.net.URISyntaxException;

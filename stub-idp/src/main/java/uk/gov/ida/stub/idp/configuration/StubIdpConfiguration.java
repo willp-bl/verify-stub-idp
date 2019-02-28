@@ -9,8 +9,8 @@ import stubidp.utils.rest.common.ServiceInfoConfiguration;
 import stubidp.utils.security.configuration.SecureCookieConfiguration;
 import stubidp.utils.rest.configuration.ServiceNameConfiguration;
 import stubidp.saml.stubidp.configuration.SamlConfiguration;
-import uk.gov.ida.saml.metadata.MetadataResolverConfiguration;
-import uk.gov.ida.saml.metadata.TrustStoreBackedMetadataConfiguration;
+import stubidp.saml.metadata.MetadataResolverConfiguration;
+import stubidp.saml.metadata.TrustStoreBackedMetadataConfiguration;
 import uk.gov.ida.stub.idp.repositories.reaper.StaleSessionReaperConfiguration;
 
 import javax.validation.Valid;

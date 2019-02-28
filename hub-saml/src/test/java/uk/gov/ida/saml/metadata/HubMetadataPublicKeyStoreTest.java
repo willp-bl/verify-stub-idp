@@ -9,11 +9,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.saml.metadata.resolver.MetadataResolver;
 import org.opensaml.saml.metadata.resolver.impl.AbstractReloadingMetadataResolver;
+import stubidp.saml.metadata.StringBackedMetadataResolver;
 import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import stubidp.test.devpki.TestCertificateStrings;
 import stubidp.test.devpki.TestEntityIds;
 import uk.gov.ida.saml.metadata.exceptions.HubEntityMissingException;
-import uk.gov.ida.saml.metadata.test.factories.metadata.MetadataFactory;
+import stubidp.saml.metadata.test.factories.metadata.MetadataFactory;
 import stubidp.saml.security.PublicKeyFactory;
 
 import java.io.ByteArrayInputStream;

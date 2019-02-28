@@ -1,12 +1,11 @@
 package uk.gov.ida.stub.idp.configuration;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import uk.gov.ida.saml.metadata.MetadataResolverConfiguration;
-import uk.gov.ida.saml.metadata.TrustStoreBackedMetadataConfiguration;
+import stubidp.saml.metadata.MetadataResolverConfiguration;
+import stubidp.saml.metadata.TrustStoreBackedMetadataConfiguration;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.net.URI;
 
 public class EuropeanIdentityConfiguration {
 

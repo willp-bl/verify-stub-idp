@@ -12,7 +12,7 @@ import stubidp.test.utils.keystore.builders.KeyStoreResourceBuilder;
 import org.apache.commons.io.FileUtils;
 import org.opensaml.core.config.InitializationService;
 import stubidp.saml.utils.Constants;
-import uk.gov.ida.saml.metadata.test.factories.metadata.MetadataFactory;
+import stubidp.saml.metadata.test.factories.metadata.MetadataFactory;
 import uk.gov.ida.stub.idp.StubIdpApplication;
 import uk.gov.ida.stub.idp.configuration.IdpStubsConfiguration;
 import uk.gov.ida.stub.idp.configuration.StubIdp;
