@@ -14,6 +14,18 @@ import stubidp.saml.hub.core.errors.SamlTransformationErrorFactory;
 import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
 
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.emptyIssuer;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.illegalIssuerFormat;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.missingId;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.missingInResponseTo;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.missingIssuer;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.missingSignature;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.missingSuccessUnEncryptedAssertions;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.nonSuccessHasUnEncryptedAssertions;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.signatureNotSigned;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.subStatusMustBeOneOf;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.unencryptedAssertion;
+import static stubidp.saml.hub.core.errors.SamlTransformationErrorFactory.unexpectedNumberOfAssertions;
 import static stubidp.saml.utils.core.test.SamlTransformationErrorManagerTestHelper.validateFail;
 import static stubidp.saml.utils.core.test.builders.AssertionBuilder.anAssertion;
 import static stubidp.saml.utils.core.test.builders.IssuerBuilder.anIssuer;
