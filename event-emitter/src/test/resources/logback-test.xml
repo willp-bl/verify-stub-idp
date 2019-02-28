@@ -6,7 +6,7 @@
         </encoder>
     </appender>
 
-    <logger name="uk.gov.ida.eventemitter" level="DEBUG" />
+    <logger name="stubidp.eventemitter" level="DEBUG" />
 
     <root level="WARN">
         <appender-ref ref="STDOUT" />
