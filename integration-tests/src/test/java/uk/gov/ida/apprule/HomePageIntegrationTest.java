@@ -10,15 +10,15 @@ import uk.gov.ida.apprule.steps.FormBuilder;
 import uk.gov.ida.apprule.steps.PreRegistrationSteps;
 import uk.gov.ida.apprule.support.IntegrationTestHelper;
 import uk.gov.ida.apprule.support.StubIdpAppRule;
-import uk.gov.ida.stub.idp.Urls;
-import uk.gov.ida.stub.idp.domain.SubmitButtonValue;
+import stubidp.stubidp.Urls;
+import stubidp.stubidp.domain.SubmitButtonValue;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Response;
 
-import static uk.gov.ida.stub.idp.builders.StubIdpBuilder.aStubIdp;
-import static uk.gov.ida.stub.idp.csrf.CSRFCheckProtectionFilter.CSRF_PROTECT_FORM_KEY;
+import static stubidp.stubidp.builders.StubIdpBuilder.aStubIdp;
+import static stubidp.stubidp.csrf.CSRFCheckProtectionFilter.CSRF_PROTECT_FORM_KEY;
 
 public class HomePageIntegrationTest extends IntegrationTestHelper {
 

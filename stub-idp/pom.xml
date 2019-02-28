@@ -15,7 +15,7 @@
     </parent>
 
     <properties>
-        <main.class>uk.gov.ida.stub.idp.StubIdpApplication</main.class>
+        <main.class>stubidp.stubidp.StubIdpApplication</main.class>
     </properties>
 
     <build>

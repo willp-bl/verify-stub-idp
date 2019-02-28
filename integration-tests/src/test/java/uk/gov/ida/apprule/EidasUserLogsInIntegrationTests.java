@@ -14,7 +14,7 @@ import uk.gov.ida.apprule.support.StubIdpAppRule;
 import uk.gov.ida.apprule.support.eidas.InboundResponseFromCountry;
 import stubidp.saml.extensions.IdaConstants;
 import stubidp.saml.hub.hub.domain.LevelOfAssurance;
-import uk.gov.ida.stub.idp.domain.EidasScheme;
+import stubidp.stubidp.domain.EidasScheme;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;

@@ -8,8 +8,8 @@ import org.jsoup.nodes.Element;
 import uk.gov.ida.apprule.support.TestSamlRequestFactory;
 import uk.gov.ida.apprule.support.eidas.EidasAuthnRequestBuilder;
 import stubidp.saml.extensions.IdaConstants;
-import uk.gov.ida.stub.idp.Urls;
-import uk.gov.ida.stub.idp.cookies.CookieNames;
+import stubidp.stubidp.Urls;
+import stubidp.stubidp.cookies.CookieNames;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
@@ -23,8 +23,8 @@ import java.util.List;
 import java.util.Objects;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static uk.gov.ida.stub.idp.csrf.CSRFCheckProtectionFilter.CSRF_PROTECT_FORM_KEY;
-import static uk.gov.ida.stub.idp.repositories.StubCountryRepository.STUB_COUNTRY_FRIENDLY_ID;
+import static stubidp.stubidp.csrf.CSRFCheckProtectionFilter.CSRF_PROTECT_FORM_KEY;
+import static stubidp.stubidp.repositories.StubCountryRepository.STUB_COUNTRY_FRIENDLY_ID;
 
 public class AuthnRequestSteps {
     private final Client client;

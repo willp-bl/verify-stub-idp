@@ -13,10 +13,10 @@ import uk.gov.ida.apprule.support.StubIdpAppRule;
 import stubidp.saml.utils.core.domain.Address;
 import stubidp.saml.utils.core.domain.AuthnContext;
 import stubidp.saml.utils.core.domain.Gender;
-import uk.gov.ida.stub.idp.builders.SimpleMdsValueBuilder;
-import uk.gov.ida.stub.idp.Urls;
-import uk.gov.ida.stub.idp.domain.MatchingDatasetValue;
-import uk.gov.ida.stub.idp.dtos.IdpUserDto;
+import stubidp.stubidp.builders.SimpleMdsValueBuilder;
+import stubidp.stubidp.Urls;
+import stubidp.stubidp.domain.MatchingDatasetValue;
+import stubidp.stubidp.dtos.IdpUserDto;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Invocation;
@@ -28,7 +28,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-import uk.gov.ida.stub.idp.utils.TestUserCredentials;
+import stubidp.stubidp.utils.TestUserCredentials;
 
 import static java.util.Arrays.asList;
 import static javax.ws.rs.client.Entity.entity;
@@ -39,8 +39,8 @@ import static stubidp.utils.rest.common.HttpHeaders.CACHE_CONTROL_KEY;
 import static stubidp.utils.rest.common.HttpHeaders.CACHE_CONTROL_NO_CACHE_VALUE;
 import static stubidp.utils.rest.common.HttpHeaders.PRAGMA_KEY;
 import static stubidp.utils.rest.common.HttpHeaders.PRAGMA_NO_CACHE_VALUE;
-import static uk.gov.ida.stub.idp.builders.AddressBuilder.anAddress;
-import static uk.gov.ida.stub.idp.builders.StubIdpBuilder.aStubIdp;
+import static stubidp.stubidp.builders.AddressBuilder.anAddress;
+import static stubidp.stubidp.builders.StubIdpBuilder.aStubIdp;
 
 public class UserRepositoryIntegrationTests extends IntegrationTestHelper {
 

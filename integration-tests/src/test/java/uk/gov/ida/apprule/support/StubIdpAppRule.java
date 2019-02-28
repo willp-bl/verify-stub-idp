@@ -13,10 +13,10 @@ import org.apache.commons.io.FileUtils;
 import org.opensaml.core.config.InitializationService;
 import stubidp.saml.utils.Constants;
 import stubidp.saml.metadata.test.factories.metadata.MetadataFactory;
-import uk.gov.ida.stub.idp.StubIdpApplication;
-import uk.gov.ida.stub.idp.configuration.IdpStubsConfiguration;
-import uk.gov.ida.stub.idp.configuration.StubIdp;
-import uk.gov.ida.stub.idp.configuration.StubIdpConfiguration;
+import stubidp.stubidp.StubIdpApplication;
+import stubidp.stubidp.configuration.IdpStubsConfiguration;
+import stubidp.stubidp.configuration.StubIdp;
+import stubidp.stubidp.configuration.StubIdpConfiguration;
 
 import java.io.File;
 import java.net.URI;

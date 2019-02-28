@@ -10,8 +10,8 @@ import org.junit.Test;
 import uk.gov.ida.apprule.steps.AuthnRequestSteps;
 import uk.gov.ida.apprule.support.IntegrationTestHelper;
 import uk.gov.ida.apprule.support.StubIdpAppRule;
-import uk.gov.ida.stub.idp.Urls;
-import uk.gov.ida.stub.idp.cookies.CookieNames;
+import stubidp.stubidp.Urls;
+import stubidp.stubidp.cookies.CookieNames;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
@@ -20,7 +20,7 @@ import javax.ws.rs.core.Response;
 
 import static java.text.MessageFormat.format;
 import static org.assertj.core.api.Assertions.assertThat;
-import static uk.gov.ida.stub.idp.builders.StubIdpBuilder.aStubIdp;
+import static stubidp.stubidp.builders.StubIdpBuilder.aStubIdp;
 
 public class EmojiSupportIntegrationTests extends IntegrationTestHelper {
 

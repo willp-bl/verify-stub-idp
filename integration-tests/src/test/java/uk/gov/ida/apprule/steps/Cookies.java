@@ -1,12 +1,10 @@
 package uk.gov.ida.apprule.steps;
 
-import uk.gov.ida.stub.idp.cookies.CookieNames;
-import uk.gov.ida.stub.idp.cookies.HttpOnlyNewCookie;
+import stubidp.stubidp.cookies.CookieNames;
+import stubidp.stubidp.cookies.HttpOnlyNewCookie;
 
 import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
-import java.sql.Date;
-import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -11,9 +11,9 @@ import org.junit.Test;
 import uk.gov.ida.apprule.steps.AuthnRequestSteps;
 import uk.gov.ida.apprule.support.IntegrationTestHelper;
 import uk.gov.ida.apprule.support.StubIdpAppRule;
-import uk.gov.ida.stub.idp.Urls;
-import uk.gov.ida.stub.idp.cookies.CookieNames;
-import uk.gov.ida.stub.idp.filters.SecurityHeadersFilterTest;
+import stubidp.stubidp.Urls;
+import stubidp.stubidp.cookies.CookieNames;
+import stubidp.stubidp.filters.SecurityHeadersFilterTest;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
@@ -25,8 +25,8 @@ import javax.ws.rs.core.UriBuilder;
 import java.util.Objects;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static uk.gov.ida.stub.idp.builders.StubIdpBuilder.aStubIdp;
-import static uk.gov.ida.stub.idp.csrf.CSRFCheckProtectionFilter.CSRF_PROTECT_FORM_KEY;
+import static stubidp.stubidp.builders.StubIdpBuilder.aStubIdp;
+import static stubidp.stubidp.csrf.CSRFCheckProtectionFilter.CSRF_PROTECT_FORM_KEY;
 
 public class SecurityIntegrationTests extends IntegrationTestHelper {
 

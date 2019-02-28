@@ -23,7 +23,7 @@ import static java.util.Optional.empty;
 import static org.assertj.core.api.Assertions.assertThat;
 import static stubidp.utils.rest.common.HttpHeaders.CACHE_CONTROL_KEY;
 import static stubidp.utils.rest.common.HttpHeaders.PRAGMA_KEY;
-import static uk.gov.ida.stub.idp.builders.StubIdpBuilder.aStubIdp;
+import static stubidp.stubidp.builders.StubIdpBuilder.aStubIdp;
 
 public class UserLogsInIntegrationTests extends IntegrationTestHelper {
 

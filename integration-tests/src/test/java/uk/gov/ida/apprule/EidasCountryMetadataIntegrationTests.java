@@ -16,7 +16,7 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Response;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static uk.gov.ida.stub.idp.builders.StubIdpBuilder.aStubIdp;
+import static stubidp.stubidp.builders.StubIdpBuilder.aStubIdp;
 
 public class EidasCountryMetadataIntegrationTests extends IntegrationTestHelper {
 
