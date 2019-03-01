@@ -11,11 +11,13 @@ import org.opensaml.xmlsec.signature.support.Signer;
 
 import stubidp.saml.security.SignatureFactory;
 
+import static stubidp.stubidp.StubIdpModule.COUNTRY_METADATA_SIGNATURE_FACTORY;
+
 public class CountryMetadataSigningHelper {
     private SignatureFactory signatureFactory;
 
     @Inject
-    public CountryMetadataSigningHelper(@Named("countryMetadataSignatureFactory") SignatureFactory signatureFactory) {
+    public CountryMetadataSigningHelper(@Named(COUNTRY_METADATA_SIGNATURE_FACTORY) SignatureFactory signatureFactory) {
         this.signatureFactory = signatureFactory;
     }
 

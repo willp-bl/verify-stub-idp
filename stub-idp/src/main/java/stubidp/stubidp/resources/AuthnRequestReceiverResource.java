@@ -36,6 +36,8 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 
+import static stubidp.stubidp.StubIdpModule.IS_SECURE_COOKIE_ENABLED;
+
 @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 @Produces(MediaType.TEXT_HTML)
 @Path("/")
@@ -52,7 +54,7 @@ public class AuthnRequestReceiverResource {
     @Inject
     public AuthnRequestReceiverResource(AuthnRequestReceiverService authnRequestReceiverService,
                                         CookieFactory cookieFactory,
-                                        @Named("isSecureCookieEnabled") Boolean isSecureCookieEnabled,
+                                        @Named(IS_SECURE_COOKIE_ENABLED) Boolean isSecureCookieEnabled,
                                         IdpSessionRepository idpSessionRepository,
                                         IdpUserService idpUserService) {
         this.authnRequestReceiverService = authnRequestReceiverService;

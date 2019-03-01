@@ -2,6 +2,7 @@ package stubidp.stubidp.builders;
 // Adapted from package uk.gov.ida.eidas.bridge.helpers;
 
 import static org.apache.commons.codec.binary.Base64.encodeBase64String;
+import static stubidp.stubidp.StubIdpModule.COUNTRY_METADATA_VALIDITY_PERIOD;
 
 import java.net.URI;
 import java.security.cert.CertificateEncodingException;
@@ -39,7 +40,7 @@ public class CountryMetadataBuilder {
 
     @Inject
     public CountryMetadataBuilder(
-            @Named("metadataValidityPeriod") ReadablePeriod validity,
+            @Named(COUNTRY_METADATA_VALIDITY_PERIOD) ReadablePeriod validity,
             CountryMetadataSigningHelper metadataSigner) {
         this.validity = validity;
         this.metadataSigner = metadataSigner;

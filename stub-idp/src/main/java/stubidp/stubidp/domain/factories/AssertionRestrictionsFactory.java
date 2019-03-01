@@ -8,13 +8,15 @@ import stubidp.stubidp.configuration.AssertionLifetimeConfiguration;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import static stubidp.stubidp.StubIdpModule.HUB_ENTITY_ID;
+
 public class AssertionRestrictionsFactory {
     private final Duration assertionLifetime;
     private final String hubEntityId;
 
     @Inject
     public AssertionRestrictionsFactory(AssertionLifetimeConfiguration assertionTimeoutConfig,
-                                        @Named("HubEntityId") String hubEntityId) {
+                                        @Named(HUB_ENTITY_ID) String hubEntityId) {
         assertionLifetime = assertionTimeoutConfig.getAssertionLifetime();
         this.hubEntityId = hubEntityId;
     }

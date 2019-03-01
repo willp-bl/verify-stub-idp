@@ -34,6 +34,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+import static stubidp.stubidp.StubIdpModule.RSASHA256_EIDAS_AUTHN_RESPONSE_SERVICE;
+import static stubidp.stubidp.StubIdpModule.RSASSAOSS_EIDAS_AUTHN_RESPONSE_SERVICE;
+
 @Path(Urls.EIDAS_CONSENT_RESOURCE)
 @Produces(MediaType.TEXT_HTML)
 @SessionCookieValueMustExistAsASession
@@ -52,8 +55,8 @@ public class EidasConsentResource {
     @Inject
     public EidasConsentResource(
             EidasSessionRepository sessionRepository,
-            @Named("RSASHA256EidasAuthnResponseService") EidasAuthnResponseService rsaSha256AuthnResponseService,
-            @Named("RSASSAPSSEidasAuthnResponseService") EidasAuthnResponseService rsaSsaPssAuthnResponseService,
+            @Named(RSASHA256_EIDAS_AUTHN_RESPONSE_SERVICE) EidasAuthnResponseService rsaSha256AuthnResponseService,
+            @Named(RSASSAOSS_EIDAS_AUTHN_RESPONSE_SERVICE) EidasAuthnResponseService rsaSsaPssAuthnResponseService,
             SamlResponseRedirectViewFactory samlResponseRedirectViewFactory,
             StubCountryRepository stubCountryRepository) {
         this.rsaSha256AuthnResponseService = rsaSha256AuthnResponseService;

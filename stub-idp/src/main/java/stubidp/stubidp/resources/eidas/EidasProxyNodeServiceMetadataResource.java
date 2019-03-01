@@ -29,6 +29,9 @@ import stubidp.stubidp.StubIdpModule;
 import stubidp.stubidp.Urls;
 import stubidp.stubidp.builders.CountryMetadataBuilder;
 
+import static stubidp.stubidp.StubIdpModule.STUB_COUNTRY_METADATA_URL;
+import static stubidp.stubidp.StubIdpModule.STUB_COUNTRY_SSO_URL;
+
 @Path(Urls.METADATA_RESOURCE)
 @Produces(Constants.APPLICATION_SAMLMETADATA_XML)
 public class EidasProxyNodeServiceMetadataResource {
@@ -41,8 +44,8 @@ public class EidasProxyNodeServiceMetadataResource {
 
 	@Inject
     public EidasProxyNodeServiceMetadataResource(@Named(StubIdpModule.COUNTRY_SIGNING_KEY_STORE) IdaKeyStore idaKeyStore,
-                                                 @Named("StubCountryMetadataUrl") String metadataUrlPattern,
-                                                 @Named("StubCountrySsoUrl") String ssoUrlPattern,
+                                                 @Named(STUB_COUNTRY_METADATA_URL) String metadataUrlPattern,
+                                                 @Named(STUB_COUNTRY_SSO_URL) String ssoUrlPattern,
                                                  CountryMetadataBuilder countryMetadataBuilder) {
         this.countryMetadataBuilder = countryMetadataBuilder;
         this.idaKeyStore = idaKeyStore;

@@ -111,14 +111,30 @@ import java.util.function.Function;
 
 public class StubIdpModule extends DropwizardAwareModule<StubIdpConfiguration> {
 
-    public static final String HUB_CONNECTOR_METADATA_REPOSITORY = "HubConnectorMetadataRepository";
     public static final String HUB_METADATA_REPOSITORY = "HubMetadataRepository";
-    public static final String HUB_CONNECTOR_METADATA_RESOLVER = "HubConnectorMetadataResolver";
     public static final String HUB_METADATA_RESOLVER = "HubMetadataResolver";
-    public static final String HUB_CONNECTOR_ENCRYPTION_KEY_STORE = "HubConnectorEncryptionKeyStore";
     public static final String HUB_ENCRYPTION_KEY_STORE = "HubEncryptionKeyStore";
-    public static final String COUNTRY_SIGNING_KEY_STORE = "CountrySigningKeyStore";
     public static final String IDP_SIGNING_KEY_STORE = "IdpSigningKeyStore";
+    public static final String HUB_ENTITY_ID = "HubEntityId";
+
+    public static final String HUB_CONNECTOR_METADATA_RESOLVER = "HubConnectorMetadataResolver";
+    public static final String HUB_CONNECTOR_METADATA_REPOSITORY = "HubConnectorMetadataRepository";
+    public static final String HUB_CONNECTOR_ENCRYPTION_KEY_STORE = "HubConnectorEncryptionKeyStore";
+    public static final String HUB_CONNECTOR_ENTITY_ID = "HubConnectorEntityId";
+    public static final String STUB_COUNTRY_METADATA_URL = "StubCountryMetadataUrl";
+    public static final String STUB_COUNTRY_SSO_URL = "StubCountrySsoUrl";
+    public static final String COUNTRY_SIGNING_KEY_STORE = "CountrySigningKeyStore";
+    public static final String COUNTRY_METADATA_SIGNATURE_FACTORY = "countryMetadataSignatureFactory";
+    public static final String COUNTRY_METADATA_VALIDITY_PERIOD = "metadataValidityPeriod";
+    public static final String RSASHA256_EIDAS_AUTHN_RESPONSE_SERVICE = "RSASHA256EidasAuthnResponseService";
+    public static final String RSASSAOSS_EIDAS_AUTHN_RESPONSE_SERVICE = "RSASSAPSSEidasAuthnResponseService";
+    private final String RSASHA256_EIDAS_RESPONSE_TRANSFORMER_PROVIDER = "RSASHA256EidasResponseTransfomerProvider";
+    private final String RSASSAPSS_EIDAS_RESPONSE_TRANSFORMER_PROVIDER = "RSASSAPSSEidasResponseTransformerProvider";
+
+    // unused?
+    private final String SESSION_CACHE_TIMEOUT_IN_MINUTES = "sessionCacheTimeoutInMinutes";
+
+    public static final String IS_SECURE_COOKIE_ENABLED = "isSecureCookieEnabled";
 
     @Override
     public void configure(Binder binder) {
@@ -203,28 +219,28 @@ public class StubIdpModule extends DropwizardAwareModule<StubIdpConfiguration> {
 
     @Provides
     @Singleton
-    @Named("HubEntityId")
+    @Named(HUB_ENTITY_ID)
     public String getHubEntityId() {
         return getConfiguration().getHubEntityId();
     }
 
     @Provides
     @Singleton
-    @Named("HubConnectorEntityId")
+    @Named(HUB_CONNECTOR_ENTITY_ID)
     public String getHubConnectorEntityId() {
         return getConfiguration().getEuropeanIdentityConfiguration().getHubConnectorEntityId();
     }
 
     @Provides
     @Singleton
-    @Named("StubCountryMetadataUrl")
+    @Named(STUB_COUNTRY_METADATA_URL)
     public String getStubCountryMetadataUrl() {
         return getConfiguration().getEuropeanIdentityConfiguration().getStubCountryBaseUrl() + Urls.METADATA_RESOURCE;
     }
 
     @Provides
     @Singleton
-    @Named("StubCountrySsoUrl")
+    @Named(STUB_COUNTRY_SSO_URL)
     public String getStubCountrySsoUrl() {
         return getConfiguration().getEuropeanIdentityConfiguration().getStubCountryBaseUrl() + Urls.EIDAS_SAML2_SSO_RESOURCE;
     }
@@ -238,7 +254,7 @@ public class StubIdpModule extends DropwizardAwareModule<StubIdpConfiguration> {
 
     @Provides
     @Singleton
-    @Named("sessionCacheTimeoutInMinutes")
+    @Named(SESSION_CACHE_TIMEOUT_IN_MINUTES)
     public Integer getSessionCacheTimeoutInMinutes() {
         return 180;
     }
@@ -259,19 +275,19 @@ public class StubIdpModule extends DropwizardAwareModule<StubIdpConfiguration> {
     }
 
     @Provides
-    @Named("countryMetadataSignatureFactory")
+    @Named(COUNTRY_METADATA_SIGNATURE_FACTORY)
     private SignatureFactory getSignatureFactoryWithKeyInfo(@Named(COUNTRY_SIGNING_KEY_STORE) IdaKeyStore keyStore, DigestAlgorithm digestAlgorithm, SignatureAlgorithm signatureAlgorithm) {
         return new SignatureFactory(true, new IdaKeyStoreCredentialRetriever(keyStore), signatureAlgorithm, digestAlgorithm);
     }
 
     @Provides
     @Singleton
-    public StubCountryRepository getStubCountryRepository(AllIdpsUserRepository allIdpsUserRepository, @Named("StubCountryMetadataUrl")String stubCountryMetadataUrl){
+    public StubCountryRepository getStubCountryRepository(AllIdpsUserRepository allIdpsUserRepository, @Named(STUB_COUNTRY_METADATA_URL)String stubCountryMetadataUrl){
         return new StubCountryRepository(allIdpsUserRepository, stubCountryMetadataUrl);
     }
 
     @Provides
-    @Named("metadataValidityPeriod")
+    @Named(COUNTRY_METADATA_VALIDITY_PERIOD)
     private ReadablePeriod getMetadataValidity() {
         return new Period().withYears(100);
     }
@@ -305,12 +321,12 @@ public class StubIdpModule extends DropwizardAwareModule<StubIdpConfiguration> {
     }
 
     @Provides
-    @Named("RSASHA256EidasAuthnResponseService")
+    @Named(RSASHA256_EIDAS_AUTHN_RESPONSE_SERVICE)
     public EidasAuthnResponseService getECDSAEidasAuthnResponseService(
-       @Named("HubConnectorEntityId") String hubConnectorEntityId,
-       @Named("RSASHA256EidasResponseTransfomerProvider") EidasResponseTransformerProvider eidasResponseTransformerProvider,
+       @Named(HUB_CONNECTOR_ENTITY_ID) String hubConnectorEntityId,
+       @Named(RSASHA256_EIDAS_RESPONSE_TRANSFORMER_PROVIDER) EidasResponseTransformerProvider eidasResponseTransformerProvider,
        @Named(StubIdpModule.HUB_CONNECTOR_METADATA_REPOSITORY) Optional<MetadataRepository> metadataProvider,
-       @Named("StubCountryMetadataUrl") String stubCountryMetadataUrl) {
+       @Named(STUB_COUNTRY_METADATA_URL) String stubCountryMetadataUrl) {
         return new EidasAuthnResponseService(
                 hubConnectorEntityId,
                 eidasResponseTransformerProvider,
@@ -319,7 +335,7 @@ public class StubIdpModule extends DropwizardAwareModule<StubIdpConfiguration> {
     }
 
     @Provides
-    @Named("RSASHA256EidasResponseTransfomerProvider")
+    @Named(RSASHA256_EIDAS_RESPONSE_TRANSFORMER_PROVIDER)
     public EidasResponseTransformerProvider getECDSAEidasResponseTransfomerProvider(
             @Named(StubIdpModule.HUB_CONNECTOR_ENCRYPTION_KEY_STORE) Optional<EncryptionKeyStore> encryptionKeyStore,
             @Named(COUNTRY_SIGNING_KEY_STORE) IdaKeyStore keyStore,
@@ -335,12 +351,12 @@ public class StubIdpModule extends DropwizardAwareModule<StubIdpConfiguration> {
     }
 
     @Provides
-    @Named("RSASSAPSSEidasAuthnResponseService")
+    @Named(RSASSAOSS_EIDAS_AUTHN_RESPONSE_SERVICE)
     public EidasAuthnResponseService getRSASSAPSSEidasAuthnResponseService(
-            @Named("HubConnectorEntityId") String hubConnectorEntityId,
-            @Named("RSASSAPSSEidasResponseTransformerProvider") EidasResponseTransformerProvider eidasResponseTransformerProvider,
+            @Named(HUB_CONNECTOR_ENTITY_ID) String hubConnectorEntityId,
+            @Named(RSASSAPSS_EIDAS_RESPONSE_TRANSFORMER_PROVIDER) EidasResponseTransformerProvider eidasResponseTransformerProvider,
             @Named(StubIdpModule.HUB_CONNECTOR_METADATA_REPOSITORY) Optional<MetadataRepository> metadataProvider,
-            @Named("StubCountryMetadataUrl") String stubCountryMetadataUrl) {
+            @Named(STUB_COUNTRY_METADATA_URL) String stubCountryMetadataUrl) {
         return new EidasAuthnResponseService(
                 hubConnectorEntityId,
                 eidasResponseTransformerProvider,
@@ -348,7 +364,7 @@ public class StubIdpModule extends DropwizardAwareModule<StubIdpConfiguration> {
                 stubCountryMetadataUrl);
     }
 
-    @Named("RSASSAPSSEidasResponseTransformerProvider")
+    @Named(RSASSAPSS_EIDAS_RESPONSE_TRANSFORMER_PROVIDER)
     @Provides
     public EidasResponseTransformerProvider getEidasResponseTransformerProvider(
         @Named(StubIdpModule.HUB_CONNECTOR_ENCRYPTION_KEY_STORE) Optional<EncryptionKeyStore> encryptionKeyStore,
@@ -386,7 +402,7 @@ public class StubIdpModule extends DropwizardAwareModule<StubIdpConfiguration> {
 
     @Provides
     @Singleton
-    @Named("isSecureCookieEnabled")
+    @Named(IS_SECURE_COOKIE_ENABLED)
     public Boolean isSecureCookieEnabled() {
         return Objects.nonNull(getConfiguration().getSecureCookieConfiguration());
     }
@@ -435,14 +451,14 @@ public class StubIdpModule extends DropwizardAwareModule<StubIdpConfiguration> {
     @Provides
     @Named(HUB_METADATA_REPOSITORY)
     @Singleton
-    public MetadataRepository getHubMetadataRepository(@Named(HUB_METADATA_RESOLVER) MetadataResolver metadataResolver, @Named("HubEntityId") String hubEntityId) {
+    public MetadataRepository getHubMetadataRepository(@Named(HUB_METADATA_RESOLVER) MetadataResolver metadataResolver, @Named(HUB_ENTITY_ID) String hubEntityId) {
         return new MetadataRepository(metadataResolver, hubEntityId);
     }
 
     @Provides
     @Named(HUB_CONNECTOR_METADATA_REPOSITORY)
     @Singleton
-    public Optional<MetadataRepository> getHubConnectorMetadataRepository(@Named(HUB_CONNECTOR_METADATA_RESOLVER) Optional<MetadataResolver> metadataResolver, @Named("HubConnectorEntityId") String hubEntityId) {
+    public Optional<MetadataRepository> getHubConnectorMetadataRepository(@Named(HUB_CONNECTOR_METADATA_RESOLVER) Optional<MetadataResolver> metadataResolver, @Named(HUB_CONNECTOR_ENTITY_ID) String hubEntityId) {
         if (metadataResolver.isPresent()) {
             return Optional.of(new MetadataRepository(metadataResolver.get(), hubEntityId));
         }

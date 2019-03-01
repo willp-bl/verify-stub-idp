@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Optional;
 
+import static stubidp.stubidp.StubIdpModule.IS_SECURE_COOKIE_ENABLED;
 import static stubidp.stubidp.cookies.CookieNames.SECURE_COOKIE_NAME;
 import static stubidp.stubidp.cookies.CookieNames.SESSION_COOKIE_NAME;
 
@@ -37,7 +38,7 @@ public class SessionCookieValueMustExistAsASessionFilter implements ContainerReq
     public SessionCookieValueMustExistAsASessionFilter(IdpSessionRepository idpSessionRepository,
                                                        EidasSessionRepository eidasSessionRepository,
                                                        HmacValidator hmacValidator,
-                                                       @Named("isSecureCookieEnabled") Boolean isSecureCookieEnabled) {
+                                                       @Named(IS_SECURE_COOKIE_ENABLED) Boolean isSecureCookieEnabled) {
         this.idpSessionRepository = idpSessionRepository;
         this.eidasSessionRepository = eidasSessionRepository;
         this.hmacValidator = hmacValidator;

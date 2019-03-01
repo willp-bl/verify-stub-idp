@@ -38,6 +38,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import static stubidp.stubidp.StubIdpModule.HUB_CONNECTOR_ENTITY_ID;
+import static stubidp.stubidp.StubIdpModule.STUB_COUNTRY_METADATA_URL;
+
 public class EidasAuthnResponseService {
 
     private final String hubConnectorEntityId;
@@ -46,10 +49,10 @@ public class EidasAuthnResponseService {
     private final String stubCountryMetadataUrl;
 
     @Inject
-    public EidasAuthnResponseService(@Named("HubConnectorEntityId") String hubConnectorEntityId,
+    public EidasAuthnResponseService(@Named(HUB_CONNECTOR_ENTITY_ID) String hubConnectorEntityId,
                                      EidasResponseTransformerProvider eidasResponseTransformerProvider,
                                      @Named(StubIdpModule.HUB_CONNECTOR_METADATA_REPOSITORY) Optional<MetadataRepository> metadataProvider,
-                                     @Named("StubCountryMetadataUrl") String stubCountryMetadataUrl) {
+                                     @Named(STUB_COUNTRY_METADATA_URL) String stubCountryMetadataUrl) {
         this.hubConnectorEntityId = hubConnectorEntityId;
         this.eidasResponseTransformerProvider = eidasResponseTransformerProvider;
         this.metadataProvider = metadataProvider.get();

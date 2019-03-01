@@ -7,6 +7,7 @@ import javax.inject.Named;
 import javax.ws.rs.core.UriBuilder;
 
 import static java.text.MessageFormat.format;
+import static stubidp.stubidp.StubIdpModule.STUB_COUNTRY_METADATA_URL;
 
 public class StubCountryRepository {
 
@@ -15,7 +16,8 @@ public class StubCountryRepository {
     public static final String STUB_COUNTRY_FRIENDLY_ID = EidasScheme.stub_country.getEidasSchemeName();
 
     @Inject
-    public StubCountryRepository(AllIdpsUserRepository allIdpsUserRepository, @Named("StubCountryMetadataUrl") String stubCountryMetadataUrl) {
+    public StubCountryRepository(AllIdpsUserRepository allIdpsUserRepository,
+                                 @Named(STUB_COUNTRY_METADATA_URL) String stubCountryMetadataUrl) {
         this.allIdpsUserRepository = allIdpsUserRepository;
         this.stubCountryMetadataUrl = stubCountryMetadataUrl;
         allIdpsUserRepository.createHardcodedTestUsersForCountries(STUB_COUNTRY_FRIENDLY_ID, STUB_COUNTRY_FRIENDLY_ID);
