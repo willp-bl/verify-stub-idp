@@ -1,7 +1,6 @@
 package stubidp.saml.hub.metadata;
 
 import com.google.common.base.Throwables;
-import com.google.inject.Inject;
 import net.shibboleth.utilities.java.support.resolver.CriteriaSet;
 import net.shibboleth.utilities.java.support.resolver.ResolverException;
 import org.opensaml.core.criterion.EntityIdCriterion;
@@ -17,6 +16,7 @@ import stubidp.saml.hub.metadata.exceptions.HubEntityMissingException;
 import stubidp.saml.security.MetadataBackedSignatureValidator;
 import stubidp.saml.security.PublicKeyFactory;
 
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.security.PublicKey;
 import java.text.MessageFormat;

@@ -1,9 +1,10 @@
 package stubidp.saml.hub.hub.factories;
 
-import com.google.inject.Inject;
 import org.opensaml.saml.saml2.core.Attribute;
 import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.hub.hub.domain.UserAccountCreationAttribute;
+
+import javax.inject.Inject;
 
 public class AttributeQueryAttributeFactory {
 

@@ -1,10 +1,10 @@
 package stubidp.stubidp.cookies;
 
-import com.google.inject.Inject;
 import stubidp.utils.rest.common.SessionId;
 import stubidp.utils.security.configuration.SecureCookieConfiguration;
 import stubidp.utils.security.security.HmacDigest;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.ws.rs.core.NewCookie;
 

@@ -1,13 +1,10 @@
 package stubidp.stubidp.resources;
 
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import stubidp.stubidp.repositories.Idp;
 import stubidp.stubidp.repositories.IdpSession;
@@ -15,6 +12,7 @@ import stubidp.stubidp.repositories.IdpSessionRepository;
 import stubidp.stubidp.repositories.IdpStubsRepository;
 import stubidp.stubidp.resources.idp.DebugPageResource;
 import stubidp.stubidp.views.DebugPageView;
+import stubidp.utils.rest.common.SessionId;
 
 import javax.ws.rs.core.Response;
 import java.util.Optional;
@@ -29,11 +27,6 @@ public class DebugPageResourceTest {
     private final String IDP_NAME = "an idp name";
     private final SessionId SESSION_ID = SessionId.createNewSessionId();
     private final String RELAY_STATE = "relayState";
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     private DebugPageResource resource;
     private Idp idp = new Idp(IDP_NAME,IDP_NAME,"an assetId", false, null, null);

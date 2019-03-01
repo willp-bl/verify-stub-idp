@@ -1,13 +1,10 @@
 package stubidp.stubidp.resources;
 
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.utils.rest.common.SessionId;
 import stubidp.stubidp.domain.EidasAuthnRequest;
 import stubidp.stubidp.domain.EidasScheme;
 import stubidp.stubidp.domain.SamlResponseFromValue;
@@ -23,6 +20,7 @@ import stubidp.stubidp.resources.eidas.EidasRegistrationPageResource;
 import stubidp.stubidp.services.NonSuccessAuthnResponseService;
 import stubidp.stubidp.services.StubCountryService;
 import stubidp.stubidp.views.SamlResponseRedirectViewFactory;
+import stubidp.utils.rest.common.SessionId;
 
 import javax.ws.rs.core.Response;
 import java.net.URI;
@@ -46,11 +44,6 @@ public class EidasRegistrationPageResourceTest {
     private final String RELAY_STATE = "relayState";
     private final String SAML_REQUEST_ID = "samlRequestId";
     private EidasSession eidasSession;
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     private EidasRegistrationPageResource resource;
 

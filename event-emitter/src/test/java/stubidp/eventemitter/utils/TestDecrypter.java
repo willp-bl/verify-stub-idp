@@ -1,12 +1,12 @@
 package stubidp.eventemitter.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.inject.Inject;
 import org.apache.commons.codec.binary.Base64;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+import javax.inject.Inject;
 
 import static stubidp.eventemitter.EventEncrypter.INITIALISATION_VECTOR_SIZE;
 

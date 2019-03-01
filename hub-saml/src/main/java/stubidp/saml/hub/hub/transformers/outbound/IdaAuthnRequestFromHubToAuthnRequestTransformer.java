@@ -1,6 +1,5 @@
 package stubidp.saml.hub.hub.transformers.outbound;
 
-import com.google.inject.Inject;
 import org.opensaml.saml.saml2.core.AuthnContextComparisonTypeEnumeration;
 import org.opensaml.saml.saml2.core.AuthnRequest;
 import org.opensaml.saml.saml2.core.Conditions;
@@ -12,6 +11,8 @@ import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.utils.core.domain.AuthnContext;
 import stubidp.saml.hub.hub.HubConstants;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
+
+import javax.inject.Inject;
 
 public class IdaAuthnRequestFromHubToAuthnRequestTransformer extends IdaAuthnRequestToAuthnRequestTransformer<IdaAuthnRequestFromHub> {
 

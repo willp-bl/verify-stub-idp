@@ -1,14 +1,11 @@
 package stubidp.stubidp.services;
 
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.utils.rest.common.SessionId;
+import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.saml.utils.core.domain.AuthnContext;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import stubidp.stubidp.domain.DatabaseIdpUser;
@@ -22,6 +19,7 @@ import stubidp.stubidp.repositories.Idp;
 import stubidp.stubidp.repositories.IdpSession;
 import stubidp.stubidp.repositories.IdpSessionRepository;
 import stubidp.stubidp.repositories.IdpStubsRepository;
+import stubidp.utils.rest.common.SessionId;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -42,11 +40,6 @@ public class IdpUserServiceTest {
     private final String PASSWORD = "password";
     private final String IDP_NAME = "an idp name";
     private final SessionId SESSION_ID = SessionId.createNewSessionId();
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     private IdpUserService idpUserService;
 

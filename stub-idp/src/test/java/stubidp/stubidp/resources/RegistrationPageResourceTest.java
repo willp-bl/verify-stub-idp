@@ -1,13 +1,10 @@
 package stubidp.stubidp.resources;
 
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import stubidp.stubidp.cookies.CookieFactory;
 import stubidp.stubidp.domain.SamlResponseFromValue;
@@ -23,6 +20,7 @@ import stubidp.stubidp.resources.idp.RegistrationPageResource;
 import stubidp.stubidp.services.IdpUserService;
 import stubidp.stubidp.services.NonSuccessAuthnResponseService;
 import stubidp.stubidp.views.SamlResponseRedirectViewFactory;
+import stubidp.utils.rest.common.SessionId;
 
 import javax.ws.rs.core.Response;
 import java.net.URI;
@@ -45,11 +43,6 @@ public class RegistrationPageResourceTest {
     private final SessionId SESSION_ID = SessionId.createNewSessionId();
     private final String RELAY_STATE = "relayState";
     private final String SAML_REQUEST_ID = "samlRequestId";
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     private RegistrationPageResource resource;
 

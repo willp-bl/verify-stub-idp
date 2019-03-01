@@ -1,11 +1,11 @@
 package stubidp.saml.hub.hub.transformers.outbound;
 
-import com.google.inject.Inject;
 import org.opensaml.saml.saml2.core.RequestAbstractType;
 import stubidp.saml.hub.hub.transformers.outbound.decorators.SigningRequestAbstractTypeSignatureCreator;
 import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
 import stubidp.saml.utils.core.transformers.outbound.decorators.SamlSignatureSigner;
 
+import javax.inject.Inject;
 import java.util.function.Function;
 
 public class RequestAbstractTypeToStringTransformer<TInput extends RequestAbstractType> implements Function<TInput, String> {

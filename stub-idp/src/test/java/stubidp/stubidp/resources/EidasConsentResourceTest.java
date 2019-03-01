@@ -1,14 +1,11 @@
 package stubidp.stubidp.resources;
 
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.joda.time.LocalDate;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.utils.rest.common.SessionId;
 import stubidp.stubidp.domain.EidasAuthnRequest;
 import stubidp.stubidp.domain.EidasScheme;
 import stubidp.stubidp.domain.EidasUser;
@@ -22,6 +19,7 @@ import stubidp.stubidp.repositories.StubCountryRepository;
 import stubidp.stubidp.resources.eidas.EidasConsentResource;
 import stubidp.stubidp.services.EidasAuthnResponseService;
 import stubidp.stubidp.views.SamlResponseRedirectViewFactory;
+import stubidp.utils.rest.common.SessionId;
 
 import javax.ws.rs.core.Response;
 import java.util.Collections;
@@ -32,11 +30,6 @@ import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class EidasConsentResourceTest {
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     private EidasConsentResource resource;
 

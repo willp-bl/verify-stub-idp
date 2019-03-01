@@ -1,11 +1,12 @@
 package stubidp.saml.hub.test.outbound.transformers;
 
-import com.google.inject.Inject;
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.AuthnContext;
 import org.opensaml.saml.saml2.core.AuthnStatement;
 import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.hub.core.domain.MatchingServiceAuthnStatement;
+
+import javax.inject.Inject;
 
 public class MatchingServiceAuthnStatementToAuthnStatementTransformer {
 

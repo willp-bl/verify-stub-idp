@@ -1,11 +1,12 @@
 package stubidp.saml.hub.core.validators.assertion;
 
-import com.google.inject.Inject;
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.Assertion;
 import stubidp.saml.hub.core.errors.SamlTransformationErrorFactory;
 import stubidp.saml.hub.hub.exception.SamlValidationException;
 import stubidp.saml.hub.hub.validators.authnrequest.IdExpirationCache;
+
+import javax.inject.Inject;
 
 public class DuplicateAssertionValidatorImpl implements DuplicateAssertionValidator {
 

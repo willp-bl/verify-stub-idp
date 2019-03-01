@@ -36,7 +36,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 
-import static stubidp.stubidp.StubIdpModule.IS_SECURE_COOKIE_ENABLED;
+import static stubidp.stubidp.StubIdpBinder.IS_SECURE_COOKIE_ENABLED;
 
 @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 @Produces(MediaType.TEXT_HTML)

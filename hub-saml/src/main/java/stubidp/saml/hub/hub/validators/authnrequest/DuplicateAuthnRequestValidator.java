@@ -1,9 +1,10 @@
 package stubidp.saml.hub.hub.validators.authnrequest;
 
-import com.google.inject.Inject;
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
 import stubidp.saml.hub.hub.configuration.SamlDuplicateRequestValidationConfiguration;
+
+import javax.inject.Inject;
 
 public class DuplicateAuthnRequestValidator {
     private final IdExpirationCache<AuthnRequestIdKey> previousRequests;

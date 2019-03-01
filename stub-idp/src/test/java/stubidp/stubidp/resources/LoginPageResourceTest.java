@@ -1,14 +1,11 @@
 package stubidp.stubidp.resources;
 
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.utils.rest.common.SessionId;
+import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import stubidp.stubidp.cookies.CookieFactory;
 import stubidp.stubidp.domain.DatabaseIdpUser;
@@ -26,6 +23,7 @@ import stubidp.stubidp.services.IdpUserService;
 import stubidp.stubidp.services.NonSuccessAuthnResponseService;
 import stubidp.stubidp.views.ErrorMessageType;
 import stubidp.stubidp.views.SamlResponseRedirectViewFactory;
+import stubidp.utils.rest.common.SessionId;
 
 import javax.ws.rs.core.Response;
 import java.net.URI;
@@ -33,8 +31,8 @@ import java.util.Optional;
 import java.util.function.Function;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Matchers.anyString;
-import static org.mockito.Matchers.eq;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -48,11 +46,6 @@ public class LoginPageResourceTest {
     private final String USERNAME = "username";
     private final String PASSWORD = "password";
 
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
-    
     private LoginPageResource resource;
 
     @Mock

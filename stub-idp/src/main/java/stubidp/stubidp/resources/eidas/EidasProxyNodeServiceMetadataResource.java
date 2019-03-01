@@ -25,12 +25,12 @@ import stubidp.saml.security.IdaKeyStore;
 import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
 import stubidp.stubidp.domain.EidasScheme;
 import stubidp.stubidp.exceptions.InvalidEidasSchemeException;
-import stubidp.stubidp.StubIdpModule;
+import stubidp.stubidp.StubIdpBinder;
 import stubidp.stubidp.Urls;
 import stubidp.stubidp.builders.CountryMetadataBuilder;
 
-import static stubidp.stubidp.StubIdpModule.STUB_COUNTRY_METADATA_URL;
-import static stubidp.stubidp.StubIdpModule.STUB_COUNTRY_SSO_URL;
+import static stubidp.stubidp.StubIdpBinder.STUB_COUNTRY_METADATA_URL;
+import static stubidp.stubidp.StubIdpBinder.STUB_COUNTRY_SSO_URL;
 
 @Path(Urls.METADATA_RESOURCE)
 @Produces(Constants.APPLICATION_SAMLMETADATA_XML)
@@ -43,7 +43,7 @@ public class EidasProxyNodeServiceMetadataResource {
 	private final String ssoUrlPattern;
 
 	@Inject
-    public EidasProxyNodeServiceMetadataResource(@Named(StubIdpModule.COUNTRY_SIGNING_KEY_STORE) IdaKeyStore idaKeyStore,
+    public EidasProxyNodeServiceMetadataResource(@Named(StubIdpBinder.COUNTRY_SIGNING_KEY_STORE) IdaKeyStore idaKeyStore,
                                                  @Named(STUB_COUNTRY_METADATA_URL) String metadataUrlPattern,
                                                  @Named(STUB_COUNTRY_SSO_URL) String ssoUrlPattern,
                                                  CountryMetadataBuilder countryMetadataBuilder) {

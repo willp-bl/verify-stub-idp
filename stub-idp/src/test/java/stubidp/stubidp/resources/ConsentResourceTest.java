@@ -1,19 +1,15 @@
 package stubidp.stubidp.resources;
 
 import com.google.common.collect.ImmutableList;
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.joda.time.LocalDate;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.core.domain.AddressFactory;
 import stubidp.saml.utils.core.domain.AuthnContext;
 import stubidp.saml.utils.core.domain.Gender;
-import stubidp.test.devpki.TestEntityIds;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import stubidp.stubidp.domain.DatabaseIdpUser;
 import stubidp.stubidp.domain.MatchingDatasetValue;
@@ -26,6 +22,8 @@ import stubidp.stubidp.services.NonSuccessAuthnResponseService;
 import stubidp.stubidp.services.SuccessAuthnResponseService;
 import stubidp.stubidp.views.ConsentView;
 import stubidp.stubidp.views.SamlResponseRedirectViewFactory;
+import stubidp.test.devpki.TestEntityIds;
+import stubidp.utils.rest.common.SessionId;
 
 import javax.ws.rs.core.Response;
 import java.util.Collections;
@@ -39,11 +37,6 @@ import static org.mockito.Mockito.when;
 public class ConsentResourceTest {
 
     private static final String RELAY_STATE = "relay";
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     @Mock
     private IdpStubsRepository idpStubsRepository;

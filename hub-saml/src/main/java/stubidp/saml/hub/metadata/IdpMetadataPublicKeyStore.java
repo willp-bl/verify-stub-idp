@@ -1,7 +1,6 @@
 package stubidp.saml.hub.metadata;
 
 import com.google.common.collect.ImmutableList;
-import com.google.inject.Inject;
 import net.shibboleth.utilities.java.support.resolver.CriteriaSet;
 import net.shibboleth.utilities.java.support.resolver.ResolverException;
 import org.apache.xml.security.exceptions.Base64DecodingException;
@@ -18,6 +17,7 @@ import stubidp.saml.hub.metadata.exceptions.NoKeyConfiguredForEntityException;
 import stubidp.saml.security.MetadataBackedSignatureValidator;
 import stubidp.saml.security.SigningKeyStore;
 
+import javax.inject.Inject;
 import java.io.ByteArrayInputStream;
 import java.security.PublicKey;
 import java.security.cert.Certificate;

@@ -2,6 +2,8 @@ package stubidp.stubidp.builders;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.inject.Singleton;
+
 import org.opensaml.core.xml.config.XMLObjectProviderRegistrySupport;
 import org.opensaml.core.xml.io.MarshallingException;
 import org.opensaml.saml.common.SignableSAMLObject;
@@ -11,8 +13,9 @@ import org.opensaml.xmlsec.signature.support.Signer;
 
 import stubidp.saml.security.SignatureFactory;
 
-import static stubidp.stubidp.StubIdpModule.COUNTRY_METADATA_SIGNATURE_FACTORY;
+import static stubidp.stubidp.StubIdpBinder.COUNTRY_METADATA_SIGNATURE_FACTORY;
 
+@Singleton
 public class CountryMetadataSigningHelper {
     private SignatureFactory signatureFactory;
 

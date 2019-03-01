@@ -1,6 +1,5 @@
 package stubidp.saml.hub.hub.transformers.outbound;
 
-import com.google.inject.Inject;
 import org.joda.time.DateTime;
 import org.opensaml.saml.saml2.core.AttributeQuery;
 import org.opensaml.saml.saml2.core.Issuer;
@@ -11,6 +10,7 @@ import org.opensaml.saml.saml2.core.SubjectConfirmationData;
 import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.hub.hub.domain.MatchingServiceHealthCheckRequest;
 
+import javax.inject.Inject;
 import java.util.function.Function;
 
 public class MatchingServiceHealthCheckRequestToSamlAttributeQueryTransformer implements Function<MatchingServiceHealthCheckRequest,AttributeQuery> {

@@ -1,7 +1,6 @@
 package stubidp.eventemitter;
 
-import com.google.inject.Inject;
-
+import javax.inject.Inject;
 import java.util.EnumMap;
 
 public class EventHasher {

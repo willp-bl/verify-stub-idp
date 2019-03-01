@@ -1,6 +1,5 @@
 package stubidp.saml.hub.test.outbound.transformers;
 
-import com.google.inject.Inject;
 import org.opensaml.core.xml.XMLObjectBuilderFactory;
 import org.opensaml.core.xml.config.XMLObjectProviderRegistrySupport;
 import org.opensaml.saml.saml2.core.Assertion;
@@ -16,6 +15,7 @@ import stubidp.saml.hub.core.domain.MatchingServiceAuthnStatement;
 import stubidp.saml.utils.core.transformers.outbound.OutboundAssertionToSubjectTransformer;
 import stubidp.saml.hub.test.domain.MatchingServiceAssertion;
 
+import javax.inject.Inject;
 import java.util.List;
 
 public class MatchingServiceAssertionToAssertionTransformer {

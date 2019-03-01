@@ -1,12 +1,12 @@
 package stubidp.saml.hub.hub.transformers.outbound;
 
-import com.google.inject.Inject;
 import org.opensaml.saml.common.xml.SAMLConstants;
 import org.opensaml.saml.saml2.core.AuthnRequest;
 import org.opensaml.saml.saml2.core.Issuer;
 import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.utils.core.domain.IdaSamlMessage;
 
+import javax.inject.Inject;
 import java.util.function.Function;
 
 public abstract class IdaAuthnRequestToAuthnRequestTransformer<TInput extends IdaSamlMessage> implements Function<TInput,AuthnRequest> {

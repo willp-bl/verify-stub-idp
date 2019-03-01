@@ -1,11 +1,12 @@
 package stubidp.saml.hub.hub.transformers.outbound;
 
 import com.google.common.collect.ImmutableMap;
-import com.google.inject.Inject;
 import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.utils.core.domain.DetailedStatusCode;
 import stubidp.saml.utils.core.domain.TransactionIdaStatus;
 import stubidp.saml.utils.core.transformers.outbound.IdaStatusMarshaller;
+
+import javax.inject.Inject;
 
 public class TransactionIdaStatusMarshaller extends IdaStatusMarshaller<TransactionIdaStatus> {
 

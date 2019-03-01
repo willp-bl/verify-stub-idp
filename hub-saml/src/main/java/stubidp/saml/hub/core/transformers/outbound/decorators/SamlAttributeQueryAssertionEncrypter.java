@@ -1,6 +1,5 @@
 package stubidp.saml.hub.core.transformers.outbound.decorators;
 
-import com.google.inject.Inject;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.AttributeQuery;
 import org.opensaml.saml.saml2.core.EncryptedAssertion;
@@ -10,6 +9,7 @@ import stubidp.saml.security.EntityToEncryptForLocator;
 import stubidp.saml.security.KeyStoreBackedEncryptionCredentialResolver;
 import stubidp.saml.utils.core.transformers.outbound.decorators.AbstractAssertionEncrypter;
 
+import javax.inject.Inject;
 import java.util.List;
 
 public class SamlAttributeQueryAssertionEncrypter extends AbstractAssertionEncrypter<AttributeQuery> {

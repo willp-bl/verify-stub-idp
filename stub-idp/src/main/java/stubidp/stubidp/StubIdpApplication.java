@@ -4,8 +4,6 @@ import com.fasterxml.jackson.databind.util.ISO8601DateFormat;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import com.google.common.base.Throwables;
 import com.google.common.collect.ImmutableMap;
-import com.hubspot.dropwizard.guicier.GuiceBundle;
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
@@ -14,10 +12,6 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
 import io.dropwizard.views.freemarker.FreemarkerViewRenderer;
-import stubidp.utils.rest.bundles.LoggingBundle;
-import stubidp.utils.rest.bundles.MonitoringBundle;
-import stubidp.utils.rest.bundles.ServiceStatusBundle;
-import stubidp.utils.rest.filters.AcceptLanguageFilter;
 import stubidp.saml.extensions.IdaSamlBootstrap;
 import stubidp.stubidp.bundles.DatabaseMigrationBundle;
 import stubidp.stubidp.configuration.StubIdpConfiguration;
@@ -55,6 +49,10 @@ import stubidp.stubidp.resources.singleidp.SingleIdpHomePageResource;
 import stubidp.stubidp.resources.singleidp.SingleIdpLogoutPageResource;
 import stubidp.stubidp.resources.singleidp.SingleIdpPreRegistrationResource;
 import stubidp.stubidp.resources.singleidp.SingleIdpStartPromptPageResource;
+import stubidp.utils.rest.bundles.LoggingBundle;
+import stubidp.utils.rest.bundles.MonitoringBundle;
+import stubidp.utils.rest.bundles.ServiceStatusBundle;
+import stubidp.utils.rest.filters.AcceptLanguageFilter;
 
 import javax.servlet.DispatcherType;
 import java.util.EnumSet;
@@ -65,8 +63,6 @@ import static java.util.Collections.singletonList;
 public class StubIdpApplication extends Application<StubIdpConfiguration> {
 
     public static void main(String[] args) {
-        JerseyGuiceUtils.reset();
-
         try {
             if (args == null || args.length == 0) {
                 String configFile = System.getenv("CONFIG_FILE");
@@ -101,12 +97,6 @@ public class StubIdpApplication extends Application<StubIdpConfiguration> {
 
         bootstrap.addBundle(new DatabaseMigrationBundle());
 
-        GuiceBundle<StubIdpConfiguration> guiceBundle = GuiceBundle
-            .defaultBuilder(getConfigurationClass())
-            .modules(new StubIdpModule())
-            .build();
-        bootstrap.addBundle(guiceBundle);
-
         bootstrap.addBundle(new ServiceStatusBundle());
         bootstrap.addBundle(new ViewBundle<StubIdpConfiguration>(singletonList(new CSRFViewRenderer())) {
             @Override
@@ -135,6 +125,8 @@ public class StubIdpApplication extends Application<StubIdpConfiguration> {
         environment.jersey().register(CSRFCheckProtectionFeature.class);
 
         environment.getObjectMapper().setDateFormat(new ISO8601DateFormat());
+
+        environment.jersey().register(new StubIdpBinder(configuration, environment));
 
         // idp resources
         environment.jersey().register(AuthnRequestReceiverResource.class);

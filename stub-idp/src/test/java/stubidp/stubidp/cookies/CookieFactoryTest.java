@@ -1,14 +1,10 @@
 package stubidp.stubidp.cookies;
 
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.stubidp.cookies.CookieFactory;
-import stubidp.stubidp.cookies.CookieNames;
 import stubidp.utils.rest.common.SessionId;
 import stubidp.utils.security.configuration.SecureCookieConfiguration;
 import stubidp.utils.security.security.HmacDigest;
@@ -32,11 +28,6 @@ public class CookieFactoryTest {
     SecureCookieConfiguration secureCookieConfiguration;
 
     CookieFactory cookieFactory;
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     @Before
     public void setup() {

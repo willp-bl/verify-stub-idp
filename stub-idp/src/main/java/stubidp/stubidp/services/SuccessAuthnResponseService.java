@@ -12,7 +12,7 @@ import stubidp.stubidp.repositories.IdpSession;
 import stubidp.stubidp.repositories.IdpStubsRepository;
 import stubidp.stubidp.repositories.MetadataRepository;
 import stubidp.stubidp.saml.transformers.OutboundResponseFromIdpTransformerProvider;
-import stubidp.stubidp.StubIdpModule;
+import stubidp.stubidp.StubIdpBinder;
 import stubidp.stubidp.domain.factories.AssertionRestrictionsFactory;
 import stubidp.stubidp.domain.factories.MatchingDatasetFactory;
 
@@ -35,7 +35,7 @@ public class SuccessAuthnResponseService {
     public SuccessAuthnResponseService(
             IdentityProviderAssertionFactory identityProviderAssertionFactory,
             IdpStubsRepository idpStubsRepository,
-            @Named(StubIdpModule.HUB_METADATA_REPOSITORY) MetadataRepository metadataProvider,
+            @Named(StubIdpBinder.HUB_METADATA_REPOSITORY) MetadataRepository metadataProvider,
             AssertionRestrictionsFactory assertionRestrictionsFactory,
             OutboundResponseFromIdpTransformerProvider outboundResponseFromIdpTransformerProvider) {
 

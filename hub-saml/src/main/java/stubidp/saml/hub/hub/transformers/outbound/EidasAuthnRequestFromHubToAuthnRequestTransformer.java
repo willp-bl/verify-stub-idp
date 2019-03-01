@@ -1,6 +1,5 @@
 package stubidp.saml.hub.hub.transformers.outbound;
 
-import com.google.inject.Inject;
 import org.opensaml.core.xml.XMLObjectBuilder;
 import org.opensaml.core.xml.XMLObjectBuilderFactory;
 import org.opensaml.core.xml.config.XMLObjectProviderRegistrySupport;
@@ -26,6 +25,7 @@ import stubidp.saml.extensions.extensions.impl.SPTypeImpl;
 import stubidp.saml.utils.core.transformers.AuthnContextFactory;
 import stubidp.saml.utils.hub.domain.EidasAuthnRequestFromHub;
 import javax.annotation.Nonnull;
+import javax.inject.Inject;
 import java.util.function.Function;
 
 

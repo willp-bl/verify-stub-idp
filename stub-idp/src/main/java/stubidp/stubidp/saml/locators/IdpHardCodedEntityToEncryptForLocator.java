@@ -4,9 +4,11 @@ import stubidp.saml.security.EntityToEncryptForLocator;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.inject.Singleton;
 
-import static stubidp.stubidp.StubIdpModule.HUB_ENTITY_ID;
+import static stubidp.stubidp.StubIdpBinder.HUB_ENTITY_ID;
 
+@Singleton
 public class IdpHardCodedEntityToEncryptForLocator implements EntityToEncryptForLocator {
 
     private final String hubEntityId;

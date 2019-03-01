@@ -1,9 +1,9 @@
 package stubidp.saml.hub.hub.validators.response.common;
 
-import com.google.inject.Inject;
 import stubidp.saml.serializers.deserializers.validators.SizeValidator;
 import stubidp.saml.utils.hub.validators.StringSizeValidator;
 
+import javax.inject.Inject;
 
 public class ResponseSizeValidator implements SizeValidator {
     // Ensures someone doing nasty things cannot get loads of data out of core hub in a single response

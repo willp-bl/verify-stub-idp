@@ -1,9 +1,10 @@
 package stubidp.saml.hub.hub.validators.authnrequest;
 
-import com.google.inject.Inject;
 import io.dropwizard.util.Duration;
 import org.joda.time.DateTime;
 import stubidp.saml.hub.hub.configuration.SamlAuthnRequestValidityDurationConfiguration;
+
+import javax.inject.Inject;
 
 public class AuthnRequestIssueInstantValidator {
     private final SamlAuthnRequestValidityDurationConfiguration samlAuthnRequestValidityDurationConfiguration;

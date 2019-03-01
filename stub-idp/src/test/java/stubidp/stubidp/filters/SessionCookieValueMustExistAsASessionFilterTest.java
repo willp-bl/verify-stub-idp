@@ -1,14 +1,10 @@
 package stubidp.stubidp.filters;
 
 import com.google.common.collect.ImmutableMap;
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.stubidp.filters.SessionCookieValueMustExistAsASessionFilter;
-import stubidp.utils.rest.common.SessionId;
 import stubidp.stubidp.cookies.HmacValidator;
 import stubidp.stubidp.exceptions.InvalidSecureCookieException;
 import stubidp.stubidp.exceptions.SecureCookieNotFoundException;
@@ -16,6 +12,7 @@ import stubidp.stubidp.exceptions.SessionIdCookieNotFoundException;
 import stubidp.stubidp.exceptions.SessionNotFoundException;
 import stubidp.stubidp.repositories.EidasSessionRepository;
 import stubidp.stubidp.repositories.IdpSessionRepository;
+import stubidp.utils.rest.common.SessionId;
 
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.core.Cookie;
@@ -42,11 +39,6 @@ public class SessionCookieValueMustExistAsASessionFilterTest {
     private EidasSessionRepository eidasSessionRepository;
     @Mock
     private ContainerRequestContext containerRequestContext;
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     @Test (expected = SessionIdCookieNotFoundException.class)
     public void shouldReturnNullWhenCheckingNotRequiredButNoCookies() throws Exception {

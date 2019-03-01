@@ -1,30 +1,26 @@
 package stubidp.stubidp.services;
 
 import com.google.common.collect.ImmutableList;
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.joda.time.DateTime;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.opensaml.saml.saml2.core.AuthnContextComparisonTypeEnumeration;
-import stubidp.stubidp.services.NonSuccessAuthnResponseService;
-import stubidp.utils.rest.common.SessionId;
 import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import stubidp.stubidp.domain.FraudIndicator;
 import stubidp.stubidp.domain.IdpIdaStatus;
 import stubidp.stubidp.domain.OutboundResponseFromIdp;
 import stubidp.stubidp.domain.factories.AssertionFactory;
-
 import stubidp.stubidp.repositories.Idp;
 import stubidp.stubidp.repositories.IdpSession;
 import stubidp.stubidp.repositories.IdpStubsRepository;
 import stubidp.stubidp.repositories.MetadataRepository;
 import stubidp.stubidp.saml.transformers.OutboundResponseFromIdpTransformerProvider;
+import stubidp.utils.rest.common.SessionId;
 
 import java.net.URI;
 import java.util.Optional;
@@ -43,11 +39,6 @@ public class NonSuccessAuthnResponseServiceTest {
     private final URI HUB_URI = URI.create("hub");
     private final String IDP_ISSUER = "idpissuer";
     private final String RELAY_STATE = "relayrelayrelay";
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     private NonSuccessAuthnResponseService nonSuccessAuthnResponseService;
 

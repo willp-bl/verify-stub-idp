@@ -6,6 +6,7 @@ import stubidp.stubidp.configuration.StubIdpConfiguration;
 import stubidp.stubidp.repositories.IdpSessionRepository;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -13,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Delete stale sessions
  */
+@Singleton
 public class ManagedStaleSessionReaper implements Managed {
 
     private static final Logger LOGGER = Logger.getLogger(ManagedStaleSessionReaper.class);

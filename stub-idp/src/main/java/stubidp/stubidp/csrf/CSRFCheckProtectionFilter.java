@@ -26,7 +26,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Optional;
 
-import static stubidp.stubidp.StubIdpModule.IS_SECURE_COOKIE_ENABLED;
+import static stubidp.stubidp.StubIdpBinder.IS_SECURE_COOKIE_ENABLED;
 import static stubidp.stubidp.cookies.CookieNames.SECURE_COOKIE_NAME;
 import static stubidp.stubidp.cookies.CookieNames.SESSION_COOKIE_NAME;
 

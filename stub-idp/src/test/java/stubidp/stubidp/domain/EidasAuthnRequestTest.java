@@ -1,9 +1,7 @@
 package stubidp.stubidp.domain;
 
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.apache.commons.codec.binary.Base64;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -17,10 +15,6 @@ import org.opensaml.saml.saml2.core.impl.RequestedAuthnContextBuilder;
 import org.opensaml.xmlsec.algorithm.descriptors.DigestSHA256;
 import org.opensaml.xmlsec.algorithm.descriptors.SignatureRSASHA256;
 import org.opensaml.xmlsec.signature.Signature;
-import stubidp.stubidp.domain.EidasAuthnRequest;
-import stubidp.utils.security.security.PrivateKeyFactory;
-import stubidp.utils.security.security.PublicKeyFactory;
-import stubidp.utils.security.security.X509CertificateFactory;
 import stubidp.saml.extensions.IdaConstants;
 import stubidp.saml.extensions.IdaSamlBootstrap;
 import stubidp.saml.extensions.extensions.RequestedAttribute;
@@ -29,21 +23,24 @@ import stubidp.saml.extensions.extensions.impl.RequestedAttributeBuilder;
 import stubidp.saml.extensions.extensions.impl.RequestedAttributesBuilder;
 import stubidp.saml.extensions.extensions.impl.RequestedAttributesImpl;
 import stubidp.saml.extensions.extensions.impl.SPTypeBuilder;
-import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
-import stubidp.test.devpki.TestCertificateStrings;
-import stubidp.test.devpki.TestEntityIds;
-import stubidp.saml.utils.core.test.builders.AuthnContextClassRefBuilder;
-import stubidp.saml.utils.core.test.builders.AuthnRequestBuilder;
-import stubidp.saml.utils.core.test.builders.IssuerBuilder;
-import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import stubidp.saml.hub.hub.domain.LevelOfAssurance;
 import stubidp.saml.security.IdaKeyStore;
 import stubidp.saml.security.IdaKeyStoreCredentialRetriever;
 import stubidp.saml.security.SignatureWithKeyInfoFactory;
+import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
+import stubidp.saml.utils.core.test.builders.AuthnContextClassRefBuilder;
+import stubidp.saml.utils.core.test.builders.AuthnRequestBuilder;
+import stubidp.saml.utils.core.test.builders.IssuerBuilder;
+import stubidp.saml.utils.hub.domain.IdaAuthnRequestFromHub;
 import stubidp.stubidp.exceptions.InvalidEidasAuthnRequestException;
 import stubidp.stubidp.repositories.EidasSessionRepository;
 import stubidp.stubidp.repositories.IdpSessionRepository;
 import stubidp.stubidp.services.AuthnRequestReceiverService;
+import stubidp.test.devpki.TestCertificateStrings;
+import stubidp.test.devpki.TestEntityIds;
+import stubidp.utils.security.security.PrivateKeyFactory;
+import stubidp.utils.security.security.PublicKeyFactory;
+import stubidp.utils.security.security.X509CertificateFactory;
 
 import java.security.KeyPair;
 import java.security.PrivateKey;
@@ -58,11 +55,6 @@ import static org.mockito.Mockito.when;
 
 @RunWith(OpenSAMLMockitoRunner.class)
 public class EidasAuthnRequestTest {
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     private static final String SCHEME_ID = "schemeId";
 

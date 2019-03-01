@@ -1,13 +1,10 @@
 package stubidp.stubidp.resources;
 
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.utils.rest.common.SessionId;
 import stubidp.stubidp.Urls;
 import stubidp.stubidp.domain.DatabaseIdpUser;
 import stubidp.stubidp.domain.EidasAuthnRequest;
@@ -23,6 +20,7 @@ import stubidp.stubidp.services.EidasAuthnResponseService;
 import stubidp.stubidp.services.StubCountryService;
 import stubidp.stubidp.views.SamlRedirectView;
 import stubidp.stubidp.views.SamlResponseRedirectViewFactory;
+import stubidp.utils.rest.common.SessionId;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
@@ -37,11 +35,6 @@ import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class EidasLoginPageResourceTest {
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     private EidasLoginPageResource resource;
     private EidasSession session;

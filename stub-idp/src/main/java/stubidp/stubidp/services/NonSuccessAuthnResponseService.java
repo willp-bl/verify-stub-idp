@@ -12,7 +12,7 @@ import stubidp.stubidp.repositories.IdpSession;
 import stubidp.stubidp.repositories.IdpStubsRepository;
 import stubidp.stubidp.repositories.MetadataRepository;
 import stubidp.stubidp.saml.transformers.OutboundResponseFromIdpTransformerProvider;
-import stubidp.stubidp.StubIdpModule;
+import stubidp.stubidp.StubIdpBinder;
 import stubidp.stubidp.domain.factories.AssertionFactory;
 
 import javax.inject.Inject;
@@ -29,7 +29,7 @@ public class NonSuccessAuthnResponseService {
     @Inject
     public NonSuccessAuthnResponseService(
             IdpStubsRepository idpStubsRepository,
-            @Named(StubIdpModule.HUB_METADATA_REPOSITORY) MetadataRepository metadataRepository,
+            @Named(StubIdpBinder.HUB_METADATA_REPOSITORY) MetadataRepository metadataRepository,
             AssertionFactory assertionFactory,
             OutboundResponseFromIdpTransformerProvider outboundResponseFromIdpTransformerProvider) {
 

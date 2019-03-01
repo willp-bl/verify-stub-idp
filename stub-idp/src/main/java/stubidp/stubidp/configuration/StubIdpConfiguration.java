@@ -13,10 +13,12 @@ import stubidp.saml.metadata.MetadataResolverConfiguration;
 import stubidp.saml.metadata.TrustStoreBackedMetadataConfiguration;
 import stubidp.stubidp.repositories.reaper.StaleSessionReaperConfiguration;
 
+import javax.inject.Singleton;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Singleton
 public class StubIdpConfiguration extends Configuration implements
         AssertionLifetimeConfiguration,
         AssetCacheConfiguration,

@@ -1,17 +1,13 @@
 package stubidp.stubidp.csrf;
 
 import com.google.common.collect.ImmutableMap;
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.stubidp.csrf.CSRFCheckProtectionFilter;
-import stubidp.utils.rest.common.SessionId;
 import stubidp.stubidp.cookies.HmacValidator;
 import stubidp.stubidp.csrf.exceptions.CSRFBodyNotFoundException;
 import stubidp.stubidp.csrf.exceptions.CSRFCouldNotValidateSessionException;
@@ -21,6 +17,7 @@ import stubidp.stubidp.csrf.exceptions.CSRFTokenWasInvalidException;
 import stubidp.stubidp.repositories.EidasSessionRepository;
 import stubidp.stubidp.repositories.IdpSession;
 import stubidp.stubidp.repositories.IdpSessionRepository;
+import stubidp.utils.rest.common.SessionId;
 
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.core.Cookie;
@@ -55,11 +52,6 @@ public class CSRFCheckProtectionFilterTest {
     private IdpSession session;
 
     private SessionId sessionId;
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     @Before
     public void setUp() {

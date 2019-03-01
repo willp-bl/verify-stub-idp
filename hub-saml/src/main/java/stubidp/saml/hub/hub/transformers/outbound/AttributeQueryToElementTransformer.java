@@ -1,6 +1,5 @@
 package stubidp.saml.hub.hub.transformers.outbound;
 
-import com.google.inject.Inject;
 import org.opensaml.saml.saml2.core.AttributeQuery;
 import org.w3c.dom.Element;
 import stubidp.saml.hub.hub.transformers.outbound.decorators.SamlAttributeQueryAssertionSignatureSigner;
@@ -9,6 +8,7 @@ import stubidp.saml.serializers.serializers.XmlObjectToElementTransformer;
 import stubidp.saml.hub.core.transformers.outbound.decorators.SamlAttributeQueryAssertionEncrypter;
 import stubidp.saml.utils.core.transformers.outbound.decorators.SamlSignatureSigner;
 
+import javax.inject.Inject;
 import java.util.function.Function;
 
 public class AttributeQueryToElementTransformer implements Function<AttributeQuery, Element> {

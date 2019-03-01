@@ -1,7 +1,8 @@
 package stubidp.stubidp.cookies;
 
-import com.google.inject.Inject;
 import stubidp.utils.security.security.HmacDigest;
+
+import javax.inject.Inject;
 
 public class HmacValidator {
     private HmacDigest hmacDigest;

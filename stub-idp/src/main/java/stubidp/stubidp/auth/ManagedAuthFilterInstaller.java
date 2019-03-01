@@ -6,6 +6,7 @@ import stubidp.stubidp.configuration.StubIdpConfiguration;
 import stubidp.stubidp.repositories.IdpStubsRepository;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import javax.servlet.DispatcherType;
 import java.util.EnumSet;
 
@@ -14,6 +15,7 @@ import java.util.EnumSet;
  * If injected manually then it won't necessarily be the same as the one used elsewhere (hk2 created
  * objects are not managed by hk2 and therefore not re-used)
  */
+@Singleton
 public class ManagedAuthFilterInstaller implements Managed {
 
     private final StubIdpConfiguration stubIdpConfiguration;

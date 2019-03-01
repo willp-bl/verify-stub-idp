@@ -68,7 +68,7 @@ public class StubIdpsFileListenerTest {
         ConfigurationFactory<IdpStubsConfiguration> configurationFactory = new DefaultConfigurationFactoryFactory<IdpStubsConfiguration>().create(IdpStubsConfiguration.class, validator, Jackson.newObjectMapper(), "");
         ConfigurationSourceProvider configurationSourceProvider = path -> new FileInputStream(stubIdpConfiguration.getStubIdpsYmlFileLocation());
         AllIdpsUserRepository allIdpsUserRepository = new AllIdpsUserRepository(mock(JDBIUserRepository.class));
-        idpStubsRepository = new IdpStubsRepository(allIdpsUserRepository, stubIdpConfiguration,  configurationFactory, configurationSourceProvider) {
+        idpStubsRepository = new IdpStubsRepository(allIdpsUserRepository, stubIdpConfiguration,  configurationFactory) {
             @Override
             public void load(String yamlFile) {
                 super.load(yamlFile);

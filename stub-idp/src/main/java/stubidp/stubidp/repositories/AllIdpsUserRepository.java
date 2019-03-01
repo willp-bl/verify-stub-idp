@@ -11,12 +11,14 @@ import stubidp.stubidp.domain.DatabaseIdpUser;
 import stubidp.stubidp.domain.MatchingDatasetValue;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
 import static stubidp.stubidp.repositories.StubCountryRepository.STUB_COUNTRY_FRIENDLY_ID;
 
+@Singleton
 public class AllIdpsUserRepository {
 
     private final UserRepository userRepository;

@@ -13,8 +13,10 @@ import stubidp.stubidp.configuration.StubIdpConfiguration;
 import stubidp.stubidp.repositories.IdpStubsRepository;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.io.File;
 
+@Singleton
 public class StubIdpsFileListener implements Managed {
     private static final Logger LOG = LoggerFactory.getLogger(StubIdpsFileListener.class);
 

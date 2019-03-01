@@ -2,7 +2,7 @@ package stubidp.utils.security.security;
 
 import com.google.common.base.Throwables;
 import stubidp.utils.security.configuration.KeyConfiguration;
-import stubidp.utils.security.configuration.SecureCookieKeyConfiguration;
+import stubidp.utils.security.configuration.SecureCookieConfiguration;
 import stubidp.utils.security.configuration.SecureCookieKeyStore;
 
 import javax.crypto.spec.SecretKeySpec;
@@ -20,8 +20,8 @@ public class SecureCookieKeyConfigurationKeyStore implements SecureCookieKeyStor
     private KeyConfiguration keyConfiguration;
 
     @Inject
-    public SecureCookieKeyConfigurationKeyStore(@SecureCookieKeyConfiguration KeyConfiguration keyConfiguration) {
-        this.keyConfiguration = keyConfiguration;
+    public SecureCookieKeyConfigurationKeyStore(SecureCookieConfiguration keyConfiguration) {
+        this.keyConfiguration = keyConfiguration.getKeyConfiguration();
     }
 
     @Override

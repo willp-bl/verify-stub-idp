@@ -3,6 +3,7 @@ package stubidp.stubidp.repositories;
 import io.dropwizard.configuration.ConfigurationException;
 import io.dropwizard.configuration.ConfigurationFactory;
 import io.dropwizard.configuration.ConfigurationSourceProvider;
+import io.dropwizard.configuration.FileConfigurationSourceProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import stubidp.stubidp.configuration.IdpStubsConfiguration;
@@ -33,11 +34,11 @@ public class IdpStubsRepository {
     private final ConfigurationSourceProvider configurationSourceProvider;
 
     @Inject
-    public IdpStubsRepository(AllIdpsUserRepository allIdpsUserRepository, StubIdpConfiguration stubIdpConfiguration, ConfigurationFactory<IdpStubsConfiguration> configurationFactory, ConfigurationSourceProvider configurationSourceProvider) {
+    public IdpStubsRepository(AllIdpsUserRepository allIdpsUserRepository, StubIdpConfiguration stubIdpConfiguration, ConfigurationFactory<IdpStubsConfiguration> configurationFactory) {
         this.allIdpsUserRepository = allIdpsUserRepository;
         this.stubIdpConfiguration = stubIdpConfiguration;
         this.configurationFactory = configurationFactory;
-        this.configurationSourceProvider = configurationSourceProvider;
+        this.configurationSourceProvider = new FileConfigurationSourceProvider();
         load(stubIdpConfiguration.getStubIdpsYmlFileLocation());
     }
 

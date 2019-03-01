@@ -1,11 +1,11 @@
 package stubidp.saml.hub.hub.transformers.inbound;
 
-import com.google.inject.Inject;
 import stubidp.saml.hub.core.domain.InboundResponseFromIdpData;
 import stubidp.saml.utils.core.domain.PassthroughAssertion;
 import stubidp.saml.hub.core.transformers.outbound.decorators.AssertionBlobEncrypter;
 import stubidp.saml.hub.hub.domain.InboundResponseFromIdp;
 
+import javax.inject.Inject;
 import java.util.Optional;
 
 import static java.util.Optional.empty;

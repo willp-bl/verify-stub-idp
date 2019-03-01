@@ -1,13 +1,10 @@
 package stubidp.stubidp.resources;
 
-import com.squarespace.jersey2.guice.JerseyGuiceUtils;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.test.devpki.TestEntityIds;
 import stubidp.stubidp.configuration.SingleIdpConfiguration;
 import stubidp.stubidp.domain.Service;
 import stubidp.stubidp.exceptions.FeatureNotEnabledException;
@@ -18,6 +15,7 @@ import stubidp.stubidp.repositories.IdpStubsRepository;
 import stubidp.stubidp.resources.singleidp.SingleIdpStartPromptPageResource;
 import stubidp.stubidp.services.ServiceListService;
 import stubidp.stubidp.views.SingleIdpPromptPageView;
+import stubidp.test.devpki.TestEntityIds;
 
 import javax.ws.rs.core.Response;
 import java.net.URI;
@@ -36,11 +34,6 @@ public class SingleIdpPromptResourceTest {
     private final Service service1 = new Service("Service 1", "LEVEL_2", "service-id-1", "Category A");
     private final Service service2 = new Service("Service 2", "LEVEL_1", "service-id-2", "Category B");
     private final Service service3 = new Service("Service 3", "LEVEL_2", "service-id-3", "Category A");
-
-    @BeforeClass
-    public static void doALittleHackToMakeGuicierHappyForSomeReason() {
-        JerseyGuiceUtils.reset();
-    }
 
     @Mock
     private IdpStubsRepository idpStubsRepository;
