@@ -1,21 +1,19 @@
 package stubidp.test.devpki;
 
-import com.google.common.base.Throwables;
-import com.google.common.io.Resources;
+import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
-import java.net.URL;
-import java.nio.charset.Charset;
+
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 public abstract class PemCertificateStrings {
 
 
     private static String readFile(String name) {
         try {
-            URL resource = Resources.getResource("dev-keys/" + name);
-            return Resources.toString(resource, Charset.defaultCharset());
+            return IOUtils.toString(PemCertificateStrings.class.getResourceAsStream("dev-keys/" + name), UTF_8);
         } catch (IOException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

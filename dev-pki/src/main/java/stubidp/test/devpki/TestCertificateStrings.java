@@ -1,12 +1,10 @@
 package stubidp.test.devpki;
 
-import com.google.common.base.Throwables;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import com.google.common.io.Resources;
+import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.Base64;
 import java.util.List;
 import java.util.Map;
@@ -24,10 +22,9 @@ public final class TestCertificateStrings {
 
     private static String readPrivateKey(String name){
         try {
-            URL resource = Resources.getResource("dev-keys/" + name);
-            return Base64.getEncoder().encodeToString(Resources.toByteArray(resource));
+            return Base64.getEncoder().encodeToString(IOUtils.toByteArray(TestCertificateStrings.class.getResourceAsStream("dev-keys/" + name)));
         } catch (IOException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
