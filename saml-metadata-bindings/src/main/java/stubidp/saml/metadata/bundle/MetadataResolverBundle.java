@@ -1,6 +1,5 @@
 package stubidp.saml.metadata.bundle;
 
-import com.google.inject.Module;
 import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -8,12 +7,12 @@ import net.shibboleth.utilities.java.support.component.ComponentInitializationEx
 import org.opensaml.saml.metadata.resolver.MetadataResolver;
 import org.opensaml.saml.security.impl.MetadataCredentialResolver;
 import org.opensaml.xmlsec.signature.support.impl.ExplicitKeySignatureTrustEngine;
+import stubidp.saml.metadata.MetadataHealthCheck;
+import stubidp.saml.metadata.MetadataResolverConfiguration;
 import stubidp.saml.metadata.exception.MetadataResolverCreationException;
 import stubidp.saml.metadata.factories.CredentialResolverFactory;
 import stubidp.saml.metadata.factories.DropwizardMetadataResolverFactory;
 import stubidp.saml.metadata.factories.MetadataSignatureTrustEngineFactory;
-import stubidp.saml.metadata.MetadataHealthCheck;
-import stubidp.saml.metadata.MetadataResolverConfiguration;
 
 import javax.annotation.Nullable;
 import javax.inject.Provider;
@@ -85,11 +84,6 @@ public class MetadataResolverBundle<T extends Configuration> implements io.dropw
 
     public Provider<MetadataCredentialResolver> getMetadataCredentialResolverProvider() {
         return () -> credentialResolver;
-    }
-
-
-    public Module getMetadataModule() {
-      return binder -> binder.bind(MetadataResolver.class).toProvider(getMetadataResolverProvider());
     }
 
     public interface MetadataConfigurationExtractor<T> {

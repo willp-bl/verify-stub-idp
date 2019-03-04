@@ -10,6 +10,7 @@ import javax.annotation.Nullable;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
+// moved to test to remove transitive guice dependency in stubidp app
 public class EventEmitterModule extends AbstractModule {
 
     @Override

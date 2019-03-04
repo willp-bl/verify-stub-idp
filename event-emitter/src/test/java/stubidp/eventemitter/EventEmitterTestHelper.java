@@ -5,11 +5,11 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Provides;
-import com.google.inject.Singleton;
 import com.google.inject.util.Modules;
 import stubidp.eventemitter.utils.TestConfiguration;
 import stubidp.eventemitter.utils.TestEventEmitterModule;
 
+import javax.inject.Singleton;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
