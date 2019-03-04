@@ -3,13 +3,9 @@ package stubidp.eventemitter;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Matchers;
+import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.eventemitter.Event;
-import stubidp.eventemitter.EventDetailsKey;
-import stubidp.eventemitter.EventHasher;
-import stubidp.eventemitter.Sha256Util;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.Map;
 
@@ -57,7 +53,7 @@ public class EventHasherTest {
 
         final Event actualEvent = eventHasher.replacePersistentIdWithHashedPersistentId(event);
 
-        verify(sha256Util, never()).hash(Matchers.anyVararg());
+        verify(sha256Util, never()).hash(ArgumentMatchers.any());
         assertThat(actualEvent.getDetails().containsKey(EventDetailsKey.pid)).isEqualTo(false);
     }
 
@@ -69,7 +65,7 @@ public class EventHasherTest {
         final Event actualEvent = eventHasher.replacePersistentIdWithHashedPersistentId(event);
         final Map<EventDetailsKey, String> actualDetails = actualEvent.getDetails();
 
-        verify(sha256Util, never()).hash(Matchers.anyVararg());
+        verify(sha256Util, never()).hash(ArgumentMatchers.any());
         assertThat(actualDetails).isNotEmpty();
         assertThat(actualDetails.get(EventDetailsKey.pid)).isEqualTo(EventHasher.PID_REMOVED);
     }
