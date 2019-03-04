@@ -23,6 +23,7 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static stubidp.test.devpki.TestCertificateStrings.STUB_IDP_PUBLIC_PRIMARY_CERT;
 import static stubidp.test.devpki.TestCertificateStrings.STUB_IDP_PUBLIC_PRIMARY_PRIVATE_KEY;
 import static stubidp.test.devpki.TestEntityIds.HUB_ENTITY_ID;
@@ -89,7 +90,7 @@ public class StubIdpAppRule extends DropwizardAppRule<StubIdpConfiguration> {
 
         IdpStubsConfiguration idpStubsConfiguration = new TestIdpStubsConfiguration(stubIdps);
         try {
-            FileUtils.write(STUB_IDPS_FILE, new ObjectMapper().writeValueAsString(idpStubsConfiguration));
+            FileUtils.write(STUB_IDPS_FILE, new ObjectMapper().writeValueAsString(idpStubsConfiguration), UTF_8);
             STUB_IDPS_FILE.deleteOnExit();
 
             InitializationService.initialize();

@@ -16,16 +16,14 @@ import org.opensaml.security.credential.Credential;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.opensaml.xmlsec.signature.support.Signer;
 import stubidp.saml.extensions.IdaConstants;
-import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.extensions.extensions.IdaAuthnContext;
+import stubidp.saml.stubidp.test.builders.ConditionsBuilder;
+import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.utils.core.test.AuthnRequestIdGenerator;
 import stubidp.saml.utils.core.test.builders.IssuerBuilder;
 import stubidp.saml.utils.core.test.builders.SignatureBuilder;
-import stubidp.saml.stubidp.test.builders.ConditionsBuilder;
 
 import java.util.Optional;
-
-import static com.google.common.base.Throwables.propagate;
 
 public class AuthnRequestBuilder {
 
@@ -103,7 +101,7 @@ public class AuthnRequestBuilder {
                     Signer.signObject(authnRequest.getSignature());
                 }
             } catch (SignatureException | MarshallingException e) {
-                throw propagate(e);
+                throw new RuntimeException(e);
             }
         }
 
