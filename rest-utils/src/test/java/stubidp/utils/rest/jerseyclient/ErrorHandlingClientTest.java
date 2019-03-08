@@ -5,11 +5,10 @@ import com.google.common.collect.ImmutableMap;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Matchers;
+import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.utils.rest.exceptions.ApplicationException;
-import stubidp.utils.rest.jerseyclient.ErrorHandlingClient;
 
 import javax.ws.rs.ProcessingException;
 import javax.ws.rs.client.Client;
@@ -23,7 +22,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.anyString;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ErrorHandlingClientTest {
@@ -47,9 +50,9 @@ public class ErrorHandlingClientTest {
         when(client.target(any(URI.class))).thenReturn(webTarget);
         when(webTarget.request()).thenReturn(webTargetBuilder);
         when(webTarget.request(MediaType.APPLICATION_JSON_TYPE)).thenReturn(webTargetBuilder);
-        when(webTargetBuilder.accept(Matchers.<MediaType>any())).thenReturn(webTargetBuilder);
-        when(webTargetBuilder.cookie(Matchers.<Cookie>any())).thenReturn(webTargetBuilder);
-        when(webTargetBuilder.header(anyString(), Matchers.any())).thenReturn(webTargetBuilder);
+        when(webTargetBuilder.accept(ArgumentMatchers.<MediaType>any())).thenReturn(webTargetBuilder);
+        when(webTargetBuilder.cookie(ArgumentMatchers.<Cookie>any())).thenReturn(webTargetBuilder);
+        when(webTargetBuilder.header(anyString(), any())).thenReturn(webTargetBuilder);
 
         testUri = URI.create("/some-uri");
     }

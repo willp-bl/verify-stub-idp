@@ -25,7 +25,7 @@ public class KeyStoreLoader {
             }
             return keyStore;
         } catch (KeyStoreException | IOException | NoSuchAlgorithmException | CertificateException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 }

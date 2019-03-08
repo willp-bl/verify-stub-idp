@@ -3,7 +3,7 @@ package stubidp.utils.rest.common;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.utils.rest.common.HttpHeaders;
 import stubidp.utils.rest.common.IpFromXForwardedForHeader;
 

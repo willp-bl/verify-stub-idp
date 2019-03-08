@@ -24,8 +24,7 @@ public class EmptyKeyStoreProvider implements Provider<KeyStore> {
             keyStore.load(null);
             return keyStore;
         } catch (KeyStoreException | CertificateException | NoSuchAlgorithmException | IOException e) {
-            Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
-        return null;
     }
 }

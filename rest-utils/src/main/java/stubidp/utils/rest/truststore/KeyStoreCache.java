@@ -30,7 +30,7 @@ public class KeyStoreCache {
         try {
             return trustStoreCache.get(trustStorePath, () -> keyStoreLoader.load(trustStorePath, password));
         } catch (ExecutionException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

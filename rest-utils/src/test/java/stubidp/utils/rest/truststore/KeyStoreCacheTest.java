@@ -4,16 +4,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.utils.rest.truststore.ClientTrustStoreConfiguration;
-import stubidp.utils.rest.truststore.ClientTrustStoreConfigurationBuilder;
-import stubidp.utils.rest.truststore.KeyStoreCache;
-import stubidp.utils.rest.truststore.KeyStoreLoader;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.security.KeyStore;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class KeyStoreCacheTest {

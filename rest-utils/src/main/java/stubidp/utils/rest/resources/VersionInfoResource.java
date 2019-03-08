@@ -1,7 +1,6 @@
 package stubidp.utils.rest.resources;
 
 
-import com.google.common.base.Throwables;
 import stubidp.utils.rest.common.CommonUrls;
 import stubidp.utils.rest.common.VersionInfoDto;
 
@@ -33,7 +32,7 @@ public class VersionInfoResource {
         try {
             manifest = new Manifest(getClass().getClassLoader().getResourceAsStream("META-INF/MANIFEST.MF"));
         } catch (IOException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
         return manifest.getMainAttributes();
     }
