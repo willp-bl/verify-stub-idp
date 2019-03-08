@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.utils.security.configuration.PublicKeyFileConfiguration;
 import stubidp.utils.security.security.Certificate;
 import stubidp.utils.security.security.CertificateStore;

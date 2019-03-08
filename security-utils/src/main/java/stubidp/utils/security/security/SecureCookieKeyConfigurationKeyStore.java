@@ -1,6 +1,5 @@
 package stubidp.utils.security.security;
 
-import com.google.common.base.Throwables;
 import stubidp.utils.security.configuration.KeyConfiguration;
 import stubidp.utils.security.configuration.SecureCookieConfiguration;
 import stubidp.utils.security.configuration.SecureCookieKeyStore;
@@ -30,7 +29,7 @@ public class SecureCookieKeyConfigurationKeyStore implements SecureCookieKeyStor
         try {
             return getSecureCookieKey(keyUri);
         } catch (IOException | NoSuchAlgorithmException | InvalidKeySpecException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

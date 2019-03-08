@@ -3,7 +3,7 @@ package stubidp.utils.security.security;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.utils.security.configuration.SecureCookieKeyStore;
 import stubidp.utils.security.security.HmacDigest;
 
