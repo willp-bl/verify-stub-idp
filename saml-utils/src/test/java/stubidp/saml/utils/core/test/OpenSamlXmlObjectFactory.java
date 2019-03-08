@@ -44,7 +44,6 @@ import stubidp.saml.extensions.extensions.eidas.PersonIdentifier;
  * Where possible use XMLObjectBuilderFactory. If you need to hide some of the
  * complexity please create a class in the project you're using.
  *
- * @deprecated
  */
 public class OpenSamlXmlObjectFactory {
 

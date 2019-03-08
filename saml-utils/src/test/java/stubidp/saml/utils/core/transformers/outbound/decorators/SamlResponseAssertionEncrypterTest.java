@@ -2,17 +2,17 @@ package stubidp.saml.utils.core.transformers.outbound.decorators;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Matchers;
+import org.mockito.ArgumentMatchers;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.EncryptedAssertion;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.encryption.Encrypter;
 import org.opensaml.security.credential.Credential;
 import org.opensaml.xmlsec.encryption.support.EncryptionException;
-import stubidp.saml.utils.core.test.OpenSAMLRunner;
 import stubidp.saml.security.EncrypterFactory;
 import stubidp.saml.security.EntityToEncryptForLocator;
 import stubidp.saml.security.KeyStoreBackedEncryptionCredentialResolver;
+import stubidp.saml.utils.core.test.OpenSAMLRunner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,7 @@ public class SamlResponseAssertionEncrypterTest {
 
         Credential credential = mock(Credential.class);
         EntityToEncryptForLocator entityToEncryptForLocator = mock(EntityToEncryptForLocator.class);
-        when(entityToEncryptForLocator.fromRequestId(Matchers.anyString())).thenReturn("some id");
+        when(entityToEncryptForLocator.fromRequestId(ArgumentMatchers.anyString())).thenReturn("some id");
         when(credentialFactory.getEncryptingCredential("some id")).thenReturn(credential);
 
 
@@ -73,7 +73,7 @@ public class SamlResponseAssertionEncrypterTest {
 
         Credential credential = mock(Credential.class);
         EntityToEncryptForLocator entityToEncryptForLocator = mock(EntityToEncryptForLocator.class);
-        when(entityToEncryptForLocator.fromRequestId(Matchers.anyString())).thenReturn("some id");
+        when(entityToEncryptForLocator.fromRequestId(ArgumentMatchers.anyString())).thenReturn("some id");
         when(credentialFactory.getEncryptingCredential("some id")).thenReturn(credential);
 
         Response response = mock(Response.class);

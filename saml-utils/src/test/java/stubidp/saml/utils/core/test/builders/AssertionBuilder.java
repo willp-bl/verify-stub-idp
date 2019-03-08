@@ -31,11 +31,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static com.google.common.base.Throwables.propagate;
-import static stubidp.test.devpki.TestEntityIds.HUB_CONNECTOR_ENTITY_ID;
 import static stubidp.saml.utils.core.test.builders.AttributeStatementBuilder.anAttributeStatement;
 import static stubidp.saml.utils.core.test.builders.AttributeStatementBuilder.anEidasAttributeStatement;
-import static stubidp.saml.utils.core.test.builders.AuthnStatementBuilder.anEidasAuthnStatement;
+import static stubidp.test.devpki.TestEntityIds.HUB_CONNECTOR_ENTITY_ID;
 
 public class AssertionBuilder {
 
@@ -192,7 +190,7 @@ public class AssertionBuilder {
                 }
             }
         } catch (SignatureException | MarshallingException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
 
         return assertion;
@@ -246,7 +244,7 @@ public class AssertionBuilder {
         try {
             return encrypter.encrypt(assertion);
         } catch (EncryptionException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

@@ -27,7 +27,6 @@ import stubidp.saml.utils.core.test.OpenSamlXmlObjectFactory;
 import javax.validation.constraints.NotNull;
 import java.util.Optional;
 
-import static com.google.common.base.Throwables.propagate;
 import static java.util.Optional.empty;
 import static java.util.Optional.ofNullable;
 
@@ -145,7 +144,7 @@ public class AuthnRequestBuilder {
                     Signer.signObject(authnRequest.getSignature());
                 }
             } catch (SignatureException | MarshallingException e) {
-                throw propagate(e);
+                throw new RuntimeException(e);
             }
         }
 

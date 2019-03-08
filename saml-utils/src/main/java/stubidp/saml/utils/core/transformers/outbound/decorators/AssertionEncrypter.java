@@ -8,8 +8,6 @@ import org.opensaml.xmlsec.encryption.support.EncryptionException;
 import stubidp.saml.security.EncrypterFactory;
 import stubidp.saml.security.KeyStoreBackedEncryptionCredentialResolver;
 
-import static com.google.common.base.Throwables.propagate;
-
 public class AssertionEncrypter {
     private final KeyStoreBackedEncryptionCredentialResolver credentialFactory;
     private final EncrypterFactory encrypterFactory;
@@ -25,7 +23,7 @@ public class AssertionEncrypter {
         try {
             return encrypter.encrypt(assertion);
         } catch (EncryptionException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 }

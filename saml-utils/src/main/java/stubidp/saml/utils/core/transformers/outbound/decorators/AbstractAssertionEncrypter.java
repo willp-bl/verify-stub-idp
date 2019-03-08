@@ -1,6 +1,5 @@
 package stubidp.saml.utils.core.transformers.outbound.decorators;
 
-import com.google.common.base.Throwables;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.EncryptedAssertion;
 import org.opensaml.saml.saml2.encryption.Encrypter;
@@ -39,7 +38,7 @@ public abstract class AbstractAssertionEncrypter<T> {
                     EncryptedAssertion encryptedAssertion = samlEncrypter.encrypt(assertion);
                     getEncryptedAssertions(samlMessage).add(encryptedAssertion);
                 } catch (EncryptionException e) {
-                    throw Throwables.propagate(e);
+                    throw new RuntimeException(e);
                 }
             }
             getAssertions(samlMessage).removeAll(getAssertions(samlMessage));

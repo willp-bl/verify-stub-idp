@@ -19,8 +19,6 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.text.MessageFormat;
 
-import static com.google.common.base.Throwables.propagate;
-
 public class TestCredentialFactory {
 
     private final String publicCert;
@@ -57,7 +55,7 @@ public class TestCredentialFactory {
         try {
             return createPublicKey(publicCert);
         } catch (CertificateException | UnsupportedEncodingException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -66,7 +64,7 @@ public class TestCredentialFactory {
         try {
             return KeyFactory.getInstance("RSA").generatePrivate(keySpec);
         } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
