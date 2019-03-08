@@ -11,7 +11,6 @@ import stubidp.test.devpki.TestCertificateStrings;
 
 import java.util.Optional;
 
-import static com.google.common.base.Throwables.propagate;
 import static java.util.Optional.ofNullable;
 import static stubidp.eidas.metadata.support.builders.AssertionBuilder.anAssertion;
 
@@ -31,7 +30,7 @@ public class EncryptedAssertionBuilder {
         try {
             return encrypter.encrypt(assertion);
         } catch (EncryptionException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

@@ -28,6 +28,8 @@ class JWKSetSigner {
     this.publicCert = publicCert;
   }
 
+  // still using sha-1 but the library marks any use deprecated
+  @SuppressWarnings("deprecation")
   public JWSObject sign(JWKSet tokenSet) throws JOSEException, CertificateEncodingException {
     final JWSHeader header = new JWSHeader.Builder(JWSAlgorithm.RS256)
                   .x509CertThumbprint(thumbprint)
