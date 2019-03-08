@@ -3,15 +3,16 @@ package stubidp.test.devpki;
 import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public abstract class PemCertificateStrings {
 
-
     private static String readFile(String name) {
         try {
-            return IOUtils.toString(PemCertificateStrings.class.getResourceAsStream("dev-keys/" + name), UTF_8);
+            final InputStream inputStream = PemCertificateStrings.class.getClassLoader().getResourceAsStream("dev-keys/" + name);
+            return IOUtils.toString(inputStream, UTF_8);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
