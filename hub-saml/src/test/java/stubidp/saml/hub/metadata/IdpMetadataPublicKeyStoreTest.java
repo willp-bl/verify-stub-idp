@@ -1,6 +1,5 @@
 package stubidp.saml.hub.metadata;
 
-import com.google.common.base.Throwables;
 import net.shibboleth.utilities.java.support.component.ComponentInitializationException;
 import net.shibboleth.utilities.java.support.xml.BasicParserPool;
 import org.apache.xml.security.exceptions.Base64DecodingException;
@@ -20,20 +19,19 @@ import org.opensaml.xmlsec.signature.KeyInfo;
 import org.opensaml.xmlsec.signature.X509Certificate;
 import org.opensaml.xmlsec.signature.X509Data;
 import org.opensaml.xmlsec.signature.support.SignatureException;
-import stubidp.saml.hub.metadata.IdpMetadataPublicKeyStore;
+import stubidp.saml.hub.metadata.exceptions.NoKeyConfiguredForEntityException;
 import stubidp.saml.metadata.StringBackedMetadataResolver;
+import stubidp.saml.metadata.test.factories.metadata.EntityDescriptorFactory;
+import stubidp.saml.metadata.test.factories.metadata.MetadataFactory;
 import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
-import stubidp.test.devpki.TestCertificateStrings;
-import stubidp.test.devpki.TestEntityIds;
 import stubidp.saml.utils.core.test.builders.metadata.EntityDescriptorBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.IdpSsoDescriptorBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.KeyDescriptorBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.KeyInfoBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.X509CertificateBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.X509DataBuilder;
-import stubidp.saml.hub.metadata.exceptions.NoKeyConfiguredForEntityException;
-import stubidp.saml.metadata.test.factories.metadata.EntityDescriptorFactory;
-import stubidp.saml.metadata.test.factories.metadata.MetadataFactory;
+import stubidp.test.devpki.TestCertificateStrings;
+import stubidp.test.devpki.TestEntityIds;
 
 import java.io.ByteArrayInputStream;
 import java.net.URISyntaxException;
@@ -42,7 +40,6 @@ import java.security.cert.Certificate;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 
-import static com.google.common.base.Throwables.propagate;
 import static java.util.Arrays.asList;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -74,7 +71,7 @@ public class IdpMetadataPublicKeyStoreTest {
             stringBackedMetadataResolver.initialize();
             return stringBackedMetadataResolver;
         } catch (InitializationException | ComponentInitializationException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -98,7 +95,7 @@ public class IdpMetadataPublicKeyStoreTest {
                     .setAddDefaultSpServiceDescriptor(false)
                     .build();
         } catch (MarshallingException | SignatureException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

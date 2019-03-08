@@ -1,6 +1,5 @@
 package stubidp.saml.hub.metadata;
 
-import com.google.common.base.Throwables;
 import net.shibboleth.utilities.java.support.resolver.CriteriaSet;
 import net.shibboleth.utilities.java.support.resolver.ResolverException;
 import org.opensaml.core.criterion.EntityIdCriterion;
@@ -27,9 +26,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * @deprecated Use {@link MetadataBackedSignatureValidator} instead
+ * Use {@link MetadataBackedSignatureValidator} instead
  */
-@Deprecated
 public class HubMetadataPublicKeyStore implements InternalPublicKeyStore {
 
     private final MetadataResolver metadataResolver;
@@ -53,7 +51,7 @@ public class HubMetadataPublicKeyStore implements InternalPublicKeyStore {
                     .map(this::getPublicKeys)
                     .orElseThrow(hubMissingException());
         } catch (ResolverException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

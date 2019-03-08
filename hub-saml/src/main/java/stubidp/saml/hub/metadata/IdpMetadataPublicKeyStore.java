@@ -29,13 +29,10 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static com.google.common.base.Throwables.propagate;
-
 
 /**
- * @deprecated Use {@link MetadataBackedSignatureValidator} instead
+ * Use {@link MetadataBackedSignatureValidator} instead
  */
-@Deprecated
 public class IdpMetadataPublicKeyStore implements SigningKeyStore {
 
     private final MetadataResolver metadataResolver;
@@ -85,7 +82,7 @@ public class IdpMetadataPublicKeyStore implements SigningKeyStore {
             Certificate certificate = certificateFactory.generateCertificate(new ByteArrayInputStream(derValue));
             return certificate.getPublicKey();
         } catch (Base64DecodingException | CertificateException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -94,7 +91,7 @@ public class IdpMetadataPublicKeyStore implements SigningKeyStore {
             CriteriaSet criteria = new CriteriaSet(new EntityIdCriterion(entityId));
             return Optional.ofNullable(metadataResolver.resolveSingle(criteria));
         } catch (ResolverException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 }
