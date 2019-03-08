@@ -9,8 +9,6 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.google.common.base.Throwables.propagate;
-
 public abstract class StubHandler extends AbstractHandler {
     protected void respondWith(Request baseRequest, HttpServletResponse response, RegisteredResponse registeredResponse) {
         response.setStatus(registeredResponse.getStatus());
@@ -21,7 +19,7 @@ public abstract class StubHandler extends AbstractHandler {
         try {
             response.getWriter().append(registeredResponse.getBody());
         } catch (IOException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
         baseRequest.setHandled(true);
     }

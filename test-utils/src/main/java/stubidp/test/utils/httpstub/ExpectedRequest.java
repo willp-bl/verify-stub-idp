@@ -28,7 +28,7 @@ public class ExpectedRequest {
         if(headers != null && notAllHeadersFound(baseRequest.getHeaders())) {
             return false;
         }
-        if(body != null && !baseRequest.getEntity().equals(body)) {
+        if(body != null && !new String(baseRequest.getEntityBytes()).equals(body)) {
             return false;
         }
         return true;

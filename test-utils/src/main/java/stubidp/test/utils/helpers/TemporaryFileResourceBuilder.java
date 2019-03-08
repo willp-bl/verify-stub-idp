@@ -3,8 +3,6 @@ package stubidp.test.utils.helpers;
 import java.io.File;
 import java.io.IOException;
 
-import static com.google.common.base.Throwables.propagate;
-
 public class TemporaryFileResourceBuilder {
     private byte[] content;
     private File file;
@@ -37,7 +35,7 @@ public class TemporaryFileResourceBuilder {
                 file = File.createTempFile("test-file", null, null);
                 file.deleteOnExit();
             } catch (IOException e) {
-                throw propagate(e);
+                throw new RuntimeException(e);
             }
         }
         return new TemporaryFileResource(file, content);

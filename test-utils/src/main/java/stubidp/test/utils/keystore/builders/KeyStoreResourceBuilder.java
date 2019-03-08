@@ -9,8 +9,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.google.common.base.Throwables.propagate;
-
 public class KeyStoreResourceBuilder {
     private List<KeyEntry> keys = new ArrayList<>();
     private List<CertificateEntry> certificates = new ArrayList<>();
@@ -53,7 +51,7 @@ public class KeyStoreResourceBuilder {
             try {
                 file = File.createTempFile("test-keystore", null, null);
             } catch (IOException e) {
-                throw propagate(e);
+                throw new RuntimeException(e);
             }
         }
         return new KeyStoreResource(file, keys, certificates);

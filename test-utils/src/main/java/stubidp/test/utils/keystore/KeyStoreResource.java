@@ -1,6 +1,5 @@
 package stubidp.test.utils.keystore;
 
-import com.google.common.base.Throwables;
 import stubidp.test.utils.helpers.ManagedFileResource;
 
 import java.io.File;
@@ -62,7 +61,7 @@ public class KeyStoreResource implements ManagedFileResource {
             keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
             keyStore.load(null, null);
         } catch (IOException | NoSuchAlgorithmException | KeyStoreException | CertificateException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
         return keyStore;
     }
@@ -80,7 +79,7 @@ public class KeyStoreResource implements ManagedFileResource {
             try {
                 keyStore.setKeyEntry(entry.getAlias(), key, getPassword().toCharArray(), x509Certificates);
             } catch (KeyStoreException e) {
-                throw Throwables.propagate(e);
+                throw new RuntimeException(e);
             }
         });
     }
@@ -92,7 +91,7 @@ public class KeyStoreResource implements ManagedFileResource {
             try {
                 keyStore.setCertificateEntry(entry.getAlias(), x509Certificate);
             } catch (KeyStoreException e) {
-                throw Throwables.propagate(e);
+                throw new RuntimeException(e);
             }
         });
     }
@@ -101,7 +100,7 @@ public class KeyStoreResource implements ManagedFileResource {
         try (FileOutputStream fos = new FileOutputStream(getFile());) {
             keyStore.store(fos, getPassword().toCharArray());
         } catch (IOException | KeyStoreException | NoSuchAlgorithmException | CertificateException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 }

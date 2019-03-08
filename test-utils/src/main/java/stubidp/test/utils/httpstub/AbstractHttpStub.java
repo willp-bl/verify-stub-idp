@@ -8,7 +8,6 @@ import org.eclipse.jetty.server.ServerConnector;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import static com.google.common.base.Throwables.propagate;
 import static com.google.common.collect.Iterables.getLast;
 
 public abstract class AbstractHttpStub {
@@ -26,7 +25,7 @@ public abstract class AbstractHttpStub {
         try {
             server.start();
         } catch (Exception e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

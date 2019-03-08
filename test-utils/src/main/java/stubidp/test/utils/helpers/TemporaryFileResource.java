@@ -1,6 +1,5 @@
 package stubidp.test.utils.helpers;
 
-import com.google.common.base.Throwables;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -29,7 +28,7 @@ public class TemporaryFileResource implements ManagedFileResource {
         try {
             FileUtils.writeByteArrayToFile(tempFile, content);
         } catch (IOException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

@@ -8,10 +8,8 @@ import org.apache.commons.io.IOUtils;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Reader;
 import java.util.Enumeration;
 
-import static com.google.common.base.Throwables.propagate;
 import static com.google.common.collect.ImmutableList.copyOf;
 import static com.google.common.collect.Iterators.forEnumeration;
 
@@ -36,7 +34,7 @@ public class ReceivedRequest {
         try (InputStream in = request.getInputStream()) {
             return IOUtils.toByteArray(in);
         } catch (IOException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -74,17 +72,11 @@ public class ReceivedRequest {
         return method;
     }
 
+    /**
+     * @return raw entity bytes, could be compressed etc
+     */
     public byte[] getEntityBytes() {
         return entity;
     }
 
-    /**
-     * This is risky as the entity could be e.g. GZipped.
-     *
-     * @deprecated Use {@link #getEntityBytes()} instead
-     */
-    @Deprecated
-    public String getEntity() {
-        return new String(entity);
-    }
 }

@@ -1,7 +1,5 @@
 package stubidp.test.utils.keystore;
 
-import com.google.common.base.Throwables;
-
 import java.io.ByteArrayInputStream;
 import java.nio.charset.StandardCharsets;
 import java.security.cert.CertificateException;
@@ -30,7 +28,7 @@ class X509CertificateFactory {
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(fullCert.getBytes(StandardCharsets.UTF_8));
             return (X509Certificate) certificateFactory.generateCertificate(byteArrayInputStream);
         } catch (CertificateException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 }

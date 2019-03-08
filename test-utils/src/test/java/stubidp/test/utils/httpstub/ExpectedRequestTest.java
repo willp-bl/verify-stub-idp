@@ -6,8 +6,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import stubidp.test.utils.httpstub.ExpectedRequest;
-import stubidp.test.utils.httpstub.RecordedRequest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
@@ -23,7 +21,7 @@ public class ExpectedRequestTest {
         when(receivedRequest.getPath()).thenReturn("/some/path/to/foo");
         when(receivedRequest.getMethod()).thenReturn("GET");
         when(receivedRequest.getHeaders()).thenReturn(ImmutableMultimap.<String, String>of("Key1", "Value1", "Key1", "Value3", "Key2", "Value2"));
-        when(receivedRequest.getEntity()).thenReturn("any-body");
+        when(receivedRequest.getEntityBytes()).thenReturn("any-body".getBytes());
     }
 
     @Test
@@ -32,7 +30,7 @@ public class ExpectedRequestTest {
         verify(receivedRequest, never()).getPath();
         verify(receivedRequest, never()).getMethod();
         verify(receivedRequest, never()).getHeaders();
-        verify(receivedRequest, never()).getEntity();
+        verify(receivedRequest, never()).getEntityBytes();
     }
 
     @Test
@@ -62,13 +60,13 @@ public class ExpectedRequestTest {
     @Test
     public void shouldApplyIfBodySetInExpectedRequestAndMatchesReceivedRequestEntity() throws Exception {
         assertThat(new ExpectedRequest(null, null, null, "any-body").applies(receivedRequest)).isTrue();
-        verify(receivedRequest, times(1)).getEntity();
+        verify(receivedRequest, times(1)).getEntityBytes();
     }
 
     @Test
     public void shouldNotApplyIfBodySetInExpectedRequestAndDoesntMatchesReceivedRequestEntity() throws Exception {
         assertThat(new ExpectedRequest(null, null, null, "some-body").applies(receivedRequest)).isFalse();
-        verify(receivedRequest, times(1)).getEntity();
+        verify(receivedRequest, times(1)).getEntityBytes();
     }
 
     @Test
