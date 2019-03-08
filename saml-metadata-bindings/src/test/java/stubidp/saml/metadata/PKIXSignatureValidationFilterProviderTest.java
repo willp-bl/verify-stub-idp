@@ -22,8 +22,8 @@ import stubidp.saml.extensions.IdaSamlBootstrap;
 import stubidp.saml.metadata.test.factories.metadata.EntitiesDescriptorFactory;
 import stubidp.saml.metadata.test.factories.metadata.MetadataFactory;
 import stubidp.saml.metadata.test.factories.metadata.TestCredentialFactory;
-import stubidp.test.devpki.TestCertificateStrings;
 import stubidp.saml.utils.core.test.builders.metadata.SignatureBuilder;
+import stubidp.test.devpki.TestCertificateStrings;
 
 import java.security.KeyStore;
 import java.security.cert.Certificate;
@@ -34,6 +34,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
@@ -50,7 +51,7 @@ public class PKIXSignatureValidationFilterProviderTest {
         List<Certificate> certificateList = new ArrayList<>();
         CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
         for (String certificate : certificates) {
-            Certificate cert = certificateFactory.generateCertificate(IOUtils.toInputStream(certificate));
+            Certificate cert = certificateFactory.generateCertificate(IOUtils.toInputStream(certificate, UTF_8));
             certificateList.add(cert);
         }
 
@@ -164,7 +165,7 @@ public class PKIXSignatureValidationFilterProviderTest {
     private XMLObject validateMetadata(String metadataContent) throws XMLParserException, UnmarshallingException, FilterException, ComponentInitializationException {
         BasicParserPool parserPool = new BasicParserPool();
         parserPool.initialize();
-        XMLObject metadata = XMLObjectSupport.unmarshallFromInputStream(parserPool, IOUtils.toInputStream(metadataContent));
+        XMLObject metadata = XMLObjectSupport.unmarshallFromInputStream(parserPool, IOUtils.toInputStream(metadataContent, UTF_8));
         return signatureValidationFilter.filter(metadata);
     }
 

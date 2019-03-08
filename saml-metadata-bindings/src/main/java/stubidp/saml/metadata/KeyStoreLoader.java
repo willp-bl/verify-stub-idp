@@ -1,6 +1,5 @@
 package stubidp.saml.metadata;
 
-import com.google.common.base.Throwables;
 import stubidp.saml.metadata.exception.TrustAnchorConfigException;
 
 import java.io.FileInputStream;
@@ -19,7 +18,7 @@ public class KeyStoreLoader {
         try {
             return load(new FileInputStream(uri), password);
         } catch (FileNotFoundException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -33,7 +32,7 @@ public class KeyStoreLoader {
             }
             return keyStore;
         } catch (KeyStoreException | IOException | NoSuchAlgorithmException | CertificateException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

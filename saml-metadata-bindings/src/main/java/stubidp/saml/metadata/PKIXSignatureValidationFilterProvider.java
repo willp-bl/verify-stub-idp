@@ -1,6 +1,5 @@
 package stubidp.saml.metadata;
 
-import com.google.common.base.Throwables;
 import net.shibboleth.utilities.java.support.resolver.CriteriaSet;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.opensaml.saml.metadata.resolver.filter.impl.SignatureValidationFilter;
@@ -76,7 +75,7 @@ public class PKIXSignatureValidationFilterProvider implements Provider<Signature
             }
             basicPKIXValidationInformation = new BasicPKIXValidationInformation(trustAnchors, Collections.emptyList(), CERTIFICATE_CHAIN_DEPTH);
         } catch (KeyStoreException | CertificateException e) {
-            Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
         SignatureTrustEngine trustEngine = new PKIXSignatureTrustEngine(
                 new NamelessPKIXValidationInformationResolver(Collections.singletonList(basicPKIXValidationInformation)),

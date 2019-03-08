@@ -70,7 +70,6 @@ public class CountryTrustAnchor {
     /**
      * Deprecated - use {@link CountryTrustAnchorValidator} instead
      */
-    @Deprecated
     public static Collection<String> findErrors(JWK trustAnchor) {
         return findTrustAnchorErrors(trustAnchor);
     }

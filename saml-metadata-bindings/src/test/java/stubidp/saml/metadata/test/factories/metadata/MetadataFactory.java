@@ -1,6 +1,5 @@
 package stubidp.saml.metadata.test.factories.metadata;
 
-import com.google.common.base.Throwables;
 import org.opensaml.core.xml.config.XMLObjectProviderRegistrySupport;
 import org.opensaml.core.xml.io.Marshaller;
 import org.opensaml.core.xml.io.MarshallerFactory;
@@ -64,7 +63,7 @@ public class MetadataFactory {
             marshallToXml(entitiesDescriptor);
             result = entitiesDescriptor.getDOM();
         } catch (ParserConfigurationException | MarshallingException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
         return result;
     }

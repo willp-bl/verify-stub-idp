@@ -1,6 +1,5 @@
 package stubidp.saml.metadata.factories;
 
-import com.google.common.base.Throwables;
 import stubidp.saml.metadata.KeyStoreLoader;
 import stubidp.saml.metadata.exception.EmptyTrustStoreException;
 
@@ -27,7 +26,7 @@ public class MetadataTrustStoreProvider implements Provider<KeyStore> {
         try {
             trustStoreSize = trustStore.size();
         } catch (KeyStoreException e) {
-            Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
         if (trustStoreSize == 0) {
             throw new EmptyTrustStoreException();

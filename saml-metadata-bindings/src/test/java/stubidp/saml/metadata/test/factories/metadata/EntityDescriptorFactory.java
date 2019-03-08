@@ -1,6 +1,5 @@
 package stubidp.saml.metadata.test.factories.metadata;
 
-import com.google.common.base.Throwables;
 import org.joda.time.DateTime;
 import org.opensaml.core.xml.io.MarshallingException;
 import org.opensaml.saml.saml2.metadata.AttributeAuthorityDescriptor;
@@ -14,8 +13,6 @@ import org.opensaml.xmlsec.signature.Signature;
 import org.opensaml.xmlsec.signature.X509Certificate;
 import org.opensaml.xmlsec.signature.X509Data;
 import org.opensaml.xmlsec.signature.support.SignatureException;
-import stubidp.test.devpki.TestCertificateStrings;
-import stubidp.test.devpki.TestEntityIds;
 import stubidp.saml.utils.core.test.builders.metadata.AttributeAuthorityDescriptorBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.EntityDescriptorBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.IdpSsoDescriptorBuilder;
@@ -25,6 +22,8 @@ import stubidp.saml.utils.core.test.builders.metadata.SPSSODescriptorBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.SignatureBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.X509CertificateBuilder;
 import stubidp.saml.utils.core.test.builders.metadata.X509DataBuilder;
+import stubidp.test.devpki.TestCertificateStrings;
+import stubidp.test.devpki.TestEntityIds;
 
 import java.util.List;
 
@@ -59,7 +58,7 @@ public class EntityDescriptorFactory {
                     .withoutSigning()
                     .build();
         } catch (MarshallingException | SignatureException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -83,7 +82,7 @@ public class EntityDescriptorFactory {
                     .withoutSigning()
                     .build();
         } catch (MarshallingException | SignatureException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -116,7 +115,7 @@ public class EntityDescriptorFactory {
                                           .withoutSigning()
                                           .build();
         } catch (MarshallingException | SignatureException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -128,7 +127,7 @@ public class EntityDescriptorFactory {
                     .withValidUntil(DateTime.now().plusWeeks(2))
                     .build();
         } catch (MarshallingException | SignatureException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -140,7 +139,7 @@ public class EntityDescriptorFactory {
                     .withValidUntil(validUntil)
                     .build();
         } catch (MarshallingException | SignatureException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -168,7 +167,7 @@ public class EntityDescriptorFactory {
                     .setAddDefaultSpServiceDescriptor(false)
                     .build();
         } catch (MarshallingException | SignatureException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

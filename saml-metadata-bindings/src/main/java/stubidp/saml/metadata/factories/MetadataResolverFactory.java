@@ -1,6 +1,5 @@
 package stubidp.saml.metadata.factories;
 
-import com.google.common.base.Throwables;
 import net.shibboleth.utilities.java.support.component.ComponentInitializationException;
 import net.shibboleth.utilities.java.support.xml.BasicParserPool;
 import org.opensaml.core.config.InitializationException;
@@ -49,7 +48,7 @@ public class MetadataResolverFactory {
             metadataResolver.initialize();
             return metadataResolver;
         } catch (ComponentInitializationException | InitializationException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 }

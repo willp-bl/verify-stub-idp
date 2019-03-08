@@ -53,7 +53,7 @@ public class EntitiesDescriptorFactory {
         try {
             return entitiesDescriptorBuilder.build();
         } catch (MarshallingException | SignatureException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
