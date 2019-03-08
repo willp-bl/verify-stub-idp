@@ -6,20 +6,20 @@ import org.junit.Before;
 import org.junit.Test;
 import org.opensaml.core.config.InitializationService;
 import org.opensaml.core.xml.io.MarshallingException;
-import org.opensaml.saml.metadata.resolver.impl.BasicRoleDescriptorResolver;
+import org.opensaml.saml.metadata.resolver.impl.PredicateRoleDescriptorResolver;
 import org.opensaml.saml.saml2.metadata.EntityDescriptor;
 import org.opensaml.saml.saml2.metadata.IDPSSODescriptor;
 import org.opensaml.saml.saml2.metadata.SPSSODescriptor;
 import org.opensaml.saml.security.impl.MetadataCredentialResolver;
 import org.opensaml.xmlsec.config.impl.DefaultSecurityConfigurationBootstrap;
 import org.opensaml.xmlsec.signature.support.SignatureException;
-import stubidp.test.devpki.TestCertificateStrings;
 import stubidp.saml.security.saml.MetadataFactory;
 import stubidp.saml.security.saml.TestCredentialFactory;
 import stubidp.saml.security.saml.builders.EntitiesDescriptorBuilder;
 import stubidp.saml.security.saml.builders.EntityDescriptorBuilder;
 import stubidp.saml.security.saml.builders.KeyDescriptorBuilder;
 import stubidp.saml.security.saml.builders.SPSSODescriptorBuilder;
+import stubidp.test.devpki.TestCertificateStrings;
 
 import java.security.PublicKey;
 import java.util.Collections;
@@ -44,11 +44,11 @@ public class MetadataBackedEncryptionCredentialResolverTest {
         metadataResolver.setId("arbitrary id");
         metadataResolver.initialize();
 
-        BasicRoleDescriptorResolver basicRoleDescriptorResolver = new BasicRoleDescriptorResolver(metadataResolver);
-        basicRoleDescriptorResolver.initialize();
+        PredicateRoleDescriptorResolver predicateRoleDescriptorResolver = new PredicateRoleDescriptorResolver(metadataResolver);
+        predicateRoleDescriptorResolver.initialize();
 
         metadataCredentialResolver = new MetadataCredentialResolver();
-        metadataCredentialResolver.setRoleDescriptorResolver(basicRoleDescriptorResolver);
+        metadataCredentialResolver.setRoleDescriptorResolver(predicateRoleDescriptorResolver);
         metadataCredentialResolver.setKeyInfoCredentialResolver(DefaultSecurityConfigurationBootstrap.buildBasicInlineKeyInfoCredentialResolver());
         metadataCredentialResolver.initialize();
     }

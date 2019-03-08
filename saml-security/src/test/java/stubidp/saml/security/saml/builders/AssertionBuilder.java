@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static com.google.common.base.Throwables.propagate;
 import static java.util.Optional.ofNullable;
 import static stubidp.saml.security.saml.builders.AttributeStatementBuilder.anAttributeStatement;
 
@@ -79,7 +78,7 @@ public class AssertionBuilder {
                 }
             }
         } catch (SignatureException | MarshallingException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
 
         return assertion;

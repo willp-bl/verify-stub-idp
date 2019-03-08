@@ -10,8 +10,6 @@ import java.security.cert.Certificate;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 
-import static com.google.common.base.Throwables.propagate;
-
 public class PublicKeyFactory {
 
     private final CertificateFactory certificateFactory;
@@ -26,7 +24,7 @@ public class PublicKeyFactory {
             Certificate certificate = certificateFactory.generateCertificate(new ByteArrayInputStream(derValue));
             return certificate.getPublicKey();
         } catch (Base64DecodingException | CertificateException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

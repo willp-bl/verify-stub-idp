@@ -5,13 +5,12 @@ import org.opensaml.saml.saml2.core.EncryptedAssertion;
 import org.opensaml.saml.saml2.encryption.Encrypter;
 import org.opensaml.security.credential.Credential;
 import org.opensaml.xmlsec.encryption.support.EncryptionException;
+import stubidp.saml.security.EncrypterFactory;
 import stubidp.saml.security.saml.TestCredentialFactory;
 import stubidp.test.devpki.TestCertificateStrings;
-import stubidp.saml.security.EncrypterFactory;
 
 import java.util.Optional;
 
-import static com.google.common.base.Throwables.propagate;
 import static java.util.Optional.ofNullable;
 
 public class EncryptedAssertionBuilder {
@@ -30,7 +29,7 @@ public class EncryptedAssertionBuilder {
         try {
             return encrypter.encrypt(assertion);
         } catch (EncryptionException e) {
-            throw propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

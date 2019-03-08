@@ -8,7 +8,7 @@ import org.joda.time.DateTime;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.opensaml.core.xml.io.MarshallingException;
-import org.opensaml.saml.metadata.resolver.impl.BasicRoleDescriptorResolver;
+import org.opensaml.saml.metadata.resolver.impl.PredicateRoleDescriptorResolver;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.AuthnRequest;
 import org.opensaml.saml.saml2.metadata.EntityDescriptor;
@@ -21,10 +21,6 @@ import org.opensaml.xmlsec.signature.Signature;
 import org.opensaml.xmlsec.signature.X509Data;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.opensaml.xmlsec.signature.support.impl.ExplicitKeySignatureTrustEngine;
-import stubidp.utils.security.security.verification.CertificateChainValidator;
-import stubidp.utils.security.security.verification.CertificateValidity;
-import stubidp.test.devpki.TestCertificateStrings;
-import stubidp.test.devpki.TestEntityIds;
 import stubidp.saml.security.saml.EntityDescriptorFactory;
 import stubidp.saml.security.saml.MetadataFactory;
 import stubidp.saml.security.saml.OpenSAMLMockitoRunner;
@@ -42,6 +38,10 @@ import stubidp.saml.security.saml.builders.X509DataBuilder;
 import stubidp.saml.security.saml.deserializers.AuthnRequestUnmarshaller;
 import stubidp.saml.security.saml.deserializers.SamlObjectParser;
 import stubidp.saml.security.saml.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.test.devpki.TestCertificateStrings;
+import stubidp.test.devpki.TestEntityIds;
+import stubidp.utils.security.security.verification.CertificateChainValidator;
+import stubidp.utils.security.security.verification.CertificateValidity;
 
 import java.net.URL;
 import java.security.cert.CertPathValidatorException;
@@ -49,8 +49,8 @@ import java.security.cert.X509Certificate;
 import java.util.Collections;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.eq;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -174,11 +174,11 @@ public class MetadataBackedSignatureValidatorTest {
         metadataResolver.setId("arbitrary id");
         metadataResolver.initialize();
 
-        BasicRoleDescriptorResolver basicRoleDescriptorResolver = new BasicRoleDescriptorResolver(metadataResolver);
-        basicRoleDescriptorResolver.initialize();
+        PredicateRoleDescriptorResolver predicateRoleDescriptorResolver = new PredicateRoleDescriptorResolver(metadataResolver);
+        predicateRoleDescriptorResolver.initialize();
 
         MetadataCredentialResolver metadataCredentialResolver = new MetadataCredentialResolver();
-        metadataCredentialResolver.setRoleDescriptorResolver(basicRoleDescriptorResolver);
+        metadataCredentialResolver.setRoleDescriptorResolver(predicateRoleDescriptorResolver);
         metadataCredentialResolver.setKeyInfoCredentialResolver(DefaultSecurityConfigurationBootstrap.buildBasicInlineKeyInfoCredentialResolver());
         metadataCredentialResolver.initialize();
         return metadataCredentialResolver;

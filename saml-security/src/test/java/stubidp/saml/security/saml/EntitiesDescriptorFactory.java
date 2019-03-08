@@ -1,6 +1,5 @@
 package stubidp.saml.security.saml;
 
-import com.google.common.base.Throwables;
 import org.joda.time.DateTime;
 import org.opensaml.core.xml.io.MarshallingException;
 import org.opensaml.saml.saml2.metadata.EntitiesDescriptor;
@@ -15,9 +14,9 @@ import java.util.List;
 import java.util.Optional;
 
 import static java.util.Collections.emptyList;
+import static stubidp.saml.security.saml.builders.EntitiesDescriptorBuilder.anEntitiesDescriptor;
 import static stubidp.test.devpki.TestCertificateStrings.METADATA_SIGNING_A_PRIVATE_KEY;
 import static stubidp.test.devpki.TestCertificateStrings.METADATA_SIGNING_A_PUBLIC_CERT;
-import static stubidp.saml.security.saml.builders.EntitiesDescriptorBuilder.anEntitiesDescriptor;
 
 public class EntitiesDescriptorFactory {
     private final DateTime validUntil = DateTime.now().plusWeeks(2);
@@ -53,7 +52,7 @@ public class EntitiesDescriptorFactory {
         try {
             return entitiesDescriptorBuilder.build();
         } catch (MarshallingException | SignatureException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

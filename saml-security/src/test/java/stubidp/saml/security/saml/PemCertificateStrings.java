@@ -14,7 +14,7 @@ public abstract class PemCertificateStrings {
             URL resource = Resources.getResource("dev-keys/" + name);
             return Resources.toString(resource, Charset.defaultCharset());
         } catch (IOException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

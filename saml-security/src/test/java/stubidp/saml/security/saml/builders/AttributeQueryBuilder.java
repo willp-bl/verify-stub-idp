@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static com.google.common.base.Throwables.propagate;
 import static java.util.Optional.ofNullable;
 
 public class AttributeQueryBuilder {
@@ -49,7 +48,7 @@ public class AttributeQueryBuilder {
                     Signer.signObject(attributeQuery.getSignature());
                 }
             } catch (MarshallingException | SignatureException e) {
-                throw propagate(e);
+                throw new RuntimeException(e);
             }
         }
 
