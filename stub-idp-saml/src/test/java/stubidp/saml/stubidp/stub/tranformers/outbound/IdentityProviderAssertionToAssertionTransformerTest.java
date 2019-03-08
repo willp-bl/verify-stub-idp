@@ -5,10 +5,15 @@ import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Matchers;
+import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Attribute;
+import stubidp.saml.stubidp.builders.MatchingDatasetBuilder;
+import stubidp.saml.stubidp.builders.SimpleMdsValueBuilder;
+import stubidp.saml.stubidp.builders.TransliterableMdsValueBuilder;
+import stubidp.saml.stubidp.stub.transformers.outbound.IdentityProviderAssertionToAssertionTransformer;
+import stubidp.saml.stubidp.stub.transformers.outbound.IdentityProviderAuthnStatementToAuthnStatementTransformer;
 import stubidp.saml.utils.core.OpenSamlXmlObjectFactory;
 import stubidp.saml.utils.core.domain.Address;
 import stubidp.saml.utils.core.domain.AddressFactory;
@@ -24,11 +29,6 @@ import stubidp.saml.utils.core.domain.TransliterableMdsValue;
 import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import stubidp.saml.utils.core.transformers.outbound.OutboundAssertionToSubjectTransformer;
 import stubidp.saml.utils.hub.factories.AttributeFactory;
-import stubidp.saml.stubidp.builders.MatchingDatasetBuilder;
-import stubidp.saml.stubidp.builders.SimpleMdsValueBuilder;
-import stubidp.saml.stubidp.builders.TransliterableMdsValueBuilder;
-import stubidp.saml.stubidp.stub.transformers.outbound.IdentityProviderAssertionToAssertionTransformer;
-import stubidp.saml.stubidp.stub.transformers.outbound.IdentityProviderAuthnStatementToAuthnStatementTransformer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +37,6 @@ import java.util.stream.Collectors;
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Matchers.anyListOf;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -106,7 +105,7 @@ public class IdentityProviderAssertionToAssertionTransformerTest {
 
         transformer.transform(assertion);
 
-        verify(attributeFactory, never()).createFirstnameAttribute(Matchers.any());
+        verify(attributeFactory, never()).createFirstnameAttribute(ArgumentMatchers.any());
     }
 
     @Test
@@ -133,7 +132,7 @@ public class IdentityProviderAssertionToAssertionTransformerTest {
 
         transformer.transform(assertion);
 
-        verify(attributeFactory, never()).createMiddlenamesAttribute(Matchers.any());
+        verify(attributeFactory, never()).createMiddlenamesAttribute(ArgumentMatchers.any());
     }
 
     @Test
@@ -152,7 +151,7 @@ public class IdentityProviderAssertionToAssertionTransformerTest {
 
         transformer.transform(assertion);
 
-        verify(attributeFactory, never()).createSurnameAttribute(Matchers.any());
+        verify(attributeFactory, never()).createSurnameAttribute(ArgumentMatchers.any());
     }
 
     @Test
@@ -171,7 +170,7 @@ public class IdentityProviderAssertionToAssertionTransformerTest {
 
         transformer.transform(assertion);
 
-        verify(attributeFactory, never()).createGenderAttribute(Matchers.any());
+        verify(attributeFactory, never()).createGenderAttribute(ArgumentMatchers.any());
     }
 
     @Test
@@ -199,7 +198,7 @@ public class IdentityProviderAssertionToAssertionTransformerTest {
 
         transformer.transform(assertion);
 
-        verify(attributeFactory, never()).createDateOfBirthAttribute(Matchers.any());
+        verify(attributeFactory, never()).createDateOfBirthAttribute(ArgumentMatchers.any());
     }
 
     @Test
@@ -218,7 +217,7 @@ public class IdentityProviderAssertionToAssertionTransformerTest {
 
         transformer.transform(assertion);
 
-        verify(attributeFactory, never()).createCurrentAddressesAttribute(anyListOf(Address.class));
+        verify(attributeFactory, never()).createCurrentAddressesAttribute(ArgumentMatchers.<Address>anyList());
     }
 
     @Test
@@ -238,7 +237,7 @@ public class IdentityProviderAssertionToAssertionTransformerTest {
 
         transformer.transform(assertion);
 
-        verify(attributeFactory, never()).createPreviousAddressesAttribute(anyListOf(Address.class));
+        verify(attributeFactory, never()).createPreviousAddressesAttribute(ArgumentMatchers.<Address>anyList());
     }
 
     @Test
