@@ -3,14 +3,13 @@ package stubidp.stubidp.services;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Matchers;
+import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
-import stubidp.stubidp.services.ServiceListService;
-import stubidp.utils.rest.jerseyclient.JsonClient;
+import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.stubidp.configuration.SingleIdpConfiguration;
 import stubidp.stubidp.domain.Service;
 import stubidp.stubidp.exceptions.FeatureNotEnabledException;
+import stubidp.utils.rest.jerseyclient.JsonClient;
 
 import javax.ws.rs.ProcessingException;
 import javax.ws.rs.core.GenericType;
@@ -20,7 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Matchers.eq;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -57,7 +56,7 @@ public class ServiceListServiceTest {
     @Test
     public void getServiceListWhenFeatureEnabled_ReturnsAListOfServices() throws FeatureNotEnabledException {
         when(singleIdpConfiguration.isEnabled()).thenReturn(true);
-        when(jsonClient.get(eq(uri), Matchers.<GenericType<List<Service>>>any())).thenReturn(Arrays.asList(service1, service2, service3, service4, service5));
+        when(jsonClient.get(eq(uri), ArgumentMatchers.<GenericType<List<Service>>>any())).thenReturn(Arrays.asList(service1, service2, service3, service4, service5));
 
         ServiceListService service = new ServiceListService(singleIdpConfiguration, jsonClient);
 
@@ -69,7 +68,7 @@ public class ServiceListServiceTest {
     @Test
     public void getServiceListWhenFeatureEnabledButErrorReadingFromHub_ReturnEmptyArray() throws FeatureNotEnabledException {
         when(singleIdpConfiguration.isEnabled()).thenReturn(true);
-        when(jsonClient.get(eq(uri), Matchers.<GenericType<List<Service>>>any())).thenThrow(new ProcessingException("No Response from Server"));
+        when(jsonClient.get(eq(uri), ArgumentMatchers.<GenericType<List<Service>>>any())).thenThrow(new ProcessingException("No Response from Server"));
 
         ServiceListService service = new ServiceListService(singleIdpConfiguration, jsonClient);
 
@@ -81,7 +80,7 @@ public class ServiceListServiceTest {
     @Test
     public void getServiceListWhenFeatureEnabledButNoServicesReturned_ReturnEmptyArray() throws FeatureNotEnabledException {
         when(singleIdpConfiguration.isEnabled()).thenReturn(true);
-        when(jsonClient.get(eq(uri), Matchers.<GenericType<List<Service>>>any())).thenReturn(new ArrayList<>());
+        when(jsonClient.get(eq(uri), ArgumentMatchers.<GenericType<List<Service>>>any())).thenReturn(new ArrayList<>());
 
         ServiceListService service = new ServiceListService(singleIdpConfiguration, jsonClient);
 

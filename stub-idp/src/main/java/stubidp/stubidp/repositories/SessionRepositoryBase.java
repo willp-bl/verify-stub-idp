@@ -26,7 +26,7 @@ import java.time.Instant;
 import java.util.Optional;
 
 import static com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES;
-import static org.apache.commons.lang3.StringEscapeUtils.unescapeJson;
+import static org.apache.commons.text.StringEscapeUtils.unescapeJson;
 
 public abstract class SessionRepositoryBase<T extends Session> implements SessionRepository<T> {
     private final Jdbi jdbi;

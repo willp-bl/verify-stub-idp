@@ -1,5 +1,6 @@
 package stubidp.stubidp.dtos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.joda.time.LocalDate;
 import stubidp.saml.utils.core.domain.Address;
@@ -11,7 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
+@JsonSerialize
+@JsonInclude(NON_NULL)
 public class IdpUserDto {
 
     private Optional<String> pid = Optional.empty();

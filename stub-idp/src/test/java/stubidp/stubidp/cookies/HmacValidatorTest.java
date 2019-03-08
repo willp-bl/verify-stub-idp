@@ -3,7 +3,7 @@ package stubidp.stubidp.cookies;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.stubidp.cookies.HmacValidator;
 import stubidp.utils.rest.common.SessionId;
 import stubidp.utils.security.security.HmacDigest;

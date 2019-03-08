@@ -1,6 +1,5 @@
 package stubidp.stubidp.repositories;
 
-import com.google.common.base.Throwables;
 import net.shibboleth.utilities.java.support.resolver.CriteriaSet;
 import net.shibboleth.utilities.java.support.resolver.ResolverException;
 import org.opensaml.core.criterion.EntityIdCriterion;
@@ -12,8 +11,6 @@ import org.opensaml.saml.saml2.metadata.SPSSODescriptor;
 import org.opensaml.security.credential.UsageType;
 import org.opensaml.xmlsec.signature.X509Certificate;
 
-import javax.inject.Inject;
-import javax.inject.Named;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -69,7 +66,7 @@ public class MetadataRepository {
                 try {
                     return new URI(endpointDto.getLocation());
                 } catch (URISyntaxException e) {
-                    Throwables.propagate(e);
+                    throw new RuntimeException(e);
                 }
             }
         }

@@ -7,7 +7,7 @@ import stubidp.stubidp.repositories.jdbc.User;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static org.apache.commons.lang3.StringEscapeUtils.unescapeJson;
+import static org.apache.commons.text.StringEscapeUtils.unescapeJson;
 
 public class UserRowMapper implements RowMapper<User> {
 

@@ -3,7 +3,7 @@ package stubidp.stubidp.filters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.stubidp.filters.SecurityHeadersFilter;
 
 import javax.ws.rs.container.ContainerRequestContext;

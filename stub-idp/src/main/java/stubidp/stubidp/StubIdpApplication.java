@@ -1,8 +1,8 @@
 package stubidp.stubidp;
 
 import com.fasterxml.jackson.databind.util.ISO8601DateFormat;
+import com.fasterxml.jackson.databind.util.StdDateFormat;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
-import com.google.common.base.Throwables;
 import com.google.common.collect.ImmutableMap;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
@@ -56,6 +56,7 @@ import stubidp.utils.rest.filters.AcceptLanguageFilter;
 
 import javax.servlet.DispatcherType;
 import java.util.EnumSet;
+import java.util.Locale;
 import java.util.Map;
 
 import static java.util.Collections.singletonList;
@@ -76,7 +77,7 @@ public class StubIdpApplication extends Application<StubIdpConfiguration> {
                 new StubIdpApplication().run(args);
             }
         } catch (Exception e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -124,7 +125,7 @@ public class StubIdpApplication extends Application<StubIdpConfiguration> {
         environment.jersey().register(SessionCookieValueMustExistAsASessionFeature.class);
         environment.jersey().register(CSRFCheckProtectionFeature.class);
 
-        environment.getObjectMapper().setDateFormat(new ISO8601DateFormat());
+        environment.getObjectMapper().setDateFormat(new StdDateFormat().withLocale(Locale.UK));
 
         environment.jersey().register(new StubIdpBinder(configuration, environment));
 

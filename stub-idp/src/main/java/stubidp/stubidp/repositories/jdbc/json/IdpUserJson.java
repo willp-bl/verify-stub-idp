@@ -1,6 +1,7 @@
 package stubidp.stubidp.repositories.jdbc.json;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.joda.time.LocalDate;
 import stubidp.saml.utils.core.domain.Address;
@@ -12,9 +13,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-import static com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion.NON_NULL;
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 
-@JsonSerialize(include = NON_NULL)
+@JsonSerialize
+@JsonInclude(NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class IdpUserJson {
 

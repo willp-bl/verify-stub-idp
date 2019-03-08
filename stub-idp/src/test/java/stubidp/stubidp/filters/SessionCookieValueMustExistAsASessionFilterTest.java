@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.stubidp.cookies.HmacValidator;
 import stubidp.stubidp.exceptions.InvalidSecureCookieException;
 import stubidp.stubidp.exceptions.SecureCookieNotFoundException;
@@ -25,7 +25,6 @@ import static org.mockito.Mockito.when;
 import static stubidp.stubidp.cookies.CookieNames.SECURE_COOKIE_NAME;
 import static stubidp.stubidp.cookies.CookieNames.SESSION_COOKIE_NAME;
 import static stubidp.stubidp.filters.SessionCookieValueMustExistAsASessionFilter.NO_CURRENT_SESSION_COOKIE_VALUE;
-
 
 @RunWith(MockitoJUnitRunner.class)
 public class SessionCookieValueMustExistAsASessionFilterTest {

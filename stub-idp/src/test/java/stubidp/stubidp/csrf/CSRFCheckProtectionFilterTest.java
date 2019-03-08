@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import stubidp.stubidp.cookies.HmacValidator;
 import stubidp.stubidp.csrf.exceptions.CSRFBodyNotFoundException;
 import stubidp.stubidp.csrf.exceptions.CSRFCouldNotValidateSessionException;
@@ -34,7 +34,6 @@ import static org.mockito.Mockito.when;
 import static stubidp.stubidp.cookies.CookieNames.SECURE_COOKIE_NAME;
 import static stubidp.stubidp.cookies.CookieNames.SESSION_COOKIE_NAME;
 import static stubidp.stubidp.csrf.CSRFCheckProtectionFilter.CSRF_PROTECT_FORM_KEY;
-
 
 @RunWith(MockitoJUnitRunner.class)
 public class CSRFCheckProtectionFilterTest {
