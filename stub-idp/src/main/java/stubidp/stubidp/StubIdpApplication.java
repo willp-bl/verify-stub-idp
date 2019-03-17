@@ -1,8 +1,6 @@
 package stubidp.stubidp;
 
-import com.fasterxml.jackson.databind.util.ISO8601DateFormat;
 import com.fasterxml.jackson.databind.util.StdDateFormat;
-import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import com.google.common.collect.ImmutableMap;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
@@ -113,7 +111,6 @@ public class StubIdpApplication extends Application<StubIdpConfiguration> {
         bootstrap.addBundle(new MonitoringBundle());
 
         bootstrap.addBundle(new AssetsBundle("/assets/", "/assets/"));
-        bootstrap.getObjectMapper().registerModule(new Jdk8Module());
     }
 
     @Override

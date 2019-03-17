@@ -15,7 +15,7 @@ import java.util.Optional;
 
 import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 
-@JsonSerialize
+@JsonSerialize(include= JsonSerialize.Inclusion.NON_NULL)
 @JsonInclude(NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class IdpUserJson {
