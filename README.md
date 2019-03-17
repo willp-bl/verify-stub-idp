@@ -1,24 +1,13 @@
-# Verify Stub IDP
+# Stub IDP
 ![Stub IDP logo](././stub-idp/src/main/resources/assets/images/providers/stub-idp-demo-one.png)
 
 This microservice is a stub IDP that can be white-labelled to simulate any IDP, or used as a Stub eIDAS Proxy Service Node.
 
-[![Build Status](https://travis-ci.org/willp-bl/verify-stub-idp.svg?branch=master)](https://travis-ci.org/willp-bl/verify-stub-idp)
-
-## Note about the history of this repository
-
-Commits made up to and including
-83a97b5157c25f3dad56bc0293ef5e78d8a2b2a4 in this repository may have
-had their history altered as part of the open sourcing process.  That
-means the apparent changesets are incomplete due to removed files, and
-thus the commit messages could not be representative of the changes
-made at the time.
-
-Merge commits were not preserved as part of the open sourcing process.
+[![Build Status](https://travis-ci.org/stub-idp/stub-idp.svg?branch=master)](https://travis-ci.org/stub-idp/stub-idp)
 
 ## Running
 
-Use [verify-local-startup](https://github.com/alphagov/verify-local-startup) to start the app.  It will also create all the appropriate config/PKI to run the app locally.
+Does not yet run, because app needs a run config :D
 
 ## Configuring the app
 
@@ -41,16 +30,6 @@ The `friendlyId` can be used to enable multiple IDPs but using the same `display
 
 Header images for IDPs should be placed into `ida-stub-idp/src/main/resources/assets/images/providers/` and are referenced as `assetId` e.g. stub-idp-one.png is referenced as `stub-idp-one`
 
-## Deploying to PaaS
-
-Before Stub IDP can be deployed to PaaS, you need to provision two services in the space you are deploying to. Make sure you are logged into PaaS Cloudfoundry and then run `./create_paas_services.sh` as follows:
-
-```
-CF_SPACE=target-space LOGIT_ENDPOINT=endpoint ./create_paas_services.sh
-```
-
-The Logit endpoint can be obtained by logging into logit.io (via GApps) and copying the Verify Stubs stack ID.
-
 ## Connecting to a hub/using as an IDP
 
 You need to use the entityId `http://stub_idp.acme.org/{friendlyId}/SSO/POST` or as the template configured in the main config file, with the shared key/cert configured in the main config file (`stub-idp.yml`)
@@ -71,45 +50,6 @@ Test users can be uploaded to the IDPs [docs](https://alphagov.github.io/rp-onbo
 
 Basic auth for the `/{friendlyId}/users` endpoint is enabled by default and can be configured using `basicAuthEnabledForUserResource`
 
-## Issues and responsible disclosure
-
-If you think you have discovered a security issue in this code please email [disclosure@digital.cabinet-office.gov.uk](mailto:disclosure@digital.cabinet-office.gov.uk) with details.
-
-For non-security related bugs and feature requests please [raise an issue](https://github.com/alphagov/verify-stub-idp/issues/new) in the GitHub issue tracker.
-
-# Verify Stub IDP SAML
-
-[![Build Status](https://travis-ci.org/alphagov/verify-stub-idp-saml.svg?branch=master)](https://travis-ci.org/alphagov/verify-stub-idp-saml)
-
-Responsible for SAML behaviours which are specific to the domain of IDPs (note that we only stub IDPs internally, hence *stub*-idp-saml). At a high level:
-
-* Handling requests from Hub
-* Generating responses for Hub
-
-At a lower level this includes:
-
-* Converting OpenSAML objects to IDP domain objects
-* Converting IDP domain objects to OpenSAML objects
-* Generating Matching Dataset Assertions
-
-Common tasks (e.g. validating signatures) are handled by dependencies such as [saml-security](https://github.com/alphagov/verify-saml-security) and [saml-serializers](https://github.com/alphagov/verify-saml-serializers).
-
-Currently used by stub idp and compliance tool.
-
-## Stub IDP SAML Test
-
-`stub-idp-saml-test` is provided for services which require IDP-like behaviour to set up state for their tests. For example: in order to test hub we need to generate an example AuthnResponse.
-`stub-idp-saml-test` provides helpful builders for situations like this.
-
-### Building the project
-
-`./gradlew clean build`
-
-## Code of Conduct
-This project is developed under the [Alphagov Code of Conduct](https://github.com/alphagov/code-of-conduct)
-
-## Licence
+# Licence
 
 [MIT Licence](LICENCE)
-
-This code is provided for informational purposes only and is not yet intended for use outside GOV.UK Verify
