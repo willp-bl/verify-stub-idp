@@ -160,7 +160,7 @@
         <dependency>
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
-            <version>2.3.27-incubating</version>
+            <version>${freemarker.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
