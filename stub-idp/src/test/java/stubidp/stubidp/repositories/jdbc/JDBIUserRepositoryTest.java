@@ -20,7 +20,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
-import static org.apache.commons.text.StringEscapeUtils.escapeJson;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class JDBIUserRepositoryTest {
@@ -28,8 +27,6 @@ public class JDBIUserRepositoryTest {
     private Jdbi jdbi;
     private JDBIUserRepository repository;
     private UserMapper userMapper;
-    // Unfortunately H2 does not support JSON type and we need to do things differently inmemory
-    private boolean isPostgresDb = false;
 
     @Before
     public void setUp() {
@@ -146,18 +143,14 @@ public class JDBIUserRepositoryTest {
         User user = userMapper.mapFrom(idpFriendlyId, idpUser);
 
         jdbi.withHandle(handle -> {
-                String sqlStatementParameter = isPostgresDb ? "to_json(:json)" : ":json";
+            final String sqlStatement = "INSERT INTO users(username, password, identity_provider_friendly_id, \"data\") " +
+                    "VALUES (:username, :password, :idpFriendlyId, to_json(:json))";
 
-                String sqlStatement = String.format("INSERT INTO users(username, password, identity_provider_friendly_id, \"data\") " +
-                    "VALUES (:username, :password, :idpFriendlyId, %s)", sqlStatementParameter);
-
-                String userData = isPostgresDb ? user.getData() : "\"" + escapeJson(user.getData()) + "\"";
-
-                return handle.createUpdate(sqlStatement)
+            return handle.createUpdate(sqlStatement)
                     .bind("username", user.getUsername())
                     .bind("password", user.getPassword())
                     .bind("idpFriendlyId", idpFriendlyId)
-                    .bind("json", userData)
+                    .bind("json", user.getData())
                     .execute();
             }
         );
