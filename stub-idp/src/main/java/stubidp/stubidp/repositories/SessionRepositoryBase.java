@@ -135,7 +135,7 @@ public abstract class SessionRepositoryBase<T extends Session> implements Sessio
         return sessionToken;
     }
 
-    private Optional cleanupSession(SessionId sessionToken) {
+    private Optional<T> cleanupSession(SessionId sessionToken) {
         deleteSession(sessionToken);
 
         return Optional.empty();

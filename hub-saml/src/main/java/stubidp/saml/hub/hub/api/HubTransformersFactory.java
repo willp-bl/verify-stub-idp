@@ -57,6 +57,7 @@ import stubidp.saml.hub.hub.transformers.outbound.decorators.NoOpSamlAttributeQu
 import stubidp.saml.hub.hub.transformers.outbound.decorators.SamlAttributeQueryAssertionSignatureSigner;
 import stubidp.saml.hub.hub.transformers.outbound.decorators.SigningRequestAbstractTypeSignatureCreator;
 import stubidp.saml.hub.hub.validators.authnrequest.AuthnRequestFromTransactionValidator;
+import stubidp.saml.hub.hub.validators.authnrequest.AuthnRequestIdKey;
 import stubidp.saml.hub.hub.validators.authnrequest.AuthnRequestIssueInstantValidator;
 import stubidp.saml.hub.hub.validators.authnrequest.DuplicateAuthnRequestValidator;
 import stubidp.saml.hub.hub.validators.authnrequest.IdExpirationCache;
@@ -198,7 +199,7 @@ public class HubTransformersFactory {
             URI expectedDestinationHost,
             SigningKeyStore signingKeyStore,
             IdaKeyStore decryptionKeyStore,
-            IdExpirationCache duplicateIds,
+            IdExpirationCache<AuthnRequestIdKey> duplicateIds,
             SamlDuplicateRequestValidationConfiguration samlDuplicateRequestValidationConfiguration,
             SamlAuthnRequestValidityDurationConfiguration samlAuthnRequestValidityDurationConfiguration
     ) {
@@ -430,7 +431,7 @@ public class HubTransformersFactory {
         final URI expectedDestinationHost,
         final SigningKeyStore signingKeyStore,
         final IdaKeyStore decryptionKeyStore,
-        final IdExpirationCache duplicateIds,
+        final IdExpirationCache<AuthnRequestIdKey> duplicateIds,
         final SamlDuplicateRequestValidationConfiguration samlDuplicateRequestValidationConfiguration,
         final SamlAuthnRequestValidityDurationConfiguration samlAuthnRequestValidityDurationConfiguration
     ) {

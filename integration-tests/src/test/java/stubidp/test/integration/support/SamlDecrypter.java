@@ -11,16 +11,9 @@ import org.opensaml.saml.saml2.encryption.Decrypter;
 import org.opensaml.saml.saml2.metadata.IDPSSODescriptor;
 import org.opensaml.xmlsec.encryption.support.EncryptionConstants;
 import org.slf4j.event.Level;
-import stubidp.test.integration.support.eidas.EidasAttributeStatementAssertionValidator;
-import stubidp.test.integration.support.eidas.EidasAuthnResponseIssuerValidator;
-import stubidp.test.integration.support.eidas.InboundResponseFromCountry;
-import stubidp.utils.security.security.PrivateKeyFactory;
-import stubidp.utils.security.security.PublicKeyFactory;
-import stubidp.utils.security.security.X509CertificateFactory;
-import stubidp.saml.hub.core.errors.SamlTransformationErrorFactory;
-import stubidp.saml.utils.core.transformers.AuthnContextFactory;
 import stubidp.saml.extensions.validation.SamlTransformationErrorException;
 import stubidp.saml.extensions.validation.SamlValidationSpecificationFailure;
+import stubidp.saml.hub.core.errors.SamlTransformationErrorFactory;
 import stubidp.saml.hub.core.validators.DestinationValidator;
 import stubidp.saml.hub.core.validators.assertion.AssertionAttributeStatementValidator;
 import stubidp.saml.hub.core.validators.assertion.AuthnStatementAssertionValidator;
@@ -30,18 +23,13 @@ import stubidp.saml.hub.core.validators.assertion.IdentityProviderAssertionValid
 import stubidp.saml.hub.core.validators.assertion.MatchingDatasetAssertionValidator;
 import stubidp.saml.hub.core.validators.subject.AssertionSubjectValidator;
 import stubidp.saml.hub.core.validators.subjectconfirmation.AssertionSubjectConfirmationValidator;
-import stubidp.saml.serializers.deserializers.OpenSamlXMLObjectUnmarshaller;
-import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
-import stubidp.saml.serializers.deserializers.parser.SamlObjectParser;
-import stubidp.saml.serializers.deserializers.validators.Base64StringDecoder;
-import stubidp.saml.serializers.deserializers.validators.NotNullSamlStringValidator;
+import stubidp.saml.hub.hub.domain.CountryAuthenticationStatus;
 import stubidp.saml.hub.hub.domain.InboundResponseFromIdp;
 import stubidp.saml.hub.hub.transformers.inbound.IdaResponseFromIdpUnmarshaller;
 import stubidp.saml.hub.hub.transformers.inbound.IdpIdaStatusUnmarshaller;
 import stubidp.saml.hub.hub.transformers.inbound.PassthroughAssertionUnmarshaller;
 import stubidp.saml.hub.hub.transformers.inbound.SamlStatusToCountryAuthenticationStatusCodeMapper;
 import stubidp.saml.hub.hub.transformers.inbound.providers.DecoratedSamlResponseToIdaResponseIssuedByIdpTransformer;
-import stubidp.saml.utils.hub.validators.StringSizeValidator;
 import stubidp.saml.hub.hub.validators.authnrequest.ConcurrentMapIdExpirationCache;
 import stubidp.saml.hub.hub.validators.response.common.ResponseSizeValidator;
 import stubidp.saml.hub.hub.validators.response.idp.components.EncryptedResponseFromIdpValidator;
@@ -62,7 +50,20 @@ import stubidp.saml.security.validators.ValidatedResponse;
 import stubidp.saml.security.validators.encryptedelementtype.EncryptionAlgorithmValidator;
 import stubidp.saml.security.validators.issuer.IssuerValidator;
 import stubidp.saml.security.validators.signature.SamlResponseSignatureValidator;
+import stubidp.saml.serializers.deserializers.OpenSamlXMLObjectUnmarshaller;
+import stubidp.saml.serializers.deserializers.StringToOpenSamlObjectTransformer;
+import stubidp.saml.serializers.deserializers.parser.SamlObjectParser;
+import stubidp.saml.serializers.deserializers.validators.Base64StringDecoder;
+import stubidp.saml.serializers.deserializers.validators.NotNullSamlStringValidator;
 import stubidp.saml.serializers.serializers.XmlObjectToBase64EncodedStringTransformer;
+import stubidp.saml.utils.core.transformers.AuthnContextFactory;
+import stubidp.saml.utils.hub.validators.StringSizeValidator;
+import stubidp.test.integration.support.eidas.EidasAttributeStatementAssertionValidator;
+import stubidp.test.integration.support.eidas.EidasAuthnResponseIssuerValidator;
+import stubidp.test.integration.support.eidas.InboundResponseFromCountry;
+import stubidp.utils.security.security.PrivateKeyFactory;
+import stubidp.utils.security.security.PublicKeyFactory;
+import stubidp.utils.security.security.X509CertificateFactory;
 
 import javax.ws.rs.client.Client;
 import java.net.URI;
@@ -91,10 +92,10 @@ public class SamlDecrypter {
     private final int localPort;
 
     // Manual Guice injection
-    private final StringToOpenSamlObjectTransformer<Response> stringToOpenSamlObjectTransformer = new StringToOpenSamlObjectTransformer(new NotNullSamlStringValidator(),
+    private final StringToOpenSamlObjectTransformer<Response> stringToOpenSamlObjectTransformer = new StringToOpenSamlObjectTransformer<>(new NotNullSamlStringValidator(),
             new Base64StringDecoder(),
             new ResponseSizeValidator(new StringSizeValidator()),
-            new OpenSamlXMLObjectUnmarshaller(new SamlObjectParser()));
+            new OpenSamlXMLObjectUnmarshaller<>(new SamlObjectParser()));
     private final Optional<String> eidasSchemeName;
 
     public SamlDecrypter(Client client, URI metadataUri, String hubEntityId, int localPort, Optional<String> eidasSchemeName) {
@@ -241,7 +242,7 @@ public class SamlDecrypter {
                 new SamlResponseSignatureValidator(new SamlMessageSignatureValidator(new CredentialFactorySignatureValidator(credentialFactory))),
                 new AssertionDecrypter(new EncryptionAlgorithmValidator(), new DecrypterFactory().createDecrypter(storeCredentialRetriever.getDecryptingCredentials())),
                 new SamlAssertionsSignatureValidator(new SamlMessageSignatureValidator(new CredentialFactorySignatureValidator(credentialFactory))),
-                new EncryptedResponseFromIdpValidator(new SamlStatusToCountryAuthenticationStatusCodeMapper()),
+                new EncryptedResponseFromIdpValidator<CountryAuthenticationStatus.Status>(new SamlStatusToCountryAuthenticationStatusCodeMapper()),
                 new DestinationValidator(URI.create("http://foo.com/bar"), "/bar"),
                 new ResponseAssertionsFromIdpValidator(
                         new IdentityProviderAssertionValidator(

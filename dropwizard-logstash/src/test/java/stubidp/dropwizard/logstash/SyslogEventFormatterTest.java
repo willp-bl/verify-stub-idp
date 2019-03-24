@@ -9,25 +9,27 @@ import org.joda.time.DateTime;
 import org.joda.time.DateTimeUtils;
 import org.junit.Before;
 import org.junit.Test;
-import stubidp.dropwizard.logstash.SyslogEventFormatter;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.core.StringStartsWith.startsWith;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+@RunWith(MockitoJUnitRunner.class)
 public class SyslogEventFormatterTest {
 
     public SyslogEventFormatter formatter;
     private String hostname = "test-hostname";
     private String tag = "test-tag";
 
+    @Mock
     private Layout<ILoggingEvent> layout;
 
     @Before
     public void setUp() throws Exception {
-        layout = mock(Layout.class);
         formatter = new SyslogEventFormatter(SyslogAppenderFactory.Facility.LOCAL1, hostname, tag, layout);
     }
 

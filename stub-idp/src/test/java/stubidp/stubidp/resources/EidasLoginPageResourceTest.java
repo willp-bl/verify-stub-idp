@@ -72,7 +72,7 @@ public class EidasLoginPageResourceTest {
         EidasAuthnRequest eidasAuthnRequest = new EidasAuthnRequest("request-id", "issuer", "destination", "loa", Collections.emptyList());
         session = new EidasSession(SESSION_ID, eidasAuthnRequest, null, null, null, Optional.empty(), Optional.empty());
         when(sessionRepository.get(SESSION_ID)).thenReturn(Optional.ofNullable(session));
-        when(sessionRepository.deleteAndGet(SESSION_ID)).thenReturn(Optional.ofNullable(session), Optional.empty());
+        when(sessionRepository.deleteAndGet(SESSION_ID)).thenReturn(Optional.ofNullable(session));
         when(eidasSuccessAuthnResponseService.generateAuthnFailed(session, SCHEME_NAME)).thenReturn(samlResponse);
         when(samlResponse.getResponseString()).thenReturn("<saml2p:Response/>");
         when(samlResponse.getHubUrl()).thenReturn(new URI("http://hub.url/"));

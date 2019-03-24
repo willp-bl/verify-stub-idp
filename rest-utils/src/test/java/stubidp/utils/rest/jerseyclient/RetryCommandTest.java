@@ -18,7 +18,7 @@ public class RetryCommandTest {
 
     @Test
     public void shouldRetryIfFirstAttemptFails() {
-        RetryCommand<String> retryCommand = new RetryCommand(2);
+        RetryCommand<String> retryCommand = new RetryCommand<>(2);
 
         DummyClass dummy = mock(DummyClass.class);
         when(dummy.function()).thenThrow(RuntimeException.class).thenReturn("SUCCESS");
@@ -31,7 +31,7 @@ public class RetryCommandTest {
 
     @Test(expected = ProcessingException.class)
     public void shouldNotRetryIfRetryCountIs0() {
-        RetryCommand<String> retryCommand = new RetryCommand(0);
+        RetryCommand<String> retryCommand = new RetryCommand<>(0);
 
         DummyClass dummy = mock(DummyClass.class);
         when(dummy.function()).thenThrow(RuntimeException.class).thenReturn("SUCCESS");
@@ -94,6 +94,7 @@ public class RetryCommandTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void shouldMarkRetryMeterWhenRetrying() {
         Meter retryMeter = mock(Meter.class);
         RetryCommand retryCommand = new RetryCommand(2, retryMeter);
@@ -109,6 +110,7 @@ public class RetryCommandTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void shouldNotMarkRetryMeterWhenRetryingNotNeeded() {
         Meter retryMeter = mock(Meter.class);
         RetryCommand retryCommand = new RetryCommand(2, retryMeter);

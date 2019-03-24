@@ -86,6 +86,7 @@ public class CountryMetadataBuilder {
         return idpSsoDescriptor;
     }
 
+    @SuppressWarnings("unchecked")
     private <T extends XMLObject> T createElement(QName elementName, QName typeName) {
         return (T) xmlFactory.getBuilder(elementName).buildObject(elementName, typeName);
     }

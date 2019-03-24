@@ -1,6 +1,7 @@
 package stubidp.utils.common.logging;
 
 import ch.qos.logback.classic.Logger;
+import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.classic.spi.LoggingEvent;
 import ch.qos.logback.core.Appender;
 import org.junit.Before;
@@ -24,7 +25,7 @@ import static org.mockito.Mockito.verify;
 public class LevelLoggerTest {
 
     @Mock
-    private Appender mockAppender;
+    private Appender<ILoggingEvent> mockAppender;
 
     //Captor is genericised with ch.qos.logback.classic.spi.LoggingEvent
     @Captor

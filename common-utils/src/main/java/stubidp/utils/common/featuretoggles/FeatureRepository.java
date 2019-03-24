@@ -1,6 +1,7 @@
 package stubidp.utils.common.featuretoggles;
 
 public class FeatureRepository {
+    @SuppressWarnings("unchecked")
     public void loadFeatures(FeatureConfiguration featureConfiguration) throws ClassNotFoundException, NoSuchFieldException {
         for (FeatureEntry featureEntry : featureConfiguration.getFeatures()) {
             Class featureClass = Class.forName(featureConfiguration.getFeatureClass());

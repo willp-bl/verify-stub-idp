@@ -159,6 +159,7 @@ public class JsonResponseProcessorTest {
         }
     }
 
+    @SuppressWarnings("unchecked")
     private Response createResponseWithBadEntity() {
         int status = 200;
         Response clientResponse = mock(Response.class);

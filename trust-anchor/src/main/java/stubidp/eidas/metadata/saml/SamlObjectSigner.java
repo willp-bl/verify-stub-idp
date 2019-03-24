@@ -61,6 +61,7 @@ public class SamlObjectSigner {
         return keyInfo;
     }
 
+    @SuppressWarnings("unchecked")
     public static <T extends XMLObject> T build(QName elementName) {
         return (T) XMLObjectSupport.buildXMLObject(elementName);
     }

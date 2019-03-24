@@ -121,10 +121,12 @@ public class EidasMetadataResolverRepository implements MetadataResolverReposito
         }
     }
 
+    @SuppressWarnings("unchecked")
     private void refreshMetadataResolvers() {
         List<String> trustAnchorsEntityIds = getTrustAnchorsEntityIds();
         List<String> currentResolverEntityIds = getResolverEntityIds();
 
+        // the subtract is unchecked
         List<String> resolversToRemove = ListUtils.subtract(currentResolverEntityIds, trustAnchorsEntityIds);
         ImmutableMap.Builder<String, MetadataResolverContainer> newMetadataResolvers = new ImmutableMap.Builder<>();
 

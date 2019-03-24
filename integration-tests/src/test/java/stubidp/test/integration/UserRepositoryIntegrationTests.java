@@ -20,6 +20,7 @@ import stubidp.stubidp.dtos.IdpUserDto;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Invocation;
+import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
 import java.io.IOException;
@@ -145,7 +146,7 @@ public class UserRepositoryIntegrationTests extends IntegrationTestHelper {
         Response response = aUserIsCreatedForIdpWithoutResponseChecking(IDP_NAME, user);
 
         assertThat(response.getStatus()).isEqualTo(Response.Status.BAD_REQUEST.getStatusCode());
-        assertThat(response.readEntity(List.class)).containsOnly("Level of Assurance was not specified.");
+        assertThat(response.readEntity(new GenericType<List<String>>() {})).containsOnly("Level of Assurance was not specified.");
     }
 
     @Test
@@ -155,7 +156,7 @@ public class UserRepositoryIntegrationTests extends IntegrationTestHelper {
         Response response = aUserIsCreatedForIdpWithoutResponseChecking(IDP_NAME, user);
 
         assertThat(response.getStatus()).isEqualTo(Response.Status.BAD_REQUEST.getStatusCode());
-        assertThat(response.readEntity(List.class)).containsOnly("Username was not specified or was empty.");
+        assertThat(response.readEntity(new GenericType<List<String>>() {})).containsOnly("Username was not specified or was empty.");
     }
 
     @Test
@@ -165,7 +166,7 @@ public class UserRepositoryIntegrationTests extends IntegrationTestHelper {
         Response response = aUserIsCreatedForIdpWithoutResponseChecking(IDP_NAME, user);
 
         assertThat(response.getStatus()).isEqualTo(Response.Status.BAD_REQUEST.getStatusCode());
-        assertThat(response.readEntity(List.class)).containsOnly("Password was not specified or was empty.");
+        assertThat(response.readEntity(new GenericType<List<String>>() {})).containsOnly("Password was not specified or was empty.");
     }
 
     // convert object to json using apprule's object mapper because it can serialize guava correctly

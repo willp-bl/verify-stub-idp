@@ -9,9 +9,9 @@ import org.opensaml.saml.saml2.core.Subject;
 import org.opensaml.saml.saml2.core.SubjectConfirmation;
 import org.opensaml.saml.saml2.core.SubjectConfirmationData;
 import stubidp.saml.hub.core.DateTimeFreezer;
-import stubidp.saml.utils.core.test.OpenSAMLRunner;
 import stubidp.saml.hub.hub.validators.authnrequest.ConcurrentMapIdExpirationCache;
 import stubidp.saml.hub.hub.validators.authnrequest.IdExpirationCache;
+import stubidp.saml.utils.core.test.OpenSAMLRunner;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -40,7 +40,7 @@ public class DuplicateAssertionValidatorTest {
         duplicateIds.put("duplicate", DateTime.now().plusMinutes(5));
         duplicateIds.put("expired-duplicate", DateTime.now().minusMinutes(2));
 
-        IdExpirationCache idExpirationCache = new ConcurrentMapIdExpirationCache<>(duplicateIds);
+        IdExpirationCache<String> idExpirationCache = new ConcurrentMapIdExpirationCache<>(duplicateIds);
         duplicateAssertionValidator = new DuplicateAssertionValidatorImpl(idExpirationCache);
     }
 

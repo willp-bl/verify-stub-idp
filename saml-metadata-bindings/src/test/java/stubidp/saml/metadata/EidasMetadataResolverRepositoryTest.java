@@ -2,6 +2,7 @@ package stubidp.saml.metadata;
 
 import certificates.values.CACertificates;
 import ch.qos.logback.classic.Logger;
+import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.classic.spi.LoggingEvent;
 import ch.qos.logback.core.Appender;
 import com.nimbusds.jose.JOSEException;
@@ -83,6 +84,9 @@ public class EidasMetadataResolverRepositoryTest {
 
     @Mock
     private MetadataResolverConfigBuilder metadataResolverConfigBuilder;
+
+    @Mock
+    private Appender<ILoggingEvent> mockAppender;
 
     @Captor
     private ArgumentCaptor<MetadataResolverConfiguration> metadataResolverConfigurationCaptor;
@@ -181,7 +185,6 @@ public class EidasMetadataResolverRepositoryTest {
 
     @Test
     public void shouldNotCreateMetadataResolverAndLogWhenCertificateIsExpired() {
-        Appender mockAppender = mock(Appender.class);
         Logger logger = (Logger) LoggerFactory.getLogger(EidasMetadataResolverRepository.class);
         logger.addAppender(mockAppender);
         ArgumentCaptor<LoggingEvent> loggingEventCaptor = ArgumentCaptor.forClass(LoggingEvent.class);

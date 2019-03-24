@@ -134,6 +134,7 @@ public class EidasAssertionBuilder {
         return issuer;
     }
 
+    @SuppressWarnings({"unchecked", "cast"})
     private static <T extends XMLObject> T build(QName elementName) {
         return (T) XMLObjectSupport.buildXMLObject(elementName);
     }

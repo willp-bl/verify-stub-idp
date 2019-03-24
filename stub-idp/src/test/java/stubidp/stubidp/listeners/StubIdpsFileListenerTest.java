@@ -36,6 +36,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import static com.google.common.collect.Lists.newArrayList;
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.apache.commons.io.FileUtils.writeStringToFile;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
@@ -115,7 +116,7 @@ public class StubIdpsFileListenerTest {
     }
 
     private void ensureInvalidStubIdpsConfigWasProcessed() throws IOException, InterruptedException {
-        writeStringToFile(YML_FILE, "bad string, this test will fail");
+        writeStringToFile(YML_FILE, "bad string, this test will fail", UTF_8);
         FileUtils.touch(YML_FILE);
         Thread.sleep(500); //wait for file to be processed by monitor
     }
@@ -132,7 +133,7 @@ public class StubIdpsFileListenerTest {
         TestIdpStubsConfiguration testIdpStubsConfiguration = new TestIdpStubsConfiguration(newArrayList(testStubIdp));
 
         final String yaml = getYamlAsString(testIdpStubsConfiguration);
-        writeStringToFile(YML_FILE, yaml);
+        writeStringToFile(YML_FILE, yaml, UTF_8);
         Thread.sleep(1); // ensure a different modified time
         FileUtils.touch(YML_FILE);
         Thread.sleep(500); //wait for file to be processed by monitor

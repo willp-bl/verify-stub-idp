@@ -119,6 +119,7 @@ public class EidasAuthnResponseService {
         return attributes;
     }
 
+    @SuppressWarnings({"unchecked", "cast"})
     private Attribute buildCurrentGivenNameAttribute(String name, Optional<String> givenNameNonLatinOptional) {
         XMLObjectBuilder<? extends CurrentGivenName> eidasTypeBuilder =
                 (XMLObjectBuilder<? extends CurrentGivenName>) XMLObjectSupport.getBuilder(CurrentGivenName.TYPE_NAME);
@@ -135,6 +136,7 @@ public class EidasAuthnResponseService {
         return buildAttribute(IdaConstants.Eidas_Attributes.FirstName.NAME, IdaConstants.Eidas_Attributes.FirstName.FRIENDLY_NAME, currentGivenNames);
     }
 
+    @SuppressWarnings({"unchecked", "cast"})
     private Attribute buildCurrentFamilyNameAttribute(String name, Optional<String> familyNameNonLatinOptional) {
         XMLObjectBuilder<? extends CurrentFamilyName> eidasTypeBuilder =
                 (XMLObjectBuilder<? extends CurrentFamilyName>) XMLObjectSupport.getBuilder(CurrentFamilyName.TYPE_NAME);
@@ -152,6 +154,7 @@ public class EidasAuthnResponseService {
         return buildAttribute(IdaConstants.Eidas_Attributes.FamilyName.NAME, IdaConstants.Eidas_Attributes.FamilyName.FRIENDLY_NAME, currentFamilyNames);
     }
 
+    @SuppressWarnings({"unchecked", "cast"})
     private Attribute buildDateOfBirthAttribute(LocalDate dateOfBirth) {
         XMLObjectBuilder<? extends DateOfBirth> eidasTypeBuilder = (XMLObjectBuilder<? extends DateOfBirth>) XMLObjectSupport.getBuilder(DateOfBirth.TYPE_NAME);
         DateOfBirth dateOfBirthAttributeValue = eidasTypeBuilder.buildObject(AttributeValue.DEFAULT_ELEMENT_NAME, DateOfBirth.TYPE_NAME);
@@ -160,6 +163,7 @@ public class EidasAuthnResponseService {
         return buildAttribute(IdaConstants.Eidas_Attributes.DateOfBirth.NAME, IdaConstants.Eidas_Attributes.DateOfBirth.FRIENDLY_NAME, dateOfBirthAttributeValue);
     }
 
+    @SuppressWarnings({"unchecked", "cast"})
     private Attribute buildPersonIdentifierAttribute(String pid) {
         XMLObjectBuilder<? extends PersonIdentifier> eidasTypeBuilder = (XMLObjectBuilder<? extends PersonIdentifier>) XMLObjectSupport.getBuilder(PersonIdentifier.TYPE_NAME);
         PersonIdentifier pidAttributeValue = eidasTypeBuilder.buildObject(AttributeValue.DEFAULT_ELEMENT_NAME, PersonIdentifier.TYPE_NAME);
@@ -168,6 +172,7 @@ public class EidasAuthnResponseService {
         return buildAttribute(IdaConstants.Eidas_Attributes.PersonIdentifier.NAME, IdaConstants.Eidas_Attributes.PersonIdentifier.FRIENDLY_NAME, pidAttributeValue);
     }
 
+    @SuppressWarnings({"unchecked", "cast"})
     private Attribute buildGenderAttribute(String value) {
         XMLObjectBuilder<? extends EidasGender> eidasTypeBuilder = (XMLObjectBuilder<? extends EidasGender>) XMLObjectSupport.getBuilder(EidasGender.TYPE_NAME);
         EidasGender eidasGender = eidasTypeBuilder.buildObject(AttributeValue.DEFAULT_ELEMENT_NAME, EidasGender.TYPE_NAME);
@@ -176,6 +181,7 @@ public class EidasAuthnResponseService {
         return buildAttribute(IdaConstants.Eidas_Attributes.Gender.NAME, IdaConstants.Eidas_Attributes.Gender.FRIENDLY_NAME, eidasGender);
     }
 
+    @SuppressWarnings({"unchecked", "cast"})
     private Attribute buildAddressAttribute(EidasAddress address) {
         XMLObjectBuilder<? extends CurrentAddress> eidasTypeBuilder = (XMLObjectBuilder<? extends CurrentAddress>) XMLObjectSupport.getBuilder(CurrentAddress.TYPE_NAME);
         CurrentAddress currentAddress = eidasTypeBuilder.buildObject(AttributeValue.DEFAULT_ELEMENT_NAME, CurrentAddress.TYPE_NAME);
@@ -196,6 +202,7 @@ public class EidasAuthnResponseService {
         return attribute;
     }
 
+    @SuppressWarnings({"unchecked", "cast"})
     private static <T extends XMLObject> T build(QName elementName) {
         return (T) XMLObjectSupport.buildXMLObject(elementName);
     }

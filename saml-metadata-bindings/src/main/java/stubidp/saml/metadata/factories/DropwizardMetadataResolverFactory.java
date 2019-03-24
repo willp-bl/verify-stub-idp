@@ -79,7 +79,7 @@ public class DropwizardMetadataResolverFactory {
         KeyStore metadataTrustStore = metadataConfiguration.getTrustStore();
         PKIXSignatureValidationFilterProvider pkixSignatureValidationFilterProvider = new PKIXSignatureValidationFilterProvider(metadataTrustStore);
 
-        ArrayList<MetadataFilter> metadataFilters = new ArrayList();
+        ArrayList<MetadataFilter> metadataFilters = new ArrayList<>();
         metadataFilters.add(pkixSignatureValidationFilterProvider.get());
         metadataFilters.add(expiredCertificateMetadataFilter);
 

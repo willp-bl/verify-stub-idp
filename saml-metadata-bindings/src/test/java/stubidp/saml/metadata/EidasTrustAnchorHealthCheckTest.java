@@ -48,6 +48,7 @@ public class EidasTrustAnchorHealthCheckTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void shouldReturnUnhealthyWhenAnyMetadataResolversDontContainMetadataMatchingTheEntityId() throws Exception {
         String entityId1 = "entityId1";
         String entityId2 = "entityId2";
@@ -76,6 +77,7 @@ public class EidasTrustAnchorHealthCheckTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void shouldReturnUnhealthyMetadataResolversAreMissing() throws Exception {
         String entityId1 = "entityId1";
         String entityId2 = "entityId2";

@@ -54,6 +54,7 @@ public class GeneratorTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void shouldHandleZeroInput() throws ParseException, JOSEException, CertificateEncodingException {
         List<String> files = new ArrayList<>();
 
@@ -65,6 +66,7 @@ public class GeneratorTest {
     }
 
     @Test
+    @SuppressWarnings({"unchecked", "cast"})
     public void shouldHandleOneString() throws JOSEException, CertificateEncodingException {
         String countryPublicCert = CACertificates.TEST_ROOT_CA;
         X509Certificate countryCertificate = new X509CertificateFactory().createCertificate(countryPublicCert);
@@ -82,6 +84,7 @@ public class GeneratorTest {
     }
 
     @Test
+    @SuppressWarnings({"unchecked", "cast"})
     public void shouldHandleChainOfCertificates() throws CertificateEncodingException, JOSEException {
         List<String> certificates = asList(
             CACertificates.TEST_ROOT_CA,
@@ -183,6 +186,7 @@ public class GeneratorTest {
     }
 
     @Test
+    @SuppressWarnings({"unchecked", "cast"})
     public void shouldHandleMultipleStrings() throws ParseException, JOSEException, CertificateEncodingException {
         List<String> files = new ArrayList<>();
         for (int i = 0; i < 1024; i++) {

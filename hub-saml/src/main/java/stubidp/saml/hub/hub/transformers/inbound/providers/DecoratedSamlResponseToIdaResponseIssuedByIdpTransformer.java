@@ -20,7 +20,7 @@ public class DecoratedSamlResponseToIdaResponseIssuedByIdpTransformer implements
     private final IdaResponseFromIdpUnmarshaller idaResponseUnmarshaller;
     private IdpResponseValidator idpResponseValidator;
 
-    @Deprecated
+    //Deprecated
     public DecoratedSamlResponseToIdaResponseIssuedByIdpTransformer(
             IdaResponseFromIdpUnmarshaller idaResponseUnmarshaller,
             SamlResponseSignatureValidator samlResponseSignatureValidator,

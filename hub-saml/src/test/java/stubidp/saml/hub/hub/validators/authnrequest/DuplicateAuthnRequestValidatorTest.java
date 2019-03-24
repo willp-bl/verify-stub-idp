@@ -30,7 +30,7 @@ public class DuplicateAuthnRequestValidatorTest {
             }
         };
         ConcurrentMap<AuthnRequestIdKey, DateTime> duplicateIds = new ConcurrentHashMap<>();
-        IdExpirationCache idExpirationCache = new ConcurrentMapIdExpirationCache(duplicateIds);
+        IdExpirationCache<AuthnRequestIdKey> idExpirationCache = new ConcurrentMapIdExpirationCache<>(duplicateIds);
         duplicateAuthnRequestValidator = new DuplicateAuthnRequestValidator(idExpirationCache, samlEngineConfiguration);
     }
 

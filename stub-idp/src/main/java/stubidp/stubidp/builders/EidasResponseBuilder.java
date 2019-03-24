@@ -127,6 +127,7 @@ public class EidasResponseBuilder {
         return issuer;
     }
 
+    @SuppressWarnings("unchecked")
     private static <T extends XMLObject> T build(QName elementName) {
         return (T) XMLObjectSupport.buildXMLObject(elementName);
     }
