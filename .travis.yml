@@ -2,6 +2,8 @@ language: java
 jdk:
   - openjdk11
   - openjdk12
-#  - openjdk13 # needs equalsverifier update
+  - openjdk13 # needs equalsverifier update
 matrix:
   fast_finish: true
+  allow_failures:
+    - jdk: openjdk13
