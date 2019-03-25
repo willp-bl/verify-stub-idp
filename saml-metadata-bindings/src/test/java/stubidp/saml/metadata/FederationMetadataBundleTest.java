@@ -14,6 +14,7 @@ import io.dropwizard.testing.ResourceHelpers;
 import io.dropwizard.testing.junit.DropwizardAppRule;
 import net.shibboleth.utilities.java.support.resolver.CriteriaSet;
 import net.shibboleth.utilities.java.support.resolver.ResolverException;
+import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
@@ -70,7 +71,12 @@ public class FederationMetadataBundleTest {
                                                        .around(idpKeyStoreRule)
                                                        .around(APPLICATION_DROPWIZARD_APP_RULE);
 
-    private static Client client = new JerseyClientBuilder(APPLICATION_DROPWIZARD_APP_RULE.getEnvironment()).build(FederationMetadataBundleTest.class.getName() + "2");
+    private static Client client;
+
+    @BeforeClass
+    public static void setUp() {
+        client = new JerseyClientBuilder(APPLICATION_DROPWIZARD_APP_RULE.getEnvironment()).build(FederationMetadataBundleTest.class.getName() + "2");
+    }
 
     @Test
     public void shouldReadMetadataFromMetadataServerUsingTrustStoreBackedMetadataConfiguration() {
