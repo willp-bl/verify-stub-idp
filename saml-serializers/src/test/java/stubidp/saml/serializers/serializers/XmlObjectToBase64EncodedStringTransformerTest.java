@@ -24,12 +24,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class XmlObjectToBase64EncodedStringTransformerTest {
 
-    private XmlObjectToBase64EncodedStringTransformer xmlObjectToBase64EncodedStringTransformer;
+    private XmlObjectToBase64EncodedStringTransformer<AuthnRequest> xmlObjectToBase64EncodedStringTransformer;
 
     @Before
     public void setup() throws InitializationException {
         InitializationService.initialize();
-        xmlObjectToBase64EncodedStringTransformer = new XmlObjectToBase64EncodedStringTransformer();
+        xmlObjectToBase64EncodedStringTransformer = new XmlObjectToBase64EncodedStringTransformer<>();
     }
 
     @Test

@@ -18,6 +18,7 @@ import java.util.Optional;
 
 import static stubidp.saml.security.validators.signature.SamlSignatureUtil.isSignaturePresent;
 
+@SuppressWarnings("rawtypes")
 public class EncryptedResponseFromIdpValidator<T extends Enum> {
     private static final int SUB_STATUS_CODE_LIMIT = 1;
     private SamlStatusToAuthenticationStatusCodeMapper<T> statusCodeMapper;

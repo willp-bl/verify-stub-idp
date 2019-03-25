@@ -18,6 +18,7 @@ import java.util.List;
 
 import static java.text.MessageFormat.format;
 
+@SuppressWarnings("rawtypes")
 public class TimeoutRequestRetryWithBackoffHandler implements HttpRequestRetryHandler {
     private static final Logger LOG = LoggerFactory.getLogger(TimeoutRequestRetryHandler.class);
     private final int numRetries;

@@ -10,6 +10,7 @@ import java.util.Optional;
 
 import static java.text.MessageFormat.format;
 
+@SuppressWarnings("rawtypes")
 public abstract class AuthenticationStatusUnmarshallerBase<T extends Enum, U extends IdaStatus> {
 
     private final SamlStatusToAuthenticationStatusCodeMapper<T> statusMapper;

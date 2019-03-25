@@ -24,7 +24,7 @@ public class TestDecrypter<T> {
 
     public T decrypt(final String base64EncodedEncryptedEvent, final Class<T> klass) throws Exception {
         final String event = decrypt(base64EncodedEncryptedEvent);
-        return (T) mapper.readValue(event, klass);
+        return mapper.readValue(event, klass);
     }
 
     public String decrypt(final String bas64EncodedEncryptedEvent) throws Exception {

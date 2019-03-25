@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.jar.Manifest;
 
+@SuppressWarnings({"rawtypes"})
 public class ManifestReader {
 
     private static final String MANIFEST_FILE_LOCATION = "/META-INF/MANIFEST.MF";

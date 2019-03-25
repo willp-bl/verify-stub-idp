@@ -9,6 +9,7 @@ import java.util.function.Supplier;
 
 import static java.lang.String.format;
 
+@SuppressWarnings("rawtypes")
 public class RetryCommand<T> {
 
     private static final Logger LOG = LoggerFactory.getLogger(RetryCommand.class);

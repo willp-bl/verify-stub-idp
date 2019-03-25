@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.glassfish.jersey.internal.util.Base64;
 
 import java.text.MessageFormat;
+import java.util.Objects;
 
 public class EidasAddress {
     private final String poBox;
@@ -85,6 +86,11 @@ public class EidasAddress {
             return MessageFormat.format("<eidas:{0}>{1}</eidas:{0}>", samlTag, value);
         }
         return "";
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(poBox, locatorDesignator, locatorName, cvAddressArea, thoroughfare, postName, adminunitFirstLine, adminunitSecondLine, postCode);
     }
 
     @Override

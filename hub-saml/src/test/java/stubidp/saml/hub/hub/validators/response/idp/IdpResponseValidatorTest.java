@@ -10,6 +10,7 @@ import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.metadata.IDPSSODescriptor;
 import stubidp.saml.hub.core.validators.DestinationValidator;
+import stubidp.saml.hub.hub.domain.CountryAuthenticationStatus;
 import stubidp.saml.hub.hub.validators.response.idp.IdpResponseValidator;
 import stubidp.saml.hub.hub.validators.response.idp.components.EncryptedResponseFromIdpValidator;
 import stubidp.saml.hub.hub.validators.response.idp.components.ResponseAssertionsFromIdpValidator;
@@ -34,7 +35,7 @@ public class IdpResponseValidatorTest {
     @Mock
     private SamlAssertionsSignatureValidator samlAssertionsSignatureValidator;
     @Mock
-    private EncryptedResponseFromIdpValidator encryptedResponseFromIdpValidator;
+    private EncryptedResponseFromIdpValidator<CountryAuthenticationStatus.Status> encryptedResponseFromIdpValidator;
     @Mock
     private DestinationValidator responseDestinationValidator;
     @Mock

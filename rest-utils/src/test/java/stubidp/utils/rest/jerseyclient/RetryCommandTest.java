@@ -11,7 +11,7 @@ import javax.ws.rs.ProcessingException;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
-@SuppressWarnings("ALL")
+@SuppressWarnings({"all", "rawtypes"})
 public class RetryCommandTest {
 
     private class DummyClass { <T> T function() { return null; } }

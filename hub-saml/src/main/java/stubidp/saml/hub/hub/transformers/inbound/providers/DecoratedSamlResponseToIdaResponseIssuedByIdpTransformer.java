@@ -26,7 +26,7 @@ public class DecoratedSamlResponseToIdaResponseIssuedByIdpTransformer implements
             SamlResponseSignatureValidator samlResponseSignatureValidator,
             AssertionDecrypter assertionDecrypter,
             SamlAssertionsSignatureValidator samlAssertionsSignatureValidator,
-            EncryptedResponseFromIdpValidator responseFromIdpValidator,
+            @SuppressWarnings("rawtypes") EncryptedResponseFromIdpValidator responseFromIdpValidator,
             DestinationValidator responseDestinationValidator,
             ResponseAssertionsFromIdpValidator responseAssertionsFromIdpValidator) {
 

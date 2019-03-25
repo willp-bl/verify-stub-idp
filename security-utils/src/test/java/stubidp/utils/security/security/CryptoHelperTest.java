@@ -36,7 +36,7 @@ public class CryptoHelperTest {
 
     @Test
     public void testInitializationVectorIsCorrectLength() {
-        assertThat(cryptoHelper.KEY_AND_NONCE_AND_IV_LENGTH_IN_BYTES).isEqualTo(16);
+        assertThat(CryptoHelper.KEY_AND_NONCE_AND_IV_LENGTH_IN_BYTES).isEqualTo(16);
     }
 
     @Test

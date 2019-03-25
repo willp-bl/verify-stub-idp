@@ -18,6 +18,7 @@ public class IdpResponseValidator {
     private final SamlResponseSignatureValidator samlResponseSignatureValidator;
     private final AssertionDecrypter assertionDecrypter;
     private final SamlAssertionsSignatureValidator samlAssertionsSignatureValidator;
+    @SuppressWarnings("rawtypes")
     private final EncryptedResponseFromIdpValidator responseFromIdpValidator;
     private final DestinationValidator responseDestinationValidator;
     private final ResponseAssertionsFromIdpValidator responseAssertionsFromIdpValidator;
@@ -27,6 +28,7 @@ public class IdpResponseValidator {
     public IdpResponseValidator(SamlResponseSignatureValidator samlResponseSignatureValidator,
                                 AssertionDecrypter assertionDecrypter,
                                 SamlAssertionsSignatureValidator samlAssertionsSignatureValidator,
+                                @SuppressWarnings("rawtypes")
                                 EncryptedResponseFromIdpValidator responseFromIdpValidator,
                                 DestinationValidator responseDestinationValidator,
                                 ResponseAssertionsFromIdpValidator responseAssertionsFromIdpValidator) {

@@ -31,7 +31,7 @@ public class LevelLoggerTest {
     @Captor
     private ArgumentCaptor<LoggingEvent> captorLoggingEvent;
 
-    private LevelLogger levelLogger = LevelLogger.getLevelLogger(LevelLoggerTest.class);
+    private LevelLogger<LevelLoggerTest> levelLogger = LevelLogger.getLevelLogger(LevelLoggerTest.class);
     private UUID errorId = UUID.randomUUID();
     private final String innerErrorMessage = "innerErrorMessage";
 

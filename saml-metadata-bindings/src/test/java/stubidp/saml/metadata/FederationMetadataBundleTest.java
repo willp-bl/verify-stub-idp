@@ -12,21 +12,20 @@ import io.dropwizard.setup.Environment;
 import io.dropwizard.testing.ConfigOverride;
 import io.dropwizard.testing.ResourceHelpers;
 import io.dropwizard.testing.junit.DropwizardAppRule;
-import stubidp.saml.metadata.test.factories.metadata.MetadataFactory;
-import stubidp.test.utils.keystore.KeyStoreRule;
-import stubidp.test.utils.keystore.builders.KeyStoreRuleBuilder;
 import net.shibboleth.utilities.java.support.resolver.CriteriaSet;
 import net.shibboleth.utilities.java.support.resolver.ResolverException;
-import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
 import org.junit.runner.RunWith;
 import org.opensaml.core.criterion.EntityIdCriterion;
 import org.opensaml.saml.metadata.resolver.MetadataResolver;
+import stubidp.saml.metadata.bundle.MetadataResolverBundle;
+import stubidp.saml.metadata.test.factories.metadata.MetadataFactory;
 import stubidp.saml.utils.core.test.OpenSAMLMockitoRunner;
 import stubidp.test.devpki.TestEntityIds;
-import stubidp.saml.metadata.bundle.MetadataResolverBundle;
+import stubidp.test.utils.keystore.KeyStoreRule;
+import stubidp.test.utils.keystore.builders.KeyStoreRuleBuilder;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -71,12 +70,7 @@ public class FederationMetadataBundleTest {
                                                        .around(idpKeyStoreRule)
                                                        .around(APPLICATION_DROPWIZARD_APP_RULE);
 
-    private static Client client;
-
-    @BeforeClass
-    public static void setUp() {
-        client = new JerseyClientBuilder(APPLICATION_DROPWIZARD_APP_RULE.getEnvironment()).build(FederationMetadataBundleTest.class.getName() + "2");
-    }
+    private static Client client = new JerseyClientBuilder(APPLICATION_DROPWIZARD_APP_RULE.getEnvironment()).build(FederationMetadataBundleTest.class.getName() + "2");
 
     @Test
     public void shouldReadMetadataFromMetadataServerUsingTrustStoreBackedMetadataConfiguration() {

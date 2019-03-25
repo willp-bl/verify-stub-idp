@@ -19,7 +19,7 @@ public class StubIdpConfigurationTest {
 
     @Rule
     public final ExpectedException expectedException = ExpectedException.none();
-    private final YamlConfigurationFactory factory = new YamlConfigurationFactory<>(
+    private final YamlConfigurationFactory<StubIdpConfiguration> factory = new YamlConfigurationFactory<>(
         StubIdpConfiguration.class, newValidator(), newObjectMapper(), "dw.");
 
     @Test
