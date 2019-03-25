@@ -3,7 +3,7 @@
 
 This microservice is a stub IDP that can be white-labelled to simulate any IDP, or used as a Stub eIDAS Proxy Service Node.
 
-[![Build Status](https://travis-ci.org/stub-idp/stub-idp.svg?branch=master)](https://travis-ci.org/stub-idp/stub-idp)
+[![Build Status](https://travis-ci.org/stub-idp/stub-idp.svg?branch=monorepo)](https://travis-ci.org/stub-idp/stub-idp)
 
 ## Running
 
