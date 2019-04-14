@@ -1,7 +1,6 @@
 package stubidp.stubidp;
 
 import com.fasterxml.jackson.databind.util.StdDateFormat;
-import com.google.common.collect.ImmutableMap;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
@@ -9,7 +8,6 @@ import io.dropwizard.configuration.SubstitutingSourceProvider;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
-import io.dropwizard.views.freemarker.FreemarkerViewRenderer;
 import stubidp.saml.extensions.IdaSamlBootstrap;
 import stubidp.stubidp.bundles.DatabaseMigrationBundle;
 import stubidp.stubidp.configuration.StubIdpConfiguration;
@@ -55,7 +53,6 @@ import stubidp.utils.rest.filters.AcceptLanguageFilter;
 import javax.servlet.DispatcherType;
 import java.util.EnumSet;
 import java.util.Locale;
-import java.util.Map;
 
 import static java.util.Collections.singletonList;
 
@@ -97,16 +94,7 @@ public class StubIdpApplication extends Application<StubIdpConfiguration> {
         bootstrap.addBundle(new DatabaseMigrationBundle());
 
         bootstrap.addBundle(new ServiceStatusBundle());
-        bootstrap.addBundle(new ViewBundle<StubIdpConfiguration>(singletonList(new CSRFViewRenderer())) {
-            @Override
-            public Map<String, Map<String, String>> getViewConfiguration(StubIdpConfiguration config) {
-                // beware: this is to force enable escaping of unsanitised user input
-                return ImmutableMap.of(new FreemarkerViewRenderer().getConfigurationKey(),
-                    ImmutableMap.of(
-                        "output_format", "HTMLOutputFormat"
-                    ));
-            }
-        });
+        bootstrap.addBundle(new ViewBundle<StubIdpConfiguration>(singletonList(new CSRFViewRenderer())));
         bootstrap.addBundle(new LoggingBundle());
         bootstrap.addBundle(new MonitoringBundle());
 
