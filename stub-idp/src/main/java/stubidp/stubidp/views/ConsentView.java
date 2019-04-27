@@ -2,6 +2,7 @@ package stubidp.stubidp.views;
 
 import stubidp.saml.utils.core.domain.Address;
 import stubidp.saml.utils.core.domain.AuthnContext;
+import stubidp.stubidp.Urls;
 import stubidp.stubidp.domain.DatabaseIdpUser;
 import stubidp.stubidp.views.helpers.IdpUserHelper;
 
@@ -62,5 +63,9 @@ public class ConsentView extends IdpPageView {
 
     public boolean isUserLOADidNotMatch() {
         return userLOADidNotMatch;
+    }
+
+    public String getConsentResource() {
+        return Urls.IDP_CONSENT_RESOURCE;
     }
 }

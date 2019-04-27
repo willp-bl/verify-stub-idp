@@ -1,5 +1,7 @@
 package stubidp.stubidp.views;
 
+import stubidp.stubidp.Urls;
+
 import java.util.Optional;
 
 public class EidasLoginPageView extends IdpPageView {
@@ -12,4 +14,7 @@ public class EidasLoginPageView extends IdpPageView {
         return String.format("Welcome to %s", getName());
     }
 
+    public String getEidasAuthnFailureResource() {
+        return Urls.EIDAS_AUTHN_FAILURE_RESOURCE;
+    }
 }

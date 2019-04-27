@@ -4,7 +4,7 @@
         <ul>
         <#if !preRegistration>
             <li>
-                <a id="tab-login" class="tab-text" href="${rootPrefix}/${idpId}/login${routeSuffix}">Login</a>
+                <a id="tab-login" class="tab-text" href="${loginResource}">Login</a>
             </li>
         </#if>
         <li class="on" id="tab-register">
@@ -12,12 +12,12 @@
         </li>
         <#if !preRegistration>
             <li>
-                <a id="tab-debug" class="tab-text" href="${rootPrefix}/${idpId}/debug${routeSuffix}">System information</a>
+                <a id="tab-debug" class="tab-text" href="${debugResource}">System information</a>
             </li>
         </#if>
         </ul>
     </div>
-    <form action="/${idpId}/register/" class="register" method="post" id="registration-form" autocomplete="off">
+    <form action="${registrationResource}" class="register" method="post" id="registration-form" autocomplete="off">
         <fieldset>
         <#if preRegistration>
             <legend>Pre-Register with ${name}</legend>

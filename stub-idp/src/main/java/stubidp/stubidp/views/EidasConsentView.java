@@ -1,5 +1,6 @@
 package stubidp.stubidp.views;
 
+import stubidp.stubidp.Urls;
 import stubidp.stubidp.domain.EidasUser;
 
 import java.util.Optional;
@@ -19,4 +20,9 @@ public class EidasConsentView extends IdpPageView {
     public EidasUser getUser() {
         return user;
     }
+
+    public String getEidasConsentResource() {
+        return Urls.EIDAS_CONSENT_RESOURCE;
+    }
+
 }

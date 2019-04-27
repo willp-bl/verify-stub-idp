@@ -56,11 +56,28 @@ public class IdpPageView extends View {
         return csrfToken;
     }
 
-    public String getRootPrefix() {
-        return Urls.ROOT_PREFIX;
+    public String getRegistrationResource() {
+        return Urls.IDP_REGISTER_RESOURCE;
     }
 
-    public String getRouteSuffix() {
-        return Urls.ROUTE_SUFFIX;
+    public String getLoginResource() {
+        return Urls.IDP_LOGIN_RESOURCE;
     }
+
+    public String getDebugResource() {
+        return Urls.IDP_DEBUG_RESOURCE;
+    }
+
+    public String getEidasRegistrationResource() {
+        return Urls.EIDAS_REGISTER_RESOURCE;
+    }
+
+    public String getEidasLoginResource() {
+        return Urls.EIDAS_LOGIN_RESOURCE;
+    }
+
+    public String getEidasDebugResource() {
+        return Urls.EIDAS_DEBUG_RESOURCE;
+    }
+
 }

@@ -41,7 +41,7 @@
             authenticating?</p>
     </div>
     <div class="submit">
-        <form action="${rootPrefix}/eidas/${idpId}/consent${routeSuffix}" method="post">
+        <form action="${eidasConsentResource}" method="post">
           <input id="agree" class="button color-ok" type="submit" name="submit" value="I Agree"/>
           <!-- this is used by acceptance tests -->
           <input id="signingAlgorithm" name="signingAlgorithm" type="hidden" value="rsasha256"/>
