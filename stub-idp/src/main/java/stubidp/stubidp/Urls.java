@@ -38,8 +38,8 @@ public interface Urls {
     String SOURCE_PARAM_PRE_REG_VALUE = "pre-reg";
 
     // comedy routes
-    String ROOT_PREFIX = "/~willp-bl/cgi-bin"; //can be left blank, needs no trailing slash if not blank
-    String ROUTE_SUFFIX = ".php"; // can be left blank
+    String ROOT_PREFIX = "/stub-idp"; //can be left blank, needs no trailing slash if not blank
+    String ROUTE_SUFFIX = ".idp"; // can be left blank
 
     // paths and resources
     String IDP_SAML2_SSO_RESOURCE = "/{"+IDP_ID_PARAM+"}/SAML2/SSO";
