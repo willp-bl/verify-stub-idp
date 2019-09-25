@@ -1,4 +1,4 @@
-package engineering.reliability.gds.metrics.config;
+package stubidp.metrics.prometheus.config;
 
 public interface PrometheusConfiguration {
     boolean isPrometheusEnabled();

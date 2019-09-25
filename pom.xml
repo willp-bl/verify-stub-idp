@@ -36,6 +36,7 @@
         <javax_activation.version>1.2.1</javax_activation.version>
         <javax_inject.version>2.6.1</javax_inject.version>
         <freemarker.version>2.3.29</freemarker.version>
+        <prometheus_client.version>0.7.0</prometheus_client.version>
 
         <!-- test dependencies -->
         <assertj.version>3.13.2</assertj.version>
@@ -61,6 +62,7 @@
         <module>rest-utils</module>
         <module>security-utils</module>
         <module>dropwizard-logstash</module>
+        <module>dropwizard-prometheus</module>
         <module>dev-pki</module>
     </modules>
 

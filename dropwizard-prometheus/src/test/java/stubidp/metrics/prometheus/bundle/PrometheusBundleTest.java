@@ -1,30 +1,29 @@
-package engineering.reliability.gds.metrics.bundle;
+package stubidp.metrics.prometheus.bundle;
 
-import engineering.reliability.gds.metrics.support.TestApplication;
-import engineering.reliability.gds.metrics.support.TestConfiguration;
 import io.dropwizard.testing.ConfigOverride;
-import io.dropwizard.testing.junit.DropwizardAppRule;
+import io.dropwizard.testing.junit5.DropwizardAppExtension;
+import io.dropwizard.testing.junit5.DropwizardExtensionsSupport;
 import org.glassfish.jersey.client.JerseyClientBuilder;
-import org.junit.ClassRule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import stubidp.metrics.prometheus.support.TestApplication;
+import stubidp.metrics.prometheus.support.TestConfiguration;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.core.Response;
 
-import static engineering.reliability.gds.metrics.bundle.PrometheusBundle.PROMETHEUS_METRICS_RESOURCE;
-import static engineering.reliability.gds.metrics.support.TestResource.TEST_RESOURCE_PATH;
 import static org.assertj.core.api.Assertions.assertThat;
+import static stubidp.metrics.prometheus.support.TestResource.TEST_RESOURCE_PATH;
 
+@ExtendWith(DropwizardExtensionsSupport.class)
 public class PrometheusBundleTest {
 
-    @ClassRule
-    public static final DropwizardAppRule<TestConfiguration> appRuleWithMetrics = new DropwizardAppRule<>(TestApplication.class, null,
+    public static final DropwizardAppExtension<TestConfiguration> appRuleWithMetrics = new DropwizardAppExtension<>(TestApplication.class, null,
             ConfigOverride.config("server.applicationConnectors[0].port", "0"),
             ConfigOverride.config("server.adminConnectors[0].port", "0"),
             ConfigOverride.config("prometheusEnabled", "true"));
 
-    @ClassRule
-    public static final DropwizardAppRule<TestConfiguration> appRuleWithoutMetrics = new DropwizardAppRule<>(TestApplication.class, null,
+    public static final DropwizardAppExtension<TestConfiguration> appRuleWithoutMetrics = new DropwizardAppExtension<>(TestApplication.class, null,
             ConfigOverride.config("server.applicationConnectors[0].port", "0"),
             ConfigOverride.config("server.adminConnectors[0].port", "0"),
             ConfigOverride.config("prometheusEnabled", "false"));
@@ -33,11 +32,11 @@ public class PrometheusBundleTest {
 
     @Test
     public void aDropwizardResourceTimerMetricIsLogged() {
-        Response response = client.target("http://localhost:" + appRuleWithMetrics.getAdminPort() + PROMETHEUS_METRICS_RESOURCE)
+        Response response = client.target("http://localhost:" + appRuleWithMetrics.getAdminPort() + PrometheusBundle.PROMETHEUS_METRICS_RESOURCE)
                 .request()
                 .get();
         assertThat(response.getStatus()).isEqualTo(200);
-        assertThat(response.readEntity(String.class)).contains("engineering_reliability_gds_metrics_support_TestResource_get_count 0");
+        assertThat(response.readEntity(String.class)).contains("stubidp_metrics_prometheus_support_TestResource_get_count 0");
 
         response = client.target("http://localhost:" + appRuleWithMetrics.getLocalPort() + TEST_RESOURCE_PATH)
                 .request()
@@ -45,16 +44,16 @@ public class PrometheusBundleTest {
         assertThat(response.getStatus()).isEqualTo(200);
         assertThat(response.readEntity(String.class)).isEqualTo("hello");
 
-        response = client.target("http://localhost:" + appRuleWithMetrics.getAdminPort() + PROMETHEUS_METRICS_RESOURCE)
+        response = client.target("http://localhost:" + appRuleWithMetrics.getAdminPort() + PrometheusBundle.PROMETHEUS_METRICS_RESOURCE)
                 .request()
                 .get();
         assertThat(response.getStatus()).isEqualTo(200);
-        assertThat(response.readEntity(String.class)).contains("engineering_reliability_gds_metrics_support_TestResource_get_count 1.0");
+        assertThat(response.readEntity(String.class)).contains("stubidp_metrics_prometheus_support_TestResource_get_count 1.0");
     }
 
     @Test
     public void noDropwizardJvmMetricsAreLogged() {
-        final Response response = client.target("http://localhost:" + appRuleWithMetrics.getAdminPort() + PROMETHEUS_METRICS_RESOURCE)
+        final Response response = client.target("http://localhost:" + appRuleWithMetrics.getAdminPort() + PrometheusBundle.PROMETHEUS_METRICS_RESOURCE)
                 .request()
                 .get();
         assertThat(response.getStatus()).isEqualTo(200);
@@ -67,7 +66,7 @@ public class PrometheusBundleTest {
 
     @Test
     public void metricsAreNotPresentWhenMetricsAreDisabled() {
-        final Response response = client.target("http://localhost:" + appRuleWithoutMetrics.getAdminPort() + PROMETHEUS_METRICS_RESOURCE)
+        final Response response = client.target("http://localhost:" + appRuleWithoutMetrics.getAdminPort() + PrometheusBundle.PROMETHEUS_METRICS_RESOURCE)
                 .request()
                 .get();
         assertThat(response.getStatus()).isEqualTo(404);
