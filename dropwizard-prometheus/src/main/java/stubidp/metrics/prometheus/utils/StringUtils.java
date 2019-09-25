@@ -1,4 +1,4 @@
-package engineering.reliability.gds.metrics.utils;
+package stubidp.metrics.prometheus.utils;
 
 import java.util.Objects;
 

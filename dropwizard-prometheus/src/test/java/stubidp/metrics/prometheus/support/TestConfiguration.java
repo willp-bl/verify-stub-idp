@@ -1,8 +1,8 @@
-package engineering.reliability.gds.metrics.support;
+package stubidp.metrics.prometheus.support;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import engineering.reliability.gds.metrics.config.PrometheusConfiguration;
 import io.dropwizard.Configuration;
+import stubidp.metrics.prometheus.config.PrometheusConfiguration;
 
 import javax.validation.constraints.NotNull;
 

@@ -1,9 +1,9 @@
-package engineering.reliability.gds.metrics.support;
+package stubidp.metrics.prometheus.support;
 
-import engineering.reliability.gds.metrics.bundle.PrometheusBundle;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import stubidp.metrics.prometheus.bundle.PrometheusBundle;
 
 public class TestApplication extends Application<TestConfiguration> {
     @Override
