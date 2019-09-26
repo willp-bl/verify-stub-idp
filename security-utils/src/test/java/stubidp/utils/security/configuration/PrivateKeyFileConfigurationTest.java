@@ -1,7 +1,7 @@
 package stubidp.utils.security.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.exc.InvalidDefinitionException;
+import com.fasterxml.jackson.databind.exc.ValueInstantiationException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -35,20 +35,20 @@ public class PrivateKeyFileConfigurationTest {
 
     @Test
     public void should_ThrowExceptionWhenFileDoesNotExist() throws Exception {
-        final InvalidDefinitionException exception = Assertions.assertThrows(InvalidDefinitionException.class, () -> objectMapper.readValue("{\"keyFile\": \"/foo/bar\"}", PrivateKeyConfiguration.class));
+        final ValueInstantiationException exception = Assertions.assertThrows(ValueInstantiationException.class, () -> objectMapper.readValue("{\"keyFile\": \"/foo/bar\"}", PrivateKeyConfiguration.class));
         assertThat(exception.getMessage()).contains("NoSuchFileException");
     }
 
     @Test
     public void should_ThrowExceptionWhenFileDoesNotContainAPrivateKey() throws Exception {
         String path = getClass().getClassLoader().getResource("empty_file").getPath();
-        final InvalidDefinitionException exception = Assertions.assertThrows(InvalidDefinitionException.class, () -> objectMapper.readValue("{\"keyFile\": \"" + path + "\"}", PrivateKeyConfiguration.class));
+        final ValueInstantiationException exception = Assertions.assertThrows(ValueInstantiationException.class, () -> objectMapper.readValue("{\"keyFile\": \"" + path + "\"}", PrivateKeyConfiguration.class));
         assertThat(exception.getMessage()).contains("InvalidKeySpecException");
     }
 
     @Test
     public void should_throwAnExceptionWhenIncorrectJSONKeySpecified() throws Exception {
         String path = getClass().getClassLoader().getResource("empty_file").getPath();
-        Assertions.assertThrows(InvalidDefinitionException.class, () -> objectMapper.readValue("{\"privateKeyFoo\": \"" + path + "\"}", PrivateKeyConfiguration.class));
+        Assertions.assertThrows(ValueInstantiationException.class, () -> objectMapper.readValue("{\"privateKeyFoo\": \"" + path + "\"}", PrivateKeyConfiguration.class));
     }
 }

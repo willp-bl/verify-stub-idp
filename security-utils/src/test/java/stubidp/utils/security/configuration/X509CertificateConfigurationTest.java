@@ -1,11 +1,10 @@
 package stubidp.utils.security.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.exc.InvalidDefinitionException;
+import com.fasterxml.jackson.databind.exc.ValueInstantiationException;
 import com.google.common.io.Resources;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import stubidp.utils.security.configuration.DeserializablePublicKeyConfiguration;
 
 import java.io.File;
 import java.io.IOException;
@@ -48,7 +47,7 @@ public class X509CertificateConfigurationTest {
     @Test
     public void should_ThrowExceptionWhenStringDoesNotContainAPublicKey() throws Exception {
         String encodedKey = Base64.getEncoder().encodeToString("not-a-fullCertificate".getBytes());
-        final InvalidDefinitionException exception = Assertions.assertThrows(InvalidDefinitionException.class, () -> objectMapper.readValue("{\"type\": \"x509\", \"cert\": \"" + encodedKey + "\", \"name\": \"someId\"}", DeserializablePublicKeyConfiguration.class));
+        final ValueInstantiationException exception = Assertions.assertThrows(ValueInstantiationException.class, () -> objectMapper.readValue("{\"type\": \"x509\", \"cert\": \"" + encodedKey + "\", \"name\": \"someId\"}", DeserializablePublicKeyConfiguration.class));
         assertThat(exception.getMessage()).contains("Unable to load certificate");
     }
 
@@ -56,7 +55,7 @@ public class X509CertificateConfigurationTest {
     public void should_ThrowExceptionWhenIncorrectKeySpecified() throws Exception {
         String path = getClass().getClassLoader().getResource("empty_file").getPath();
         String jsonConfig = "{\"type\": \"x509\", \"certFoo\": \"" + path + "\", \"name\": \"someId\"}";
-        Assertions.assertThrows(InvalidDefinitionException.class, () -> objectMapper.readValue(jsonConfig, DeserializablePublicKeyConfiguration.class));
+        Assertions.assertThrows(ValueInstantiationException.class, () -> objectMapper.readValue(jsonConfig, DeserializablePublicKeyConfiguration.class));
     }
 
     private String getCertificateString() throws IOException {

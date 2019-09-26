@@ -1,7 +1,7 @@
 package stubidp.utils.security.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.exc.InvalidDefinitionException;
+import com.fasterxml.jackson.databind.exc.ValueInstantiationException;
 import com.google.common.io.Resources;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -31,14 +31,14 @@ public class EncodedCertificateConfigurationTest {
         String path = Resources.getResource("private_key.pk8").getFile();
         byte[] key = Files.readAllBytes(new File(path).toPath());
         String encodedKey = Base64.getEncoder().encodeToString(key);
-        final InvalidDefinitionException exception = Assertions.assertThrows(InvalidDefinitionException.class,
+        final ValueInstantiationException exception = Assertions.assertThrows(ValueInstantiationException.class,
                 () -> objectMapper.readValue("{\"type\": \"encoded\", \"cert\": \"" + encodedKey + "\", \"name\": \"someId\"}", DeserializablePublicKeyConfiguration.class));
         assertThat(exception.getMessage()).contains("Unable to load certificate");
     }
 
     @Test
     public void should_ThrowExceptionWhenStringIsNotBase64Encoded() throws Exception {
-        Assertions.assertThrows(InvalidDefinitionException.class,
+        Assertions.assertThrows(ValueInstantiationException.class,
                 () -> objectMapper.readValue("{\"type\": \"encoded\", \"cert\": \"" + "FOOBARBAZ" + "\", \"name\": \"someId\"}", DeserializablePublicKeyConfiguration.class));
     }
 
@@ -46,7 +46,7 @@ public class EncodedCertificateConfigurationTest {
     public void should_ThrowExceptionWhenIncorrectKeySpecified() throws Exception {
         String path = getClass().getClassLoader().getResource("empty_file").getPath();
         String jsonConfig = "{\"type\": \"encoded\", \"certFoo\": \"" + path + "\", \"name\": \"someId\"}";
-        Assertions.assertThrows(InvalidDefinitionException.class,
+        Assertions.assertThrows(ValueInstantiationException.class,
                 () -> objectMapper.readValue(jsonConfig, DeserializablePublicKeyConfiguration.class));
     }
 
