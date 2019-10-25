@@ -6,7 +6,7 @@
         </encoder>
     </appender>
 
-    <logger name="uk.gov.ida.shared.utils.logging.LevelLoggerTest" level="DEBUG" />
+    <logger name="stubidp.utils.common.logging.LevelLoggerTest" level="DEBUG" />
 
     <root level="WARN">
         <appender-ref ref="STDOUT" />

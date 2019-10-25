@@ -1,0 +1,6 @@
+featureClass: IdaFeatures
+features:
+  - featureName: UIRework
+    active: false
+  - featureName: EncodeAssertions
+    active: true

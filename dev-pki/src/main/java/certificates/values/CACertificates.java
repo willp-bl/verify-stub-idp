@@ -1,16 +1,17 @@
 package certificates.values;
 
-import com.google.common.base.Throwables;
 import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
 public class CACertificates {
     private static String readCertificateFile(String name) {
         try {
-            return IOUtils.toString(CACertificates.class.getResourceAsStream("/ca-certificates/" + name));
+            return IOUtils.toString(CACertificates.class.getResourceAsStream("/ca-certificates/" + name), UTF_8);
         } catch (IOException e) {
-            throw Throwables.propagate(e);
+            throw new RuntimeException(e);
         }
     }
 

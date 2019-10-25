@@ -10,17 +10,14 @@ server:
     type: classic
     appenders:
       - type: console
-      - type: file
-        currentLogFilename: ${LOG_PATH}/debug/stub-idp_access.log
-        archivedLogFilenamePattern: ${LOG_PATH}/debug/stub-idp_access.log.%d.gz
-        archivedFileCount: 7
-      - type: logstash-file
-        currentLogFilename: ${LOG_PATH}/stub-idp_access.log
-        archivedLogFilenamePattern: ${LOG_PATH}/stub-idp_access.log.%d.gz
-        archivedFileCount: 7
-      - type: logstash-syslog
-        facility: local2
-        tag: stub-idp
+#      - type: file
+#        currentLogFilename: ${LOG_PATH}/debug/stub-idp_access.log
+#        archivedLogFilenamePattern: ${LOG_PATH}/debug/stub-idp_access.log.%d.gz
+#        archivedFileCount: 7
+#      - type: logstash-file
+#        currentLogFilename: ${LOG_PATH}/stub-idp_access.log
+#        archivedLogFilenamePattern: ${LOG_PATH}/stub-idp_access.log.%d.gz
+#        archivedFileCount: 7
 
 assertionLifetime: 60m
 
@@ -34,17 +31,14 @@ logging:
   level: ${LOG_LEVEL:-INFO}
   appenders:
     - type: console
-    - type: file
-      currentLogFilename: ${LOG_PATH}/debug/stub-idp.log
-      archivedLogFilenamePattern: ${LOG_PATH}/debug/stub-idp.log.%d.gz
-      archivedFileCount: 7
-    - type: logstash-file
-      currentLogFilename: ${LOG_PATH}/stub-idp.log
-      archivedLogFilenamePattern: ${LOG_PATH}/stub-idp.log.%d.gz
-      archivedFileCount: 7
-    - type: logstash-syslog
-      facility: local2
-      tag: stub-idp
+#    - type: file
+#      currentLogFilename: ${LOG_PATH}/debug/stub-idp.log
+#      archivedLogFilenamePattern: ${LOG_PATH}/debug/stub-idp.log.%d.gz
+#      archivedFileCount: 7
+#    - type: logstash-file
+#      currentLogFilename: ${LOG_PATH}/stub-idp.log
+#      archivedLogFilenamePattern: ${LOG_PATH}/stub-idp.log.%d.gz
+#      archivedFileCount: 7
 
 signingKeyPairConfiguration:
   privateKeyConfiguration:
@@ -100,7 +94,7 @@ europeanIdentity:
       tls:
         protocol: TLSv1.2
         verifyHostname: false
-    uri: ${HUB_CONNECTOR_ENTITY_ID:-http://DefaultNotUsed}
+    uri: ${CONNECTOR_NODE_METADATA_URI:-http://DefaultNotUsed}
     trustStore:
       type: ${TRUSTSTORE_TYPE:-file}
       store: ${METADATA_TRUSTSTORE}
